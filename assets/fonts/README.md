@@ -1,31 +1,30 @@
 # NFShark — Font Assets
 
-Folder ini menyimpan konfigurasi pemanggilan font yang sudah ditinjau dari arsip `Font.zip`.
+Folder ini berisi konfigurasi pemanggilan font web yang telah dipilih dari arsip `Font.zip`. Berkas font mentah tidak disalin ke repository; font yang dipilih dimuat melalui CSS resmi Fontshare.
 
-## Font yang disetujui untuk penggunaan website
+## Font terpilih
 
 ### Bespoke Serif
 - Desainer: Jeremie Hornus, Theo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu.
 - Sumber: [Fontshare — Bespoke Serif](https://www.fontshare.com/fonts/bespoke-serif)
-- Lisensi: ITF Free Font License dari Fontshare.
-- Penggunaan: font serif display untuk heading, judul, atau elemen editorial.
+- Fungsi: judul, heading, dan elemen editorial.
 - Bobot yang diminta: 300, 400, 500, 700, 800.
 
 ### Rosaline
 - Desainer: Jérémie Hornus.
 - Sumber: [Fontshare — Rosaline](https://www.fontshare.com/fonts/rosaline)
-- Lisensi: Fontshare; periksa ketentuan lisensi keluarga font di sumber resmi sebelum penggunaan.
-- Penggunaan: aksen script/dekoratif seperlunya, bukan teks isi.
+- Fungsi: aksen script/dekoratif. Jangan digunakan untuk paragraf atau teks UI.
+- Bobot yang diminta: 400.
 
 ## Cara menggunakan
 
-Tambahkan stylesheet berikut pada halaman yang membutuhkan font ini:
+Tambahkan stylesheet ini pada halaman yang membutuhkan font:
 
 ```html
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 ```
 
-Kemudian gunakan variabel CSS:
+Gunakan variabel font:
 
 ```css
 .heading-editorial {
@@ -37,18 +36,17 @@ Kemudian gunakan variabel CSS:
 }
 ```
 
-Font dimuat dari API resmi Fontshare agar file font tidak didistribusikan ulang melalui repository publik. Website memerlukan koneksi internet ketika font pertama kali dimuat.
+Font diambil dari API/CDN Fontshare. Halaman memerlukan koneksi internet untuk memuat font; jika layanan eksternal tidak tersedia, browser menggunakan fallback Georgia atau cursive.
 
-## Font yang tidak dimasukkan
+## Hasil pemeriksaan arsip
 
-- **Shalyze Cln** — arsip menyebut PERSONAL USE ONLY; tidak cocok untuk layanan komersial.
-- **Mrs. Monster** — catatan di arsip membatasi penggunaan gratis untuk non-komersial; penggunaan komersial memerlukan lisensi.
-- **Someday** dan **Roman New Times** — arsip tidak menyertakan keterangan lisensi yang cukup.
-- File font lain yang hanya tersedia sebagai OTF/TTF tanpa informasi lisensi yang jelas juga tidak dimasukkan.
+- Arsip memuat beberapa format font yang sama (OTF, TTF, WOFF, WOFF2). Tidak perlu menambahkan semua duplikat ke website.
+- Bespoke Serif dan Rosaline dipilih sebagai kandidat web font karena arsip menyediakan file web WOFF2 dan CSS sumber.
+- File `ShalyzeCln-Regular.otf` diberi label **PERSONAL USE ONLY**, sehingga tidak dimasukkan untuk website jasa komersial.
+- Catatan lisensi `Mrs. Monster` menyebut penggunaan gratis hanya untuk non-komersial; penggunaan komersial memerlukan lisensi dari pembuatnya. Font ini tidak dimasukkan.
+- Someday, Roman New Times, dan file lain tanpa keterangan lisensi yang memadai tidak dimasukkan.
+- Fontshare memiliki ketentuan lisensi per keluarga font. Periksa panel lisensi keluarga font di situs resmi sebelum pemakaian produksi, khususnya bila cara distribusi atau penggunaan berubah. Konfigurasi ini menggunakan stylesheet resmi Fontshare dan tidak mengunggah ulang file font mereka.
 
-## Catatan teknis
+## Keputusan penggunaan
 
-- Arsip berisi duplikasi format desktop dan web (OTF, TTF, WOFF, WOFF2).
-- Untuk web, WOFF2 umumnya paling efisien; namun file asli tidak disalin ke repository ini.
-- Jangan mengubah atau mengonversi file font Fontshare tanpa memeriksa lisensi dan memperoleh izin yang diperlukan.
-- Font ini belum dijadikan font global NFShark. Pemakaian harus ditentukan per halaman/komponen setelah uji visual.
+Font ini belum menggantikan font global website NFShark. Terapkan hanya pada elemen yang memang membutuhkan karakter editorial/script setelah dilakukan pemeriksaan visual pada halaman terkait.
