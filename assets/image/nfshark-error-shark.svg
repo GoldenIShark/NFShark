@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 150" role="img" aria-label="Hiu NFShark">
+  <g stroke="#0b2932" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path data-part="tail" d="M228 66c17-8 31-23 49-38-4 19-12 36-25 47 14 8 22 24 26 44-20-10-37-23-51-34Z" fill="#28788b" />
+    <g data-part="body">
+      <path d="M20 73c10-8 17-20 34-27 25-11 55-16 89-13 36 3 67 15 89 32l10 5-12 8c-22 18-53 30-88 33-37 3-69-3-94-14-14-6-21-13-28-20l-7-1Z" fill="#327f91" />
+      <path d="M21 77c17 7 31 16 49 23 27 11 58 16 91 12 23-3 43-10 61-20-20 17-48 27-80 30-35 3-68-4-93-16-13-6-22-15-28-29Z" fill="#f1f5f2" stroke="none" />
+      <path d="M32 84c28 17 64 25 101 24 31-1 57-8 78-20" fill="none" stroke="#9bbdc1" stroke-width="2" opacity=".8" />
+      <path d="M61 60q-7 10-4 22m14-25q-7 11-4 23m14-25q-6 12-3 23" fill="none" stroke="#17566a" stroke-width="2.5" />
+    </g>
+    <path data-part="fin" d="M105 39c12-12 17-26 28-33q5-3 8 3l18 33Z" fill="#28788b" />
+    <path data-part="fin" d="M184 99c12 2 22 10 34 21-15-3-29-8-41-15Z" fill="#28788b" />
+    <path data-part="inspection-fin" d="M116 91c22 3 43 20 66 38-20-4-40-13-56-24l-15-8Z" fill="#28788b" />
+    <g data-part="head">
+      <g data-part="eye" fill="#071512" stroke="none">
+        <ellipse cx="46" cy="58" rx="4.3" ry="5.2" />
+        <circle cx="47" cy="56" r="1.2" fill="#f4f7f4" />
+      </g>
+      <g data-part="mouth" fill="none" stroke="#071512" stroke-width="2.5">
+        <path d="M15 77q12 1 25 8" />
+        <path d="m22 79 3 4 3-2 3 5 3-2 3 4" stroke="#f4f7f4" stroke-width="1.5" />
+      </g>
+    </g>
+  </g>
+</svg>

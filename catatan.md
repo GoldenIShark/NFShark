@@ -248,3 +248,101 @@ Tanggal: 2026-10-18
 - Perubahan lokal yang teramati sebelum tugas: `.github/agents/website-developer.agent.md` berubah; `css/ui-components.css` dan `ui-preview.html` belum dilacak. CSS preview kemudian diubah hanya untuk warna tombol sesuai permintaan; markup preview dan semua demo portofolio dipertahankan.
 - `node --check js/script.js` tersedia dan berhasil. `git diff --check` default melaporkan karakter CR pada akhir baris file CRLF; pemeriksaan read-only `git -c core.whitespace=cr-at-eol diff --check` selesai tanpa temuan.
 - Tidak ada command yang diblokir atau tidak tersedia pada sesi ini. Jika command kelak tidak tersedia, gunakan pemeriksaan read-only editor/VS Code dan catat sebagai keterbatasan, bukan sebagai command yang gagal.
+
+---
+
+Tanggal: 2026-11-01
+
+## Area
+- Halaman error utama NFShark: `404.html`, `error.html`, serta halaman baru `403.html` dan `500.html`.
+- Sistem animasi bersama: `css/error-animation.css`, `js/error-animation.js`, dan `assets/image/nfshark-error-shark.svg`.
+
+## Fakta dan keputusan
+- Sebelum perubahan, worktree sudah memuat modifikasi pada `404.html` dan `error.html` serta file animasi dan SVG yang belum dilacak. Perubahan tersebut diperiksa dan dikembangkan, bukan dibuang.
+- Halaman berbagi satu controller Vanilla JavaScript, stylesheet, dan karakter SVG; konfigurasi kode 404/403/500 tetap terpisah dari sistem animasi. Konten HTML statis tetap dapat dibaca bila script atau aset gagal.
+- SVG lokal menggunakan bagian kepala, badan, mata, mulut, sirip, dan ekor yang dapat dikendalikan. Tidak ada aset pihak ketiga atau dependensi baru.
+- SVG dimuat saat stage terlihat, maksimal tiga percobaan dengan jeda satu detik; retry, observer, timer, gelombang, dan frame intro dibersihkan saat halaman ditinggalkan. Jika gagal, hiu disembunyikan dan halaman tetap berfungsi.
+- Gerakan inti tetap aktif pada pengaturan reduce-motion sesuai spesifikasi; efek pendukung seperti trail, gelombang sentuh, dan animasi judul dikurangi.
+- `403.html` dan `500.html` tersedia sebagai halaman statis. Pemetaan respons HTTP 403/500 tidak diatur dalam repository ini; hosting statis yang digunakan perlu konfigurasi tersendiri untuk menyajikannya sebagai respons error.
+
+## Dampak
+- Halaman 404 dan fallback `error.html` memakai animasi bersama; halaman 403 dan 500 memakai konfigurasi dan perilaku yang sama.
+- Hiu dapat bergerak acak, berganti arah, menyusuri tepi stage, mencari dekor digital, bereaksi terhadap klik/keyboard, dan menampilkan efek gelombang pointer yang tidak menghalangi kontrol.
+- Perubahan terbatas pada empat halaman error, satu stylesheet, satu script, satu SVG, dan catatan ini. Situs utama selain halaman error tidak diubah.
+
+## Status
+- Pemeriksaan sintaks `node --check js\error-animation.js` lulus.
+- Pemeriksaan Python `HTMLParser` memverifikasi struktur empat halaman, kode error, stylesheet/script bersama, dan path lokal; `ElementTree` memverifikasi SVG.
+- Smoke test runtime Node memverifikasi pemuatan berhasil, konfigurasi 500, interaksi, retry tiga kali, fallback/logging, dan pembersihan resource pada `pagehide`.
+- Pemeriksaan struktur CSS, kebijakan reduce-motion, dan `git -c core.whitespace=cr-at-eol diff --check` lulus.
+- Pratinjau browser dan pemeriksaan viewport visual tidak dilakukan pada sesi ini; hasil smoke test bukan pengganti pengujian visual lintas perangkat.
+
+## Command dan batasan
+- `git status --short`; `rg -n "shark\.png|nfshark-error-shark\.svg|error-content|scaleX\(" 403.html 404.html 500.html error.html css/error-animation.css js/error-animation.js assets/image/nfshark-error-shark.svg`.
+- `node --check js/error-animation.js`.
+- Python inline (`HTMLParser` dan `ElementTree`) memeriksa halaman, referensi lokal, SVG/XML, bagian ilustrasi, dan invariant CSS/JS.
+- `git diff --check` (CRLF ditandai oleh konfigurasi default) serta `git -c core.whitespace=cr-at-eol diff --check` dan `git -c core.whitespace=cr-at-eol diff --cached --check`.
+- Pemeriksaan browser, console, dan visual lintas viewport tidak dilakukan.
+
+---
+
+Tanggal: 2026-11-01
+
+## Ilustrasi dan lapisan hiu pada halaman error
+
+### Area
+- `css/error-animation.css`
+- `js/error-animation.js`
+- `assets/image/nfshark-error-shark.svg`
+- `catatan.md`
+- Perilaku bersama berlaku pada `403.html`, `404.html`, `500.html`, dan `error.html`; markup halaman dan perubahan lokal yang telah ada dipertahankan.
+
+### Fakta dan keputusan teknis
+- SVG original digambar menghadap ke kiri, dengan badan teal panjang, perut pucat, sirip dorsal/pectoral, ekor bercabang, mata, insang, dan garis mulut bergigi. Aset raster `shark.png` maupun watermark tidak digunakan.
+- Nama bagian SVG `tail`, `body`, `fin`, `inspection-fin`, `head`, `eye`, dan `mouth` dipertahankan. Poros animasi ekor disesuaikan ke pangkal ekor; controller tetap memakai gerak viewport 2D, membalik SVG dasar kiri hanya untuk gerak ke kanan (`scaleX(-facing)`), dan mengompensasi arah tatapan horizontal saat mirror.
+- `.error-content` tetap berada di atas hiu dengan permukaan gelap semi-transparan 78% agar hiu tampak melintas di belakang teks. Lapisan teks melewatkan pointer ke maskot dan tautan tetap interaktif. Stacking context stage tidak mengurung tombol agar ring fokus keyboard di atas konten tetap terlihat.
+- Ilustrasi dimuat sebagai SVG lokal oleh sistem maskot yang sudah ada; tidak ada hiu duplikat, perubahan HTML, framework, dependensi, atau aset eksternal.
+
+### Dampak
+- Hiu tampak bergerak melalui area `.error-content` di bawah konten tanpa kehilangan gerak dua dimensi, mirror flip, animasi mata/mulut/ekor, atau interaksi klik/keyboard.
+- CTA tetap dapat digunakan dan kontras konten ditopang lapisan permukaan gelap; empat halaman error tetap memakai satu maskot bersama.
+
+### Status verifikasi
+- `node --check js/error-animation.js` lulus.
+- Python `HTMLParser` memeriksa empat halaman dan semua referensi lokal (termasuk `/` ke `index.html`); `ElementTree` membaca SVG sebagai XML dan memverifikasi bagian ilustrasi. Pemeriksaan CSS/JS memverifikasi lapisan konten, pointer CTA, poros ekor, serta transformasi arah.
+- Uji arah 2D dan tatapan dengan `node -e` mengonfirmasi mirror untuk empat kombinasi gerak serta tatapan layar yang konsisten pada kedua orientasi.
+- `git -c core.whitespace=cr-at-eol diff --check` dan pemeriksaan staged dengan opsi yang sama lulus. `git diff --check` tanpa opsi menandai CRLF pada perubahan lokal `catatan.md`; file sumber dan perubahan tersebut tetap dipertahankan.
+- Pemeriksaan visual/browser, console, dan viewport perangkat tidak dilakukan; validasi statis bukan pengganti tinjauan visual.
+
+### Command dan batasan
+- `node --check js/error-animation.js`; `node -e` memeriksa arah transformasi untuk empat kombinasi dx/dy dan kompensasi tatapan.
+- Python inline (`HTMLParser` dan `ElementTree`) memeriksa halaman, referensi lokal, SVG/XML, bagian ilustrasi, dan invariant CSS/JS.
+- `git status --short`; `rg -n "shark\.png|nfshark-error-shark\.svg|error-content|scaleX\(" 403.html 404.html 500.html error.html css/error-animation.css js/error-animation.js assets/image/nfshark-error-shark.svg`.
+- `git diff --check` (CRLF ditandai konfigurasi default), `git -c core.whitespace=cr-at-eol diff --check`, dan `git -c core.whitespace=cr-at-eol diff --cached --check`.
+- Pemeriksaan browser, console, dan visual lintas viewport tidak dilakukan.
+---
+
+Tanggal: 2026-11-01
+
+## Tindak lanjut posisi kaca pembesar dan trail hiu
+
+### Area
+- `css/error-animation.css` dan `catatan.md`; SVG, HTML, dan JavaScript dipertahankan.
+
+### Keputusan teknis dan dampak
+- Kaca pembesar diposisikan pada `left: 12%; top: 32%`; offset mode investigasi yang sudah ada (`translate(5px, -12px)`) dipertahankan. Geometri SVG kiri menempatkan lingkaran kaca di dekat mata setelah offset aktif.
+- Trail memakai anchor lokal `left: 82%` di sisi ekor SVG. Seluruh tombol, termasuk `::after`, mengikuti transformasi mirror dari controller untuk `data-facing="-1"` dan `data-facing="1"`; karena itu CSS tidak memerlukan perubahan JS atau cabang arah yang keliru. Animasi/keyframe dan pengaturan gerak lainnya tidak diubah.
+- Tidak ada HTML, aset, dependensi, atau file lain yang diubah.
+
+### Status verifikasi
+- `node --check js/error-animation.js` lulus.
+- Pemeriksaan Python inline memverifikasi deklarasi posisi lensa, offset investigasi yang tetap, kedekatan posisi lingkaran lensa dengan mata pada geometri SVG, brace CSS, serta penggunaan `dataset.facing` dan mirror controller untuk trail.
+- `git -c core.whitespace=cr-at-eol diff --check` dan `git -c core.whitespace=cr-at-eol diff --cached --check` lulus.
+- Validator invariant awal dikoreksi agar memeriksa properti `dataset.facing` yang benar; pemeriksaan yang dikoreksi lulus.
+- Visual browser, console, dan viewport tidak dilakukan.
+
+### Command dan batasan
+- `node --check js/error-animation.js`.
+- PowerShell inline Python (`python -`) untuk invariant CSS/SVG/JS dan perkiraan posisi aktif lensa.
+- `git -c core.whitespace=cr-at-eol diff --check`; `git -c core.whitespace=cr-at-eol diff --cached --check`.
+- `git status --short`; `git --no-pager diff -- catatan.md`.
