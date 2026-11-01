@@ -373,3 +373,31 @@ Tanggal: 2026-11-01
 ## Command dan batasan
 - File dibaca melalui GitHub `fetch_file` dan diperbarui melalui GitHub `update_file`.
 - Tidak ada command terminal atau pengujian browser yang dijalankan.
+
+
+---
+
+Tanggal: 2026-11-01
+
+## Area
+- Perbaikan navigasi atas halaman Syarat & Ketentuan: `persetujuan.html` dan `css/persetujuan.css`.
+- Sinkronisasi temuan pada `list/daftar-masalah.json`.
+
+## Fakta dan keputusan
+- Sebelum perubahan, katalog `list/index.json` diperiksa dan dokumen `list/daftar-masalah.json` dipilih sebagai catatan temuan tata letak.
+- Data daftar masalah terakhir bertanggal 2026-10-10 (lebih dari 14 hari), sehingga source `persetujuan.html` dan stylesheet terkait diperiksa ulang sebelum implementasi.
+- Aset logo pada header diganti dari `LogoFull.webp` ke `Logo.webp` agar simbol logo tidak menampilkan varian logo penuh dalam ruang ikon; teks merek tetap berupa teks HTML.
+- Pada viewport <=767px, header halaman ketentuan diatur menjadi baris horizontal: logo/simbol di atas teks NFShark pada sisi kiri, tautan “Kembali ke brief” di sisi kanan. Area tautan memiliki tinggi minimum 44px.
+- Temuan dicatat sebagai MAS-002 dengan status selesai pada pemeriksaan source; verifikasi visual browser/perangkat belum dilakukan.
+
+## Dampak
+- Susunan navigasi atas halaman ketentuan pada aturan CSS mobile mengikuti permintaan: simbol logo di atas nama merek dan tautan kembali berada di samping kelompok merek.
+- Perubahan dibatasi pada halaman ketentuan; header halaman lain tidak disentuh.
+
+## Status
+- Perubahan source dan dokumentasi dikirim ke branch `main`.
+- Belum ada uji browser atau pemeriksaan visual perangkat nyata; tidak diklaim lulus.
+
+## Command dan batasan
+- Source dan dokumentasi dibaca melalui GitHub `fetch_file`; pembaruan dilakukan melalui GitHub `update_file`.
+- Tidak ada command terminal, lint, atau pengujian browser yang dijalankan.
