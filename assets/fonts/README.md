@@ -2,7 +2,17 @@
 
 Folder ini berisi konfigurasi pemanggilan font web yang telah dipilih dari arsip `Font.zip`. Berkas font mentah tidak disalin ke repository; font yang dipilih dimuat melalui CSS resmi Fontshare.
 
-## Font terpilih
+## Tiga font utama NFShark Studio
+
+| Kategori | Font | Penggunaan |
+|---|---|---|
+| Mencolok | Rosaline | Frasa pendek/aksen dekoratif yang sengaja ditonjolkan |
+| Mencolok sebagian | Bespoke Serif | Judul utama, heading bagian, dan angka editorial |
+| Semua teks | Plus Jakarta Sans | Paragraf, navigasi, tombol, label, formulir, dan teks UI |
+
+Plus Jakarta Sans sudah menjadi font antarmuka website melalui Google Fonts. Dua font display di bawah dimuat melalui Fontshare.
+
+## Font display terpilih
 
 ### Bespoke Serif
 - Desainer: Jeremie Hornus, Theo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu.
@@ -47,6 +57,6 @@ Font diambil dari API/CDN Fontshare. Halaman memerlukan koneksi internet untuk m
 - Someday, Roman New Times, dan file lain tanpa keterangan lisensi yang memadai tidak dimasukkan.
 - Fontshare memiliki ketentuan lisensi per keluarga font. Periksa panel lisensi keluarga font di situs resmi sebelum pemakaian produksi, khususnya bila cara distribusi atau penggunaan berubah. Konfigurasi ini menggunakan stylesheet resmi Fontshare dan tidak mengunggah ulang file font mereka.
 
-## Keputusan penggunaan
+## Penerapan saat ini
 
-Font ini belum menggantikan font global website NFShark. Terapkan hanya pada elemen yang memang membutuhkan karakter editorial/script setelah dilakukan pemeriksaan visual pada halaman terkait.
+Pada halaman utama, ketiga font dipetakan berdasarkan fungsi: Plus Jakarta Sans untuk seluruh teks umum dan UI, Bespoke Serif untuk heading/penekanan editorial, serta Rosaline untuk frasa aksen pendek. Rosaline tidak digunakan pada paragraf panjang atau informasi penting karena keterbacaannya lebih rendah.
