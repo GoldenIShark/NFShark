@@ -44,3 +44,7 @@ Setiap kali melakukan penambahan, perubahan, atau penghapusan file di repository
 ## Aturan khusus aset portofolio
 Untuk pekerjaan gambar pada situs di `portofolio/`, gunakan skill `asset-management` dan patuhi `.github/skills/convert-images-to-webp/SKILL.md` (beserta tool Python `convert_to_webp.py`) bila konversi relevan. Periksa hanya folder aset situs yang sedang dikerjakan (`portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` jika situs berada langsung di kategori). Jangan mengubah `assets/` situs utama kecuali diminta. Jangan mengonversi SVG secara otomatis atau meratakan GIF animasi.
 
+
+
+## Sinkronisasi Data `list/` (Wajib untuk Setiap Perubahan Website)
+Sebelum setiap perubahan website, baca `list/index.json` dan dokumen `list/` paling relevan dengan area yang akan diubah. Periksa tanggal `updatedAt`; bila lebih dari 14 hari, cocokkan ulang data terhadap source terkait sebelum implementasi dan perbarui data yang terbukti usang. Setelah setiap perubahan website, perbarui otomatis sekurang-kurangnya satu dokumen `list/` yang relevan meskipun pengguna tidak memintanya. Gunakan `daftar-fitur.json` untuk inventaris fitur, `daftar-masalah.json` untuk temuan/bug, dan `daftar-rencana.json` untuk rencana/progres; perbarui lebih dari satu bila diperlukan. Jangan mengarang status atau hasil uji. Tetap catat seluruh perubahan file di `catatan.md`. Dalam laporan, sebutkan file `list/` yang diperiksa dan diperbarui serta hasil pemeriksaan usia 14 hari.
