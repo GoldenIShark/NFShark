@@ -3,7 +3,7 @@
   "title": "Daftar Masalah",
   "category": "Pengembangan",
   "description": "Masalah teknis dan kebutuhan perbaikan yang dicatat berdasarkan bukti repository.",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-11-01",
   "sections": [
     {
       "title": "Terverifikasi",
@@ -15,11 +15,28 @@
           "summary": "Eyebrow masih bertuliskan “Tentang Saya”, sementara subjudul berada pada elemen h3.",
           "impact": "Judul section yang terlihat tidak mencerminkan judul yang diminta dan hierarki heading section tidak lengkap.",
           "reproduction": "Buka section #about pada source halaman utama; periksa .section-heading: teks eyebrow “Tentang Saya”, h3 berisi subjudul, dan h2 kosong. Ini temuan inspeksi source, bukan klaim uji browser.",
-          "files": ["index.html", "css/style.css"],
+          "files": [
+            "index.html",
+            "css/style.css"
+          ],
           "priority": "Sedang",
           "status": "Terbuka",
           "resolution": "Belum diperbaiki atau diuji setelah perbaikan.",
           "relatedPlan": "REN-001"
+        },
+        {
+          "id": "MAS-002",
+          "title": "Susunan navigasi atas halaman Syarat & Ketentuan tidak sesuai di smartphone",
+          "summary": "Pada persetujuan.html, logo dan teks merek berada dalam satu tautan tanpa aturan susunan vertikal khusus halaman; tautan Kembali ke brief tidak memiliki tata letak header mobile yang eksplisit. Pengguna melaporkan logo seharusnya berada di atas teks NFShark, sedangkan tautan kembali berada di samping merek.",
+          "impact": "Identitas merek dan navigasi atas tampak salah posisi atau tidak tertata pada layar smartphone.",
+          "reproduction": "Buka persetujuan.html pada viewport smartphone dan periksa header .studio-header-inner, .studio-logo, serta .agreement-back. Pemeriksaan source awal menemukan belum ada aturan tata letak mobile khusus untuk header halaman ketentuan.",
+          "files": [
+            "persetujuan.html",
+            "css/persetujuan.css"
+          ],
+          "priority": "Sedang",
+          "status": "Selesai diperbaiki — pemeriksaan source",
+          "resolution": "Menggunakan aset Logo.webp sebagai simbol, menumpuk logo di atas teks NFShark pada layar <=767px, dan menempatkan tautan Kembali ke brief di sisi kanan dalam header flex. Belum diverifikasi melalui browser/perangkat nyata."
         }
       ]
     },
