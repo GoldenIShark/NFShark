@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ketentuan awal layanan pembuatan website NFShark." />
+  <meta name="description" content="Ketentuan layanan pembuatan website NFShark." />
   <meta property="og:site_name" content="NFShark" />
   <title>Ketentuan Layanan | NFShark</title>
   <link rel="stylesheet" href="css/common.css" />
@@ -21,56 +21,47 @@
       <a class="agreement-back" href="brief.html">Kembali ke brief</a>
     </div>
   </header>
+
   <main class="agreement-main">
     <article class="container agreement-content">
-      <p class="agreement-eyebrow">NFShark · Ketentuan Layanan</p>
-      <h1>Ketentuan awal pembuatan website</h1>
-      <p class="agreement-lead">Mohon baca ketentuan berikut sebelum mengirimkan brief. Rincian akhir proyek tetap akan dibahas dan dikonfirmasi bersama sebelum pengerjaan dimulai.</p>
-
-      <section>
-        <h2>Ruang lingkup pengerjaan</h2>
-        <p>Pengerjaan mengikuti paket dan kebutuhan yang telah disepakati. Halaman, fitur, desain, serta hasil akhir yang diterima akan dikonfirmasi sebelum proyek dimulai. Fitur backend, database, atau layanan server tidak termasuk kecuali disebutkan secara jelas dalam kesepakatan.</p>
-      </section>
-      <section>
-        <h2>Informasi dan materi dari pelanggan</h2>
-        <p>Pelanggan bertanggung jawab memberikan informasi, teks, logo, foto, dan materi lain yang diperlukan serta memastikan memiliki hak untuk menggunakannya. Keterlambatan materi dapat memengaruhi jadwal pengerjaan.</p>
-      </section>
-      <section>
-        <h2>Harga dan biaya tambahan</h2>
-        <p>Harga mengikuti paket dan ruang lingkup yang dikonfirmasi. Domain, hosting, layanan pihak ketiga, atau kebutuhan tambahan tidak otomatis termasuk dalam harga kecuali dinyatakan secara tertulis.</p>
-      </section>
-      <section>
-        <h2>Revisi dan perubahan</h2>
-        <p>Revisi mengikuti batas dan cakupan yang disepakati untuk proyek. Perubahan di luar cakupan awal, penambahan halaman, atau fitur baru dapat memerlukan penyesuaian biaya dan waktu. NFShark akan mengonfirmasi perubahan tersebut sebelum mengerjakannya.</p>
-      </section>
-      <section>
-        <h2>Waktu pengerjaan</h2>
-        <p>Estimasi waktu ditentukan berdasarkan tingkat kesulitan, kelengkapan materi, jumlah halaman, dan fitur yang disepakati. Estimasi dapat berubah apabila terdapat perubahan kebutuhan atau keterlambatan konfirmasi.</p>
-      </section>
-      <section>
-        <h2>Penyerahan dan pemeliharaan</h2>
-        <p>Bentuk penyerahan file, akses, lisensi aset, dan dukungan setelah website selesai akan dijelaskan sesuai kesepakatan proyek. Pemeliharaan atau pengembangan setelah penyerahan tidak otomatis termasuk.</p>
-      </section>
-      <section>
-        <h2>Penggunaan informasi brief</h2>
-        <p>Informasi yang dikirim melalui brief digunakan untuk memahami kebutuhan, menghubungi pelanggan, dan membahas proyek. Jangan mengirimkan kata sandi, data pembayaran rahasia, atau informasi sensitif melalui formulir.</p>
-      </section>
-      <section>
-        <h2>Konfirmasi pesanan</h2>
-        <p>Pengisian dan pengiriman brief belum berarti pesanan otomatis diterima atau pengerjaan langsung dimulai. Proyek berjalan setelah kebutuhan, ruang lingkup, harga, jadwal, dan ketentuan terkait dikonfirmasi bersama.</p>
-      </section>
+      <div class="agreement-document" id="agreement-document" aria-live="polite">
+        <p class="agreement-loading">Memuat ketentuan layanan…</p>
+      </div>
       <div class="agreement-actions">
         <a class="btn btn-secondary" href="brief.html">Kembali ke brief</a>
         <a class="btn btn-primary" href="brief.html#consent">Lanjut ke persetujuan</a>
       </div>
-      <p class="agreement-note">Ketentuan ini merupakan penjelasan awal. Ketentuan khusus setiap proyek akan dicantumkan dalam komunikasi atau kesepakatan sebelum pengerjaan.</p>
     </article>
   </main>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-brand"><img src="assets/Logo/Logo.webp" alt="" width="40" height="40" /><span>© 2026 NFShark</span></p>
       <a href="index.html">Beranda</a>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const target = document.querySelector('#agreement-document');
+      if (!target) return;
+
+      try {
+        const response = await fetch('persetujuan.md', { cache: 'no-cache' });
+        if (!response.ok) throw new Error('Dokumen tidak dapat dimuat.');
+        if (!window.marked || !window.DOMPurify) throw new Error('Komponen Markdown tidak tersedia.');
+
+        const markdown = await response.text();
+        const rendered = window.marked.parse(markdown, { gfm: true, breaks: false });
+        target.innerHTML = window.DOMPurify.sanitize(rendered);
+        target.classList.add('is-loaded');
+      } catch (error) {
+        target.innerHTML = '<h1>Ketentuan layanan belum dapat dimuat</h1><p>Periksa koneksi internet, lalu muat ulang halaman. Anda juga dapat membaca <a href="persetujuan.md">dokumen Markdown secara langsung</a>.</p>';
+        target.classList.add('is-error');
+      }
+    });
+  </script>
 </body>
 </html>
