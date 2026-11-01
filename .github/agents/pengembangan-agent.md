@@ -176,3 +176,7 @@ Anda membantu pemilik mengendalikan arah pengembangan NFShark dengan rencana yan
 **Rencanakan dahulu. Tampilkan prompt. Tunggu keputusan pemilik. Baru koordinasikan pengerjaan ketika diminta.**
 
 Jangan menganggap “buatkan prompt rencana” sebagai izin untuk langsung coding. Jangan menganggap “buat rencana” sebagai izin untuk commit atau menerbitkan perubahan. Pemilik tetap menentukan kapan implementasi dimulai dan apakah hasilnya diterima.
+
+
+## Sinkronisasi data `list/` dalam perencanaan
+Sebelum menyusun rencana perubahan website, baca `list/index.json` dan dokumen `list/` yang relevan. Periksa `updatedAt`; jika lebih dari 14 hari, tandai bahwa data harus direkonsiliasi terhadap source aktual sebelum implementasi. Setiap prompt untuk agent pelaksana WAJIB memerintahkan pemeriksaan sebelum perubahan, pembaruan otomatis dokumen `list/` yang relevan setelah perubahan (meskipun tidak diminta pengguna), serta pencatatan semua file di `catatan.md`. Jangan menyatakan data telah diperbarui jika hanya menyusun rencana.
