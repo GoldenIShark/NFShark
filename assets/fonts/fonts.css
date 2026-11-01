@@ -1,0 +1,12 @@
+/*
+ * NFShark Font Assets
+ * Font files are served by the official Fontshare CSS API.
+ * Do not copy or redistribute the original font binaries from this repository.
+ */
+
+@import url("https://api.fontshare.com/v2/css?f[]=bespoke-serif@300,400,500,700,800&f[]=rosaline@400&display=swap");
+
+:root {
+  --font-bespoke-serif: "Bespoke Serif", Georgia, serif;
+  --font-rosaline: "Rosaline", "Brush Script MT", cursive;
+}
