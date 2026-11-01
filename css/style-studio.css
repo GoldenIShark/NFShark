@@ -451,7 +451,7 @@ section[id] {
 }
 
 .feature-number {
-  font-family: var(--font-serif);
+  font-family: var(--studio-font-editorial);
   font-size: 1.4rem;
   color: var(--studio-mint);
   display: block;
