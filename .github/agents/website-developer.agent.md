@@ -54,3 +54,10 @@ Untuk fitur lintas bidang, gunakan kombinasi sekecil mungkin—contohnya `websit
 - Pastikan layout, navigasi, gambar, teks, dan target sentuh tetap nyaman di layar kecil dan tidak menimbulkan overflow.
 - Utamakan aset yang sesuai konteks dan berukuran efisien; hindari hotlink, path absolut lokal, duplikasi, dan perubahan format yang merusak fungsi.
 - Jangan mengorbankan keterbacaan, aksesibilitas, atau kecepatan demi animasi, efek dekoratif, atau tren visual.
+
+
+## Sinkronisasi wajib data `list/`
+- Sebelum mengubah website, baca `list/index.json` dan dokumen `list/` yang paling relevan. Periksa `updatedAt`; jika lebih lama dari 14 hari, rekonsiliasi isi dengan source aktual sebelum implementasi.
+- Sesudah setiap perubahan website, perbarui otomatis minimal satu dokumen `list/` yang relevan walaupun pengguna tidak meminta pembaruan dokumentasi. Pilih `daftar-fitur.json` untuk perubahan fitur, `daftar-masalah.json` untuk bug/temuan, dan `daftar-rencana.json` untuk progres/rencana. Perbarui semua dokumen yang benar-benar terdampak.
+- Jangan mengarang fitur, status, tanggal, atau hasil pengujian. Bedakan pemeriksaan source dari uji browser/runtime.
+- Tetap perbarui `catatan.md` untuk semua file yang ditambah/diubah/dihapus. Laporan akhir harus menyebut dokumen `list/` yang diperiksa dan diperbarui serta kondisi usia datanya.
