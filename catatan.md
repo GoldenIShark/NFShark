@@ -346,3 +346,30 @@ Tanggal: 2026-11-01
 - PowerShell inline Python (`python -`) untuk invariant CSS/SVG/JS dan perkiraan posisi aktif lensa.
 - `git -c core.whitespace=cr-at-eol diff --check`; `git -c core.whitespace=cr-at-eol diff --cached --check`.
 - `git status --short`; `git --no-pager diff -- catatan.md`.
+
+---
+
+Tanggal: 2026-11-01
+
+## Area
+- Aturan lintas-agent untuk sinkronisasi dokumentasi data website di folder `list/`.
+- Instruksi pusat repository, Copilot, Website Developer, dan Pengembangan Agent.
+
+## Fakta dan keputusan
+- Ditambahkan kewajiban membaca `list/index.json` dan dokumen data paling relevan sebelum setiap perubahan website.
+- Ditetapkan pemeriksaan usia data 14 hari berdasarkan `updatedAt`; data yang lebih lama wajib direkonsiliasi dengan source aktual sebelum implementasi.
+- Setiap perubahan website wajib diikuti pembaruan otomatis sekurang-kurangnya satu dokumen `list/`, meskipun pengguna tidak meminta pembaruan dokumentasi.
+- Pemetaan dokumen ditetapkan: `daftar-fitur.json` untuk inventaris fitur, `daftar-masalah.json` untuk bug/temuan, dan `daftar-rencana.json` untuk progres/rencana. Beberapa dokumen diperbarui bila beberapa kategori terdampak.
+- Kewajiban pencatatan seluruh file di `catatan.md` tetap berlaku dan tidak digantikan oleh dokumen `list/`.
+- Agent perencana wajib meneruskan aturan sinkronisasi ini ke prompt agent pelaksana.
+
+## Dampak
+- Dokumentasi `list/` menjadi bagian dari alur wajib setiap perubahan website, baik perubahan dilakukan setelah instruksi eksplisit maupun sebagai tindak lanjut agent tanpa pengingat.
+- Data yang berusia lebih dari 14 hari tidak boleh dianggap mutakhir tanpa pencocokan ulang dengan source.
+
+## Status
+- Instruksi diperbarui melalui GitHub. Pemeriksaan isi setelah penulisan perlu dilakukan; tidak ada klaim uji website karena perubahan ini hanya menyentuh dokumentasi/instruksi agent.
+
+## Command dan batasan
+- File dibaca melalui GitHub `fetch_file` dan diperbarui melalui GitHub `update_file`.
+- Tidak ada command terminal atau pengujian browser yang dijalankan.
