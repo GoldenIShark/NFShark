@@ -15,6 +15,9 @@
   --studio-dark-text: var(--color-dark-text);
   --studio-light-text: var(--color-light-text);
   --studio-muted: var(--color-muted);
+  --studio-font-body: var(--font-sans);
+  --studio-font-editorial: var(--font-bespoke-serif);
+  --studio-font-accent: var(--font-rosaline);
 }
 
 /* Reset Scroll Margin untuk Semua Section Target Anchor */
@@ -26,7 +29,7 @@ section[id] {
 .studio-body {
   background-color: var(--studio-dark);
   color: var(--studio-light-text);
-  font-family: var(--font-sans);
+  font-family: var(--studio-font-body);
   margin: 0;
   line-height: 1.6;
 }
@@ -37,17 +40,29 @@ section[id] {
   margin-inline: auto;
 }
 
-/* Tipografi Editorial */
+/* Sistem Tipografi NFShark Studio
+   1. Rosaline: aksen paling mencolok, hanya pada frasa pilihan.
+   2. Bespoke Serif: heading dan penekanan editorial.
+   3. Plus Jakarta Sans: seluruh teks isi dan antarmuka.
+*/
+.studio-body :is(h1, h2, h3) {
+  font-family: var(--studio-font-editorial);
+}
+
 .serif-heading {
-  font-family: var(--font-serif);
+  font-family: var(--studio-font-editorial);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
 .serif-italic {
-  font-style: italic;
+  display: inline;
+  font-family: var(--studio-font-accent);
+  font-style: normal;
   font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
   color: var(--studio-mint);
 }
 
@@ -277,7 +292,7 @@ section[id] {
 .stat-item strong {
   display: block;
   font-size: 2rem;
-  font-family: var(--font-serif);
+  font-family: var(--studio-font-editorial);
   color: var(--studio-mint);
   line-height: 1;
   margin-bottom: 0.4rem;
