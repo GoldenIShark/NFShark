@@ -401,3 +401,33 @@ Tanggal: 2026-11-01
 ## Command dan batasan
 - Source dan dokumentasi dibaca melalui GitHub `fetch_file`; pembaruan dilakukan melalui GitHub `update_file`.
 - Tidak ada command terminal, lint, atau pengujian browser yang dijalankan.
+
+
+---
+
+Tanggal: 2026-11-02
+
+## Area
+- Intro loading halaman utama NFShark: `index.html` dan `css/style-studio.css`.
+- Sinkronisasi inventaris fitur dan rencana: `list/daftar-fitur.json` dan `list/daftar-rencana.json`.
+
+## Fakta dan keputusan teknis
+- Loading screen menggunakan logo lokal `assets/Logo/Logo.webp`, nama `nfshark`, teks `Preparing your experience`, serta progress bar dan persentase 0–100%.
+- Urutan animasi: FadeIn 0,5 detik; progress 3,5 detik; fade-out konten loading 1 detik; circular reveal 1 detik. Total durasi sekitar 6 detik.
+- Warna progress diinterpolasi dari `#303A33` (hitam kehijauan) ke `#43B65C` (hijau rumput).
+- Circular reveal memakai radial mask transparan yang membesar dari titik tengah viewport; halaman utama berada di bawah lapisan loading sehingga terlihat melalui area lingkaran.
+- Intro dijalankan sekali per tab session menggunakan `sessionStorage`; bila penyimpanan sesi tidak tersedia, animasi tetap dijalankan. Tidak ada library atau dependensi baru.
+- Inventaris fitur ditambahkan sebagai FIT-018 dan rencana pengembangan dicatat sebagai REN-014. Data sebelumnya bertanggal 2026-10-10 (lebih dari 14 hari); source halaman utama dan stylesheet diperiksa ulang sebelum sinkronisasi.
+
+## Dampak
+- Pengunjung tab baru melihat intro sebelum halaman utama; navigasi ulang dalam tab yang sama tidak mengulang intro.
+- Perubahan kode dibatasi pada halaman utama dan stylesheet khusus halaman utama; dokumen inventaris/rencana serta catatan repository diperbarui.
+
+## Status verifikasi
+- Source markup, CSS, dan JavaScript diperiksa setelah perubahan melalui pembacaan file GitHub.
+- Pengujian runtime browser, console, dan viewport visual belum dilakukan; belum diklaim lulus.
+
+## Command dan batasan
+- File dibaca dan diperbarui melalui GitHub connector (`fetch_file` dan `update_file`).
+- Branch yang tersedia dan digunakan: `main`; branch `utama` tidak ditemukan saat pemeriksaan.
+- Tidak ada command terminal atau pengujian browser yang dijalankan.
