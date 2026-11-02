@@ -705,3 +705,131 @@ section[id] {
 
 /* Pastikan atribut hidden tetap berlaku pada kartu portofolio. */
 .portfolio-card-studio[hidden] { display: none !important; }
+
+
+/* ==========================================================================
+   NFShark Home Intro — 0.5s FadeIn, 3.5s progress, 1s content fade, 1s reveal
+   ========================================================================== */
+.nf-loading-screen {
+  --reveal-radius: 0px;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #f7f9f6;
+  color: #26352b;
+  opacity: 0;
+  animation: nf-loading-fade-in 0.5s ease-out forwards;
+}
+
+.nf-loading-screen[hidden] {
+  display: none;
+}
+
+.nf-loading-content {
+  display: flex;
+  width: min( min(100% - 3rem, 340px), 340px );
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: opacity 1s ease;
+  will-change: opacity;
+}
+
+.nf-loading-content.is-fading-out {
+  opacity: 0;
+}
+
+.nf-loading-logo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 0.9rem;
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+.nf-loading-brand {
+  color: #21864d;
+  font-family: var(--studio-font-body);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.nf-loading-caption {
+  margin: 0.55rem 0 2rem;
+  color: #64736a;
+  font-size: 0.84rem;
+  letter-spacing: 0.015em;
+}
+
+.nf-loading-progress {
+  width: 100%;
+  text-align: left;
+}
+
+.nf-loading-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+  color: #46554b;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+#nf-loading-percent {
+  color: #21864d;
+  font-variant-numeric: tabular-nums;
+}
+
+.nf-loading-track {
+  width: 100%;
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e4eae5;
+}
+
+.nf-loading-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: #303a33;
+  will-change: width, background-color;
+}
+
+.nf-loading-screen.is-revealing {
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent var(--reveal-radius),
+    #000 calc(var(--reveal-radius) + 1px)
+  );
+  mask-image: radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent var(--reveal-radius),
+    #000 calc(var(--reveal-radius) + 1px)
+  );
+}
+
+@keyframes nf-loading-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-loading-screen {
+    animation-duration: 0.01ms;
+  }
+
+  .nf-loading-content {
+    transition-duration: 0.01ms;
+  }
+}
