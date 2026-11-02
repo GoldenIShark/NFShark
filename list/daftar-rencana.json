@@ -3,7 +3,7 @@
   "title": "Daftar Rencana Pengembangan",
   "category": "Pengembangan",
   "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-11-02",
   "sections": [
     {
       "title": "Belum dimulai atau masih perlu dilanjutkan",
@@ -138,6 +138,12 @@
           "title": "Menyiapkan pusat dokumentasi internal",
           "result": "Struktur dokumentasi awal dibuat di list/; file dan aturan pembaruan tercantum di README.md. Tidak mengubah kode website.",
           "updatedAt": "2026-10-10"
+        },
+        {
+          "id": "REN-014",
+          "title": "Menambahkan intro loading dan circular reveal halaman utama",
+          "result": "Markup loading, progress bar 0–100%, transisi warna, fade konten, dan circular reveal ditambahkan pada halaman utama. Runtime browser belum diverifikasi.",
+          "updatedAt": "2026-11-02"
         }
       ]
     }
