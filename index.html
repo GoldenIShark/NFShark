@@ -14,6 +14,22 @@
     <link rel="stylesheet" href="css/style-studio.css?v=20261029-2" />
   </head>
   <body class="studio-body">
+    <div class="nf-loading-screen" id="nf-loading-screen" hidden aria-label="Memuat halaman NFShark">
+      <div class="nf-loading-content" id="nf-loading-content">
+        <img class="nf-loading-logo" src="assets/Logo/Logo.webp" alt="" width="76" height="76" />
+        <div class="nf-loading-brand">nfshark</div>
+        <p class="nf-loading-caption">Preparing your experience</p>
+        <div class="nf-loading-progress">
+          <div class="nf-loading-progress-meta">
+            <span>Loading...</span>
+            <span id="nf-loading-percent" aria-live="off">0%</span>
+          </div>
+          <div class="nf-loading-track" id="nf-loading-track" role="progressbar" aria-label="Progres pemuatan animasi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span class="nf-loading-fill" id="nf-loading-fill"></span>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <!-- NAVBAR (Sticky, Minimalist, Aksesibel Keyboard & Escape) -->
     <header class="studio-header" id="header">
@@ -454,6 +470,95 @@
     <!-- SKRIP INTERAKSI AKSESIBEL (Menu Mobile & Accordion) -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
+        // Intro NFShark: 0,5s FadeIn + 3,5s progress + 1s fade konten + 1s circular reveal.
+        const loadingScreen = document.getElementById('nf-loading-screen');
+        const loadingContent = document.getElementById('nf-loading-content');
+        const loadingFill = document.getElementById('nf-loading-fill');
+        const loadingPercent = document.getElementById('nf-loading-percent');
+        const loadingTrack = document.getElementById('nf-loading-track');
+
+        if (loadingScreen && loadingContent && loadingFill && loadingPercent && loadingTrack) {
+          let alreadyShown = false;
+          try {
+            alreadyShown = sessionStorage.getItem('nfshark-home-intro-shown') === '1';
+          } catch (_) {
+            // Jika sessionStorage tidak tersedia, intro tetap dijalankan.
+          }
+
+          if (alreadyShown) {
+            loadingScreen.remove();
+          } else {
+            try {
+              sessionStorage.setItem('nfshark-home-intro-shown', '1');
+            } catch (_) {
+              // Tidak mengganggu animasi bila penyimpanan sesi diblokir.
+            }
+
+            loadingScreen.hidden = false;
+            const loadingDuration = 3500;
+            const fadeContentDuration = 1000;
+            const revealDuration = 1000;
+            const startProgress = performance.now();
+
+            const colorStart = { r: 48, g: 58, b: 51 }; // #303A33
+            const colorEnd = { r: 67, g: 182, b: 92 }; // #43B65C
+
+            const animateProgress = (now) => {
+              const progress = Math.min((now - startProgress) / loadingDuration, 1);
+              const percent = Math.round(progress * 100);
+              const easedColor = progress;
+              const red = Math.round(colorStart.r + (colorEnd.r - colorStart.r) * easedColor);
+              const green = Math.round(colorStart.g + (colorEnd.g - colorStart.g) * easedColor);
+              const blue = Math.round(colorStart.b + (colorEnd.b - colorStart.b) * easedColor);
+
+              loadingFill.style.width = percent + '%';
+              loadingFill.style.backgroundColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+              loadingPercent.textContent = percent + '%';
+              loadingTrack.setAttribute('aria-valuenow', String(percent));
+
+              if (progress < 1) {
+                requestAnimationFrame(animateProgress);
+                return;
+              }
+
+              loadingPercent.textContent = '100%';
+              loadingTrack.setAttribute('aria-valuenow', '100');
+
+              window.setTimeout(() => {
+                loadingContent.classList.add('is-fading-out');
+
+                window.setTimeout(() => {
+                  loadingScreen.classList.add('is-revealing');
+                  const centerX = window.innerWidth / 2;
+                  const centerY = window.innerHeight / 2;
+                  const revealRadius = Math.ceil(Math.hypot(
+                    Math.max(centerX, window.innerWidth - centerX),
+                    Math.max(centerY, window.innerHeight - centerY)
+                  ));
+                  const revealStart = performance.now();
+
+                  const animateReveal = (revealNow) => {
+                    const rawProgress = Math.min((revealNow - revealStart) / revealDuration, 1);
+                    const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
+                    loadingScreen.style.setProperty('--reveal-radius', (revealRadius * easedProgress) + 'px');
+
+                    if (rawProgress < 1) {
+                      requestAnimationFrame(animateReveal);
+                    } else {
+                      loadingScreen.remove();
+                    }
+                  };
+
+                  loadingScreen.style.setProperty('--reveal-radius', '0px');
+                  requestAnimationFrame(() => requestAnimationFrame(animateReveal));
+                }, fadeContentDuration);
+              }, 0);
+            };
+
+            // FadeIn CSS berjalan 0,5 detik sebelum progress 3,5 detik dimulai.
+            window.setTimeout(() => requestAnimationFrame(animateProgress), 500);
+          }
+        }
         // 1. Menu Mobile Handler dengan Escape & Focus Management
         const menuToggle = document.querySelector('.menu-toggle');
         const mainNav = document.querySelector('.main-nav');
