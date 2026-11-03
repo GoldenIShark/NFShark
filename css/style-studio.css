@@ -58,7 +58,7 @@ section[id] {
 
 .serif-italic {
   display: inline;
-  font-family: var(--studio-font-accent);
+  font-family: var(--studio-font-editorial);
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
