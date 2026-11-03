@@ -3,7 +3,7 @@
   "title": "Daftar Rencana Pengembangan",
   "category": "Pengembangan",
   "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "sections": [
     {
       "title": "Belum dimulai atau masih perlu dilanjutkan",
@@ -143,6 +143,12 @@
           "id": "REN-014",
           "title": "Mengubah transisi akhir intro loading halaman utama",
           "result": "Animasi akhir diubah: logo, teks, dan progress bar membesar sambil memudar selama 1 detik, sementara latar loading berubah menjadi transparan. Circular reveal/radial mask dihapus. Runtime browser belum diverifikasi.",
+          "updatedAt": "2026-11-03"
+        },
+        {
+          "id": "REN-015",
+          "title": "Menerapkan White Blur Ripple pada halaman aktif",
+          "result": "Menambahkan efek pointerdown berbentuk lingkaran putih blur yang membesar dan memudar otomatis. CSS bersama diterapkan melalui css/common.css; halaman error memperoleh styling pendamping dari css/error-animation.css. Script dimuat pada halaman utama, brief, FAQ, feedback, persetujuan, UI preview, serta halaman error 403/404/500/error. Arsip history tidak diubah. Runtime browser belum diverifikasi.",
           "updatedAt": "2026-11-03"
         }
       ]
