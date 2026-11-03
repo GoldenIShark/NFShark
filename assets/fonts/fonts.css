@@ -1,15 +1,15 @@
 /* NFShark font registry.
- * Place the supplied Telma-Light.woff2 in this folder to enable the title font.
+ * File Telma-Light.woff2 berada di folder yang sama.
  */
+@import url("https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap");
+
 @font-face {
   font-family: "Telma Light";
   src: url("./Telma-Light.woff2") format("woff2");
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 300;
   font-display: swap;
 }
-
-@import url("https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap");
 
 :root {
   --font-telma: "Telma Light", "Times New Roman", Times, serif;
