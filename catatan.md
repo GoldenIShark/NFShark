@@ -431,3 +431,22 @@ Tanggal: 2026-11-02
 - File dibaca dan diperbarui melalui GitHub connector (`fetch_file` dan `update_file`).
 - Branch yang tersedia dan digunakan: `main`; branch `utama` tidak ditemukan saat pemeriksaan.
 - Tidak ada command terminal atau pengujian browser yang dijalankan.
+
+
+---
+
+Tanggal: 2026-11-03
+
+## Area
+- Revisi transisi akhir intro loading halaman utama: `index.html` dan `css/style-studio.css`.
+- Sinkronisasi inventaris fitur dan rencana: `list/daftar-fitur.json` dan `list/daftar-rencana.json`.
+
+## Perubahan
+- Circular reveal dan radial mask dihapus.
+- Setelah progress mencapai 100%, seluruh konten loading (logo, nama merek, caption, label persentase, dan progress bar) melakukan transformasi membesar (`scale(1.7)`) sambil memudar selama 1 detik.
+- Latar loading berubah menjadi transparan pada waktu yang sama, sehingga halaman utama terlihat tanpa efek lingkaran.
+- Durasi FadeIn 0,5 detik dan progress 3,5 detik tetap dipertahankan; durasi total intro sekitar 5 detik.
+
+## Status verifikasi
+- Source HTML, CSS, dan JavaScript diperbarui melalui GitHub.
+- Pengujian runtime browser dan pemeriksaan visual belum dilakukan; belum diklaim lulus.
