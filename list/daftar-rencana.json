@@ -150,6 +150,12 @@
           "title": "Menerapkan White Blur Ripple pada halaman aktif",
           "result": "Menambahkan efek pointerdown berbentuk lingkaran putih blur yang membesar dan memudar otomatis. CSS bersama diterapkan melalui css/common.css; halaman error memperoleh styling pendamping dari css/error-animation.css. Script dimuat pada halaman utama, brief, FAQ, feedback, persetujuan, UI preview, serta halaman error 403/404/500/error. Arsip history tidak diubah. Runtime browser belum diverifikasi.",
           "updatedAt": "2026-11-03"
+        },
+        {
+          "id": "REN-016",
+          "title": "Menerapkan animasi Typewriter berulang pada headline hero",
+          "result": "Headline utama dipindahkan menjadi elemen penampil yang diisi JavaScript. Sumber teks dan konfigurasi berada di data/hero-text.js, sedangkan js/hero-typewriter.js mengatur pengetikan per karakter (45 ms), jeda 10 detik, penghapusan per karakter (30 ms), jeda kosong 2 detik, lalu loop. Dimulai setelah loading intro selesai dan menghormati prefers-reduced-motion. Belum diuji runtime browser.",
+          "updatedAt": "2026-11-03"
         }
       ]
     }
