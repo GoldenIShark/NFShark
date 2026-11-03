@@ -61,7 +61,7 @@
   };
 
   waitForIntro(() => {
-    timer = window.setTimeout(typeNext, config.completeDelay);
+    typeNext();
   });
 
   const handleMotionPreference = (event) => {
