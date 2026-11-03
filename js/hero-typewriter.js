@@ -9,6 +9,7 @@
   const characters = Array.from(config.text);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  target.textContent = '';
   target.setAttribute('aria-label', config.text);
   target.setAttribute('aria-live', 'off');
 
