@@ -511,3 +511,24 @@ Tanggal: 2026-11-03
 ## Status verifikasi
 - File kode dan dokumentasi diperbarui pada branch `main`.
 - Belum dilakukan pengujian runtime/visual lintas browser dan perangkat; belum diklaim lulus.
+
+
+---
+
+Tanggal: 2026-11-03
+
+## Area
+- Animasi Typewriter pada headline utama halaman beranda.
+
+## Perubahan
+- Teks headline `Membangun website dengan estetika terencana dan kecepatan nyata.` kini ditampilkan melalui elemen khusus `data-nf-typewriter`.
+- Sumber teks dan konfigurasi dipisahkan ke `data/hero-text.js`; logika animasi berada di `js/hero-typewriter.js`.
+- Urutan: mengetik per karakter (45 ms/karakter) → teks lengkap diam 10 detik → menghapus per karakter (30 ms/karakter) → area kosong 2 detik → mengulang.
+- Siklus pertama dimulai setelah loading intro selesai.
+- Menggunakan `Array.from` agar karakter Unicode diproses dengan benar, dan `textContent` untuk menampilkan teks.
+- Kursor visual berkedip ditambahkan melalui CSS.
+- Jika `prefers-reduced-motion: reduce` aktif, teks lengkap ditampilkan tanpa loop animasi.
+
+## Status verifikasi
+- Perubahan kode dan dokumentasi telah dikirim ke branch `main`.
+- Belum dilakukan pengujian runtime/visual di browser.
