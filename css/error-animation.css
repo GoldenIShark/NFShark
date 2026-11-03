@@ -22,7 +22,7 @@ body {
   padding: 24px;
   background: var(--error-bg);
   color: var(--error-text);
-  font: 16px/1.6 system-ui, sans-serif;
+  font: 16px/1.6 "Times New Roman", Times, serif;
 }
 
 .error-card {
