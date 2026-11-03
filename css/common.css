@@ -37,8 +37,9 @@
   --color-dark-text: #111a18;
   --color-light-text: #f5fbf8;
   --color-muted: #839993;
-  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-times-new-roman: "Times New Roman", Times, serif;
+  --font-sans: var(--font-times-new-roman);
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 18px;
