@@ -489,3 +489,25 @@ Tanggal: 2026-11-03
 ## Status verifikasi
 - Perubahan CSS dan dokumentasi dikirim ke branch `main`.
 - Belum dilakukan pemeriksaan visual lintas browser/perangkat.
+
+
+---
+
+Tanggal: 2026-11-03
+
+## Area
+- Efek interaksi White Blur Ripple pada halaman aktif NFShark.
+- File implementasi: `js/touch-ripple.js`, `css/common.css`, dan `css/error-animation.css`.
+
+## Perubahan
+- Menambahkan efek lingkaran putih transparan dengan radial gradient dan blur 16px.
+- Efek dipicu oleh `pointerdown`, sehingga mendukung sentuhan layar, mouse, dan stylus.
+- Lingkaran muncul pada posisi interaksi, membesar hingga diameter 140px, lalu memudar dalam 700ms.
+- Maksimal lima ripple aktif pada saat bersamaan; elemen efek dihapus setelah animasi selesai.
+- Script dimuat pada halaman utama, Brief, FAQ, Feedback, Persetujuan, UI Preview, serta halaman error 403, 404, 500, dan error.
+- Halaman arsip `history/` tidak diubah dan tidak memuat script efek.
+- Efek dinonaktifkan ketika `prefers-reduced-motion: reduce` aktif.
+
+## Status verifikasi
+- File kode dan dokumentasi diperbarui pada branch `main`.
+- Belum dilakukan pengujian runtime/visual lintas browser dan perangkat; belum diklaim lulus.
