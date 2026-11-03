@@ -470,7 +470,7 @@
     <!-- SKRIP INTERAKSI AKSESIBEL (Menu Mobile & Accordion) -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        // Intro NFShark: 0,5s FadeIn + 3,5s progress + 1s fade konten + 1s circular reveal.
+        // Intro NFShark: 0,5s FadeIn + 3,5s progress + 1s scale fade-out dengan latar transparan.
         const loadingScreen = document.getElementById('nf-loading-screen');
         const loadingContent = document.getElementById('nf-loading-content');
         const loadingFill = document.getElementById('nf-loading-fill');
@@ -497,7 +497,6 @@
             loadingScreen.hidden = false;
             const loadingDuration = 3500;
             const fadeContentDuration = 1000;
-            const revealDuration = 1000;
             const startProgress = performance.now();
 
             const colorStart = { r: 48, g: 58, b: 51 }; // #303A33
@@ -525,32 +524,13 @@
               loadingTrack.setAttribute('aria-valuenow', '100');
 
               window.setTimeout(() => {
+                // Konten (logo, teks, dan progress bar) membesar sambil memudar.
+                // Pada saat yang sama, latar loading berubah menjadi transparan.
                 loadingContent.classList.add('is-fading-out');
+                loadingScreen.classList.add('is-fading-out');
 
                 window.setTimeout(() => {
-                  loadingScreen.classList.add('is-revealing');
-                  const centerX = window.innerWidth / 2;
-                  const centerY = window.innerHeight / 2;
-                  const revealRadius = Math.ceil(Math.hypot(
-                    Math.max(centerX, window.innerWidth - centerX),
-                    Math.max(centerY, window.innerHeight - centerY)
-                  ));
-                  const revealStart = performance.now();
-
-                  const animateReveal = (revealNow) => {
-                    const rawProgress = Math.min((revealNow - revealStart) / revealDuration, 1);
-                    const easedProgress = 1 - Math.pow(1 - rawProgress, 3);
-                    loadingScreen.style.setProperty('--reveal-radius', (revealRadius * easedProgress) + 'px');
-
-                    if (rawProgress < 1) {
-                      requestAnimationFrame(animateReveal);
-                    } else {
-                      loadingScreen.remove();
-                    }
-                  };
-
-                  loadingScreen.style.setProperty('--reveal-radius', '0px');
-                  requestAnimationFrame(() => requestAnimationFrame(animateReveal));
+                  loadingScreen.remove();
                 }, fadeContentDuration);
               }, 0);
             };
