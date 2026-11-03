@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap");
+
 
 :root {
   --bg-primary: #071114;
@@ -37,7 +37,7 @@
   --color-dark-text: #111a18;
   --color-light-text: #f5fbf8;
   --color-muted: #839993;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-serif: var(--font-telma);
   --font-times-new-roman: "Times New Roman", Times, serif;
   --font-sans: var(--font-times-new-roman);
   --radius-sm: 6px;
