@@ -418,3 +418,18 @@ body {
 
   .error-shark__art [data-part="tail"] { animation-duration: 1.6s; }
 }
+/* White blur touch ripple shared interaction */
+.nf-touch-ripple {
+  position: fixed; z-index: 9999; width: 140px; height: 140px; border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,.32) 0%, rgba(255,255,255,.16) 34%, rgba(255,255,255,.055) 58%, rgba(255,255,255,0) 76%);
+  filter: blur(16px); opacity: 0; transform: translate(-50%,-50%) scale(.1);
+  animation: nf-touch-ripple-expand 700ms cubic-bezier(.16,.7,.25,1) forwards;
+  will-change: transform, opacity;
+}
+@keyframes nf-touch-ripple-expand {
+  0% { opacity: .85; transform: translate(-50%,-50%) scale(.1); }
+  72% { opacity: .38; }
+  100% { opacity: 0; transform: translate(-50%,-50%) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) { .nf-touch-ripple { display:none!important; animation:none!important; } }
