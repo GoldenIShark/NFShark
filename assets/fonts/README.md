@@ -34,7 +34,13 @@ Tambahkan stylesheet ini pada halaman yang membutuhkan font:
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 ```
 
-Gunakan variabel font:
+Gunakan Times New Roman untuk teks umum dan font display untuk aksen:
+
+```css
+body {
+  font-family: var(--font-times-new-roman);
+}
+```
 
 ```css
 .heading-editorial {
