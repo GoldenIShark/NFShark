@@ -118,8 +118,8 @@
         },
         {
           "id": "FIT-018",
-          "title": "Intro loading dan circular reveal halaman utama",
-          "description": "Intro halaman utama menampilkan logo NFShark, persentase progress 0–100% dengan warna dari hitam kehijauan ke hijau rumput, fade konten, lalu circular reveal transparan dari tengah layar.",
+          "title": "Intro loading dengan scale fade-out",
+          "description": "Intro halaman utama menampilkan logo NFShark, persentase progress 0–100% dengan warna dari hitam kehijauan ke hijau rumput, lalu seluruh konten loading (logo, teks, dan progress bar) membesar sambil memudar; latar loading ikut memudar menjadi transparan tanpa circular reveal.",
           "benefit": "Memberikan transisi pembuka singkat sebelum pengunjung melihat halaman utama.",
           "priority": "Rendah",
           "status": "Tersedia di source; runtime browser belum diverifikasi",
@@ -127,7 +127,7 @@
             "index.html",
             "css/style-studio.css"
           ],
-          "testNotes": "Timeline source: FadeIn 0,5 detik, progress 3,5 detik, fade konten 1 detik, circular reveal 1 detik. Intro dibatasi satu kali per tab session melalui sessionStorage. Belum diuji secara visual di browser."
+          "testNotes": "Timeline source: FadeIn 0,5 detik, progress 3,5 detik, scale fade-out konten dan transisi latar transparan 1 detik. Intro dibatasi satu kali per tab session melalui sessionStorage. Belum diuji secara visual di browser."
         }
       ]
     },
