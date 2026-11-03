@@ -43,7 +43,7 @@ Dokumen ini memuat katalog seluruh komponen UI, token desain, dan kelas CSS yang
 | Variabel | Nilai | Keterangan |
 |---|---|---|
 | `--font-serif` | `"Playfair Display", Georgia, serif` | Tipografi headline editorial |
-| `--font-sans` | `"Plus Jakarta Sans", system-ui, sans-serif` | Tipografi sans-serif netral |
+| `--font-sans` | `"Times New Roman", Times, serif` | Tipografi teks umum dan antarmuka |
 | `--radius-sm` | `6px` | Radius kecil (input, badge, tombol) |
 | `--radius-md` | `12px` | Radius sedang (kartu, panel) |
 | `--radius-lg` | `18px` | Radius besar (modal, mockup) |
