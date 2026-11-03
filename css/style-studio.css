@@ -858,3 +858,29 @@ section[id] {
     will-change: auto;
   }
 }
+
+/* ==========================================================================
+   NFShark Hero Typewriter
+   ========================================================================== */
+.hero-typewriter-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.hero-typewriter-caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.88em;
+  margin-left: 0.12em;
+  vertical-align: -0.06em;
+  background: currentColor;
+  animation: nf-typewriter-caret-blink 850ms steps(2, start) infinite;
+}
+
+@keyframes nf-typewriter-caret-blink {
+  to { visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-typewriter-caret { display: none; animation: none; }
+}
