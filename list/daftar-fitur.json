@@ -157,6 +157,31 @@
             "css/style-studio.css"
           ],
           "testNotes": "Kecepatan ketik 45 ms/karakter, hapus 30 ms/karakter; memakai Array.from untuk karakter Unicode; animasi dimulai setelah loading intro dan menghormati prefers-reduced-motion."
+        },
+        {
+          "id": "FIT-021",
+          "title": "Sistem tipografi NFShark dengan Telma Light",
+          "description": "Telma Light ditetapkan sebagai font judul, Times New Roman untuk teks umum, Rosaline untuk aksen script opsional, dan system monospace untuk informasi teknis. Registry font dimuat pada halaman aktif selain history.",
+          "benefit": "Menyatukan hierarki tipografi dan menyediakan daftar font serta fungsi yang terdokumentasi.",
+          "priority": "Sedang",
+          "status": "CSS dan dokumentasi tersedia; file Telma-Light.woff2 perlu diunggah ke assets/fonts sebelum font judul tampil.",
+          "files": [
+            "assets/fonts/fonts.css",
+            "assets/fonts/README.md",
+            "css/common.css",
+            "css/style-studio.css",
+            "index.html",
+            "brief.html",
+            "faq.html",
+            "feedback.html",
+            "persetujuan.html",
+            "ui-preview.html",
+            "403.html",
+            "404.html",
+            "500.html",
+            "error.html"
+          ],
+          "testNotes": "Telma Light diatur pada @font-face bobot 300. Pastikan file assets/fonts/Telma-Light.woff2 tersedia dan lisensi mengizinkan penggunaan publik/komersial."
         }
       ]
     },
