@@ -532,3 +532,31 @@ Tanggal: 2026-11-03
 ## Status verifikasi
 - Perubahan kode dan dokumentasi telah dikirim ke branch `main`.
 - Belum dilakukan pengujian runtime/visual di browser.
+
+
+---
+
+Tanggal: 2026-11-03
+
+## Area
+- Sistem tipografi judul dan daftar font seluruh halaman aktif NFShark.
+
+## Perubahan
+- Font judul sebelumnya (Bespoke Serif/Playfair Display) diganti dengan Telma Light melalui token `--font-telma` dan `--font-serif`.
+- Judul umum H1–H6 pada `css/common.css` diarahkan ke Telma Light.
+- Headline dan heading editorial NFShark Studio memakai Telma Light, termasuk teks highlight yang sebelumnya memakai font aksen.
+- Times New Roman tetap menjadi font teks umum dan UI.
+- Rosaline tetap tersedia sebagai font aksen script opsional; system monospace digunakan untuk konten teknis.
+- Registry font dimuat di beranda, Brief, FAQ, Feedback, Persetujuan, UI Preview, dan halaman error 403/404/500.
+- Halaman lama di folder `history/` tidak diubah.
+- `assets/fonts/README.md` memuat inventaris font, kategori, dan cara penggunaan.
+
+## File font yang diperlukan
+- Letakkan `Telma-Light.woff2` pada `assets/fonts/Telma-Light.woff2`.
+- File WOFF2 hasil konversi dari font TTF yang diberikan telah disiapkan untuk diunggah.
+- File font biner belum dapat ditambahkan melalui operasi teks GitHub yang tersedia pada sesi ini; sebelum file tersebut diunggah, browser akan memakai fallback Times New Roman untuk judul.
+
+## Status verifikasi
+- CSS dan dokumentasi telah diperbarui di branch `main`.
+- Belum dilakukan pengujian visual browser.
+- Pastikan lisensi Telma mengizinkan penggunaan website publik/komersial.
