@@ -409,30 +409,37 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--green); outline
 }
 
 
-/* ==========================================================================
-   NFShark White Blur Ripple — interaksi pointer global
+/* ===========================================================================
+   NFShark press feedback and tap ring
    ========================================================================== */
 .nf-touch-ripple {
   position: fixed;
   z-index: 9999;
-  width: 140px;
-  height: 140px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.16) 34%, rgba(255,255,255,0.055) 58%, rgba(255,255,255,0) 76%);
-  filter: blur(16px);
+  border: 1.5px solid #2dd4bf;
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.1);
-  animation: nf-touch-ripple-expand 700ms cubic-bezier(0.16, 0.7, 0.25, 1) forwards;
-  will-change: transform, opacity;
+  transform: translate(-50%, -50%) scale(.78);
+  animation: nf-touch-ripple-expand 280ms ease-out forwards;
 }
 
 @keyframes nf-touch-ripple-expand {
-  0% { opacity: 0.85; transform: translate(-50%, -50%) scale(0.1); }
-  72% { opacity: 0.38; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+  0% { opacity: .72; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.12); }
+}
+
+.nf-press-feedback {
+  transition: scale 110ms ease-out;
+}
+
+.nf-press-feedback.is-pressed {
+  scale: .97;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nf-touch-ripple { display: none !important; animation: none !important; }
+  .nf-touch-ripple { display: none; animation: none; }
+  .nf-press-feedback { transition: none; }
+  .nf-press-feedback.is-pressed { scale: 1; }
 }

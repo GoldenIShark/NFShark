@@ -144,7 +144,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 1;
+  z-index: 2;
   display: none;
   width: clamp(118px, 34vw, 156px);
   aspect-ratio: 1.87;
@@ -281,7 +281,7 @@ body {
   pointer-events: none;
   padding: clamp(24px, 6vw, 42px);
   border-radius: 0 0 19px 19px;
-  background: rgb(16 35 30 / 78%);
+  background: rgb(16 35 30 / 70%);
 }
 
 .error-code {
@@ -420,12 +420,16 @@ body {
 }
 /* White blur touch ripple shared interaction */
 .nf-touch-ripple {
-  position: fixed; z-index: 9999; width: 140px; height: 140px; border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #2dd4bf;
+  border-radius: 50%;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(255,255,255,.32) 0%, rgba(255,255,255,.16) 34%, rgba(255,255,255,.055) 58%, rgba(255,255,255,0) 76%);
-  filter: blur(16px); opacity: 0; transform: translate(-50%,-50%) scale(.1);
-  animation: nf-touch-ripple-expand 700ms cubic-bezier(.16,.7,.25,1) forwards;
-  will-change: transform, opacity;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.78);
+  animation: nf-touch-ripple-expand 280ms ease-out forwards;
 }
 @keyframes nf-touch-ripple-expand {
   0% { opacity: .85; transform: translate(-50%,-50%) scale(.1); }

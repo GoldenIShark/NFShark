@@ -41,6 +41,11 @@
 ## Aturan Pencatatan File (Wajib)
 Setiap kali melakukan penambahan, perubahan, atau penghapusan file di repository ini, pengembang/agent **WAJIB** mencatat perubahan tersebut ke file `/catatan.md` di root dengan mencantumkan tanggal, area yang disentuh, fakta & keputusan teknis, dampak, status verifikasi, dan command yang digunakan.
 
+### Batas Arsip `catatan.md`
+- Saat `catatan.md` mencapai 500 baris ATAU 50 KB (mana yang lebih dulu), arsipkan seluruh isinya tanpa kehilangan riwayat sebagai `catatan-vN.md` dengan nomor versi berikutnya yang belum digunakan.
+- Setelah arsip dibuat, mulai log aktif baru di `catatan.md` dengan rujukan jelas ke arsip tersebut.
+- Jika masih di bawah kedua ambang, jangan memecah atau mengarsipkan catatan.
+
 ## Aturan khusus aset portofolio
 Untuk pekerjaan gambar pada situs di `portofolio/`, gunakan skill `asset-management` dan patuhi `.github/skills/convert-images-to-webp/SKILL.md` (beserta tool Python `convert_to_webp.py`) bila konversi relevan. Periksa hanya folder aset situs yang sedang dikerjakan (`portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` jika situs berada langsung di kategori). Jangan mengubah `assets/` situs utama kecuali diminta. Jangan mengonversi SVG secara otomatis atau meratakan GIF animasi.
 

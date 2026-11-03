@@ -76,8 +76,13 @@ Jangan menyatakan pengujian berhasil apabila pengujian tersebut belum benar-bena
 
 - Saat menulis kode, usahakan kode sesingkat, seefisien, dan serapi mungkin; hindari kode bertele‑tele, gunakan sintaks singkat, dan pertahankan keterbacaan.
 
+## 9. Batas Arsip `catatan.md`
 
-## 9. Sinkronisasi Wajib dengan Data `list/` (Semua Agent)
+- Saat `catatan.md` mencapai 500 baris atau 50 KB (mana yang lebih dulu), arsipkan seluruh isinya tanpa kehilangan riwayat sebagai `catatan-vN.md` dengan nomor versi berikutnya yang belum digunakan.
+- Setelah arsip dibuat, mulai log aktif baru di `catatan.md` dan sertakan rujukan yang jelas ke arsip.
+- Jika masih di bawah kedua ambang, jangan memecah atau mengarsipkan catatan.
+
+## 10. Sinkronisasi Wajib dengan Data `list/` (Semua Agent)
 
 Setiap pekerjaan yang mengubah website—baik diminta langsung oleh pemilik maupun dikerjakan sebagai tindak lanjut agent—WAJIB terhubung dengan dokumentasi data di folder `list/`. Aturan ini berlaku sebelum dan sesudah perubahan, tanpa perlu pengingat tambahan.
 

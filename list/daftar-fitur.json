@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-03",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -131,17 +131,17 @@
         },
         {
           "id": "FIT-019",
-          "title": "White Blur Ripple untuk sentuhan dan klik",
-          "description": "Lingkaran putih transparan dengan blur muncul pada posisi pointerdown, membesar, lalu memudar. Diterapkan pada halaman aktif kecuali arsip history.",
+          "title": "Press & Release dan ring tap",
+          "description": "Elemen kontrol interaktif mendapat scale singkat saat ditekan dengan pointer atau keyboard lalu kembali saat dilepas. Ring garis kecil muncul pada pointerdown utama di area non-kontrol dan memudar tanpa blur.",
           "benefit": "Memberikan umpan balik visual pada interaksi pengguna.",
           "priority": "Rendah",
-          "status": "Tersedia di source; pengujian runtime belum dilakukan",
+          "status": "Tersedia di source; uji browser belum dilakukan",
           "files": [
             "js/touch-ripple.js",
             "css/common.css",
             "css/error-animation.css"
           ],
-          "testNotes": "Durasi 700 ms, diameter 140 px, maksimal lima ripple aktif, mendukung prefers-reduced-motion."
+          "testNotes": "Ring berdiameter 42 px dan berdurasi 280 ms dengan maksimal lima ring aktif; press scale 0.97 dan kembali pada pointerup/pointercancel, blur, atau keyup. Pemicu pointerdown utama melayani mouse kiri, touch, dan pen; ring tidak dibuat di atas kontrol/form/editable. prefers-reduced-motion menghentikan gerakan. Sintaks js/touch-ripple.js diperiksa dengan node --check; tap/press dan reduced motion belum diuji di browser."
         },
         {
           "id": "FIT-020",
@@ -182,6 +182,22 @@
             "error.html"
           ],
           "testNotes": "Telma Light diatur pada @font-face bobot 300. Pastikan file assets/fonts/Telma-Light.woff2 tersedia dan lisensi mengizinkan penggunaan publik/komersial."
+        },
+        {
+          "id": "FIT-022",
+          "title": "Panel konten halaman error dengan latar transparan",
+          "description": "Selector .error-content pada css/error-animation.css menggunakan latar rgb(16 35 30 / 50%) dan stylesheet dimuat oleh halaman 403, 404, 500, serta error.",
+          "benefit": "Membuat panel konten halaman error sedikit lebih transparan.",
+          "priority": "Rendah",
+          "status": "Tersedia di source; pengujian visual browser belum dilakukan",
+          "files": [
+            "css/error-animation.css",
+            "403.html",
+            "404.html",
+            "500.html",
+            "error.html"
+          ],
+          "testNotes": "Nilai alpha 50% diverifikasi pada source CSS dan referensi stylesheet diperiksa pada halaman 403, 404, 500, serta error; tampilan visual di browser belum diuji."
         }
       ]
     },
