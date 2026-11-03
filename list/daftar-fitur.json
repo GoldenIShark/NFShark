@@ -128,6 +128,35 @@
             "css/style-studio.css"
           ],
           "testNotes": "Timeline source: FadeIn 0,5 detik, progress 3,5 detik, scale fade-out konten dan transisi latar transparan 1 detik. Intro dibatasi satu kali per tab session melalui sessionStorage. Belum diuji secara visual di browser."
+        },
+        {
+          "id": "FIT-019",
+          "title": "White Blur Ripple untuk sentuhan dan klik",
+          "description": "Lingkaran putih transparan dengan blur muncul pada posisi pointerdown, membesar, lalu memudar. Diterapkan pada halaman aktif kecuali arsip history.",
+          "benefit": "Memberikan umpan balik visual pada interaksi pengguna.",
+          "priority": "Rendah",
+          "status": "Tersedia di source; pengujian runtime belum dilakukan",
+          "files": [
+            "js/touch-ripple.js",
+            "css/common.css",
+            "css/error-animation.css"
+          ],
+          "testNotes": "Durasi 700 ms, diameter 140 px, maksimal lima ripple aktif, mendukung prefers-reduced-motion."
+        },
+        {
+          "id": "FIT-020",
+          "title": "Animasi Typewriter berulang pada headline hero",
+          "description": "Teks headline dikelola dari data/hero-text.js dan ditampilkan per karakter oleh js/hero-typewriter.js. Setelah selesai mengetik menunggu 10 detik, menghapus per karakter, menunggu 2 detik, lalu mengulang.",
+          "benefit": "Menambahkan gerakan tipografi pada headline utama tanpa library eksternal.",
+          "priority": "Sedang",
+          "status": "Tersedia di source; pengujian runtime belum dilakukan",
+          "files": [
+            "index.html",
+            "data/hero-text.js",
+            "js/hero-typewriter.js",
+            "css/style-studio.css"
+          ],
+          "testNotes": "Kecepatan ketik 45 ms/karakter, hapus 30 ms/karakter; memakai Array.from untuk karakter Unicode; animasi dimulai setelah loading intro dan menghormati prefers-reduced-motion."
         }
       ]
     },
