@@ -450,3 +450,22 @@ Tanggal: 2026-11-03
 ## Status verifikasi
 - Source HTML, CSS, dan JavaScript diperbarui melalui GitHub.
 - Pengujian runtime browser dan pemeriksaan visual belum dilakukan; belum diklaim lulus.
+
+
+---
+
+Tanggal: 2026-11-03
+
+## Area
+- Animasi elemen individual pada halaman utama: `index.html` dan `css/style-studio.css`.
+
+## Perubahan
+- Menambahkan animasi reveal pada elemen konten secara individual, bukan pada section atau container.
+- Efek awal: opacity 0, posisi Y bergeser 24px ke bawah, dan scale 0.96.
+- Saat elemen masuk viewport: FadeIn ke opacity 1, translateY ke 0, dan scale ke 1.
+- Elemen diamati dengan IntersectionObserver dan berhenti diamati setelah tampil.
+- Menghormati preferensi `prefers-reduced-motion`; fallback menampilkan elemen tanpa animasi jika IntersectionObserver tidak tersedia.
+
+## Status verifikasi
+- Perubahan HTML dan CSS telah dikirim ke branch `main`.
+- Belum dilakukan pengujian visual langsung di browser.
