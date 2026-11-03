@@ -43,7 +43,7 @@ section[id] {
 /* Sistem Tipografi NFShark Studio
    1. Rosaline: aksen paling mencolok, hanya pada frasa pilihan.
    2. Bespoke Serif: heading dan penekanan editorial.
-   3. Plus Jakarta Sans: seluruh teks isi dan antarmuka.
+   3. Times New Roman: seluruh teks isi dan antarmuka.
 */
 .studio-body :is(h1, h2, h3) {
   font-family: var(--studio-font-editorial);
