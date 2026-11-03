@@ -539,6 +539,39 @@
             window.setTimeout(() => requestAnimationFrame(animateProgress), 500);
           }
         }
+        // 0. Animasi elemen individual saat masuk viewport (tanpa menganimasikan container).
+        const motionItems = document.querySelectorAll(
+          'main h1, main h2, main h3, main h4, main p, main a, main button, main img, main li, main span, main strong, main em, main small, main figure, main blockquote, main label, main input, main textarea, main select, main th, main td, .studio-header a, .studio-header button, .studio-footer h3, .studio-footer p, .studio-footer a, .studio-footer strong, .studio-footer span, .studio-footer .badge-editorial'
+        );
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          const revealItem = (item) => item.classList.add('nf-animate-visible');
+
+          if ('IntersectionObserver' in window) {
+            const motionObserver = new IntersectionObserver((entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  revealItem(entry.target);
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, {
+              threshold: 0.08,
+              rootMargin: '0px 0px -35px 0px'
+            });
+
+            motionItems.forEach((item) => {
+              if (item.closest('.nf-loading-screen')) return;
+              item.classList.add('nf-animate-item');
+              motionObserver.observe(item);
+            });
+          } else {
+            motionItems.forEach((item) => {
+              if (!item.closest('.nf-loading-screen')) revealItem(item);
+            });
+          }
+        }
+
         // 1. Menu Mobile Handler dengan Escape & Focus Management
         const menuToggle = document.querySelector('.menu-toggle');
         const mainNav = document.querySelector('.main-nav');
