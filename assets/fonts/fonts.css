@@ -1,13 +1,21 @@
-/*
- * NFShark Font Assets
- * Font files are served by the official Fontshare CSS API.
- * Do not copy or redistribute the original font binaries from this repository.
+/* NFShark font registry.
+ * Place the supplied Telma-Light.woff2 in this folder to enable the title font.
  */
+@font-face {
+  font-family: "Telma Light";
+  src: url("./Telma-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
 
-@import url("https://api.fontshare.com/v2/css?f[]=bespoke-serif@300,400,500,700,800&f[]=rosaline@400&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap");
 
 :root {
+  --font-telma: "Telma Light", "Times New Roman", Times, serif;
   --font-times-new-roman: "Times New Roman", Times, serif;
-  --font-bespoke-serif: "Bespoke Serif", Georgia, serif;
   --font-rosaline: "Rosaline", "Brush Script MT", cursive;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font-serif: var(--font-telma);
+  --font-sans: var(--font-times-new-roman);
 }
