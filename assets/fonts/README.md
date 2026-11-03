@@ -1,68 +1,59 @@
 # NFShark — Font Assets
 
-Folder ini berisi konfigurasi pemanggilan font web yang telah dipilih dari arsip `Font.zip`. Berkas font mentah tidak disalin ke repository; font yang dipilih dimuat melalui CSS resmi Fontshare.
+## Daftar font dan penggunaannya
 
-## Tipografi NFShark Studio
+| Font | Kategori | Penggunaan | Status |
+|---|---|---|---|
+| **Telma Light** | Display / judul | H1–H6, judul section, heading editorial | Font judul utama; file WOFF2 perlu berada di folder ini |
+| **Times New Roman** | Serif / teks umum | Paragraf, navigasi, tombol, label, formulir, UI | Fallback sistem, tidak perlu file font |
+| **Rosaline** | Script / dekoratif | Aksen pendek dan ornamen tipografi | Dimuat dari Fontshare |
+| **System monospace** | Monospace | URL preview, kode, dan informasi teknis | Font sistem; tidak perlu file tambahan |
 
-| Kategori | Font | Penggunaan |
-|---|---|---|
-| Mencolok | Rosaline | Frasa pendek/aksen dekoratif yang sengaja ditonjolkan |
-| Mencolok sebagian | Bespoke Serif | Judul utama, heading bagian, dan angka editorial |
-| Teks umum | Times New Roman | Paragraf, navigasi, tombol, label, formulir, dan teks UI |
+## Telma Light (font judul utama)
 
-Times New Roman digunakan sebagai font umum melalui font sistem yang tersedia di perangkat pengguna. Tidak diperlukan file font tambahan atau unduhan eksternal untuk Times New Roman. Dua font display di bawah dimuat melalui Fontshare.
+- Nama internal: `Telma Light`
+- File web: `Telma-Light.woff2`
+- Bobot: 300 (Light)
+- Penggunaan: menggantikan Bespoke Serif/Playfair Display sebagai font judul.
+- Sumber file asli: font TTF yang diberikan untuk proyek NFShark.
+- CSS: `@font-face` di `fonts.css`.
 
-## Font display terpilih
+Letakkan file `Telma-Light.woff2` di folder `assets/fonts/`. File TTF yang diberikan telah dikonversi ke WOFF2 agar lebih efisien untuk web.
 
-### Bespoke Serif
-- Desainer: Jeremie Hornus, Theo Guillard, Morgane Pambrun, Alisa Nowak, Joachim Vu.
-- Sumber: [Fontshare — Bespoke Serif](https://www.fontshare.com/fonts/bespoke-serif)
-- Fungsi: judul, heading, dan elemen editorial.
-- Bobot yang diminta: 300, 400, 500, 700, 800.
+## Times New Roman
 
-### Rosaline
-- Desainer: Jérémie Hornus.
+Times New Roman adalah font sistem. Tidak perlu mengunggah TTF/WOFF. CSS memakai fallback `Times` dan `serif` jika font tidak tersedia pada perangkat.
+
+## Rosaline
+
 - Sumber: [Fontshare — Rosaline](https://www.fontshare.com/fonts/rosaline)
-- Fungsi: aksen script/dekoratif. Jangan digunakan untuk paragraf atau teks UI.
-- Bobot yang diminta: 400.
+- Penggunaan: aksen script pendek saja, bukan paragraf atau teks informasi.
+- Dimuat menggunakan CSS resmi Fontshare.
 
-## Cara menggunakan
+## System monospace
 
-Tambahkan stylesheet ini pada halaman yang membutuhkan font:
+Menggunakan `ui-monospace, SFMono-Regular, Consolas, monospace` untuk konten teknis. Browser memilih font monospace yang tersedia pada perangkat.
 
-```html
-<link rel="stylesheet" href="assets/fonts/fonts.css">
-```
+## Penggunaan CSS
 
-Gunakan Times New Roman untuk teks umum dan font display untuk aksen:
+Semua halaman aktif yang memuat `assets/fonts/fonts.css` dapat menggunakan token berikut:
 
 ```css
-body {
-  font-family: var(--font-times-new-roman);
-}
+body { font-family: var(--font-times-new-roman); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-telma); }
+.text-accent { font-family: var(--font-rosaline); }
+.code, .technical-label { font-family: var(--font-mono); }
 ```
 
-```css
-.heading-editorial {
-  font-family: var(--font-bespoke-serif);
-}
+## Catatan halaman
 
-.signature-accent {
-  font-family: var(--font-rosaline);
-}
-```
+- Font judul NFShark Studio menggunakan Telma Light.
+- Font teks umum tetap Times New Roman.
+- Rosaline hanya untuk aksen yang memang memerlukan gaya script.
+- UI teknis dapat memakai monospace.
+- Halaman lama di folder `history/` dikecualikan dari perubahan sistem tipografi.
+- Website demo di `portofolio/` dapat memiliki tipografi mandiri sesuai desain masing-masing dan tidak otomatis mengikuti sistem font halaman utama.
 
-Font diambil dari API/CDN Fontshare. Halaman memerlukan koneksi internet untuk memuat font; jika layanan eksternal tidak tersedia, browser menggunakan fallback Georgia atau cursive.
+## Catatan lisensi
 
-## Hasil pemeriksaan arsip
-
-- Arsip memuat beberapa format font yang sama (OTF, TTF, WOFF, WOFF2). Tidak perlu menambahkan semua duplikat ke website.
-- Bespoke Serif dan Rosaline dipilih sebagai kandidat web font karena arsip menyediakan file web WOFF2 dan CSS sumber.
-- File `ShalyzeCln-Regular.otf` diberi label **PERSONAL USE ONLY**, sehingga tidak dimasukkan untuk website jasa komersial.
-- Catatan lisensi `Mrs. Monster` menyebut penggunaan gratis hanya untuk non-komersial; penggunaan komersial memerlukan lisensi dari pembuatnya. Font ini tidak dimasukkan.
-- Someday, Roman New Times, dan file lain tanpa keterangan lisensi yang memadai tidak dimasukkan.
-- Fontshare memiliki ketentuan lisensi per keluarga font. Periksa panel lisensi keluarga font di situs resmi sebelum pemakaian produksi, khususnya bila cara distribusi atau penggunaan berubah. Konfigurasi ini menggunakan stylesheet resmi Fontshare dan tidak mengunggah ulang file font mereka.
-
-## Penerapan saat ini
-
-Pada halaman utama dan halaman aktif NFShark, Times New Roman digunakan untuk teks umum dan UI, Bespoke Serif untuk heading/penekanan editorial, serta Rosaline untuk frasa aksen pendek. Rosaline tidak digunakan pada paragraf panjang atau informasi penting karena keterbacaannya lebih rendah.
+Pastikan lisensi font Telma mengizinkan penggunaan pada website publik/komersial sebelum deployment produksi. File sumber diberikan oleh pemilik proyek; informasi lisensi tidak disimpulkan dari nama file.
