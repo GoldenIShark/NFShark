@@ -2,15 +2,15 @@
 
 Folder ini berisi konfigurasi pemanggilan font web yang telah dipilih dari arsip `Font.zip`. Berkas font mentah tidak disalin ke repository; font yang dipilih dimuat melalui CSS resmi Fontshare.
 
-## Tiga font utama NFShark Studio
+## Tipografi NFShark Studio
 
 | Kategori | Font | Penggunaan |
 |---|---|---|
 | Mencolok | Rosaline | Frasa pendek/aksen dekoratif yang sengaja ditonjolkan |
 | Mencolok sebagian | Bespoke Serif | Judul utama, heading bagian, dan angka editorial |
-| Semua teks | Plus Jakarta Sans | Paragraf, navigasi, tombol, label, formulir, dan teks UI |
+| Teks umum | Times New Roman | Paragraf, navigasi, tombol, label, formulir, dan teks UI |
 
-Plus Jakarta Sans sudah menjadi font antarmuka website melalui Google Fonts. Dua font display di bawah dimuat melalui Fontshare.
+Times New Roman digunakan sebagai font umum melalui font sistem yang tersedia di perangkat pengguna. Tidak diperlukan file font tambahan atau unduhan eksternal untuk Times New Roman. Dua font display di bawah dimuat melalui Fontshare.
 
 ## Font display terpilih
 
@@ -59,4 +59,4 @@ Font diambil dari API/CDN Fontshare. Halaman memerlukan koneksi internet untuk m
 
 ## Penerapan saat ini
 
-Pada halaman utama, ketiga font dipetakan berdasarkan fungsi: Plus Jakarta Sans untuk seluruh teks umum dan UI, Bespoke Serif untuk heading/penekanan editorial, serta Rosaline untuk frasa aksen pendek. Rosaline tidak digunakan pada paragraf panjang atau informasi penting karena keterbacaannya lebih rendah.
+Pada halaman utama dan halaman aktif NFShark, Times New Roman digunakan untuk teks umum dan UI, Bespoke Serif untuk heading/penekanan editorial, serta Rosaline untuk frasa aksen pendek. Rosaline tidak digunakan pada paragraf panjang atau informasi penting karena keterbacaannya lebih rendah.
