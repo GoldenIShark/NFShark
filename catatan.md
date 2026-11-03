@@ -469,3 +469,23 @@ Tanggal: 2026-11-03
 ## Status verifikasi
 - Perubahan HTML dan CSS telah dikirim ke branch `main`.
 - Belum dilakukan pengujian visual langsung di browser.
+
+
+---
+
+Tanggal: 2026-11-03
+
+## Area
+- Penyesuaian tipografi umum NFShark dan inventaris font: `assets/fonts/fonts.css`, `assets/fonts/README.md`, `css/common.css`, `css/error-animation.css`, `css/style-studio.css`, dan `Daftar-UI.md`.
+
+## Perubahan
+- Times New Roman ditetapkan sebagai font teks umum melalui `--font-times-new-roman` dan `--font-sans`.
+- Penerapan mencakup halaman aktif yang menggunakan `css/common.css`, termasuk halaman utama, brief, FAQ, feedback, persetujuan, dan UI preview.
+- Halaman error 403/404/500 menggunakan Times New Roman melalui `css/error-animation.css`.
+- Bespoke Serif dan Rosaline tetap tersedia sebagai font display/editorial.
+- Times New Roman tidak ditambahkan sebagai file font biner karena merupakan font sistem; CSS memakai fallback `Times` dan `serif` jika font tersebut tidak tersedia pada perangkat.
+- Folder `history/` (halaman lama) dan website demo terpisah di `portofolio/` tidak diubah.
+
+## Status verifikasi
+- Perubahan CSS dan dokumentasi dikirim ke branch `main`.
+- Belum dilakukan pemeriksaan visual lintas browser/perangkat.
