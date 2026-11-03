@@ -141,9 +141,9 @@
         },
         {
           "id": "REN-014",
-          "title": "Menambahkan intro loading dan circular reveal halaman utama",
-          "result": "Markup loading, progress bar 0–100%, transisi warna, fade konten, dan circular reveal ditambahkan pada halaman utama. Runtime browser belum diverifikasi.",
-          "updatedAt": "2026-11-02"
+          "title": "Mengubah transisi akhir intro loading halaman utama",
+          "result": "Animasi akhir diubah: logo, teks, dan progress bar membesar sambil memudar selama 1 detik, sementara latar loading berubah menjadi transparan. Circular reveal/radial mask dihapus. Runtime browser belum diverifikasi.",
+          "updatedAt": "2026-11-03"
         }
       ]
     }
