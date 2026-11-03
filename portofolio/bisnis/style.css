@@ -1380,3 +1380,16 @@ p {
     transform: none;
   }
 }
+
+
+/* NFShark global body typography: Times New Roman for general text. */
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
