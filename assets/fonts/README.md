@@ -4,7 +4,7 @@
 
 | Font | Kategori | Penggunaan | Status |
 |---|---|---|---|
-| **Telma Light** | Display / judul | H1–H6, judul section, heading editorial | Font judul utama; file WOFF2 perlu berada di folder ini |
+| **Telma Light** | Display / judul | H1–H6, judul section, heading editorial | Font judul utama; file TTF tersedia di folder ini |
 | **Times New Roman** | Serif / teks umum | Paragraf, navigasi, tombol, label, formulir, UI | Fallback sistem, tidak perlu file font |
 | **Rosaline** | Script / dekoratif | Aksen pendek dan ornamen tipografi | Dimuat dari Fontshare |
 | **System monospace** | Monospace | URL preview, kode, dan informasi teknis | Font sistem; tidak perlu file tambahan |
@@ -12,13 +12,13 @@
 ## Telma Light (font judul utama)
 
 - Nama internal: `Telma Light`
-- File web: `Telma-Light.woff2`
+- File web: `Telma-Light.ttf`
 - Bobot: 300 (Light)
 - Penggunaan: menggantikan Bespoke Serif/Playfair Display sebagai font judul.
 - Sumber file asli: font TTF yang diberikan untuk proyek NFShark.
 - CSS: `@font-face` di `fonts.css`.
 
-Letakkan file `Telma-Light.woff2` di folder `assets/fonts/`. File TTF yang diberikan telah dikonversi ke WOFF2 agar lebih efisien untuk web.
+Letakkan file `Telma-Light.ttf` di folder `assets/fonts/`. File TTF asli yang diberikan digunakan langsung oleh browser; format WOFF2 dapat dipertimbangkan kemudian untuk ukuran unduhan lebih kecil.
 
 ## Times New Roman
 
