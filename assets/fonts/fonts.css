@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Telma Light";
-  src: url("./Telma-Light.woff2") format("woff2");
+  src: url("./Telma-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
   font-display: swap;
