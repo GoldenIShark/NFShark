@@ -39,7 +39,7 @@
 - Pembuatan/penambahan skill dan tooling otomatis baru: `skill-creator`
 
 ## Aturan Pencatatan File (Wajib)
-Setiap kali melakukan penambahan, perubahan, atau penghapusan file di repository ini, pengembang/agent **WAJIB** mencatat perubahan tersebut ke file `/catatan.md` di root dengan mencantumkan tanggal, area yang disentuh, fakta & keputusan teknis, dampak, status verifikasi, dan command yang digunakan.
+Setiap kali melakukan penambahan, perubahan, atau penghapusan file di repository ini, pengembang/agent **WAJIB** mencatat perubahan tersebut ke file `/catatan.md` di root dengan mencantumkan tanggal, area yang disentuh, fakta & keputusan teknis, dampak, status verifikasi, dan command yang digunakan. **Pengecualian read-only:** jika tugas hanya memeriksa/membaca/mencari/audit struktur atau isi file tanpa menambah, mengubah, atau menghapus file apa pun, tidak perlu membuat atau memperbarui `catatan.md`; cukup laporkan file yang diperiksa dan temuannya. Jika ada perubahan file, kewajiban pencatatan kembali berlaku.
 
 ### Batas Arsip `catatan.md`
 - Saat `catatan.md` mencapai 500 baris ATAU 50 KB (mana yang lebih dulu), arsipkan seluruh isinya tanpa kehilangan riwayat sebagai `catatan-vN.md` dengan nomor versi berikutnya yang belum digunakan.
