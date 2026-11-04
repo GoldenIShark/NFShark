@@ -90,3 +90,30 @@ Tanggal: 2026-11-04
 ## Command yang digunakan
 - GitHub repository search untuk `Telma`, `Telma-Light.woff2`, `catatan.md`, dan file instruksi agent.
 - GitHub file fetch untuk memeriksa isi file terkait dan menguji keberadaan `assets/fonts/Telma-Light.woff2`.
+
+
+---
+
+Tanggal: 2026-11-04
+
+## Area
+- Perbaikan pemuatan font Telma: `assets/fonts/fonts.css`, dokumentasi `assets/fonts/README.md`, inventaris `list/daftar-fitur.json`, dan temuan `list/daftar-masalah.json`.
+
+## Fakta dan keputusan teknis
+- Aset yang telah diunggah bernama `assets/fonts/Telma-Light.ttf` (118.396 byte), bukan WOFF2.
+- Pemeriksaan base64 file menunjukkan signature TrueType `00 01 00 00`; aset dapat digunakan langsung sebagai font TTF.
+- `@font-face` sebelumnya meminta `Telma-Light.woff2`, sehingga path tidak cocok dengan file yang tersedia.
+- CSS diperbaiki untuk meminta `./Telma-Light.ttf` dengan format `truetype`, bobot 300 dan `font-display: swap` tetap dipertahankan. Tidak ada perubahan desain atau fallback Times New Roman.
+- Dokumentasi font dan status FIT-021 diselaraskan. MAS-003 ditambahkan sebagai temuan yang telah diperbaiki pada source.
+
+## Dampak
+- Browser kini diarahkan ke aset font yang benar; heading yang menggunakan token Telma dapat memuat font tersebut setelah perubahan ter-deploy.
+- TTF dipakai langsung untuk saat ini. WOFF2 dapat dipertimbangkan kemudian untuk ukuran unduhan yang lebih kecil.
+
+## Status verifikasi
+- Path file TTF dikonfirmasi ada di `assets/fonts/`; ukuran 118.396 byte dan signature file cocok dengan TrueType.
+- Isi CSS, README, dan JSON inventaris diperbarui. Pemeriksaan browser, Network panel, dan Google Search Console belum dilakukan; keberhasilan pemuatan runtime belum diklaim.
+
+## Command yang digunakan
+- GitHub Contents API untuk memeriksa isi direktori `assets/fonts/` dan mengambil metadata aset font.
+- GitHub file fetch untuk memeriksa CSS, README, katalog `list/index.json`, `list/daftar-fitur.json`, `list/daftar-masalah.json`, serta `catatan.md`.
