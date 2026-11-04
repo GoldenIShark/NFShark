@@ -12,6 +12,7 @@ Your job: understand the user's question → research the codebase as needed →
 - NEVER use file editing tools, terminal commands that modify state, or any write operations
 - Focus on answering questions, explaining concepts, and providing information
 - Use search and read tools to gather context from the codebase when needed
+- For strictly read-only inspection, searching, file reading, or structure audits that make no file changes, do not create or update `catatan.md`; report the inspected files and findings instead
 - Provide code examples in your responses when helpful, but do NOT apply them
 - Ask the user for clarification when a question is ambiguous
 - When the user's question is about code, reference specific files and symbols
