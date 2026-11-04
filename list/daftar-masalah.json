@@ -3,7 +3,7 @@
   "title": "Daftar Masalah",
   "category": "Pengembangan",
   "description": "Masalah teknis dan kebutuhan perbaikan yang dicatat berdasarkan bukti repository.",
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-04",
   "sections": [
     {
       "title": "Terverifikasi",
@@ -37,6 +37,21 @@
           "priority": "Sedang",
           "status": "Selesai diperbaiki — pemeriksaan source",
           "resolution": "Menggunakan aset Logo.webp sebagai simbol, menumpuk logo di atas teks NFShark pada layar <=767px, dan menempatkan tautan Kembali ke brief di sisi kanan dalam header flex. Belum diverifikasi melalui browser/perangkat nyata."
+        },
+        {
+          "id": "MAS-003",
+          "title": "Font Telma tidak termuat karena path dan format aset tidak cocok",
+          "summary": "CSS sebelumnya meminta assets/fonts/Telma-Light.woff2, sedangkan aset yang tersedia bernama assets/fonts/Telma-Light.ttf. Karena nama file berbeda, browser meminta file yang tidak ada.",
+          "impact": "Font judul Telma gagal dimuat dan browser menggunakan fallback Times New Roman.",
+          "reproduction": "Periksa @font-face di assets/fonts/fonts.css dan daftar isi assets/fonts/. CSS merujuk Telma-Light.woff2, sedangkan aset yang tersedia Telma-Light.ttf.",
+          "files": [
+            "assets/fonts/fonts.css",
+            "assets/fonts/Telma-Light.ttf",
+            "assets/fonts/README.md"
+          ],
+          "priority": "Sedang",
+          "status": "Diperbaiki — pemeriksaan source",
+          "resolution": "Mengubah src @font-face agar memuat ./Telma-Light.ttf dengan format truetype, serta menyelaraskan dokumentasi font. File TTF memiliki signature TrueType yang valid. Belum dilakukan uji browser atau pemeriksaan ulang Google Search Console."
         }
       ]
     },
