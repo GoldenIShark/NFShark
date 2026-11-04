@@ -95,3 +95,11 @@ Setiap pekerjaan yang mengubah website—baik diminta langsung oleh pemilik maup
 7. **Pelaporan:** sebutkan dokumen `list/` yang diperiksa dan diperbarui, alasan pemilihannya, serta apakah data berusia lebih dari 14 hari dan perlu direkonsiliasi. Jika akses atau kemampuan edit tidak tersedia, nyatakan dengan jelas dan jangan mengklaim sinkronisasi selesai.
 
 Agent perencana juga wajib membaca dokumen `list/` yang relevan saat menyusun rencana dan memasukkan instruksi pembaruan data `list/` serta `catatan.md` ke prompt agent pelaksana.
+
+
+## 11. Pemeriksaan Read-Only Tanpa Catatan Perubahan
+
+- Jika tugas hanya meminta pemeriksaan, pembacaan, pencarian, audit struktur, atau penelusuran isi file dan **tidak ada file yang ditambah, diubah, atau dihapus**, agent TIDAK perlu membuat atau memperbarui `catatan.md`.
+- Agent tetap wajib melaporkan area/file yang diperiksa, temuan, dan batas pemeriksaan secara akurat.
+- Jika selama tugas read-only ditemukan masalah, cukup laporkan temuannya; jangan mengubah file atau mencatatnya sebagai perubahan.
+- Jika tugas kemudian berlanjut menjadi perubahan file, aturan pencatatan `catatan.md` dan sinkronisasi `list/` yang berlaku kembali diterapkan untuk perubahan tersebut.
