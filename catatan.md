@@ -65,3 +65,28 @@ Tanggal: 2026-11-03
 - `node -e` mem-parse `list/daftar-fitur.json` dan memeriksa nilai CSS, FIT-022, serta referensi stylesheet.
 - `git diff --check`
 - `git -c core.whitespace=cr-at-eol diff --check`
+
+
+---
+
+Tanggal: 2026-11-04
+
+## Area
+- Aturan kerja agent untuk pemeriksaan read-only: `AGENTS.md`, `.github/copilot-instructions.md`, `.github/agents/website-developer.agent.md`, `.github/agents/pengembangan-agent.md`, dan `.agents/agents/ask.agent.md`.
+
+## Fakta dan keputusan teknis
+- Ditambahkan pengecualian pencatatan: pekerjaan yang hanya membaca, mencari, memeriksa struktur, atau mengaudit file tanpa menambah, mengubah, atau menghapus file tidak perlu membuat atau memperbarui `catatan.md`.
+- Pekerjaan read-only tetap harus melaporkan file yang diperiksa dan temuan. Jika ada perubahan file, kewajiban pencatatan dan sinkronisasi dokumentasi yang relevan kembali berlaku.
+- Pemeriksaan font menemukan bahwa `assets/fonts/fonts.css` merujuk `assets/fonts/Telma-Light.woff2`, tetapi GitHub Contents API mengembalikan 404 untuk path tersebut. Tidak ada perubahan pada aset font atau tampilan website dalam tugas ini.
+
+## Dampak
+- Agent tidak lagi diwajibkan membuat log perubahan palsu atau kosong ketika hanya melakukan pemeriksaan tanpa perubahan.
+- Perubahan file tetap tercatat melalui aturan yang sudah ada.
+
+## Status verifikasi
+- Instruksi agent diperbarui pada lima file dan catatan perubahan ini.
+- Pemeriksaan font bersifat pemeriksaan repository; pemuatan font melalui browser/Google Search Console belum diuji ulang.
+
+## Command yang digunakan
+- GitHub repository search untuk `Telma`, `Telma-Light.woff2`, `catatan.md`, dan file instruksi agent.
+- GitHub file fetch untuk memeriksa isi file terkait dan menguji keberadaan `assets/fonts/Telma-Light.woff2`.
