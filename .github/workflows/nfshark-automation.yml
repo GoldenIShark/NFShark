@@ -1,0 +1,139 @@
+name: NFShark Automation
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    # Setiap Senin pukul 10.00 WIB (03.00 UTC).
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nfshark-automation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-check:
+    name: 1. Quality Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Validate JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -d '' files < <(find js -type f -name '*.js' -print0)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "Tidak ada file JavaScript di folder js/."
+            exit 1
+          fi
+          for file in "${files[@]}"; do
+            echo "Checking $file"
+            node --check "$file"
+          done
+
+      - name: Validate all JSON files
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          result = subprocess.run(
+              ["git", "ls-files", "-z", "*.json"],
+              check=True, capture_output=True
+          )
+          files = [Path(p.decode()) for p in result.stdout.split(b"\\0") if p]
+          if not files:
+              raise SystemExit("Tidak ada file JSON terlacak.")
+
+          for path in files:
+              print(f"Checking {path}")
+              with path.open(encoding="utf-8") as file:
+                  json.load(file)
+
+          print(f"Valid: {len(files)} file JSON.")
+          PY
+
+      - name: Validate automation scripts
+        run: python -m py_compile .github/scripts/check_site_integrity.py .github/scripts/prepare_pages.py
+
+      - name: Check required project files
+        run: |
+          test -f index.html
+          test -f CNAME
+          test -f css/common.css
+          test -f js/skeleton-loading.js
+          test -f data/packages.json
+          test -f assets/fonts/fonts.css
+          test -f list/index.json
+          test -f list/daftar-fitur.json
+          test -f catatan.md
+          echo "Semua file wajib tersedia."
+
+  website-test:
+    name: 2. Website & Deployment Package Test
+    needs: quality-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Check HTML local references and assets
+        run: python .github/scripts/check_site_integrity.py
+
+      - name: Prepare public GitHub Pages directory
+        run: python .github/scripts/prepare_pages.py site
+
+      - name: Verify deployment package
+        run: |
+          test -f site/index.html
+          test -f site/CNAME
+          test -f site/.nojekyll
+          test -d site/assets
+          test -d site/css
+          test -d site/js
+          test -d site/portofolio
+          test ! -e site/catatan.md
+          test ! -e site/AGENTS.md
+          test ! -e site/.github
+          test ! -e site/list
+          echo "Paket publik lulus pemeriksaan."
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    name: 3. Deploy to GitHub Pages
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    needs:
+      - quality-check
+      - website-test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v5
