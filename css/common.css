@@ -46,7 +46,7 @@
   --transition-smooth: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); font-weight: 300; }
 
 * { box-sizing: border-box; }
 
