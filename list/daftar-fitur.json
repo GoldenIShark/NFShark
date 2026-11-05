@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-05",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -164,7 +164,7 @@
           "description": "Telma Light ditetapkan sebagai font judul, Times New Roman untuk teks umum, Rosaline untuk aksen script opsional, dan system monospace untuk informasi teknis. Registry font dimuat pada halaman aktif selain history.",
           "benefit": "Menyatukan hierarki tipografi dan menyediakan daftar font serta fungsi yang terdokumentasi.",
           "priority": "Sedang",
-          "status": "File Telma-Light.ttf tersedia; fonts.css sudah diarahkan ke file TTF. Perlu verifikasi pemuatan di browser/Google Search Console.",
+          "status": "File Telma-Light.otf tersedia; fonts.css diarahkan ke file OTF. Perlu verifikasi pemuatan di browser/Google Search Console.",
           "files": [
             "assets/fonts/fonts.css",
             "assets/fonts/README.md",
@@ -181,7 +181,7 @@
             "500.html",
             "error.html"
           ],
-          "testNotes": "File assets/fonts/Telma-Light.ttf tersedia (118.396 byte; signature file TTF terdeteksi). @font-face memakai format truetype dan bobot 300. Lisensi tetap perlu dipastikan mengizinkan penggunaan publik/komersial. Pemeriksaan source selesai; browser/Google Search Console belum diuji ulang."
+          "testNotes": "File assets/fonts/Telma-Light.otf tersedia dan terdeteksi sebagai OpenType (signature OTTO). @font-face memakai format opentype dan bobot 300. Heading umum serta heading editorial menggunakan Telma Light dengan bobot 300; Times New Roman tetap untuk teks umum. Lisensi tetap perlu dipastikan mengizinkan penggunaan publik/komersial. Pemeriksaan source selesai; browser/Google Search Console belum diuji ulang."
         },
         {
           "id": "FIT-022",
