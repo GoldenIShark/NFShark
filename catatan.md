@@ -178,3 +178,39 @@ Tanggal: 2026-11-05
 ## Command yang digunakan
 - GitHub fetch/update untuk membaca dan memperbarui file terkait.
 - Pemeriksaan struktur JSON `list/daftar-fitur.json` melalui JSON.parse sebelum pembaruan.
+
+
+---
+
+Tanggal: 2026-11-05
+
+## Area
+- Otomatisasi pemeriksaan dan deployment: `.github/workflows/nfshark-automation.yml`.
+- Pemeriksaan integritas HTML dan referensi lokal: `.github/scripts/check_site_integrity.py`.
+- Penyiapan direktori publik GitHub Pages: `.github/scripts/prepare_pages.py`.
+- Progres pengujian berkelanjutan: `list/daftar-rencana.json` (REN-012).
+
+## Fakta dan keputusan teknis
+- Workflow NFShark Automation berjalan pada push, Pull Request menuju `main`, pemicu manual, dan jadwal mingguan setiap Senin pukul 10.00 WIB.
+- Job Quality Check memeriksa sintaks seluruh JavaScript pada `js/`, validitas semua JSON terlacak, sintaks skrip Python otomasi, dan keberadaan file proyek wajib.
+- Job Website & Deployment Package Test memeriksa referensi lokal pada atribut HTML `href`, `src`, `poster`, dan `data`; lalu membangun direktori staging `site/` dari halaman HTML root, CNAME, aset, CSS, data, JavaScript, portofolio, dan arsip history.
+- File internal seperti `.github/`, `AGENTS.md`, `catatan.md`, dan `list/` tidak disalin ke paket publik. File `.nojekyll` dibuat agar GitHub Pages tidak memproses aset melalui Jekyll.
+- Job Deploy hanya berjalan pada push ke `main` atau pemicu manual dari `main`, dan menunggu Quality Check serta Website Test berhasil. Push ke branch lain, Pull Request, dan jadwal mingguan tidak menerbitkan website.
+- GitHub Pages artifact diunggah dari direktori staging; tidak ada dependensi build frontend atau backend baru.
+- REN-012 diperbarui untuk mencatat implementasi awal otomasi; uji browser, aksesibilitas menyeluruh, dan audit performa belum termasuk cakupan.
+
+## Dampak
+- Pemeriksaan dasar berjalan otomatis sebelum publikasi.
+- Paket GitHub Pages dibatasi pada file website yang dipilih, sehingga dokumentasi dan instruksi internal tidak ikut dipublikasikan.
+- Deployment dari `main` terhubung pada hasil pemeriksaan; workflow tidak otomatis menggabungkan branch lain.
+
+## Status verifikasi
+- Run pertama gagal pada enumerasi file JSON karena pemisah NUL pada skrip inline; ekspresi diperbaiki.
+- Run berikutnya pada commit workflow `ec3e961771c450682dbb254b2bd30a016031df97`: Quality Check berhasil; job Website Test masih berjalan saat pencatatan awal.
+- Pemeriksaan integritas HTML dan hasil deployment perlu dipastikan dari penyelesaian run terbaru. Belum mengklaim deployment produksi berhasil.
+- Catatan aktif sebelum penambahan: 181 baris dan 11.594 byte; masih di bawah batas arsip 500 baris atau 50 KB.
+
+## Command yang digunakan
+- GitHub fetch untuk membaca struktur repository, `catatan.md`, katalog `list/index.json`, rencana REN-012, file website, dan status workflow.
+- GitHub create/update file untuk menambahkan skrip, workflow, dan memperbarui dokumen progres.
+- GitHub Actions run/job inspection untuk memeriksa langkah yang berhasil dan gagal.
