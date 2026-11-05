@@ -1,6 +1,8 @@
 (() => {
   'use strict';
 
+  document.documentElement.classList.add('nf-skeleton-loading');
+
   const textSelector = 'h1,h2,h3,h4,h5,h6,p,li,a,button,label,legend,small,strong,em,blockquote,figcaption,summary,input,textarea,select';
   const ignoredSelector = '[hidden],[aria-hidden="true"],script,style,noscript,template,#nf-loading-screen,.nf-loading-screen';
 
