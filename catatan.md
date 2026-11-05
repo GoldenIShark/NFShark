@@ -117,3 +117,33 @@ Tanggal: 2026-11-04
 ## Command yang digunakan
 - GitHub Contents API untuk memeriksa isi direktori `assets/fonts/` dan mengambil metadata aset font.
 - GitHub file fetch untuk memeriksa CSS, README, katalog `list/index.json`, `list/daftar-fitur.json`, `list/daftar-masalah.json`, serta `catatan.md`.
+
+
+---
+
+Tanggal: 2026-11-05
+
+## Area
+- Perbaikan pemuatan Telma setelah aset diganti menjadi OpenType: `assets/fonts/fonts.css` dan halaman aktif yang memuat registry font.
+- Konsistensi penggunaan font judul: `css/common.css`, `css/style-studio.css`, `assets/fonts/README.md`, `Daftar-UI.md`, `list/daftar-fitur.json`, dan `list/daftar-masalah.json`.
+
+## Fakta dan keputusan teknis
+- Aset terbaru yang tersedia adalah `assets/fonts/Telma-Light.otf`; file TTF sebelumnya sudah tidak tersedia. Signature base64 aset OTF diawali `OTTO`, sesuai kontainer OpenType.
+- `@font-face` diperbarui agar memuat `./Telma-Light.otf` dengan format `opentype`, tetap memakai nama keluarga `Telma Light`, bobot 300, dan `font-display: swap`.
+- Heading global H1–H6 dan heading editorial NFShark Studio menggunakan bobot 300 agar sesuai dengan varian Telma Light yang didaftarkan. Selector editorial seperti `.serif-heading`, `.serif-italic`, `.stat-item strong`, dan `.feature-number` diselaraskan ke bobot 300; teks umum tetap Times New Roman.
+- Komentar stylesheet, README font, katalog UI, FIT-021, dan MAS-003 diperbarui agar tidak lagi menyebut file TTF sebagai aset aktif.
+- Tautan registry font pada halaman aktif diberi query versi `v=20261105-1` untuk meminta browser mengambil CSS terbaru setelah perubahan nama aset.
+
+## Dampak
+- Browser diarahkan ke nama file dan format font yang sekarang tersedia.
+- Selector heading yang menggunakan token Telma konsisten meminta bobot Light; fallback Times New Roman untuk teks umum tidak diubah.
+
+## Status verifikasi
+- Repository source diperiksa pada branch `main`; file OTF ditemukan dan signature kontainernya teridentifikasi sebagai OpenType.
+- Referensi font pada `css/common.css` dan `css/style-studio.css` diperiksa; kedua stylesheet menggunakan token font Telma yang didefinisikan di `assets/fonts/fonts.css`.
+- Semua halaman aktif yang memuat registry font diperbarui untuk cache-busting.
+- Uji render browser, respons HTTP aset pada domain produksi, dan Google Search Console belum dilakukan; keberhasilan runtime belum diklaim.
+
+## Command yang digunakan
+- GitHub fetch/search untuk memeriksa aset font, seluruh referensi Telma, stylesheet, halaman aktif, dokumentasi, inventaris fitur/masalah, dan catatan teknis.
+- Pemeriksaan signature OpenType dari awalan base64 aset `Telma-Light.otf`.
