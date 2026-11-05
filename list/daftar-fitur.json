@@ -198,6 +198,30 @@
             "error.html"
           ],
           "testNotes": "Nilai alpha 50% diverifikasi pada source CSS dan referensi stylesheet diperiksa pada halaman 403, 404, 500, serta error; tampilan visual di browser belum diuji."
+        },
+        {
+          "id": "FIT-023",
+          "title": "Skeleton loading global per elemen",
+          "description": "Halaman aktif menampilkan placeholder shimmer pada teks, tautan, tombol, label, kontrol formulir, gambar yang belum selesai dimuat, serta area iframe. Placeholder teks dilepas setelah event load dan document.fonts.ready; placeholder gambar/iframe dilepas berdasarkan event masing-masing. prefers-reduced-motion menonaktifkan animasi shimmer.",
+          "benefit": "Memberi umpan balik visual saat konten halaman sedang dimuat tanpa mengganti intro loading utama.",
+          "priority": "Rendah",
+          "status": "Tersedia di source; runtime browser belum diverifikasi",
+          "files": [
+            "css/common.css",
+            "css/error-animation.css",
+            "js/skeleton-loading.js",
+            "index.html",
+            "brief.html",
+            "faq.html",
+            "feedback.html",
+            "persetujuan.html",
+            "ui-preview.html",
+            "403.html",
+            "404.html",
+            "500.html",
+            "error.html"
+          ],
+          "testNotes": "Source bersama ditautkan melalui script defer di head pada 10 halaman aktif. Selektor mencakup teks dan kontrol; gambar serta iframe memakai status load/error masing-masing. Pemeriksaan sintaks JavaScript dan uji visual/runtime browser belum dilakukan."
         }
       ]
     },
