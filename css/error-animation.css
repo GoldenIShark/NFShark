@@ -437,3 +437,37 @@ body {
   100% { opacity: 0; transform: translate(-50%,-50%) scale(1); }
 }
 @media (prefers-reduced-motion: reduce) { .nf-touch-ripple { display:none!important; animation:none!important; } }
+
+/* Skeleton loading for standalone error pages */
+@keyframes nf-skeleton-shimmer {
+  to { background-position: -200% 0; }
+}
+.nf-skeleton-loading [data-nf-skeleton] {
+  position: relative;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+.nf-skeleton-loading [data-nf-skeleton]::after,
+.nf-skeleton-loading [data-nf-skeleton-frame]::after {
+  position: absolute;
+  z-index: 20;
+  inset: 0;
+  border-radius: 5px;
+  background: linear-gradient(100deg, rgb(168 230 193 / 10%) 25%, rgb(168 230 193 / 24%) 48%, rgb(168 230 193 / 10%) 70%);
+  background-size: 200% 100%;
+  animation: nf-skeleton-shimmer 1.35s ease-in-out infinite;
+  content: "";
+  pointer-events: none;
+}
+.nf-skeleton-loading [data-nf-skeleton-media] {
+  background: linear-gradient(100deg, rgb(168 230 193 / 10%) 25%, rgb(168 230 193 / 24%) 48%, rgb(168 230 193 / 10%) 70%) !important;
+  background-size: 200% 100% !important;
+  animation: nf-skeleton-shimmer 1.35s ease-in-out infinite;
+}
+.nf-skeleton-loading [data-nf-skeleton-frame] { position: relative; overflow: hidden; }
+@media (prefers-reduced-motion: reduce) {
+  .nf-skeleton-loading [data-nf-skeleton]::after,
+  .nf-skeleton-loading [data-nf-skeleton-media],
+  .nf-skeleton-loading [data-nf-skeleton-frame]::after { animation: none !important; }
+}
