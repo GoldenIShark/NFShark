@@ -206,8 +206,8 @@ Tanggal: 2026-11-05
 
 ## Status verifikasi
 - Run pertama gagal pada enumerasi file JSON karena pemisah NUL pada skrip inline; ekspresi diperbaiki.
-- Run berikutnya pada commit workflow `ec3e961771c450682dbb254b2bd30a016031df97`: Quality Check berhasil; job Website Test masih berjalan saat pencatatan awal.
-- Pemeriksaan integritas HTML dan hasil deployment perlu dipastikan dari penyelesaian run terbaru. Belum mengklaim deployment produksi berhasil.
+- Run #9 pada commit `94f96c3193ea1a5641702a94e6f83c3552b320b0` selesai dengan conclusion `success`: Quality Check, Website & Deployment Package Test, dan Deploy to GitHub Pages semuanya berhasil.
+- Aksi Deploy to GitHub Pages selesai sukses. Pemeriksaan langsung URL domain produksi melalui alat browser yang tersedia tidak dapat diakses, sehingga tampilan live/domain belum diverifikasi secara terpisah.
 - Catatan aktif sebelum penambahan: 181 baris dan 11.594 byte; masih di bawah batas arsip 500 baris atau 50 KB.
 
 ## Command yang digunakan
