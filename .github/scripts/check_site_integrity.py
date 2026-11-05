@@ -33,7 +33,7 @@ def tracked_html_files() -> list[Path]:
     return [
         ROOT / item.decode("utf-8")
         for item in result.stdout.split(b"\0")
-        if item
+        if item and not item.decode("utf-8").startswith("history/")
     ]
 
 
