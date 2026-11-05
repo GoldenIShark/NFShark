@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = (ROOT / sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / "site"
-PUBLIC_DIRECTORIES = ("assets", "css", "data", "js", "portofolio", "history")
+PUBLIC_DIRECTORIES = ("assets", "css", "data", "js", "portofolio")
 ROOT_STATIC_FILES = (
     "CNAME",
     "robots.txt",
