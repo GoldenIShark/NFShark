@@ -42,7 +42,7 @@ section[id] {
 
 /* Sistem Tipografi NFShark Studio
    1. Rosaline: aksen paling mencolok, hanya pada frasa pilihan.
-   2. Bespoke Serif: heading dan penekanan editorial.
+   2. Telma Light: heading dan penekanan editorial.
    3. Times New Roman: seluruh teks isi dan antarmuka.
 */
 .studio-body :is(h1, h2, h3) {
