@@ -147,3 +147,33 @@ Tanggal: 2026-11-05
 ## Command yang digunakan
 - GitHub fetch/search untuk memeriksa aset font, seluruh referensi Telma, stylesheet, halaman aktif, dokumentasi, inventaris fitur/masalah, dan catatan teknis.
 - Pemeriksaan signature OpenType dari awalan base64 aset `Telma-Light.otf`.
+
+
+---
+
+Tanggal: 2026-11-05
+
+## Area
+- Skeleton loading global: `css/common.css`, `css/error-animation.css`, dan `js/skeleton-loading.js`.
+- Integrasi pada halaman aktif: `index.html`, `brief.html`, `faq.html`, `feedback.html`, `persetujuan.html`, `ui-preview.html`, `403.html`, `404.html`, `500.html`, dan `error.html`.
+- Inventaris fitur: `list/daftar-fitur.json` (FIT-023).
+
+## Fakta dan keputusan teknis
+- Ditambahkan efek skeleton shimmer global untuk teks, tautan, tombol, label, kontrol formulir, gambar yang belum selesai dimuat, dan area iframe.
+- Script bersama ditautkan dengan atribut `defer` di bagian `head` pada 10 halaman aktif agar proses persiapan dimulai lebih awal.
+- Placeholder teks dibersihkan setelah event `window.load` dan `document.fonts.ready`; placeholder gambar dan iframe dibersihkan melalui event load/error masing-masing.
+- Animasi shimmer mengikuti `prefers-reduced-motion`; intro loading utama NFShark tetap dipertahankan dan dikecualikan dari placeholder teks.
+- Halaman arsip `history/` dan website demo pelanggan di `portofolio/` tidak diubah.
+
+## Dampak
+- Pengunjung mendapat penanda visual sementara saat halaman dan media sedang dimuat.
+- Tidak ada framework, backend, atau dependensi baru.
+
+## Status verifikasi
+- File CSS dan JavaScript serta referensi script pada 10 halaman diperbarui di branch `main`.
+- Inventaris FIT-023 diperbarui.
+- Pemeriksaan sintaks JavaScript, uji browser, uji visual, dan perilaku iframe lintas-origin belum dilakukan; keberhasilan runtime belum diklaim.
+
+## Command yang digunakan
+- GitHub fetch/update untuk membaca dan memperbarui file terkait.
+- Pemeriksaan struktur JSON `list/daftar-fitur.json` melalui JSON.parse sebelum pembaruan.
