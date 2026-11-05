@@ -193,7 +193,7 @@ Tanggal: 2026-11-05
 ## Fakta dan keputusan teknis
 - Workflow NFShark Automation berjalan pada push, Pull Request menuju `main`, pemicu manual, dan jadwal mingguan setiap Senin pukul 10.00 WIB.
 - Job Quality Check memeriksa sintaks seluruh JavaScript pada `js/`, validitas semua JSON terlacak, sintaks skrip Python otomasi, dan keberadaan file proyek wajib.
-- Job Website & Deployment Package Test memeriksa referensi lokal pada atribut HTML `href`, `src`, `poster`, dan `data`; lalu membangun direktori staging `site/` dari halaman HTML root, CNAME, aset, CSS, data, JavaScript, portofolio, dan arsip history.
+- Job Website & Deployment Package Test memeriksa referensi lokal pada atribut HTML `href`, `src`, `poster`, dan `data`; lalu membangun direktori staging `site/` dari halaman HTML root, CNAME, aset, CSS, data, JavaScript, portofolio. Arsip `history/` tetap tersimpan di repository tetapi tidak dipublikasikan karena sebagian arsip masih memakai path aset lama.
 - File internal seperti `.github/`, `AGENTS.md`, `catatan.md`, dan `list/` tidak disalin ke paket publik. File `.nojekyll` dibuat agar GitHub Pages tidak memproses aset melalui Jekyll.
 - Job Deploy hanya berjalan pada push ke `main` atau pemicu manual dari `main`, dan menunggu Quality Check serta Website Test berhasil. Push ke branch lain, Pull Request, dan jadwal mingguan tidak menerbitkan website.
 - GitHub Pages artifact diunggah dari direktori staging; tidak ada dependensi build frontend atau backend baru.
