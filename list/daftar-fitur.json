@@ -221,7 +221,7 @@
             "500.html",
             "error.html"
           ],
-          "testNotes": "Source bersama ditautkan melalui script defer di head pada 10 halaman aktif. Selektor mencakup teks dan kontrol; gambar serta iframe memakai status load/error masing-masing. Pemeriksaan sintaks JavaScript dan uji visual/runtime browser belum dilakukan."
+          "testNotes": "Source bersama ditautkan melalui script defer di head pada 10 halaman aktif. Selektor mencakup teks dan kontrol; gambar serta iframe memakai status load/error masing-masing. `node --check js/skeleton-loading.js` lulus. Uji visual/runtime browser dan iframe lintas-origin belum dilakukan."
         }
       ]
     },
