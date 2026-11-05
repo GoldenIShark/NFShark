@@ -55,7 +55,7 @@ jobs:
               ["git", "ls-files", "-z", "*.json"],
               check=True, capture_output=True
           )
-          files = [Path(p.decode()) for p in result.stdout.split(b"\\0") if p]
+          files = [Path(p.decode()) for p in result.stdout.split(bytes([0])) if p]
           if not files:
               raise SystemExit("Tidak ada file JSON terlacak.")
 
