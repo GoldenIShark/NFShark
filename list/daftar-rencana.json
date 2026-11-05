@@ -3,7 +3,7 @@
   "title": "Daftar Rencana Pengembangan",
   "category": "Pengembangan",
   "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-05",
   "sections": [
     {
       "title": "Belum dimulai atau masih perlu dilanjutkan",
@@ -123,10 +123,10 @@
           "title": "Memelihara dokumentasi dan pengujian setelah perubahan",
           "goal": "Menjaga catatan tetap sejalan dengan repository dan pengujian nyata.",
           "priority": "Sedang",
-          "status": "Belum dimulai",
-          "nextSteps": "Perbarui berkas terkait setelah perubahan fitur; pisahkan temuan source dari hasil runtime dan arsipkan catatan usang.",
+          "status": "Sedang dikerjakan",
+          "nextSteps": "Pantau hasil workflow NFShark Automation pada push dan Pull Request; evaluasi pemeriksaan browser, aksesibilitas, dan performa setelah cakupan serta alat uji ditetapkan.",
           "dependencies": "Disiplin pembaruan setiap perubahan dan bukti yang dapat ditinjau.",
-          "resultAndUpdatedAt": "Aturan dasar tercantum di README; rutinitas pemeliharaan dan pengujian berkelanjutan belum dibuktikan. Pembaruan 2026-10-10."
+          "resultAndUpdatedAt": "Workflow GitHub Actions ditambahkan untuk pemeriksaan sintaks JavaScript, validitas JSON, keberadaan file wajib, referensi lokal HTML, dan validasi paket publik GitHub Pages. Pengujian runtime/browser dan audit aksesibilitas/performa menyeluruh belum tercakup. Pembaruan 2026-11-05."
         }
       ]
     },
