@@ -18,7 +18,7 @@
     });
 
     root.querySelectorAll('img').forEach((image) => {
-      if (image.complete && image.naturalWidth > 0) return;
+      if (image.complete) return;
       image.setAttribute('data-nf-skeleton-media', '');
       const finish = () => image.removeAttribute('data-nf-skeleton-media');
       image.addEventListener('load', finish, { once: true });
