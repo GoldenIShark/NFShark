@@ -172,7 +172,8 @@ Tanggal: 2026-11-05
 ## Status verifikasi
 - File CSS dan JavaScript serta referensi script pada 10 halaman diperbarui di branch `main`.
 - Inventaris FIT-023 diperbarui.
-- Pemeriksaan sintaks JavaScript, uji browser, uji visual, dan perilaku iframe lintas-origin belum dilakukan; keberhasilan runtime belum diklaim.
+- `node --check js/skeleton-loading.js` lulus setelah file diambil dari repository dan diperiksa secara lokal.
+- Uji browser, uji visual, dan perilaku iframe lintas-origin belum dilakukan; keberhasilan runtime belum diklaim.
 
 ## Command yang digunakan
 - GitHub fetch/update untuk membaca dan memperbarui file terkait.
