@@ -15,10 +15,10 @@
 - File web: `Telma-Light.otf`
 - Bobot: 300 (Light)
 - Penggunaan: menggantikan Bespoke Serif/Playfair Display sebagai font judul.
-- Sumber file asli: font TTF yang diberikan untuk proyek NFShark.
+- Sumber file asli: font OpenType yang diunggah untuk proyek NFShark.
 - CSS: `@font-face` di `fonts.css`.
 
-Letakkan file `Telma-Light.ttf` di folder `assets/fonts/`. File OpenType (OTF) yang diunggah digunakan langsung oleh browser.
+Letakkan file `Telma-Light.otf` di folder `assets/fonts/`. CSS memuatnya dengan format `opentype`.
 
 ## Times New Roman
 
