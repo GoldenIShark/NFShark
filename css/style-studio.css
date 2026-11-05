@@ -47,11 +47,12 @@ section[id] {
 */
 .studio-body :is(h1, h2, h3) {
   font-family: var(--studio-font-editorial);
+  font-weight: 300;
 }
 
 .serif-heading {
   font-family: var(--studio-font-editorial);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -60,7 +61,7 @@ section[id] {
   display: inline;
   font-family: var(--studio-font-editorial);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0;
   line-height: 1.2;
   color: var(--studio-mint);
@@ -293,6 +294,7 @@ section[id] {
   display: block;
   font-size: 2rem;
   font-family: var(--studio-font-editorial);
+  font-weight: 300;
   color: var(--studio-mint);
   line-height: 1;
   margin-bottom: 0.4rem;
@@ -452,6 +454,7 @@ section[id] {
 
 .feature-number {
   font-family: var(--studio-font-editorial);
+  font-weight: 300;
   font-size: 1.4rem;
   color: var(--studio-mint);
   display: block;
