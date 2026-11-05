@@ -3,7 +3,7 @@
   "title": "Daftar Masalah",
   "category": "Pengembangan",
   "description": "Masalah teknis dan kebutuhan perbaikan yang dicatat berdasarkan bukti repository.",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-05",
   "sections": [
     {
       "title": "Terverifikasi",
@@ -41,17 +41,17 @@
         {
           "id": "MAS-003",
           "title": "Font Telma tidak termuat karena path dan format aset tidak cocok",
-          "summary": "CSS sebelumnya meminta assets/fonts/Telma-Light.woff2, sedangkan aset yang tersedia bernama assets/fonts/Telma-Light.ttf. Karena nama file berbeda, browser meminta file yang tidak ada.",
+          "summary": "CSS sebelumnya masih meminta assets/fonts/Telma-Light.ttf, sedangkan aset terbaru yang tersedia bernama assets/fonts/Telma-Light.otf. Ketidakcocokan nama dan format membuat browser meminta file yang tidak ada.",
           "impact": "Font judul Telma gagal dimuat dan browser menggunakan fallback Times New Roman.",
-          "reproduction": "Periksa @font-face di assets/fonts/fonts.css dan daftar isi assets/fonts/. CSS merujuk Telma-Light.woff2, sedangkan aset yang tersedia Telma-Light.ttf.",
+          "reproduction": "Periksa @font-face di assets/fonts/fonts.css dan daftar isi assets/fonts/. CSS harus merujuk Telma-Light.otf dengan format opentype.",
           "files": [
             "assets/fonts/fonts.css",
-            "assets/fonts/Telma-Light.ttf",
+            "assets/fonts/Telma-Light.otf",
             "assets/fonts/README.md"
           ],
           "priority": "Sedang",
           "status": "Diperbaiki — pemeriksaan source",
-          "resolution": "Mengubah src @font-face agar memuat ./Telma-Light.ttf dengan format truetype, serta menyelaraskan dokumentasi font. File TTF memiliki signature TrueType yang valid. Belum dilakukan uji browser atau pemeriksaan ulang Google Search Console."
+          "resolution": "Mengubah src @font-face agar memuat ./Telma-Light.otf dengan format opentype, menyelaraskan bobot Telma Light pada selector heading, serta memperbarui dokumentasi dan cache-busting stylesheet. File OTF terdeteksi memiliki signature OpenType OTTO. Belum dilakukan uji browser atau pemeriksaan ulang Google Search Console."
         }
       ]
     },
