@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-06",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -222,6 +222,29 @@
             "error.html"
           ],
           "testNotes": "Source bersama ditautkan melalui script defer di head pada 10 halaman aktif. Selektor mencakup teks dan kontrol; gambar serta iframe memakai status load/error masing-masing. `node --check js/skeleton-loading.js` lulus. Uji visual/runtime browser dan iframe lintas-origin belum dilakukan."
+        },
+        {
+          "id": "FIT-023",
+          "title": "Favicon NFShark",
+          "description": "Simbol logo NFShark digunakan sebagai favicon dan Apple touch icon pada seluruh halaman HTML aktif.",
+          "benefit": "Membantu pengunjung mengenali situs NFShark melalui ikon di browser dan hasil penelusuran.",
+          "priority": "Sedang",
+          "status": "Referensi favicon tersedia di source; tampilan browser dan Google belum diverifikasi",
+          "files": [
+            "assets/Logo/Logo.webp",
+            "index.html",
+            "403.html",
+            "404.html",
+            "500.html",
+            "brief.html",
+            "error.html",
+            "faq.html",
+            "feedback.html",
+            "persetujuan.html",
+            "ui-preview.html",
+            "portofolio/"
+          ],
+          "testNotes": "Rel icon dan apple-touch-icon ditambahkan pada 16 dokumen HTML aktif. Google dapat memperbarui favicon setelah crawl ulang; belum ada verifikasi dimensi aset atau tampilan hasil pencarian."
         }
       ]
     },
