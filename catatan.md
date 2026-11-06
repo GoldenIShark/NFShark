@@ -214,3 +214,29 @@ Tanggal: 2026-11-05
 - GitHub fetch untuk membaca struktur repository, `catatan.md`, katalog `list/index.json`, rencana REN-012, file website, dan status workflow.
 - GitHub create/update file untuk menambahkan skrip, workflow, dan memperbarui dokumen progres.
 - GitHub Actions run/job inspection untuk memeriksa langkah yang berhasil dan gagal.
+
+
+---
+
+Tanggal: 2026-11-06
+
+## Area
+- Identitas favicon NFShark pada seluruh halaman aktif.
+
+## Fakta dan keputusan teknis
+- Google telah menampilkan hasil domain nfshark.web.id untuk kueri `nfshark`, berdasarkan tangkapan layar pemilik.
+- Aset simbol merek yang sudah tersedia, `assets/Logo/Logo.webp`, digunakan sebagai favicon dan Apple touch icon.
+- Referensi favicon ditambahkan ke 16 dokumen HTML aktif, termasuk halaman utama, halaman informasi, dan halaman portofolio. Jalur root absolut `/assets/Logo/Logo.webp` dipakai agar tetap benar dari halaman di subdirektori.
+- Tidak membuat ulang atau mengubah file logo sumber.
+
+## Dampak
+- Browser dan crawler dapat menemukan aset ikon situs melalui elemen `rel=icon`.
+- Google dapat mengganti ikon hasil penelusuran setelah melakukan crawl ulang; waktu pembaruan tidak dapat dijamin.
+
+## Status verifikasi
+- Seluruh 16 file HTML aktif diperbarui melalui GitHub pada branch `main`.
+- Belum memverifikasi dimensi persegi aset, akses publik dari domain produksi, tampilan di browser, atau pembaruan ikon pada Google. Google Search Console dapat digunakan untuk meminta crawl ulang homepage.
+
+## Command yang digunakan
+- GitHub Contents API untuk memeriksa aset logo dan seluruh halaman HTML aktif.
+- GitHub Contents API untuk menambahkan referensi favicon pada halaman aktif.
