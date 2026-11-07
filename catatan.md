@@ -1,6 +1,6 @@
 # Catatan Teknis Lintas Agent
 
-Tanggal: 2026-10-18
+Tanggal: 2026-11-07
 
 ## Area
 - Situs utama NFShark: fondasi UI, pratinjau portofolio, dan pemuatan paket.
@@ -40,3 +40,11 @@ Tanggal: 2026-10-18
 - Perubahan lokal yang teramati sebelum tugas: `.github/agents/website-developer.agent.md` berubah; `css/ui-components.css` dan `ui-preview.html` belum dilacak. CSS preview kemudian diubah hanya untuk warna tombol sesuai permintaan; markup preview dan semua demo portofolio dipertahankan.
 - `node --check js/script.js` tersedia dan berhasil. `git diff --check` default melaporkan karakter CR pada akhir baris file CRLF; pemeriksaan read-only `git -c core.whitespace=cr-at-eol diff --check` selesai tanpa temuan.
 - Tidak ada command yang diblokir atau tidak tersedia pada sesi ini. Jika command kelak tidak tersedia, gunakan pemeriksaan read-only editor/VS Code dan catat sebagai keterbatasan, bukan sebagai command yang gagal.
+
+## Perubahan homepage — 2026-11-07
+- Branch sasaran: `local`; halaman utama disusun ulang mengikuti naskah final yang disetujui.
+- File yang diganti: `index.html`, `css/style.css`, `js/script.js`, dan `data/packages.json`. Tidak menyalin atau mengganti file proyek lain.
+- Konten meliputi hero, Tentang, tiga kelompok layanan, lima kartu portofolio, enam keunggulan, tiga tahap pengerjaan, empat paket, CTA WhatsApp, footer, dan tautan WhatsApp Channel resmi.
+- Tautan demo hanya ditambahkan untuk direktori portofolio yang ditemukan pada branch local. Aura Rasa ditampilkan sebagai konsep UI karena folder demo terpisah tidak ditemukan.
+- Paket harga dan deskripsi disinkronkan dengan keputusan naskah; CTA paket membuka WhatsApp dengan pesan sesuai pilihan.
+- Validasi dilakukan melalui inspeksi source dan pembaruan terarah; uji browser, responsivitas aktual, dan hasil GitHub Actions belum diverifikasi pada sesi ini.
