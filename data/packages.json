@@ -1,82 +1,66 @@
 [
   {
     "name": "Basic",
+    "displayName": "Ringan (Basic)",
     "price": "Rp100.000",
-    "domainIncluded": false,
-    "estimate": "1-3 hari kerja",
-    "badge": "Starter",
+    "description": "Untuk kebutuhan website sederhana yang mengutamakan informasi dan kemudahan akses.",
+    "estimate": "1–3 hari kerja",
+    "badge": "",
     "featured": false,
     "features": [
       "1 halaman website",
-      "Responsive untuk HP",
-      "Desain sederhana",
-      "Informasi/profil",
-      "Tombol kontak",
-      "Animasi sederhana",
-      "Hosting website statis",
-      "Revisi terbatas"
+      "Tampilan responsif untuk perangkat mobile",
+      "Tombol kontak WhatsApp",
+      "Publikasi melalui hosting statis"
     ],
-    "button": "Pesan Paket",
-    "href": "#contact"
+    "button": "Pilih Ringan"
   },
   {
     "name": "Popular",
+    "displayName": "Populer (Popular)",
     "price": "Rp225.000",
-    "domainIncluded": false,
-    "estimate": "3-5 hari kerja",
-    "badge": "PALING POPULER",
+    "description": "Untuk kebutuhan website yang memerlukan penyajian informasi lebih lengkap dan tampilan lebih beragam.",
+    "estimate": "3–5 hari kerja",
+    "badge": "REKOMENDASI",
     "featured": true,
     "features": [
-      "Website bisnis",
-      "Beberapa section/halaman",
-      "Informasi produk atau jasa",
-      "Galeri",
-      "Kontak",
-      "Lokasi",
-      "Responsive",
-      "Desain lebih custom",
-      "Revisi"
+      "Website dengan beberapa bagian informasi",
+      "Galeri atau portofolio",
+      "Informasi lokasi",
+      "Tata letak yang disesuaikan"
     ],
-    "button": "Pesan Paket",
-    "href": "#contact"
+    "button": "Pilih Populer"
   },
   {
     "name": "Premium",
+    "displayName": "Premium (Premium)",
     "price": "Rp500.000",
-    "domainIncluded": false,
-    "estimate": "5-7 hari kerja",
-    "badge": "Premium",
+    "description": "Untuk kebutuhan website dengan penyajian informasi dan tampilan yang lebih lengkap.",
+    "estimate": "5–7 hari kerja",
+    "badge": "",
     "featured": false,
     "features": [
-      "Website lebih lengkap",
-      "Beberapa halaman",
-      "Katalog atau portofolio",
-      "Animasi/interaksi ringan",
-      "Desain custom",
-      "Responsive",
-      "Optimasi tampilan",
-      "Revisi"
+      "Katalog produk atau konten",
+      "Animasi interaktif terkurasi",
+      "Penyesuaian tampilan lebih mendalam",
+      "Pengaturan desain sesuai karakter proyek"
     ],
-    "button": "Pesan Paket",
-    "href": "#contact"
+    "button": "Pilih Premium"
   },
   {
     "name": "Custom",
-    "price": "Mulai Rp100.000",
-    "domainIncluded": false,
-    "estimate": "Menyesuaikan kebutuhan dan tingkat kesulitan",
-    "badge": "Custom",
+    "displayName": "Fleksibel (Custom)",
+    "price": "Konsultasi",
+    "description": "Untuk kebutuhan khusus yang memerlukan susunan, fitur, atau cakupan pengerjaan di luar paket tersedia.",
+    "estimate": "Berdasarkan ruang lingkup proyek",
+    "badge": "",
     "featured": false,
     "features": [
-      "Desain sesuai kebutuhan",
-      "Halaman tambahan",
-      "Fitur tambahan",
-      "Struktur website khusus",
-      "Penyesuaian tampilan",
-      "Permintaan khusus lainnya"
+      "Struktur website sesuai kebutuhan",
+      "Penambahan halaman dan fitur sesuai kesepakatan",
+      "Penyesuaian desain dan fungsi",
+      "Estimasi pengerjaan berdasarkan ruang lingkup proyek"
     ],
-    "button": "Konsultasi",
-    "href": "#contact",
-    "customNote": "Harga dapat menyesuaikan tingkat kesulitan dan fitur yang dibutuhkan."
+    "button": "Diskusikan Kebutuhan"
   }
 ]
