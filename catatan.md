@@ -255,7 +255,7 @@ Tanggal: 2026-11-07
 - Data teks typewriter pada data/hero-text.js disesuaikan; kecepatan dan jeda animasi tetap sama.
 - Tahap pengerjaan dituliskan di deskripsi keunggulan yang sudah ada. Elemen dan tautan WhatsApp Channel baru tidak ditambahkan karena ruang lingkup dibatasi pada penggantian teks saja.
 - Teks tahun copyright tetap 2026; tidak dibuat dinamis karena perubahan script dilarang dalam permintaan ini.
-- Teks tombol WhatsApp berubah, tetapi isi pesan otomatis pada URL tidak diubah karena perubahan atribut tautan berada di luar instruksi text-only.
+- Teks pesan otomatis WhatsApp pada parameter tautan CTA disesuaikan dengan naskah pemilik; nomor tujuan dan elemen tautan tetap sama.
 
 ## File yang diubah
 - index.html
