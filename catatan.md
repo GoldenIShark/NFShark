@@ -240,3 +240,33 @@ Tanggal: 2026-11-06
 ## Command yang digunakan
 - GitHub Contents API untuk memeriksa aset logo dan seluruh halaman HTML aktif.
 - GitHub Contents API untuk menambahkan referensi favicon pada halaman aktif.
+
+
+---
+
+Tanggal: 2026-11-07
+
+## Area
+- Pembaruan naskah halaman utama NFShark pada branch main.
+
+## Fakta dan keputusan teknis
+- Teks navigasi, hero, Tentang NFShark, layanan, portofolio, keunggulan, paket harga, CTA, dan footer diselaraskan dengan naskah yang diberikan pemilik.
+- Struktur HTML, jumlah elemen, class, id, atribut, CSS, dan logika JavaScript tidak diubah.
+- Data teks typewriter pada data/hero-text.js disesuaikan; kecepatan dan jeda animasi tetap sama.
+- Tahap pengerjaan dituliskan di deskripsi keunggulan yang sudah ada. Elemen dan tautan WhatsApp Channel baru tidak ditambahkan karena ruang lingkup dibatasi pada penggantian teks saja.
+- Teks tahun copyright tetap 2026; tidak dibuat dinamis karena perubahan script dilarang dalam permintaan ini.
+- Teks tombol WhatsApp berubah, tetapi isi pesan otomatis pada URL tidak diubah karena perubahan atribut tautan berada di luar instruksi text-only.
+
+## File yang diubah
+- index.html
+- data/hero-text.js
+- list/daftar-fitur.json
+- list/daftar-rencana.json
+- catatan.md
+
+## Status verifikasi
+- Pemeriksaan dilakukan pada source branch main.
+- Belum dilakukan pengujian visual/runtime di browser atau verifikasi deployment publik.
+
+## Command yang digunakan
+- GitHub Contents API untuk membaca dan memperbarui file pada branch main.
