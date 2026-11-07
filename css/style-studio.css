@@ -905,3 +905,28 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .hero-typewriter-caret { display: none; animation: none; }
 }
+
+
+/* Efek sentuh/ripple yang digunakan halaman utama. */
+.nf-touch-ripple {
+  position: fixed;
+  z-index: 9999;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #2dd4bf;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(.78);
+  animation: nf-touch-ripple-expand 280ms ease-out forwards;
+}
+@keyframes nf-touch-ripple-expand {
+  0% { opacity: .72; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.12); }
+}
+.nf-press-feedback { transition: scale 110ms ease-out; }
+.nf-press-feedback.is-pressed { scale: .97; }
+@media (prefers-reduced-motion: reduce) {
+  .nf-touch-ripple { display: none; animation: none; }
+  .nf-press-feedback, .nf-press-feedback.is-pressed { transition: none; scale: 1; }
+}
