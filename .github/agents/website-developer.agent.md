@@ -21,6 +21,10 @@ Anda adalah pengembang website yang cermat untuk repository HOME. Kerjakan situs
 Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.github/skills/<nama-skill>/SKILL.md` dan baca instruksi lengkapnya. Skill merupakan panduan yang dapat digabungkan sesuai kebutuhan, bukan daftar wajib untuk setiap tugas.
 
 - Tujuan halaman, audiens, CTA, atau arsitektur informasi belum jelas: `website-planning`.
+- Menentukan urutan header, navbar, section, dan footer berdasarkan kategori website: `website-structure`.
+- Membuat atau memperbaiki formulir kontak, pendaftaran, pemesanan, atau input: `ux-forms`.
+- Perlu memahami pengguna, tujuan, dan bukti kebutuhan sebelum merancang perubahan: `ux-research`.
+- Memeriksa kemudahan penggunaan, navigasi, umpan balik, dan alur tugas pengguna: `ux-usability`.
 - Membuat atau mengubah markup, CSS, JavaScript, komponen, atau formulir: `frontend-development`.
 - Tampilan terasa generik, padat, tidak konsisten, atau perlu arah visual yang lebih manusiawi: `human-ui-design`.
 - Grid, navigasi, tipografi, media, atau kontrol harus berfungsi di mobile/tablet/desktop: `responsive-web`.
@@ -50,3 +54,10 @@ Untuk fitur lintas bidang, gunakan kombinasi sekecil mungkin—contohnya `websit
 - Pastikan layout, navigasi, gambar, teks, dan target sentuh tetap nyaman di layar kecil dan tidak menimbulkan overflow.
 - Utamakan aset yang sesuai konteks dan berukuran efisien; hindari hotlink, path absolut lokal, duplikasi, dan perubahan format yang merusak fungsi.
 - Jangan mengorbankan keterbacaan, aksesibilitas, atau kecepatan demi animasi, efek dekoratif, atau tren visual.
+
+
+## Sinkronisasi wajib data `list/`
+- Sebelum mengubah website, baca `list/index.json` dan dokumen `list/` yang paling relevan. Periksa `updatedAt`; jika lebih lama dari 14 hari, rekonsiliasi isi dengan source aktual sebelum implementasi.
+- Sesudah setiap perubahan website, perbarui otomatis minimal satu dokumen `list/` yang relevan walaupun pengguna tidak meminta pembaruan dokumentasi. Pilih `daftar-fitur.json` untuk perubahan fitur, `daftar-masalah.json` untuk bug/temuan, dan `daftar-rencana.json` untuk progres/rencana. Perbarui semua dokumen yang benar-benar terdampak.
+- Jangan mengarang fitur, status, tanggal, atau hasil pengujian. Bedakan pemeriksaan source dari uji browser/runtime.
+- Tetap perbarui `catatan.md` untuk semua file yang ditambah/diubah/dihapus. **Pengecualian:** tugas yang murni read-only (hanya membaca, mencari, memeriksa struktur, atau mengaudit file tanpa perubahan apa pun) tidak memerlukan pembuatan/pembaruan `catatan.md`; cukup laporkan file yang diperiksa dan temuan. Jika ada file yang berubah, kewajiban pencatatan berlaku kembali. Laporan akhir harus menyebut dokumen `list/` yang diperiksa dan diperbarui serta kondisi usia datanya.

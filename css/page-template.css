@@ -1,0 +1,456 @@
+/* ==========================================================================
+   NFShark — Reusable Editorial Page Template
+   Shared page layouts, typography and form components.
+   Page CSS files should only override the custom properties below.
+   ========================================================================== */
+
+.editorial-page {
+  min-height: 100vh;
+  background: var(--color-dark);
+  color: var(--color-light-text);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+}
+
+.editorial-page .site-header,
+.editorial-page .studio-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(9, 25, 21, .94);
+  border-bottom: 1px solid var(--color-dark-border);
+  backdrop-filter: blur(14px);
+}
+
+.editorial-page .studio-container,
+.editorial-page .container {
+  width: min(calc(100% - var(--page-gutter, 2.5rem)), var(--page-container-width, 1180px));
+  margin-inline: auto;
+}
+
+.editorial-page .studio-header-inner,
+.editorial-page .header-inner {
+  min-height: var(--page-header-height, 74px);
+}
+
+.editorial-page .studio-logo,
+.editorial-page .logo {
+  color: var(--color-light-text);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.editorial-page .studio-logo img,
+.editorial-page .logo img {
+  width: var(--page-logo-size, 44px);
+  height: var(--page-logo-size, 44px);
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.editorial-page .brief-back-link,
+.editorial-page .agreement-back {
+  color: var(--color-muted);
+  font-size: .88rem;
+  font-weight: 600;
+  transition: color var(--transition-smooth);
+}
+
+.editorial-page .brief-back-link:hover,
+.editorial-page .agreement-back:hover {
+  color: var(--color-mint);
+}
+
+.editorial-page .brief-main,
+.editorial-page .agreement-main {
+  padding: var(--page-main-padding, 4rem) 0 var(--page-main-bottom, 4.5rem);
+}
+
+.editorial-page .brief-container,
+.editorial-page .agreement-content {
+  width: min(calc(100% - var(--page-gutter, 2.5rem)), var(--page-content-width, 820px));
+}
+
+.editorial-page .brief-intro {
+  max-width: var(--page-intro-width, 690px);
+  margin: 0 auto var(--page-intro-gap, 2rem);
+  text-align: center;
+}
+
+.editorial-page .brief-eyebrow,
+.editorial-page .brief-step-kicker,
+.editorial-page .agreement-eyebrow {
+  margin: 0 0 .6rem;
+  color: var(--color-mint);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.editorial-page .brief-intro h1,
+.editorial-page .agreement-content h1 {
+  margin: 0;
+  color: var(--color-light-text);
+  font-family: var(--font-serif);
+  font-size: var(--page-title-size, clamp(2.2rem, 5vw, 3.4rem));
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+
+.editorial-page .brief-intro > p:last-child,
+.editorial-page .brief-description,
+.editorial-page .agreement-lead {
+  color: var(--color-muted);
+}
+
+.editorial-page .brief-intro > p:last-child {
+  max-width: 590px;
+  margin: 1rem auto 0;
+}
+
+.editorial-page .brief-progress {
+  max-width: var(--page-intro-width, 690px);
+  margin: 0 auto 1.25rem;
+}
+
+.editorial-page .brief-progress-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .55rem;
+  color: var(--color-muted);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.editorial-page .brief-progress-track {
+  height: var(--page-progress-height, 6px);
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(245, 251, 248, .12);
+}
+
+.editorial-page .brief-progress-track span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-mint);
+  transition: width .2s ease;
+}
+
+.editorial-page .brief-card {
+  padding: var(--page-card-padding, clamp(1.4rem, 4vw, 2.5rem));
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--page-card-radius, 16px);
+  background: var(--color-dark-surface);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .2);
+}
+
+.editorial-page .brief-card > h2 {
+  margin: 0;
+  color: var(--color-light-text);
+  font-family: var(--font-serif);
+  font-size: var(--page-section-title-size, clamp(1.45rem, 3.5vw, 2rem));
+  line-height: 1.3;
+}
+
+.editorial-page .brief-description {
+  margin: .65rem 0 1.6rem;
+}
+
+.editorial-page .brief-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .7rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.editorial-page .brief-option {
+  display: flex;
+  min-height: var(--page-choice-height, 52px);
+  align-items: center;
+  gap: .7rem;
+  padding: .7rem .85rem;
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--page-control-radius, 8px);
+  background: rgba(255, 255, 255, .025);
+  color: var(--color-light-text);
+  cursor: pointer;
+  transition: border-color var(--transition-smooth), background var(--transition-smooth);
+}
+
+.editorial-page .brief-option:has(input:checked) {
+  border-color: var(--color-mint);
+  background: rgba(45, 212, 191, .09);
+}
+
+.editorial-page .brief-option input,
+.editorial-page .brief-check-grid input,
+.editorial-page .brief-consent-label input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: var(--color-mint);
+}
+
+.editorial-page .brief-step-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: .85rem;
+  margin-top: 1.8rem;
+}
+
+.editorial-page .brief-step-actions .btn {
+  min-width: var(--page-action-min-width, 150px);
+}
+
+.editorial-page .brief-section {
+  margin-top: 1.7rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-dark-border);
+}
+
+.editorial-page .brief-section h3 {
+  margin: 0 0 1rem;
+  color: var(--color-light-text);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+}
+
+.editorial-page .brief-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.editorial-page .brief-field {
+  display: grid;
+  gap: .48rem;
+  min-width: 0;
+  margin-top: 1rem;
+}
+
+.editorial-page .brief-field-grid .brief-field { margin-top: 0; }
+.editorial-page .brief-field-full { grid-column: 1 / -1; }
+
+.editorial-page .brief-field label,
+.editorial-page .brief-field legend {
+  color: var(--color-light-text);
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.editorial-page .brief-field fieldset,
+.editorial-page fieldset.brief-field {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.editorial-page .field-required,
+.editorial-page .field-optional {
+  margin-left: .35rem;
+  color: var(--color-muted);
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.editorial-page .field-required { color: var(--color-mint); }
+
+.editorial-page .brief-field input:not([type="checkbox"]):not([type="radio"]),
+.editorial-page .brief-field select,
+.editorial-page .brief-field textarea,
+.editorial-page .phone-inputs input {
+  width: 100%;
+  min-height: var(--page-input-height, 50px);
+  padding: .75rem .9rem;
+  border: 1px solid rgba(245, 251, 248, .16);
+  border-radius: var(--page-control-radius, 8px);
+  outline: 0;
+  background: rgba(255, 255, 255, .045);
+  color: var(--color-light-text);
+  font: inherit;
+  font-size: .92rem;
+  transition: border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.editorial-page .brief-field select option {
+  color: var(--color-dark-text);
+  background: var(--color-cream);
+}
+
+.editorial-page .brief-field textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.editorial-page .brief-field input:focus,
+.editorial-page .brief-field select:focus,
+.editorial-page .brief-field textarea:focus,
+.editorial-page .phone-inputs input:focus {
+  border-color: var(--color-mint);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, .16);
+}
+
+.editorial-page .brief-field input::placeholder,
+.editorial-page .brief-field textarea::placeholder,
+.editorial-page .phone-inputs input::placeholder {
+  color: #839993;
+}
+
+.editorial-page .brief-hint,
+.editorial-page .brief-submit-note {
+  color: var(--color-muted);
+  font-size: .8rem;
+}
+
+.editorial-page .phone-inputs {
+  display: grid;
+  grid-template-columns: minmax(100px, .35fr) minmax(0, 1fr);
+  gap: .7rem;
+}
+
+.editorial-page .brief-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem 1rem;
+  margin-top: .8rem;
+}
+
+.editorial-page .brief-check-grid label {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--color-muted);
+  font-size: .87rem;
+  font-weight: 500;
+}
+
+.editorial-page .brief-conditional {
+  margin-top: .9rem;
+  padding: 1rem;
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--page-control-radius, 8px);
+  background: rgba(45, 212, 191, .055);
+}
+
+.editorial-page .brief-consent { margin-top: 1.7rem; }
+
+.editorial-page .brief-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  color: var(--color-muted);
+  font-size: .9rem;
+}
+
+.editorial-page .brief-consent-label input { margin-top: .2rem; }
+
+.editorial-page .brief-consent-label a {
+  color: var(--color-mint);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.editorial-page .brief-error {
+  min-height: 1.3em;
+  margin: .55rem 0 0;
+  color: #ff9e9e;
+  font-size: .84rem;
+}
+
+.editorial-page .brief-footer,
+.editorial-page .site-footer {
+  border-top: 1px solid var(--color-dark-border);
+  background: var(--color-dark);
+}
+
+.editorial-page .brief-footer .footer-inner { align-items: center; }
+
+.editorial-page .brief-footer a,
+.editorial-page .site-footer a {
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.editorial-page .brief-footer a:hover,
+.editorial-page .site-footer a:hover { color: var(--color-mint); }
+
+.editorial-page .agreement-content h1 { margin-bottom: .8rem; }
+.editorial-page .agreement-lead {
+  max-width: 720px;
+  margin: 1rem 0 2rem;
+  font-size: 1rem;
+}
+.editorial-page .agreement-content section {
+  padding: 1.3rem 0;
+  border-top: 1px solid var(--color-dark-border);
+}
+.editorial-page .agreement-content h2 {
+  margin: 0 0 .5rem;
+  color: var(--color-light-text);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+}
+.editorial-page .agreement-content section p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+.editorial-page .agreement-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 1.6rem;
+}
+.editorial-page .agreement-note {
+  margin-top: 1.2rem;
+  color: var(--color-muted);
+  font-size: .82rem;
+}
+
+.editorial-page .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.editorial-page [hidden] { display: none !important; }
+
+@media (max-width: 767px) {
+  .editorial-page .brief-intro { text-align: left; }
+  .editorial-page .brief-intro > p:last-child { margin-left: 0; }
+  .editorial-page .brief-options,
+  .editorial-page .brief-field-grid,
+  .editorial-page .brief-check-grid { grid-template-columns: minmax(0, 1fr); }
+  .editorial-page .brief-step-actions { flex-direction: column-reverse; }
+  .editorial-page .brief-step-actions .btn { width: 100%; }
+  .editorial-page .brief-card { padding: var(--page-card-padding-mobile, 1.1rem); }
+  .editorial-page .brief-main,
+  .editorial-page .agreement-main { padding-top: var(--page-main-padding-mobile, 2.25rem); }
+  .editorial-page .agreement-actions { flex-direction: column; }
+  .editorial-page .agreement-actions .btn { width: 100%; }
+  .editorial-page .brief-footer .footer-inner { align-items: flex-start; }
+}
+
+@media (max-width: 420px) {
+  .editorial-page .phone-inputs { grid-template-columns: minmax(88px, .4fr) minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editorial-page .brief-progress-track span,
+  .editorial-page .brief-option { transition: none; }
+}

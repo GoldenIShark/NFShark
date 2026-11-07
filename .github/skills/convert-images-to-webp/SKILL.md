@@ -53,6 +53,22 @@ Simpan hasil di folder asset yang sama dan pertahankan struktur subfolder sepert
 5. Jangan menghapus file asli sebelum versi WebP berhasil dibuat dan semua referensi sudah dipindahkan.
 6. Setelah validasi berhasil, file asli yang sudah tidak digunakan boleh dihapus bila sesuai kebutuhan proyek. Jangan menghapus asset yang masih diperlukan.
 
+## Tool Pembantu Otomatis (Python)
+
+Folder skill ini dilengkapi skrip Python pembantu reusable: `convert_to_webp.py`.
+Gunakan skrip ini saat perlu mengonversi satu gambar atau satu direktori gambar raster ke WebP secara cepat dan aman:
+
+```bash
+# Konversi satu file (file asli tetap disimpan secara default)
+python .github/skills/convert-images-to-webp/convert_to_webp.py portofolio/<kategori>/<website>/assets/images/foto.jpg
+
+# Konversi seluruh gambar dalam direktori
+python .github/skills/convert-images-to-webp/convert_to_webp.py portofolio/<kategori>/<website>/assets/images/
+
+# Opsi kualitas (default: 85) dan rekursif subfolder (-r)
+python .github/skills/convert-images-to-webp/convert_to_webp.py portofolio/<kategori>/assets/ -q 80 -r
+```
+
 ## Validasi setelah konversi
 
 - Periksa path gambar pada HTML, CSS, dan JavaScript dari root website yang bersangkutan.
@@ -60,3 +76,4 @@ Simpan hasil di folder asset yang sama dan pertahankan struktur subfolder sepert
 - Pastikan website tetap dapat dibuka dari `HOME/portofolio/<kategori>/` dengan path relatifnya.
 - Periksa console untuk error JavaScript dan uji tampilan responsive di desktop serta HP.
 - Prioritaskan gabungan kualitas visual yang baik, ukuran file kecil, dan performa loading yang cepat.
+

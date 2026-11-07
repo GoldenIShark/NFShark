@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo portofolio website restoran Aura Rasa, dibuat satu halaman dengan HTML, CSS, dan JavaScript ringan.">
+  <meta name="theme-color" content="#f7f6f1">
+  <title>Aura Rasa | Demo Website Restoran</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+  </head>
+<body>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Aura Rasa, Beranda">
+        <span class="brand-mark" aria-hidden="true">AR</span>
+        <span>Aura Rasa</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Buka navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Demo portofolio <span aria-hidden="true">/</span> Paket Basic</p>
+          <h1 id="hero-title">Kenali <em>Aura Rasa</em></h1>
+          <p class="hero-description">
+            Contoh website restoran satu halaman untuk menyajikan cerita, menu, dan informasi kunjungan dengan jelas.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Lihat informasi menu <span aria-hidden="true">↓</span></a>
+            <a class="button button-text" href="#contact">Info lokasi dan kontak</a>
+          </div>
+        </div>
+
+        <figure class="media-placeholder media-placeholder-hero">
+          <div class="placeholder-art" aria-hidden="true"><span>AR</span></div>
+          <figcaption>
+            <span>Visual utama</span>
+            <strong>Foto restoran perlu materi</strong>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="hero-footnote"><span>01</span> Identitas dan konten demo menunggu konfirmasi pemilik restoran.</div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-intro">
+          <p class="eyebrow">Tentang restoran</p>
+          <h2 id="about-title">Cerita di balik Aura Rasa</h2>
+        </div>
+        <div class="about-copy">
+          <p>Aura Rasa adalah nama demo restoran yang digunakan untuk contoh Paket Basic NFShark.</p>
+          <p>Cerita restoran, jenis masakan, dan suasana tempat belum memiliki materi sumber. Detail tersebut perlu dikonfirmasi sebelum menjadi konten final.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Menu unggulan</p>
+            <h2 id="menu-title">Daftar sajian</h2>
+          </div>
+          <p>Nama hidangan, deskripsi, dan harga akan ditampilkan setelah datanya tersedia.</p>
+        </div>
+        <div class="content-status" role="note">
+          <span class="status-index" aria-hidden="true">01</span>
+          <div>
+            <h3>Menu dan harga perlu materi</h3>
+            <p>Belum ada daftar menu terverifikasi untuk ditampilkan.</p>
+          </div>
+          <span class="status-label">Menunggu konfirmasi</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-heading gallery-heading">
+          <div>
+            <p class="eyebrow">Galeri</p>
+            <h2 id="gallery-title">Suasana Aura Rasa</h2>
+          </div>
+          <p>Foto restoran belum tersedia. Slot ini menandai materi yang diperlukan, bukan foto menu atau lokasi.</p>
+        </div>
+        <div class="gallery-slots">
+          <figure class="gallery-slot gallery-slot-dish">
+            <span class="slot-number" aria-hidden="true">01</span>
+            <figcaption><strong>Foto hidangan</strong><span>Perlu materi</span></figcaption>
+          </figure>
+          <figure class="gallery-slot gallery-slot-interior">
+            <span class="slot-number" aria-hidden="true">02</span>
+            <figcaption><strong>Foto interior</strong><span>Perlu materi</span></figcaption>
+          </figure>
+          <figure class="gallery-slot gallery-slot-exterior">
+            <span class="slot-number" aria-hidden="true">03</span>
+            <figcaption><strong>Foto eksterior</strong><span>Perlu materi</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <p class="eyebrow">Lokasi dan kontak</p>
+          <h2 id="contact-title">Rencanakan kunjungan</h2>
+          <p>Informasi berikut perlu dikonfirmasi sebelum pengunjung dapat diarahkan ke restoran.</p>
+        </div>
+        <dl class="contact-details">
+          <div>
+            <dt>Alamat</dt>
+            <dd>Perlu materi</dd>
+          </div>
+          <div>
+            <dt>Jam operasional</dt>
+            <dd>Perlu konfirmasi</dd>
+          </div>
+          <div>
+            <dt>Telepon atau reservasi</dt>
+            <dd>Perlu kanal resmi</dd>
+          </div>
+          <div>
+            <dt>URL peta</dt>
+            <dd>Perlu tautan lokasi</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a class="brand" href="#home" aria-label="Aura Rasa, kembali ke Beranda">
+          <span class="brand-mark" aria-hidden="true">AR</span>
+          <span>Aura Rasa</span>
+        </a>
+        <p>Demo website restoran satu halaman dari NFShark.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navigasi footer">
+        <a href="#about">Tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <p class="footer-note">Alamat, jam buka, menu, foto, dan kanal kontak menunggu materi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

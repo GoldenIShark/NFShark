@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ketentuan layanan pembuatan website NFShark." />
+  <meta property="og:site_name" content="NFShark" />
+  <title>Ketentuan Layanan | NFShark</title>
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261105-1" />
+  <link rel="stylesheet" href="css/common-animasi.css" />
+  <link rel="stylesheet" href="css/page-template.css" />
+  <link rel="stylesheet" href="css/persetujuan.css" />
+  <script src="js/skeleton-loading.js" defer></script>
+    <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+      <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+  </head>
+<body class="editorial-page agreement-page">
+  <header class="studio-header">
+    <div class="studio-container studio-header-inner">
+      <a href="index.html" class="studio-logo" aria-label="NFShark, beranda">
+        <img src="assets/Logo/Logo.webp" alt="" width="48" height="48" />
+        <span><span class="logo-accent">NF</span>Shark</span>
+      </a>
+      <a class="agreement-back" href="brief.html">Kembali ke brief</a>
+    </div>
+  </header>
+
+  <main class="agreement-main">
+    <article class="container agreement-content">
+      <div class="agreement-document" id="agreement-document" aria-live="polite">
+        <p class="agreement-loading">Memuat ketentuan layanan…</p>
+      </div>
+      <div class="agreement-actions">
+        <a class="btn btn-secondary" href="brief.html">Kembali ke brief</a>
+        <a class="btn btn-primary" href="brief.html#consent">Lanjut ke persetujuan</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand"><img src="assets/Logo/Logo.webp" alt="" width="40" height="40" /><span>© 2026 NFShark</span></p>
+      <a href="index.html">Beranda</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const target = document.querySelector('#agreement-document');
+      if (!target) return;
+
+      try {
+        const response = await fetch('persetujuan.md', { cache: 'no-cache' });
+        if (!response.ok) throw new Error('Dokumen tidak dapat dimuat.');
+        if (!window.marked || !window.DOMPurify) throw new Error('Komponen Markdown tidak tersedia.');
+
+        const markdown = await response.text();
+        const rendered = window.marked.parse(markdown, { gfm: true, breaks: false });
+        target.innerHTML = window.DOMPurify.sanitize(rendered);
+        target.classList.add('is-loaded');
+      } catch (error) {
+        target.innerHTML = '<h1>Ketentuan layanan belum dapat dimuat</h1><p>Periksa koneksi internet, lalu muat ulang halaman. Anda juga dapat membaca <a href="persetujuan.md">dokumen Markdown secara langsung</a>.</p>';
+        target.classList.add('is-error');
+      }
+    });
+  </script>
+  <script src="js/touch-ripple.js" defer></script>
+</body>
+</html>

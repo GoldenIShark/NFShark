@@ -3,7 +3,7 @@
   "title": "Daftar Rencana Pengembangan",
   "category": "Pengembangan",
   "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-11-05",
   "sections": [
     {
       "title": "Belum dimulai atau masih perlu dilanjutkan",
@@ -123,10 +123,10 @@
           "title": "Memelihara dokumentasi dan pengujian setelah perubahan",
           "goal": "Menjaga catatan tetap sejalan dengan repository dan pengujian nyata.",
           "priority": "Sedang",
-          "status": "Belum dimulai",
-          "nextSteps": "Perbarui berkas terkait setelah perubahan fitur; pisahkan temuan source dari hasil runtime dan arsipkan catatan usang.",
+          "status": "Sedang dikerjakan",
+          "nextSteps": "Pantau hasil workflow NFShark Automation pada push dan Pull Request; evaluasi pemeriksaan browser, aksesibilitas, dan performa setelah cakupan serta alat uji ditetapkan.",
           "dependencies": "Disiplin pembaruan setiap perubahan dan bukti yang dapat ditinjau.",
-          "resultAndUpdatedAt": "Aturan dasar tercantum di README; rutinitas pemeliharaan dan pengujian berkelanjutan belum dibuktikan. Pembaruan 2026-10-10."
+          "resultAndUpdatedAt": "Workflow GitHub Actions memeriksa sintaks JavaScript, validitas JSON, file wajib, referensi lokal HTML, dan paket publik GitHub Pages. Run #9 pada 2026-11-05 berhasil pada Quality Check, Website Test, dan Deploy to GitHub Pages. Pengujian browser interaktif serta audit aksesibilitas/performa menyeluruh belum tercakup. Pembaruan 2026-11-05."
         }
       ]
     },
@@ -138,6 +138,24 @@
           "title": "Menyiapkan pusat dokumentasi internal",
           "result": "Struktur dokumentasi awal dibuat di list/; file dan aturan pembaruan tercantum di README.md. Tidak mengubah kode website.",
           "updatedAt": "2026-10-10"
+        },
+        {
+          "id": "REN-014",
+          "title": "Mengubah transisi akhir intro loading halaman utama",
+          "result": "Animasi akhir diubah: logo, teks, dan progress bar membesar sambil memudar selama 1 detik, sementara latar loading berubah menjadi transparan. Circular reveal/radial mask dihapus. Runtime browser belum diverifikasi.",
+          "updatedAt": "2026-11-03"
+        },
+        {
+          "id": "REN-015",
+          "title": "Menerapkan White Blur Ripple pada halaman aktif",
+          "result": "Menambahkan efek pointerdown berbentuk lingkaran putih blur yang membesar dan memudar otomatis. CSS bersama diterapkan melalui css/common.css; halaman error memperoleh styling pendamping dari css/error-animation.css. Script dimuat pada halaman utama, brief, FAQ, feedback, persetujuan, UI preview, serta halaman error 403/404/500/error. Arsip history tidak diubah. Runtime browser belum diverifikasi.",
+          "updatedAt": "2026-11-03"
+        },
+        {
+          "id": "REN-016",
+          "title": "Menerapkan animasi Typewriter berulang pada headline hero",
+          "result": "Headline utama dipindahkan menjadi elemen penampil yang diisi JavaScript. Sumber teks dan konfigurasi berada di data/hero-text.js, sedangkan js/hero-typewriter.js mengatur pengetikan per karakter (45 ms), jeda 10 detik, penghapusan per karakter (30 ms), jeda kosong 2 detik, lalu loop. Dimulai setelah loading intro selesai dan menghormati prefers-reduced-motion. Belum diuji runtime browser.",
+          "updatedAt": "2026-11-03"
         }
       ]
     }

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id" class="brief-document">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Isi brief website NFShark untuk menjelaskan kebutuhan website Anda, baik untuk personal, organisasi, proyek, maupun bisnis." />
+    <meta property="og:site_name" content="NFShark" />
+    <title>Brief Website | NFShark</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/common-animasi.css" />
+    <link rel="stylesheet" href="css/brief.css" />
+  </head>
+  <body class="brief-page">
+    <header class="site-header brief-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="NFShark, beranda">
+          <img src="assets/Logo/LogoFull.webp" alt="" />
+          <span><span class="logo-accent">NF</span>Shark</span>
+        </a>
+        <nav class="brief-page-nav" aria-label="Navigasi halaman">
+          <a class="brief-home-link" href="faq.html">FAQ</a>
+          <a class="brief-home-link" href="index.html#packages"><span class="brief-home-long">Kembali ke </span>paket</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="brief-main">
+      <div class="container brief-container">
+        <header class="brief-intro">
+          <p class="eyebrow">NFShark</p>
+          <h1>Ceritakan website yang ingin dibuat.</h1>
+          <p>Isi informasi yang sudah Anda ketahui. Bagian desain dan aset boleh dikosongkan bila belum siap.</p>
+          <p class="draft-note">Pilih salah satu metode pengisian di bawah ini untuk mengirimkan kebutuhan website Anda.</p>
+        </header>
+
+        <section class="google-form-panel" aria-labelledby="brief-form-heading">
+          <div class="google-form-heading">
+            <h2 id="brief-form-heading">Formulir Brief Website</h2>
+            <p>Pilih cara pengisian sebelum memasukkan data. Anda dapat menggunakan Google Form atau formulir alternatif.</p>
+          </div>
+          <div class="google-form-options" role="group" aria-label="Pilih cara pengisian brief">
+            <button class="btn btn-primary" type="button" data-form-choice="google" aria-controls="brief-google-form" aria-pressed="false">Isi dengan Google Form</button>
+            <button class="btn btn-secondary" type="button" data-form-choice="manual" aria-controls="brief-legacy-form" aria-pressed="false">Isi formulir alternatif</button>
+          </div>
+          <p class="google-form-status" data-form-status role="status" aria-live="polite">Belum ada metode dipilih. Pilih salah satu tombol untuk mulai mengisi.</p>
+          <div class="google-form-content" data-google-form-content hidden>
+            <a class="google-form-fallback" href="https://docs.google.com/forms/d/e/1FAIpQLSex4JLkAvzEE7VndyP2k5n7y-HHsCaiGF7cb4-r33roMoBEPg/viewform?usp=header" target="_blank" rel="noopener noreferrer">Buka formulir di tab baru</a>
+            <iframe id="brief-google-form" class="google-form-embed" title="Formulir Brief Website NFShark" data-src="https://docs.google.com/forms/d/e/1FAIpQLSex4JLkAvzEE7VndyP2k5n7y-HHsCaiGF7cb4-r33roMoBEPg/viewform?embedded=true" loading="lazy"></iframe>
+          </div>
+        </section>
+        <details class="legacy-form-fallback" id="brief-legacy-form" data-legacy-form>
+          <summary>Jika Google Form tidak dapat dibuka, gunakan pengisian lama</summary>
+          <p class="legacy-form-note">Gunakan opsi ini bila formulir di atas tidak dapat diakses. Pengisian lama menyimpan draft di browser dan menyiapkan pesan WhatsApp.</p>
+          <p class="legacy-form-note" id="draft-status" role="status" aria-live="polite"></p>
+          <form id="brief-form" novalidate>
+          <section class="brief-section brief-section-a" data-section-title="A. DATA PELANGGAN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">A</span><h2>Data Pelanggan</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-a-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-a-content">
+              <div class="field-grid">
+                <div class="field"><label for="customer-name" data-summary-label="Nama">Nama lengkap <span class="field-status required">Wajib</span></label><input id="customer-name" name="customerName" type="text" autocomplete="name" aria-required="true" aria-describedby="customer-name-help" data-summary-label="Nama" /><small class="field-help" id="customer-name-help">Masukkan nama Anda sebagai orang yang mengajukan pembuatan website. Nama ini membantu komunikasi dan pembahasan proyek.</small></div>
+                <div class="field"><label for="business-name" data-summary-label="Nama bisnis">Nama bisnis <span class="field-status optional">Opsional</span></label><input id="business-name" name="businessName" type="text" autocomplete="organization" aria-describedby="business-name-help" data-summary-label="Nama bisnis" /><small class="field-help" id="business-name-help">Jika website dibuat untuk bisnis atau usaha, masukkan nama bisnisnya. Jika untuk personal, sekolah, organisasi, portfolio, atau kebutuhan lain, bagian ini boleh dikosongkan.</small></div>
+                <div class="field"><label for="customer-whatsapp" data-summary-label="WhatsApp pelanggan">WhatsApp Anda <span class="field-status required">Wajib</span></label><input id="customer-whatsapp" name="customerWhatsapp" type="tel" autocomplete="tel" aria-required="true" aria-describedby="customer-whatsapp-help" data-summary-label="WhatsApp pelanggan" /><small class="field-help" id="customer-whatsapp-help">Masukkan nomor WhatsApp yang aktif. Nomor ini digunakan untuk membahas brief dan perkembangan proyek.</small></div>
+                <div class="field"><label for="customer-email" data-summary-label="Email pelanggan">Email <span class="field-status optional">Opsional</span></label><input id="customer-email" name="customerEmail" type="email" autocomplete="email" aria-describedby="customer-email-help" data-summary-label="Email pelanggan" /><small class="field-help" id="customer-email-help">Cantumkan email jika Anda ingin menyertakannya sebagai kontak tambahan. Contohnya nama@email.com.</small></div>
+                <div class="field"><label for="business-location" data-summary-label="Lokasi">Lokasi <span class="field-status optional">Opsional</span></label><input id="business-location" name="businessLocation" type="text" autocomplete="address-level2" aria-describedby="business-location-help" data-summary-label="Lokasi" /><small class="field-help" id="business-location-help">Tuliskan kota atau wilayah yang berkaitan dengan website, bila relevan. Informasi ini dapat membantu menampilkan area layanan atau lokasi.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-b" data-section-title="B. TENTANG BISNIS">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">B</span><h2>Tentang Bisnis</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-b-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-b-content">
+              <div class="field-grid">
+                <div class="field"><label for="business-category" data-summary-label="Kategori bisnis">Kategori bisnis atau proyek <span class="field-status required">Wajib</span></label><input id="business-category" name="businessCategory" type="text" aria-required="true" aria-describedby="business-category-help" data-summary-label="Kategori bisnis" /><small class="field-help" id="business-category-help">Sebutkan jenis website atau kegiatan yang ingin ditampilkan, misalnya personal, portfolio, organisasi, sekolah, komunitas, proyek, produk, jasa, atau bisnis.</small></div>
+                <div class="field"><label for="business-description" data-summary-label="Deskripsi bisnis">Deskripsi bisnis atau kebutuhan <span class="field-status required">Wajib</span></label><textarea id="business-description" name="businessDescription" rows="3" aria-required="true" aria-describedby="business-description-help" data-summary-label="Deskripsi bisnis"></textarea><small class="field-help" id="business-description-help">Jelaskan secara singkat tentang bisnis, organisasi, diri Anda, atau hal yang akan ditampilkan di website. Informasi ini membantu menyusun isi dan arah halaman.</small></div>
+                <div class="field"><label for="products-services" data-summary-label="Produk atau layanan">Produk/Layanan <span class="field-status required">Wajib</span></label><textarea id="products-services" name="productsServices" rows="3" aria-required="true" aria-describedby="products-services-help" data-summary-label="Produk atau layanan"></textarea><small class="field-help" id="products-services-help">Sebutkan produk, jasa, karya, kegiatan, atau informasi utama yang ingin ditampilkan. Contohnya daftar menu, layanan konsultasi, atau karya portfolio.</small></div>
+                <div class="field"><label for="target-customer" data-summary-label="Target pelanggan">Target pelanggan <span class="field-status optional">Opsional</span></label><textarea id="target-customer" name="targetCustomer" rows="3" aria-describedby="target-customer-help" data-summary-label="Target pelanggan"></textarea><small class="field-help" id="target-customer-help">Jelaskan siapa yang ingin dijangkau website, bila sudah diketahui. Contohnya calon pelanggan, siswa, anggota komunitas, atau perekrut.</small></div>
+                <div class="field"><label for="business-advantage" data-summary-label="Keunggulan bisnis">Keunggulan bisnis <span class="field-status optional">Opsional</span></label><textarea id="business-advantage" name="businessAdvantage" rows="3" aria-describedby="business-advantage-help" data-summary-label="Keunggulan bisnis"></textarea><small class="field-help" id="business-advantage-help">Ceritakan hal yang membedakan bisnis, layanan, karya, atau kegiatan Anda. Contohnya pengalaman, cara kerja, atau manfaat yang ditawarkan.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-c" data-section-title="C. TUJUAN WEBSITE">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">C</span><h2>Tujuan Website</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-c-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-c-content">
+              <div class="field-grid">
+                <div class="field"><label for="website-goal" data-summary-label="Tujuan website">Tujuan website <span class="field-status required">Wajib</span></label><textarea id="website-goal" name="websiteGoal" rows="3" aria-required="true" aria-describedby="website-goal-help" data-summary-label="Tujuan website"></textarea><small class="field-help" id="website-goal-help">Jelaskan apa yang ingin dicapai dari website ini. Contohnya memperkenalkan diri, menampilkan portfolio, menjual produk, memberikan informasi, atau menerima pesanan.</small></div>
+                <div class="field"><label for="website-target" data-summary-label="Target website">Target website <span class="field-status optional">Opsional</span></label><textarea id="website-target" name="websiteTarget" rows="3" aria-describedby="website-target-help" data-summary-label="Target website"></textarea><small class="field-help" id="website-target-help">Tuliskan hasil yang diharapkan setelah website tersedia, bila ada. Contohnya pengunjung menghubungi Anda atau memahami informasi yang disediakan.</small></div>
+                <div class="field"><label for="desired-cta" data-summary-label="CTA yang diinginkan">CTA yang diinginkan <span class="field-status optional">Opsional</span></label><input id="desired-cta" name="desiredCta" type="text" aria-describedby="cta-help" data-summary-label="CTA yang diinginkan" /><small class="field-help" id="cta-help">Sebutkan tindakan yang diharapkan dilakukan pengunjung, seperti menghubungi WhatsApp, memesan produk, mendaftar, atau melihat katalog. Ini membantu menentukan tombol utama website.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-d" data-section-title="D. STRUKTUR & FITUR">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">D</span><h2>Struktur &amp; Fitur</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-d-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-d-content">
+              <div class="field-grid">
+                <div class="field"><label for="website-pages" data-summary-label="Halaman yang dibutuhkan">Halaman yang dibutuhkan <span class="field-status required">Wajib</span></label><textarea id="website-pages" name="websitePages" rows="3" aria-required="true" aria-describedby="website-pages-help" data-summary-label="Halaman yang dibutuhkan"></textarea><small class="field-help" id="website-pages-help">Sebutkan halaman yang ingin tersedia, misalnya Home, Tentang, Produk, Layanan, Portfolio, Galeri, atau Kontak. Daftar ini membantu menyusun struktur website.</small></div>
+                <div class="field"><label for="desired-features" data-summary-label="Fitur yang diinginkan">Fitur yang diinginkan <span class="field-status optional">Opsional</span></label><textarea id="desired-features" name="desiredFeatures" rows="3" aria-describedby="desired-features-help" data-summary-label="Fitur yang diinginkan"></textarea><small class="field-help" id="desired-features-help">Tuliskan fitur yang Anda inginkan, misalnya tombol WhatsApp, galeri, atau katalog. Informasi ini membantu memperkirakan kebutuhan pengerjaan.</small></div>
+                <div class="field"><label for="special-needs" data-summary-label="Kebutuhan khusus">Kebutuhan khusus <span class="field-status optional">Opsional</span></label><textarea id="special-needs" name="specialNeeds" rows="3" aria-describedby="special-needs-help" data-summary-label="Kebutuhan khusus"></textarea><small class="field-help" id="special-needs-help">Sampaikan kebutuhan lain yang belum tercakup, misalnya aksesibilitas atau tampilan dalam bahasa tertentu. Catatan ini membantu mengidentifikasi hal yang perlu dibahas.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-e" data-section-title="E. DESAIN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">E</span><h2>Desain</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-e-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-e-content">
+              <div class="field-grid">
+                <div class="field"><label for="design-colors" data-summary-label="Warna">Warna <span class="field-status optional">Opsional</span></label><input id="design-colors" name="designColors" type="text" aria-describedby="design-colors-help" data-summary-label="Warna" /><small class="field-help" id="design-colors-help">Sebutkan warna yang disukai atau ingin dihindari, bila ada. Contohnya hijau dan biru laut agar tampilan mengikuti identitas yang Anda inginkan.</small></div>
+                <div class="field"><label for="design-style" data-summary-label="Gaya atau desain">Gaya/desain <span class="field-status optional">Opsional</span></label><textarea id="design-style" name="designStyle" rows="3" aria-describedby="design-style-help" data-summary-label="Gaya atau desain"></textarea><small class="field-help" id="design-style-help">Jelaskan kesan tampilan yang Anda sukai, misalnya sederhana, formal, ceria, atau minimalis. Arahan ini membantu menentukan pendekatan visual.</small></div>
+                <div class="field"><label for="design-reference" data-summary-label="Referensi website">Referensi website <span class="field-status optional">Opsional</span></label><input id="design-reference" name="designReference" type="url" aria-describedby="design-reference-help" data-summary-label="Referensi website" /><small class="field-help" id="design-reference-help">Jika ada website dengan tampilan atau fitur yang Anda sukai, masukkan link-nya. Referensi menjadi gambaran, bukan untuk menyalin website tersebut.</small></div>
+                <div class="field"><label for="design-animation" data-summary-label="Animasi">Animasi <span class="field-status optional">Opsional</span></label><input id="design-animation" name="designAnimation" type="text" aria-describedby="design-animation-help" data-summary-label="Animasi" /><small class="field-help" id="design-animation-help">Sebutkan animasi yang diinginkan atau tulis jika tidak ingin ada animasi. Pilihan ini membantu menyesuaikan interaksi dengan kenyamanan pengunjung.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-f" data-section-title="F. KONTEN & ASET">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">F</span><h2>Konten &amp; Aset</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-f-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-f-content">
+              <p class="section-help">Untuk file, Anda dapat menempelkan tautan berbagi atau menuliskan aset yang akan disiapkan.</p>
+              <div class="field-grid">
+                <div class="field"><label for="business-logo" data-summary-label="Logo">Logo <span class="field-status optional">Opsional</span></label><textarea id="business-logo" name="businessLogo" rows="2" aria-describedby="business-logo-help" data-summary-label="Logo"></textarea><small class="field-help" id="business-logo-help">Jika sudah memiliki logo, masukkan link file atau lokasi aset tersebut. Jika belum ada, bagian ini boleh dikosongkan.</small></div>
+                <div class="field"><label for="business-images" data-summary-label="Foto atau gambar">Foto/gambar <span class="field-status optional">Opsional</span></label><textarea id="business-images" name="businessImages" rows="2" aria-describedby="business-images-help" data-summary-label="Foto atau gambar"></textarea><small class="field-help" id="business-images-help">Masukkan link foto atau gambar yang ingin digunakan, atau jelaskan gambar yang akan disiapkan. Aset membantu membuat isi website lebih sesuai.</small></div>
+                <div class="field"><label for="business-copy" data-summary-label="Teks atau konten">Teks/konten <span class="field-status optional">Opsional</span></label><textarea id="business-copy" name="businessCopy" rows="2" aria-describedby="business-copy-help" data-summary-label="Teks atau konten"></textarea><small class="field-help" id="business-copy-help">Tempelkan teks yang sudah tersedia atau tuliskan informasi yang perlu dimuat. Konten ini menjadi bahan untuk menyusun isi halaman.</small></div>
+                <div class="field"><label for="product-data" data-summary-label="Data produk">Data produk <span class="field-status optional">Opsional</span></label><textarea id="product-data" name="productData" rows="2" aria-describedby="product-data-help" data-summary-label="Data produk"></textarea><small class="field-help" id="product-data-help">Jika website menampilkan produk, cantumkan nama dan keterangan singkatnya. Data ini membantu menyiapkan katalog atau daftar produk.</small></div>
+                <div class="field"><label for="product-prices" data-summary-label="Harga produk">Harga produk <span class="field-status optional">Opsional</span></label><textarea id="product-prices" name="productPrices" rows="2" aria-describedby="product-prices-help" data-summary-label="Harga produk"></textarea><small class="field-help" id="product-prices-help">Tuliskan harga produk atau layanan jika ingin ditampilkan. Contohnya harga tetap atau kisaran harga untuk membantu pengunjung memahami penawaran.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-g" data-section-title="G. KONTAK">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">G</span><h2>Kontak</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-g-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-g-content">
+              <div class="field-grid">
+                <div class="field"><label for="business-whatsapp" data-summary-label="WhatsApp bisnis">WhatsApp bisnis <span class="field-status required">Wajib</span></label><input id="business-whatsapp" name="businessWhatsapp" type="tel" aria-required="true" aria-describedby="business-whatsapp-help" data-summary-label="WhatsApp bisnis" /><small class="field-help" id="business-whatsapp-help">Masukkan nomor WhatsApp yang ingin ditampilkan di website. Nomor ini menjadi jalur pengunjung untuk menghubungi atau memesan.</small></div>
+                <div class="field"><label for="main-social" data-summary-label="Sosial media utama">Sosial media utama <span class="field-status optional">Opsional</span></label><input id="main-social" name="mainSocial" type="text" aria-describedby="main-social-help" data-summary-label="Sosial media utama" /><small class="field-help" id="main-social-help">Cantumkan akun sosial media yang paling penting, misalnya Instagram atau TikTok. Link ini dapat membantu pengunjung menemukan profil Anda.</small></div>
+                <div class="field"><label for="other-socials" data-summary-label="Media sosial lainnya">Media sosial lainnya <span class="field-status optional">Opsional</span></label><input id="other-socials" name="otherSocials" type="text" aria-describedby="other-socials-help" data-summary-label="Media sosial lainnya" /><small class="field-help" id="other-socials-help">Tambahkan akun sosial media lain yang ingin ditampilkan. Contohnya Facebook, YouTube, atau LinkedIn.</small></div>
+                <div class="field"><label for="business-email" data-summary-label="Email bisnis">Email <span class="field-status optional">Opsional</span></label><input id="business-email" name="businessEmail" type="email" aria-describedby="business-email-help" data-summary-label="Email bisnis" /><small class="field-help" id="business-email-help">Masukkan alamat email yang ingin ditampilkan sebagai kontak website, misalnya halo@email.com.</small></div>
+                <div class="field"><label for="business-maps" data-summary-label="Google Maps">Google Maps <span class="field-status optional">Opsional</span></label><input id="business-maps" name="businessMaps" type="url" aria-describedby="business-maps-help" data-summary-label="Google Maps" /><small class="field-help" id="business-maps-help">Tempelkan link lokasi dari Google Maps jika ingin menampilkan alamat atau petunjuk lokasi di website.</small></div>
+                <div class="field"><label for="marketplace" data-summary-label="Marketplace">Marketplace <span class="field-status optional">Opsional</span></label><input id="marketplace" name="marketplace" type="text" aria-describedby="marketplace-help" data-summary-label="Marketplace" /><small class="field-help" id="marketplace-help">Masukkan nama toko atau link marketplace yang digunakan, misalnya Tokopedia atau Shopee. Informasi ini dapat mengarahkan pengunjung ke tempat transaksi.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-h" data-section-title="H. DOMAIN & HOSTING">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">H</span><h2>Domain &amp; Hosting</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-h-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-h-content">
+              <div class="field-grid">
+                <div class="field"><label for="domain-choice" data-summary-label="Domain">Domain <span class="field-status optional">Opsional</span></label><input id="domain-choice" name="domainChoice" type="text" placeholder="Contoh: namawebsite.com" aria-describedby="domain-choice-help" data-summary-label="Domain" /><small class="field-help" id="domain-choice-help">Jika sudah memiliki domain atau nama domain yang diinginkan, tuliskan di sini. Contohnya namawebsite.com untuk membantu pembahasan alamat website.</small></div>
+                <div class="field"><label for="hosting-choice" data-summary-label="Hosting">Hosting <span class="field-status optional">Opsional</span></label><input id="hosting-choice" name="hostingChoice" type="text" aria-describedby="hosting-choice-help" data-summary-label="Hosting" /><small class="field-help" id="hosting-choice-help">Jelaskan jika sudah memiliki layanan hosting atau preferensi tertentu. Informasi ini membantu membahas tempat website akan dipublikasikan.</small></div>
+                <div class="field"><label for="purchase-help" data-summary-label="Bantuan pembelian domain atau hosting">Membutuhkan bantuan pembelian <span class="field-status optional">Opsional</span></label><select id="purchase-help" name="purchaseHelp" aria-describedby="purchase-help-help" data-summary-label="Bantuan pembelian domain atau hosting"><option value="">Pilih bila diperlukan</option><option value="Ya">Ya</option><option value="Belum yakin">Belum yakin</option><option value="Tidak">Tidak</option></select><small class="field-help" id="purchase-help-help">Pilih apakah Anda memerlukan arahan untuk membeli domain atau hosting. Jawaban ini membantu mengetahui hal yang perlu dibahas terpisah dari jasa website.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-i" data-section-title="I. DEADLINE & CATATAN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">I</span><h2>Deadline &amp; Catatan</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-i-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-i-content">
+              <div class="field-grid">
+                <div class="field"><label for="deadline" data-summary-label="Deadline">Deadline <span class="field-status optional">Opsional</span></label><input id="deadline" name="deadline" type="date" aria-describedby="deadline-help" data-summary-label="Deadline" /><small class="field-help" id="deadline-help">Pilih tanggal target jika ada. Informasi ini membantu membicarakan jadwal dan kesesuaiannya dengan kebutuhan website.</small></div>
+                <div class="field"><label for="priority" data-summary-label="Prioritas">Prioritas <span class="field-status optional">Opsional</span></label><select id="priority" name="priority" aria-describedby="priority-help" data-summary-label="Prioritas"><option value="">Pilih bila ada</option><option value="Tampilan">Tampilan</option><option value="Informasi bisnis">Informasi bisnis</option><option value="Kontak dan pemesanan">Kontak dan pemesanan</option><option value="Fitur khusus">Fitur khusus</option><option value="Lainnya">Lainnya</option></select><small class="field-help" id="priority-help">Pilih bagian yang paling penting bagi Anda, seperti tampilan, informasi, atau pemesanan. Ini membantu menentukan fokus pembahasan.</small></div>
+                <div class="field"><label for="extra-notes" data-summary-label="Catatan tambahan">Catatan tambahan <span class="field-status optional">Opsional</span></label><textarea id="extra-notes" name="extraNotes" rows="3" aria-describedby="extra-notes-help" data-summary-label="Catatan tambahan"></textarea><small class="field-help" id="extra-notes-help">Tambahkan informasi yang belum tercakup di pertanyaan lain. Catatan ini membantu menghindari hal penting terlewat saat membahas brief.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-j" data-section-title="J. PERSETUJUAN">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">J</span><h2>Persetujuan</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-j-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-j-content">
+              <div class="field"><label for="revision-terms" data-summary-label="Ketentuan atau jumlah revisi">Ketentuan/jumlah revisi <span class="field-status required">Wajib</span></label><textarea id="revision-terms" name="revisionTerms" rows="2" aria-required="true" aria-describedby="revision-terms-help" data-summary-label="Ketentuan atau jumlah revisi"></textarea><small class="field-help" id="revision-terms-help">Tuliskan hal yang ingin dipastikan tentang proses revisi atau jumlah revisi yang dibutuhkan. Informasi ini menjadi bahan untuk menyepakati alur pengerjaan.</small></div>
+              <div class="consent-list">
+                <label class="consent-item" data-summary-label="Persetujuan hasil website masuk portfolio"><input id="portfolio-consent" name="portfolioConsent" type="checkbox" value="Disetujui" aria-required="true" aria-describedby="portfolio-consent-help" data-summary-label="Persetujuan hasil website masuk portfolio" /><span>Saya menyetujui hasil website dapat dimasukkan ke portfolio NFShark. <span class="field-status required">Wajib</span><small class="consent-explanation" id="portfolio-consent-help">Persetujuan ini menjelaskan apakah hasil proyek dapat dipertimbangkan untuk ditampilkan sebagai portfolio.</small></span></label>
+                <label class="consent-item" data-summary-label="Persetujuan penggunaan aset dari pelanggan"><input id="asset-consent" name="assetConsent" type="checkbox" value="Disetujui" aria-required="true" aria-describedby="asset-consent-help" data-summary-label="Persetujuan penggunaan aset dari pelanggan" /><span>Saya memastikan aset yang saya berikan boleh digunakan untuk website. <span class="field-status required">Wajib</span><small class="consent-explanation" id="asset-consent-help">Centang setelah memastikan Anda berhak memberikan logo, foto, teks, atau aset lain untuk kebutuhan website.</small></span></label>
+                <label class="consent-item" data-summary-label="Persetujuan akhir"><input id="final-consent" name="finalConsent" type="checkbox" value="Disetujui" aria-required="true" aria-describedby="final-consent-help" data-summary-label="Persetujuan akhir" /><span>Saya menyetujui informasi brief ini sebagai dasar diskusi pengerjaan website. <span class="field-status required">Wajib</span><small class="consent-explanation" id="final-consent-help">Periksa kembali isian sebelum menyetujui. Brief ini digunakan sebagai dasar pembahasan kebutuhan proyek.</small></span></label>
+              </div>
+            </div>
+          </section>
+
+          <section class="brief-section brief-section-k" data-section-title="K. PAKET & BUDGET">
+            <div class="brief-section-heading">
+              <div><span class="section-letter">K</span><h2>Paket &amp; Budget</h2></div>
+              <button class="section-toggle" type="button" aria-expanded="true" aria-controls="section-k-content">Tutup bagian</button>
+            </div>
+            <div class="brief-section-content" id="section-k-content">
+              <div class="field-grid">
+                <div class="field"><label for="package-choice" data-summary-label="Pilihan paket">Pilihan paket <span class="field-status required">Wajib</span></label><select id="package-choice" name="packageChoice" aria-required="true" aria-describedby="package-choice-help" data-summary-label="Pilihan paket"><option value="">Pilih paket</option><option value="Basic">Basic</option><option value="Popular">Popular</option><option value="Premium">Premium</option><option value="Custom">Custom</option></select><small class="field-help" id="package-choice-help">Pilih paket yang ingin dibahas. Pilihan ini membantu menyesuaikan diskusi dengan cakupan layanan yang tersedia.</small></div>
+                <div class="field"><label for="budget" data-summary-label="Budget">Budget <span class="field-status required">Wajib</span></label><input id="budget" name="budget" type="number" inputmode="numeric" min="100000" step="1000" placeholder="100000" aria-required="true" aria-describedby="budget-help" data-summary-label="Budget" /><small class="field-help" id="budget-help">Masukkan perkiraan anggaran untuk jasa pembuatan website. Budget minimum Rp100.000; harga domain dan hosting dibahas terpisah.</small></div>
+                <div class="field custom-needs-field" id="custom-needs-field" hidden><label for="custom-needs" data-summary-label="Kebutuhan custom">Kebutuhan Custom <span class="field-status optional">Opsional</span></label><textarea id="custom-needs" name="customNeeds" rows="3" aria-describedby="custom-needs-help" data-summary-label="Kebutuhan Custom" disabled></textarea><small class="field-help" id="custom-needs-help">Jelaskan fitur, halaman, atau kebutuhan lain di luar paket yang tersedia. Catatan ini membantu memahami cakupan Custom.</small></div>
+              </div>
+            </div>
+          </section>
+
+          <div class="brief-actions">
+            <div class="brief-feedback" id="brief-feedback" role="alert" aria-live="assertive"></div>
+            <div class="brief-action-buttons">
+              <button class="btn btn-secondary reset-button" id="reset-brief" type="button">Reset Brief</button>
+              <button class="btn btn-primary send-button" id="send-brief" type="button">Kirim Brief ke WhatsApp</button>
+            </div>
+            <p class="send-note">Pesan akan disiapkan di WhatsApp. Anda tetap perlu menekan tombol kirim di WhatsApp.</p>
+          </div>
+          </form>
+
+          <details class="brief-review">
+          <summary>Periksa ringkasan brief</summary>
+          <div class="summary-content" id="brief-summary" aria-live="polite"></div>
+          </details>
+        </details>
+      </div>
+    </main>
+
+    <footer class="site-footer brief-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand"><img src="assets/Logo/Logo.webp" alt="" /><span>© 2026 NFShark</span></p>
+        <a href="index.html">Kembali ke halaman utama</a>
+      </div>
+    </footer>
+
+    <script src="js/google-form-choice.js"></script>
+    <script src="js/brief.js"></script>
+  </body>
+</html>

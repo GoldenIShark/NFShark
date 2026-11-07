@@ -80,6 +80,10 @@ Jika pelanggan telah memilih paket, perlakukan itu sebagai preferensi awal. Band
 Gunakan hanya skill yang relevan dan periksa file skill yang benar-benar ada sebelum menyebutnya sebagai panduan yang telah digunakan.
 
 - `website-planning`: tujuan, audiens, struktur, alur halaman, CTA, dan ruang lingkup.
+- `website-structure`: urutan header, navbar, section, dan footer berdasarkan kategori website.
+- `ux-research`: memahami pengguna, tujuan, data yang tersedia, asumsi, dan pertanyaan yang belum terjawab.
+- `ux-usability`: memeriksa alur tugas, navigasi, kejelasan tindakan, umpan balik, dan pemulihan dari kesalahan.
+- `ux-forms`: merencanakan formulir yang mudah diisi, validasi, status pengiriman, dan aksesibilitas formulir.
 - `human-ui-design`: arah visual, karakter desain, konsistensi, dan penghindaran tampilan generik.
 - `website-content`: pesan utama, konten, CTA, label, dan kebutuhan materi.
 - `frontend-development`: kelayakan teknis implementasi front-end.

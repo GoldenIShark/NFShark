@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/common-animasi.css" />
     <link rel="stylesheet" href="css/feedback.css" />
+    <script src="js/skeleton-loading.js" defer></script>
+    <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+      <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
   </head>
   <body class="feedback-page">
     <header class="site-header feedback-header">
@@ -30,10 +35,28 @@
           <p class="eyebrow">Masukan pengunjung</p>
           <h1>Saran / Lapor Bug</h1>
           <p>Sampaikan ide atau masalah yang Anda temukan agar pengalaman menggunakan NFShark dapat terus diperbaiki.</p>
-          <p class="feedback-setup-note">Isian hanya digunakan untuk menyusun email di perangkat Anda dan tidak disimpan oleh halaman ini.</p>
+          <p class="feedback-setup-note">Pilih Google Form atau formulir alternatif untuk menyampaikan masukan Anda.</p>
         </header>
 
-        <form class="feedback-form" id="feedback-form" novalidate>
+        <section class="google-form-panel" aria-labelledby="feedback-form-heading">
+          <div class="google-form-heading">
+            <h2 id="feedback-form-heading">Formulir Saran / Lapor Bug</h2>
+            <p>Pilih cara pengisian sebelum memasukkan data. Anda dapat menggunakan Google Form atau formulir alternatif.</p>
+          </div>
+          <div class="google-form-options" role="group" aria-label="Pilih cara pengisian saran atau laporan">
+            <button class="btn btn-primary" type="button" data-form-choice="google" aria-controls="feedback-google-form" aria-pressed="false">Isi dengan Google Form</button>
+            <button class="btn btn-secondary" type="button" data-form-choice="manual" aria-controls="feedback-legacy-form" aria-pressed="false">Isi formulir alternatif</button>
+          </div>
+          <p class="google-form-status" data-form-status role="status" aria-live="polite">Belum ada metode dipilih. Pilih salah satu tombol untuk mulai mengisi.</p>
+          <div class="google-form-content" data-google-form-content hidden>
+            <a class="google-form-fallback" href="https://docs.google.com/forms/d/e/1FAIpQLSfD4M1zSuFPKvD1vL_L1jM74VhIee2meUQvb7JBLji9b_evqw/viewform?usp=header" target="_blank" rel="noopener noreferrer">Buka formulir di tab baru</a>
+            <iframe id="feedback-google-form" class="google-form-embed" title="Formulir Saran atau Lapor Bug NFShark" data-src="https://docs.google.com/forms/d/e/1FAIpQLSfD4M1zSuFPKvD1vL_L1jM74VhIee2meUQvb7JBLji9b_evqw/viewform?embedded=true" loading="lazy"></iframe>
+          </div>
+        </section>
+        <details class="legacy-form-fallback" id="feedback-legacy-form" data-legacy-form>
+          <summary>Jika Google Form tidak dapat dibuka, gunakan pengisian lama</summary>
+          <p class="legacy-form-note">Gunakan opsi ini bila formulir di atas tidak dapat diakses. Pengisian lama akan menyiapkan email di perangkat Anda.</p>
+          <form class="feedback-form" id="feedback-form" novalidate>
           <div class="feedback-field-grid">
             <div class="feedback-field">
               <label for="report-name">Nama <span class="field-status optional">Opsional</span></label>
@@ -84,7 +107,8 @@
           <p class="feedback-send-note">Tombol ini akan membuka aplikasi email di perangkat Anda. Silakan periksa kembali isi email sebelum menekan Kirim.</p>
           <p class="feedback-status" id="feedback-status" role="status" aria-live="polite"></p>
           <p class="feedback-fallback">Aplikasi email tidak ditemukan? Silakan gunakan aplikasi email di perangkat Anda atau <a id="feedback-email-link" href="mailto:goldenishark22@gmail.com">hubungi NFShark melalui email</a>.</p>
-        </form>
+          </form>
+        </details>
       </div>
     </main>
 
@@ -99,6 +123,8 @@
       </div>
     </footer>
 
+    <script src="js/google-form-choice.js"></script>
     <script src="js/feedback.js"></script>
-  </body>
+    <script src="js/touch-ripple.js" defer></script>
+</body>
 </html>

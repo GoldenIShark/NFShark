@@ -37,6 +37,27 @@ html.feedback-document { scroll-behavior: auto; }
 .feedback-footer-nav { display: flex; flex-wrap: wrap; gap: 1rem; color: var(--text-secondary); }
 .feedback-footer-nav a:hover, .feedback-footer-nav a:focus-visible { color: var(--green); }
 
+.google-form-panel {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-secondary);
+}
+
+.google-form-heading { padding: 1.25rem 1.35rem; }
+.google-form-heading h2 { margin: 0 0 0.55rem; color: var(--white); font-size: 1.3rem; }
+.google-form-heading p { margin: 0; color: var(--text-secondary); line-height: 1.55; }
+.google-form-options { display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 0 1.35rem; }
+.google-form-status { min-height: 1.5em; margin: 0; padding: 0.85rem 1.35rem; color: var(--text-secondary); }
+.google-form-content { padding: 0 1.35rem 1.35rem; }
+.google-form-fallback { display: inline-block; margin-top: 0.85rem; color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 0.15em; }
+.google-form-embed { display: block; width: 100%; min-height: 1100px; margin-top: 0.5rem; border: 0; background: #fff; }
+.legacy-form-fallback { margin-top: 1rem; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-secondary); }
+.legacy-form-fallback summary { padding: 1rem 1.15rem; color: var(--green); font-weight: 700; cursor: pointer; }
+.legacy-form-fallback summary:focus-visible { outline: 2px solid var(--green); outline-offset: -3px; }
+.legacy-form-note { margin: 0; padding: 0 1.15rem 1rem; color: var(--text-secondary); line-height: 1.5; }
+.legacy-form-fallback > form { margin: 0; border: 0; border-radius: 0; }
+
 @media (max-width: 600px) {
   .feedback-page .container { width: calc(100% - 1.25rem); max-width: 760px; }
   .feedback-page .header-inner { min-height: 66px; }
@@ -50,4 +71,47 @@ html.feedback-document { scroll-behavior: auto; }
   .feedback-field-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .feedback-footer .footer-inner { align-items: flex-start; }
   .report-type-options { flex-direction: column; }
+  .google-form-heading { padding: 1rem; }
+  .google-form-heading h2 { font-size: 1.12rem; }
+  .google-form-options { flex-direction: column; padding: 0 1rem; }
+  .google-form-options .btn { width: 100%; }
+  .google-form-status { padding: 0.75rem 1rem; }
+  .google-form-content { padding: 0 1rem 1rem; }
+  .google-form-embed { min-height: 1400px; }
+}
+
+/* --- Editorial UI/UX Refinement --- */
+.feedback-field input,
+.feedback-field textarea {
+  transition: border-color var(--transition-smooth, 0.2s ease), box-shadow var(--transition-smooth, 0.2s ease);
+}
+
+.feedback-field input:focus,
+.feedback-field textarea:focus {
+  border-color: var(--color-mint, #2dd4bf);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.report-type-options label {
+  transition: border-color var(--transition-smooth, 0.2s ease), background var(--transition-smooth, 0.2s ease);
+}
+
+.report-type-options label:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+}
+
+.report-type-options label:focus-within {
+  border-color: var(--color-mint, #2dd4bf);
+  background: rgba(45, 212, 191, 0.05);
+}
+
+.feedback-home-link {
+  transition: all var(--transition-smooth, 0.2s ease);
+}
+
+.feedback-home-link:hover,
+.feedback-home-link:focus-visible {
+  border-color: var(--color-mint, #2dd4bf);
+  color: var(--color-mint, #2dd4bf);
+  background: rgba(45, 212, 191, 0.06);
 }

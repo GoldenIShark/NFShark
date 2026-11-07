@@ -72,3 +72,39 @@ html.faq-document { scroll-behavior: auto; }
   .faq-question-submit { width: 100%; }
   .faq-footer .footer-inner { align-items: flex-start; }
 }
+/* --- Editorial UI/UX Refinement --- */
+.faq-tools input,
+.faq-question-field input,
+.faq-question-field select,
+.faq-question-field textarea {
+  transition: border-color var(--transition-smooth, 0.2s ease), box-shadow var(--transition-smooth, 0.2s ease);
+}
+
+.faq-tools input:focus,
+.faq-question-field input:focus,
+.faq-question-field select:focus,
+.faq-question-field textarea:focus {
+  border-color: var(--color-mint, #2dd4bf);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.faq-categories a {
+  transition: all var(--transition-smooth, 0.2s ease);
+}
+
+.faq-categories a:hover,
+.faq-categories a:focus-visible {
+  border-color: var(--color-mint, #2dd4bf);
+  color: var(--color-mint, #2dd4bf);
+  background: rgba(45, 212, 191, 0.06);
+}
+
+.faq-item summary::after {
+  color: var(--color-mint, #2dd4bf);
+  transition: transform var(--transition-smooth, 0.2s ease);
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--color-mint, #2dd4bf);
+  outline-offset: 4px;
+}
