@@ -1,25 +1,3 @@
-/* Homepage editorial tokens, scoped to the original homepage design. */
-:root {
-  --color-dark: #091915;
-  --color-dark-surface: #102621;
-  --color-dark-border: rgba(45, 212, 191, 0.16);
-  --color-cream: #f6f3eb;
-  --color-cream-surface: #ede8dc;
-  --color-cream-border: rgba(17, 26, 24, 0.12);
-  --color-mint: #2dd4bf;
-  --color-lime: #bef264;
-  --color-dark-text: #111a18;
-  --color-light-text: #f5fbf8;
-  --color-muted: #839993;
-  --font-telma: "Telma Light", "Times New Roman", Times, serif;
-  --font-rosaline: "Rosaline", "Brush Script MT", cursive;
-  --font-sans: "Times New Roman", Times, serif;
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --transition-smooth: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 /* ==========================================================================
    NFShark Studio — Minimalist Editorial Stylesheet
    Digital Agency / Web Design Studio Single-Page Landing Page
@@ -908,29 +886,4 @@ section[id] {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-typewriter-caret { display: none; animation: none; }
-}
-
-
-/* Efek sentuh/ripple yang digunakan halaman utama. */
-.nf-touch-ripple {
-  position: fixed;
-  z-index: 9999;
-  width: 42px;
-  height: 42px;
-  border: 1.5px solid #2dd4bf;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(.78);
-  animation: nf-touch-ripple-expand 280ms ease-out forwards;
-}
-@keyframes nf-touch-ripple-expand {
-  0% { opacity: .72; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.12); }
-}
-.nf-press-feedback { transition: scale 110ms ease-out; }
-.nf-press-feedback.is-pressed { scale: .97; }
-@media (prefers-reduced-motion: reduce) {
-  .nf-touch-ripple { display: none; animation: none; }
-  .nf-press-feedback, .nf-press-feedback.is-pressed { transition: none; scale: 1; }
 }
