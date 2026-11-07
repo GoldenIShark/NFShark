@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-07",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -11,7 +11,7 @@
         {
           "id": "FIT-001",
           "title": "Halaman utama dan bagian layanan",
-          "description": "Halaman utama statis memuat beranda, jasa, alasan memilih layanan, paket, portofolio, dan kontak.",
+          "description": "Halaman utama memuat navigasi, hero, tentang NFShark, layanan, portofolio, keunggulan, paket harga, CTA, dan footer dengan konten yang diselaraskan dengan naskah terbaru.",
           "benefit": "Memberi pengunjung ringkasan layanan dan jalur informasi.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
@@ -19,7 +19,7 @@
             "index.html",
             "css/style.css"
           ],
-          "testNotes": "Struktur section dan tautan diperiksa; belum diuji seluruh interaksi."
+          "testNotes": "Teks pada elemen halaman utama diperbarui tanpa mengubah struktur HTML, CSS, elemen, atau logika JavaScript. Pemeriksaan source dilakukan setelah pembaruan; uji browser belum dilakukan."
         },
         {
           "id": "FIT-002",
