@@ -1,292 +1,662 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NFShark membantu mewujudkan website dengan desain fleksibel, tampilan profesional, dan performa ringan untuk berbagai kebutuhan." />
-  <meta property="og:site_name" content="NFShark" />
-  <meta property="og:title" content="NFShark — Jasa Pembuatan Website" />
-  <meta property="og:description" content="Dari kebutuhan sederhana menjadi tampilan website yang berkesan." />
-  <meta name="theme-color" content="#071114" />
-  <title>NFShark — Jasa Pembuatan Website</title>
-  <link rel="icon" type="image/webp" href="assets/Logo/Logo.webp" />
-  <link rel="apple-touch-icon" href="assets/Logo/Logo.webp" />
-  <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/common-animasi.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="logo" aria-label="NFShark, beranda">
-        <img src="assets/Logo/LogoFull.webp" alt="" width="58" height="58" />
-        <span><span class="logo-accent">NF</span>Shark</span>
-      </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NFShark membantu mewujudkan website yang fleksibel, ringan, dan sesuai dengan kebutuhan informasi maupun pengembangan bisnis."
+    />
+    <meta property="og:site_name" content="NFShark" />
+    <meta name="google-site-verification" content="mmbmfa8yv-SaLUJyy3tBIJU0WpFMeo-WJoZZEfleo4U" />
 
-      <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="main-navigation">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
-        <ul>
-          <li><a href="#services">Layanan</a></li>
-          <li><a href="#portfolio">Portofolio</a></li>
-          <li><a href="#features">Keunggulan</a></li>
-          <li><a href="#pricing">Paket Harga</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="feedback.html">Masukan &amp; Laporan</a></li>
-          <li><a class="btn btn-primary nav-cta" href="https://wa.me/6289630984238?text=Halo%20NFShark%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%20website." target="_blank" rel="noopener noreferrer">Pesan Website</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">WEBSITE DESIGN &amp; DEVELOPMENT</p>
-          <h1>Butuh website yang sesuai dengan kebutuhan Anda?</h1>
-          <p class="lead">NFShark membantu mewujudkan website dengan desain fleksibel, tampilan profesional, dan performa ringan. Mulai dari website sederhana untuk menyampaikan informasi hingga website bisnis untuk memperkenalkan layanan dan menjangkau lebih banyak pelanggan.</p>
-          <div class="hero-actions">
-            <a href="https://wa.me/6289630984238?text=Halo%20NFShark%2C%20saya%20tertarik%20menggunakan%20jasa%20pembuatan%20website." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Pesan Website</a>
-            <a href="#portfolio" class="btn btn-secondary">Lihat Portofolio</a>
+    <title>NFShark | Jasa Pembuatan Website</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261105-1" />
+    <link rel="stylesheet" href="css/style-studio.css?v=20261029-2" />
+    <script src="js/skeleton-loading.js" defer></script>
+    <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+      <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+    <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+  </head>
+  <body class="studio-body">
+    <div class="nf-loading-screen" id="nf-loading-screen" hidden aria-label="Memuat halaman NFShark">
+      <div class="nf-loading-content" id="nf-loading-content">
+        <img class="nf-loading-logo" src="assets/Logo/Logo.webp" alt="" width="76" height="76" />
+        <div class="nf-loading-brand">nfshark</div>
+        <p class="nf-loading-caption">Preparing your experience</p>
+        <div class="nf-loading-progress">
+          <div class="nf-loading-progress-meta">
+            <span>Loading...</span>
+            <span id="nf-loading-percent" aria-live="off">0%</span>
+          </div>
+          <div class="nf-loading-track" id="nf-loading-track" role="progressbar" aria-label="Progres pemuatan animasi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span class="nf-loading-fill" id="nf-loading-fill"></span>
           </div>
         </div>
+      </div>
+    </div>
+    
+    <!-- NAVBAR (Sticky, Minimalist, Aksesibel Keyboard & Escape) -->
+    <header class="studio-header" id="header">
+      <div class="studio-container studio-header-inner">
+        <a href="#hero" class="studio-logo" aria-label="NFShark, kembali ke beranda">
+          <img src="assets/Logo/LogoFull.webp" alt="" width="44" height="44" />
+          <span>NFShark</span>
+        </a>
 
-        <div class="hero-visual reveal" aria-label="Ilustrasi pratinjau website NFShark">
-          <div class="browser-window">
-            <div class="browser-bar"><span></span><span></span><span></span></div>
-            <div class="browser-content">
-              <div class="mockup-header">
-                <div class="mockup-brand">NFShark</div>
-                <div class="mockup-nav"><span></span><span></span><span></span></div>
-              </div>
-              <div class="mockup-hero">
-                <div>
-                  <p class="mockup-kicker">WEBSITE PREVIEW</p>
-                  <h3>Website yang dirancang mengikuti kebutuhan Anda.</h3>
-                  <p>Fleksibel dalam desain, nyaman digunakan, dan responsif di berbagai perangkat.</p>
+        <button class="menu-toggle" type="button" aria-label="Buka navigasi menu" aria-expanded="false" aria-controls="studio-navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="studio-navigation" aria-label="Navigasi utama">
+          <ul class="studio-nav-list">
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#portfolio">Portofolio</a></li>
+            <li><a href="#features">Keunggulan</a></li>
+            <li><a href="#features">Keunggulan</a></li>
+              <li><a href="#pricing">Paket Harga</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="feedback.html">Masukan &amp; Laporan</a></li>
+            <li><a href="#contact" class="btn btn-lime" style="min-height: 40px; padding: 0.4rem 1rem;">Mulai Proyek ↗</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      
+      <!-- 1. HERO SECTION -->
+      <section id="hero" class="studio-section studio-hero" aria-labelledby="hero-title">
+        <div class="studio-container hero-editorial-grid">
+          <div class="hero-copy-block">
+            <span class="studio-eyebrow">WEBSITE DESIGN &amp; DEVELOPMENT</span>
+            <h1 id="hero-title" class="serif-heading hero-headline">
+              <span class="hero-typewriter-text serif-italic" data-nf-typewriter>Butuh website yang sesuai dengan kebutuhan Anda?</span><span class="hero-typewriter-caret" aria-hidden="true"></span>
+            </h1>
+            <p class="hero-lead-text">
+              NFShark membantu mewujudkan website dengan desain fleksibel, tampilan profesional, dan performa ringan. Mulai dari website sederhana untuk menyampaikan informasi hingga website bisnis untuk memperkenalkan layanan dan menjangkau lebih banyak pelanggan.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-lime">Pesan Website</a>
+              <a href="#portfolio" class="btn btn-outline-editorial">Lihat Portofolio</a>
+            </div>
+          </div>
+
+          <!-- Hero Mockup Frame (Rasio Visual Terkunci) -->
+          <div class="hero-mockup-wrapper">
+            <div class="browser-header-editorial">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-address">https://nfshark.web.id</span>
+            </div>
+            <div class="hero-preview-canvas">
+              <div class="hero-canvas-inner">
+                <span class="badge-editorial badge-mint" style="margin-bottom: 1rem;">Website Fleksibel</span>
+                <h2 class="serif-heading" style="color: var(--color-light-text);">
+                  Website yang dirancang mengikuti kebutuhan Anda.
+                </h2>
+                <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                  Fleksibel dalam desain, nyaman digunakan, dan responsif di berbagai perangkat.
+                </p>
+                <div style="display: inline-flex; gap: 0.75rem;">
+                  <span class="badge-editorial badge-lime">Desain Fleksibel</span>
+                  <span class="badge-editorial badge-mint">Performa Ringan</span>
                 </div>
-                <div class="mockup-chart" aria-hidden="true"></div>
               </div>
-              <div class="mockup-cards" aria-hidden="true"><div></div><div></div><div></div></div>
-              <div class="mockup-strengths"><span>Desain Fleksibel</span><span>Performa Ringan</span></div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="about" class="section about">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">TENTANG NFSHARK</p>
-          <h2>Dari kebutuhan sederhana menjadi tampilan website yang berkesan.</h2>
-        </div>
-        <div class="about-content">
-          <div class="about-text reveal">
-            <p>NFShark berfokus pada pembuatan website yang menyesuaikan kebutuhan, tujuan, dan karakter setiap pelanggan. Kami percaya bahwa website seharusnya membantu menyampaikan informasi, memperkenalkan bisnis, dan memberikan pengalaman yang nyaman bagi pengunjung.</p>
-            <p>Dengan memperhatikan desain, kemudahan penggunaan, dan kecepatan akses, setiap website dirancang agar tampil profesional tanpa elemen yang tidak diperlukan.</p>
+      <!-- 2. PROFIL & PENDEKATAN STUDIO (2 KOLOM: 45/55) -->
+      <section id="about" class="studio-section studio-section--dark" aria-labelledby="about-title">
+        <div class="studio-container studio-profile-grid">
+          <div class="studio-profile-left">
+            <span class="studio-eyebrow">TENTANG NFSHARK</span>
+            <h2 id="about-title" class="serif-heading">
+              Dari kebutuhan sederhana menjadi tampilan website yang <span class="serif-italic">berkesan.</span>
+            </h2>
+          </div>
+          <div class="studio-profile-right">
+            <p>
+              NFShark berfokus pada pembuatan website yang menyesuaikan kebutuhan, tujuan, dan karakter setiap pelanggan. Kami percaya bahwa website seharusnya membantu menyampaikan informasi, memperkenalkan bisnis, dan memberikan pengalaman yang nyaman bagi pengunjung.
+            </p>
+            <p>
+              Dengan memperhatikan desain, kemudahan penggunaan, dan kecepatan akses, setiap website dirancang agar tampil profesional tanpa elemen yang tidak diperlukan.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services" class="section services">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">LAYANAN NFSHARK</p>
-          <h2>Satu solusi website untuk segala kebutuhan.</h2>
-          <p class="section-intro">Setiap kebutuhan memiliki tujuan yang berbeda. Karena itu, NFShark menyediakan layanan pembuatan website dengan tampilan dan susunan yang dapat disesuaikan dengan kebutuhan Anda.</p>
-        </div>
-
-        <div class="card-grid">
-          <article class="service-card reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V8l6-4 6 4v12M9 20v-5h6v5M9 10h.01M15 10h.01"/></svg></div>
-            <h3>Website Informasi</h3>
-            <p>Website untuk memperkenalkan profil, menyampaikan informasi, menampilkan kegiatan, atau menyediakan informasi penting kepada pengunjung.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 17V8l7-4 7 4v9M8 17v-4h8v4M9 9h.01M15 9h.01"/></svg></div>
-            <h3>Website Bisnis &amp; Pemasaran</h3>
-            <p>Website untuk memperkenalkan bisnis, menampilkan layanan, membangun kepercayaan pelanggan, dan mendukung kegiatan pemasaran.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5v-9ZM4.5 7.8 12 12l7.5-4.2M12 12v8.5"/></svg></div>
-            <h3>Website Katalog &amp; Kebutuhan Khusus</h3>
-            <p>Website untuk menampilkan produk, koleksi, portofolio, maupun kebutuhan lain dengan susunan dan tampilan yang dapat disesuaikan.</p>
-          </article>
-        </div>
-
-        <div class="service-actions reveal">
-          <a class="btn btn-primary" href="https://wa.me/6289630984238?text=Halo%20NFShark%2C%20saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20website." target="_blank" rel="noopener noreferrer">Konsultasikan Kebutuhan</a>
-        </div>
-
-        <div class="brief-callout reveal">
-          <div>
-            <h3>Masih bingung menentukan kebutuhan website?</h3>
-            <p>Belum tahu website seperti apa yang Anda butuhkan atau apa saja yang perlu disampaikan kepada NFShark? Tidak masalah. Isi Brief Website untuk membantu kami memahami ide dan kebutuhan Anda.</p>
+      <!-- 3. LAYANAN (LATAR KREM & ACCORDION ARIA) -->
+      <section id="services" class="studio-section studio-section--cream" aria-labelledby="services-title">
+        <div class="studio-container studio-services-layout">
+          <div class="services-intro-col">
+            <span class="studio-eyebrow">LAYANAN NFSHARK</span>
+            <h2 id="services-title" class="serif-heading">Satu solusi website untuk segala kebutuhan.</h2>
+            <p>
+              Mulai dari website informasi hingga kebutuhan bisnis dan katalog, NFShark membantu menyusun tampilan website sesuai tujuan dan karakter proyek.
+            </p>
+            <a href="#contact" class="btn btn-lime" style="background:#091915; color:#fff; border-color:#091915;">Konsultasikan Kebutuhan</a>
           </div>
-          <a class="btn btn-secondary" href="brief.html">Isi Brief Website</a>
-        </div>
-      </div>
-    </section>
 
-    <section id="portfolio" class="section portfolio">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">KARYA &amp; EKSPLORASI</p>
-          <h2>Berbagai tampilan, berbagai kemungkinan.</h2>
-          <p class="section-intro">Lihat bagaimana kebutuhan yang berbeda dapat diwujudkan menjadi website dengan karakter visual, susunan informasi, dan pengalaman penggunaan yang beragam.</p>
-        </div>
-
-        <p class="portfolio-type-label reveal">TEMPLATE UI PREVIEW</p>
-        <div class="portfolio-grid" tabindex="0" aria-label="Daftar pratinjau portofolio, geser ke samping untuk melihat lainnya">
-          <article class="portfolio-card reveal">
-            <div class="portfolio-image portfolio-placeholder portfolio-placeholder--aura" role="img" aria-label="Ilustrasi konsep website Aura Rasa"><span>AURA RASA</span></div>
-            <div class="portfolio-body">
-              <h3>Aura Rasa — Restoran Nusantara</h3>
-              <p>Website restoran dengan tampilan ringkas dan informatif. Dilengkapi navigasi sederhana serta akses pemesanan langsung melalui WhatsApp.</p>
-              <span class="portfolio-status">Konsep UI</span>
+          <div class="studio-accordion-wrap" role="region" aria-label="Daftar accordion rincian layanan">
+            <!-- Layanan 1 -->
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="true" aria-controls="srv-panel-1" id="srv-btn-1">
+                <span>Website Informasi</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="srv-panel-1" role="region" aria-labelledby="srv-btn-1">
+                <div class="accordion-panel-inner">
+                  Website untuk menyampaikan profil, informasi, pengumuman, maupun kebutuhan publikasi dengan susunan konten yang jelas dan mudah diakses.
+                </div>
+              </div>
             </div>
-          </article>
 
-          <article class="portfolio-card reveal">
-            <div class="portfolio-image"><iframe src="portofolio/restoran/index.html" title="Pratinjau visual Ruang Rasa" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
-            <div class="portfolio-body">
-              <h3>Ruang Rasa — Warm Dining</h3>
-              <p>Website restoran dengan nuansa hangat, galeri foto, dan fitur penyaringan kategori menu untuk memudahkan pengunjung menjelajahi pilihan hidangan.</p>
-              <div class="portfolio-card-actions"><button class="btn btn-secondary portfolio-preview-trigger" type="button" data-demo-url="portofolio/restoran/index.html" data-demo-title="Ruang Rasa — Warm Dining" aria-haspopup="dialog">Pratinjau</button><a href="portofolio/restoran/index.html" class="text-link" target="_blank" rel="noopener noreferrer">Buka Website</a></div>
+            <!-- Layanan 2 -->
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="srv-panel-2" id="srv-btn-2">
+                <span>Website Bisnis &amp; Pemasaran</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="srv-panel-2" role="region" aria-labelledby="srv-btn-2" aria-hidden="true">
+                <div class="accordion-panel-inner">
+                  Website untuk memperkenalkan bisnis, menampilkan layanan, membangun kepercayaan, dan membantu pelanggan menemukan informasi yang dibutuhkan.
+                </div>
+              </div>
             </div>
-          </article>
 
-          <article class="portfolio-card reveal">
-            <div class="portfolio-image"><iframe src="portofolio/toko/index.html" title="Pratinjau visual NAYA SUPPLY" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
-            <div class="portfolio-body">
-              <h3>NAYA SUPPLY</h3>
-              <p>Website katalog produk yang membantu pengunjung mengenal koleksi, melihat informasi produk, dan menghubungi penjual untuk melakukan pemesanan.</p>
-              <div class="portfolio-card-actions"><button class="btn btn-secondary portfolio-preview-trigger" type="button" data-demo-url="portofolio/toko/index.html" data-demo-title="NAYA SUPPLY" aria-haspopup="dialog">Pratinjau</button><a href="portofolio/toko/index.html" class="text-link" target="_blank" rel="noopener noreferrer">Buka Website</a></div>
+            <!-- Layanan 3 -->
+            <div class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="srv-panel-3" id="srv-btn-3">
+                <span>Website Katalog &amp; Kebutuhan Khusus</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-panel" id="srv-panel-3" role="region" aria-labelledby="srv-btn-3" aria-hidden="true">
+                <div class="accordion-panel-inner">
+                  Website katalog produk, portofolio, maupun kebutuhan khusus dengan struktur dan fitur yang dibahas sesuai ruang lingkup proyek.
+                </div>
+              </div>
             </div>
-          </article>
-
-          <article class="portfolio-card reveal">
-            <div class="portfolio-image"><iframe src="portofolio/sekolah/index.html" title="Pratinjau visual SMA Cakrawala Nusa" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
-            <div class="portfolio-body">
-              <h3>SMA Cakrawala Nusa</h3>
-              <p>Website informasi sekolah dengan penyajian profil, informasi pendidikan, dan jadwal dalam susunan yang mudah dipahami.</p>
-              <div class="portfolio-card-actions"><button class="btn btn-secondary portfolio-preview-trigger" type="button" data-demo-url="portofolio/sekolah/index.html" data-demo-title="SMA Cakrawala Nusa" aria-haspopup="dialog">Pratinjau</button><a href="portofolio/sekolah/index.html" class="text-link" target="_blank" rel="noopener noreferrer">Buka Website</a></div>
-            </div>
-          </article>
-
-          <article class="portfolio-card reveal">
-            <div class="portfolio-image"><iframe src="portofolio/bisnis/index.html" title="Pratinjau visual NEXORA Business" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
-            <div class="portfolio-body">
-              <h3>NEXORA Business</h3>
-              <p>Website bisnis dengan tampilan profesional untuk memperkenalkan layanan, identitas usaha, dan berbagai informasi pendukung bisnis.</p>
-              <div class="portfolio-card-actions"><button class="btn btn-secondary portfolio-preview-trigger" type="button" data-demo-url="portofolio/bisnis/index.html" data-demo-title="NEXORA Business" aria-haspopup="dialog">Pratinjau</button><a href="portofolio/bisnis/index.html" class="text-link" target="_blank" rel="noopener noreferrer">Buka Website</a></div>
-            </div>
-          </article>
-        </div>
-        <button class="btn btn-secondary portfolio-toggle" type="button" aria-expanded="false" hidden>Tampilkan Semua</button>
-      </div>
-    </section>
-
-    <section id="features" class="section features">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">NILAI KEUNGGULAN</p>
-          <h2>Mengapa memilih NFShark?</h2>
-          <p class="section-intro">Kami mengutamakan website yang tidak hanya memiliki tampilan menarik, tetapi juga mudah digunakan, sesuai kebutuhan, dan nyaman diakses.</p>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-item reveal"><span class="feature-number">01</span><h3>Desain Fleksibel</h3><p>Tampilan website dapat disesuaikan dengan karakter, kebutuhan, dan identitas yang ingin ditampilkan.</p></article>
-          <article class="feature-item reveal"><span class="feature-number">02</span><h3>Performa Ringan</h3><p>Website dirancang agar dapat diakses dengan nyaman tanpa membebani pengunjung dengan elemen yang tidak diperlukan.</p></article>
-          <article class="feature-item reveal"><span class="feature-number">03</span><h3>Responsif di Berbagai Perangkat</h3><p>Tampilan menyesuaikan ukuran layar ponsel, tablet, maupun komputer sehingga informasi tetap mudah diakses.</p></article>
-          <article class="feature-item reveal"><span class="feature-number">04</span><h3>Tampilan Modern</h3><p>Setiap proyek memperhatikan tata letak, warna, tipografi, dan susunan informasi agar terlihat lebih profesional.</p></article>
-          <article class="feature-item reveal"><span class="feature-number">05</span><h3>Harga Terjangkau</h3><p>Tersedia beberapa pilihan paket dengan harga yang dapat disesuaikan dengan kebutuhan dan anggaran.</p></article>
-          <article class="feature-item reveal"><span class="feature-number">06</span><h3>Proses Pengerjaan Terarah</h3><p>Pengerjaan dilakukan melalui tiga tahap agar kebutuhan dan arah desain dapat dipahami bersama.</p></article>
-        </div>
-
-        <div class="process-block reveal">
-          <h3>Tiga Tahap Pengerjaan</h3>
-          <div class="process-grid">
-            <article class="process-step"><span>01</span><h4>Diskusi</h4><p>Membahas kebutuhan, tujuan website, referensi desain, dan fitur yang diperlukan.</p></article>
-            <article class="process-step"><span>02</span><h4>Pratinjau Awal</h4><p>Menampilkan gambaran awal website agar pelanggan dapat melihat dan mengevaluasi arah desain.</p></article>
-            <article class="process-step"><span>03</span><h4>Finalisasi Desain</h4><p>Menyempurnakan tampilan berdasarkan hasil diskusi dan pratinjau hingga sesuai dengan kesepakatan.</p></article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="pricing" class="section packages">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow">INVESTASI TRANSPARAN</p>
-          <h2>Pilih paket sesuai kebutuhan website Anda.</h2>
-          <p class="section-intro">Setiap paket memiliki cakupan pengerjaan yang berbeda. Anda dapat memilih paket yang paling sesuai atau berkonsultasi apabila membutuhkan penyesuaian.</p>
+      <!-- 4. PORTOFOLIO (GRID 2 KOLOM) -->
+      <section id="portfolio" class="studio-section studio-section--dark" aria-labelledby="portfolio-title">
+        <div class="studio-container">
+          <div class="portfolio-header-row">
+            <div>
+              <span class="studio-eyebrow">KARYA &amp; EKSPLORASI</span>
+              <h2 id="portfolio-title" class="serif-heading" style="margin:0; font-size:clamp(2rem, 4vw, 2.85rem);">
+                Berbagai tampilan, berbagai kemungkinan.
+              </h2>
+            </div>
+            <p style="margin:0; color:var(--studio-muted); max-width:360px;">
+              Berikut beberapa contoh tampilan website dengan karakter, susunan, dan kebutuhan yang berbeda.
+            </p>
+          </div>
+
+          <div class="portfolio-grid-studio" id="studio-portfolio-grid">
+            <!-- Proyek 1: Aura Rasa -->
+            <a href="portofolio/restoran-basic/" class="portfolio-card-studio">
+              <div class="portfolio-thumb-frame">
+                <iframe src="portofolio/restoran-basic/index.html" title="Pratinjau website Aura Rasa" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
+              </div>
+              <div class="portfolio-meta-box">
+                <span class="portfolio-cat-badge">TEMPLATE UI PREVIEW</span>
+                <h3>Aura Rasa — Restoran Nusantara</h3>
+                <p>Website cepat dan ringkas satu halaman dengan navigasi instan dan reservasi langsung WhatsApp.</p>
+              </div>
+            </a>
+
+            <!-- Proyek 2: Ruang Rasa -->
+            <a href="portofolio/restoran/" class="portfolio-card-studio">
+              <div class="portfolio-thumb-frame">
+                <iframe src="portofolio/restoran/index.html" title="Pratinjau website Ruang Rasa" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
+              </div>
+              <div class="portfolio-meta-box">
+                <span class="portfolio-cat-badge">TEMPLATE UI PREVIEW</span>
+                <h3>Ruang Rasa — Warm Dining</h3>
+                <p>Presentasi suasana makan malam hangat dengan filter kategori menu interaktif dan galeri foto.</p>
+              </div>
+            </a>
+
+            <!-- Proyek 3: NAYA SUPPLY -->
+            <a href="portofolio/toko/index.html" class="portfolio-card-studio">
+              <div class="portfolio-thumb-frame">
+                <iframe src="portofolio/toko/index.html" title="Pratinjau website NAYA SUPPLY" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
+              </div>
+              <div class="portfolio-meta-box">
+                <span class="portfolio-cat-badge">TEMPLATE UI PREVIEW</span>
+                <h3>NAYA SUPPLY</h3>
+                <p>Website katalog produk dengan informasi produk dan tombol pemesanan.</p>
+              </div>
+            </a>
+
+            <!-- Proyek 4: SMA Cakrawala Nusa -->
+            <a href="portofolio/sekolah/index.html" class="portfolio-card-studio">
+              <div class="portfolio-thumb-frame">
+                <iframe src="portofolio/sekolah/index.html" title="Pratinjau website SMA Cakrawala Nusa" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
+              </div>
+              <div class="portfolio-meta-box">
+                <span class="portfolio-cat-badge">TEMPLATE UI PREVIEW</span>
+                <h3>SMA Cakrawala Nusa</h3>
+                <p>Website informasi sekolah dengan profil, informasi, dan jadwal.</p>
+              </div>
+            </a>
+
+            <!-- Proyek 5: NEXORA Business -->
+            <a href="portofolio/bisnis/index.html" class="portfolio-card-studio">
+              <div class="portfolio-thumb-frame">
+                <iframe src="portofolio/bisnis/index.html" title="Pratinjau website NEXORA Business" loading="lazy" tabindex="-1" aria-hidden="true" style="width:100%;height:100%;border:0;pointer-events:none;"></iframe>
+              </div>
+              <div class="portfolio-meta-box">
+                <span class="portfolio-cat-badge">TEMPLATE UI PREVIEW</span>
+                <h3>NEXORA Business</h3>
+                <p>Website bisnis dengan layanan branding, website, strategi, dan kampanye digital.</p>
+              </div>
+            </a>
+          </div>
+          <button class="btn btn-lime" id="portfolio-more" type="button" hidden aria-expanded="false" style="margin-top:2rem;">Lihat Karya Lainnya</button>
         </div>
-        <p class="package-status" id="package-status" role="status" aria-live="polite" hidden></p>
-        <noscript><p class="package-status">Aktifkan JavaScript untuk melihat rincian paket harga.</p></noscript>
-        <div id="package-list" class="package-grid reveal" aria-busy="false"></div>
-        <div class="package-note reveal">
-          <h3>Catatan Biaya Tambahan</h3>
-          <p>Harga paket merupakan biaya jasa pembuatan website dan belum mencakup biaya pendaftaran domain khusus apabila diperlukan. Pelanggan dapat menggunakan domain sendiri atau berkonsultasi dengan NFShark untuk bantuan pemesanan domain. Pemesanan melalui NFShark dapat dikenakan biaya administrasi.</p>
-          <p>Kebutuhan tambahan di luar cakupan paket akan dibahas dan disepakati terlebih dahulu sebelum pengerjaan.</p>
+      </section>
+
+      <!-- 5. KEUNGGULAN DAN FITUR (GRID 3 KOLOM) -->
+      <section id="features" class="studio-section studio-section--dark" aria-labelledby="features-title">
+        <div class="studio-container">
+          <span class="studio-eyebrow">NILAI KEUNGGULAN</span>
+          <h2 id="features-title" class="serif-heading" style="font-size:clamp(2rem, 4vw, 2.85rem); margin:0 0 1rem;">
+            Mengapa memilih NFShark?
+          </h2>
+          <p style="color:var(--studio-muted); max-width:600px; margin:0;">
+            Setiap website dirancang dengan memperhatikan kebutuhan, kenyamanan pengunjung, dan tujuan penggunaannya.
+          </p>
+
+          <div class="features-grid-studio">
+            <div class="feature-col-item">
+              <span class="feature-number">01</span>
+              <h3>Desain Fleksibel</h3>
+              <p>Tampilan disesuaikan dengan kebutuhan dan karakter setiap proyek.</p>
+            </div>
+            <div class="feature-col-item">
+              <span class="feature-number">02</span>
+              <h3>Performa Ringan</h3>
+              <p>Mengutamakan struktur front-end yang ringan tanpa elemen dan kode yang tidak diperlukan.</p>
+            </div>
+            <div class="feature-col-item">
+              <span class="feature-number">03</span>
+              <h3>Responsif di Berbagai Perangkat</h3>
+              <p>Tampilan menyesuaikan ukuran layar ponsel, tablet, maupun desktop.</p>
+            </div>
+            <div class="feature-col-item">
+              <span class="feature-number">04</span>
+              <h3>Tampilan Modern</h3>
+              <p>Desain dibuat rapi, mudah dipahami, dan mengikuti kebutuhan website.</p>
+            </div>
+            <div class="feature-col-item">
+              <span class="feature-number">05</span>
+              <h3>Harga Terjangkau</h3>
+              <p>Pilihan paket tersedia mulai Rp100.000 dengan cakupan yang dijelaskan secara transparan.</p>
+            </div>
+            <div class="feature-col-item">
+              <span class="feature-number">06</span>
+              <h3>Proses Pengerjaan Terarah</h3>
+              <p>Pengerjaan dimulai dari pembahasan kebutuhan, pratinjau awal, hingga finalisasi website.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. PAKET DAN HARGA (LATAR KREM & TABEL SEMANTIK) -->
+      <section id="pricing" class="studio-section studio-section--cream" aria-labelledby="pricing-title">
+        <div class="studio-container">
+          <div class="pricing-intro-center">
+            <span class="studio-eyebrow">INVESTASI TRANSPARAN</span>
+            <h2 id="pricing-title" class="serif-heading">Pilih paket website sesuai kebutuhan Anda.</h2>
+            <p>Setiap paket memiliki cakupan pengerjaan yang berbeda. Kebutuhan tambahan dapat dibahas sebelum pengerjaan dimulai.</p>
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <table class="studio-pricing-table">
+              <caption>Perbandingan rincian paket layanan pembuatan website NFShark</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Paket Layanan</th>
+                  <th scope="col">Investasi Mulai</th>
+                  <th scope="col">Cakupan &amp; Fitur</th>
+                  <th scope="col">Estimasi Waktu</th>
+                  <th scope="col" class="table-action-cell">Tindakan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <div class="table-plan-title">
+                      <span>Ringan (Basic)</span>
+                    </div>
+                  </th>
+                  <td><span class="table-price">Rp100.000</span></td>
+                  <td>1 halaman website, tampilan responsif untuk perangkat mobile, tombol WhatsApp, dan publikasi melalui hosting statis.</td>
+                  <td>1–3 hari kerja</td>
+                  <td class="table-action-cell">
+                    <a href="#contact" class="btn btn-lime" style="min-height:38px; padding:0.4rem 0.85rem; font-size:0.85rem;">Pilih Ringan</a>
+                  </td>
+                </tr>
+
+                <tr style="background-color: #faf7f0;">
+                  <th scope="row">
+                    <div class="table-plan-title">
+                      <span>Populer (Popular)</span>
+                      <span class="badge-editorial badge-lime" style="font-size:0.65rem;">Rekomendasi</span>
+                    </div>
+                  </th>
+                  <td><span class="table-price">Rp225.000</span></td>
+                  <td>Beberapa bagian informasi, galeri atau portofolio, informasi lokasi, dan tata letak yang disesuaikan.</td>
+                  <td>3–5 hari kerja</td>
+                  <td class="table-action-cell">
+                    <a href="#contact" class="btn btn-lime" style="min-height:38px; padding:0.4rem 0.85rem; font-size:0.85rem; background:#091915; color:#fff; border-color:#091915;">Pilih Populer</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <div class="table-plan-title">
+                      <span>Premium</span>
+                    </div>
+                  </th>
+                  <td><span class="table-price">Rp500.000</span></td>
+                  <td>Katalog produk atau konten, animasi interaktif terkurasi, dan penyesuaian tampilan lebih mendalam.</td>
+                  <td>5–7 hari kerja</td>
+                  <td class="table-action-cell">
+                    <a href="#contact" class="btn btn-lime" style="min-height:38px; padding:0.4rem 0.85rem; font-size:0.85rem;">Pilih Premium</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">
+                    <div class="table-plan-title">
+                      <span>Fleksibel (Custom)</span>
+                    </div>
+                  </th>
+                  <td><span class="table-price">Konsultasi</span></td>
+                  <td>Struktur website khusus, halaman dan fitur tambahan, serta penyesuaian desain dan fungsi.</td>
+                  <td>Menyesuaikan</td>
+                  <td class="table-action-cell">
+                    <a href="#contact" class="btn btn-outline-editorial" style="min-height:38px; padding:0.4rem 0.85rem; font-size:0.85rem; color:#111a18; border-color:rgba(17,26,24,0.3);">Diskusikan Kebutuhan</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.82rem; color:#6b7280; margin-top:1rem; text-align:center;">
+            *Harga paket merupakan biaya jasa pembuatan website dan belum mencakup biaya pendaftaran domain khusus apabila diperlukan. Pelanggan dapat menggunakan domain sendiri atau berkonsultasi dengan NFShark untuk bantuan pemesanan domain. Pemesanan melalui NFShark dapat dikenakan biaya administrasi. Kebutuhan tambahan di luar cakupan paket akan dibahas dan disepakati terlebih dahulu.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. CTA & KONTAK (LATAR HIJAU GELAP) -->
+      <section id="contact" class="studio-section studio-section--dark" aria-labelledby="contact-title">
+        <div class="studio-container">
+          <div class="studio-cta-box">
+            <span class="studio-eyebrow">Langkah Berikutnya</span>
+            <h2 id="contact-title" class="serif-heading">
+              Punya kebutuhan website? Mari wujudkan bersama <span class="serif-italic">NFShark.</span>
+            </h2>
+            <p>
+              Ceritakan kebutuhan dan ide website Anda. NFShark akan membantu memahami kebutuhan tersebut, menentukan pilihan pengerjaan, dan merancang website yang sesuai dengan tujuan serta anggaran Anda.
+            </p>
+            <div class="cta-button-row">
+              <a href="https://wa.me/6289630984238?text=Halo%20NFShark%2C%20saya%20tertarik%20menggunakan%20jasa%20pembuatan%20website.%0A%0ASaya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20website%2C%20pilihan%20paket%2C%20dan%20proses%20pengerjaannya.%0A%0AMohon%20informasi%20lebih%20lanjut.%20Terima%20kasih." class="btn btn-lime" target="_blank" rel="noopener noreferrer">
+                Pesan Website via WhatsApp
+              </a>
+              <a href="brief.html" class="btn btn-outline-editorial">
+                Isi Brief Website
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="studio-footer">
+      <div class="studio-container">
+        <div class="studio-footer-grid">
+          <div class="footer-studio-info">
+            <h3 class="serif-heading">NFShark</h3>
+            <p style="margin:0 0 1rem; max-width:320px; line-height:1.6;">
+              NFShark membantu mewujudkan website yang fleksibel, ringan, dan sesuai dengan kebutuhan informasi maupun pengembangan bisnis.
+            </p>
+            <span class="badge-editorial badge-mint">Berbasis di Indonesia</span>
+          </div>
+
+          <div class="footer-nav-col">
+            <strong>Navigasi Cepat</strong>
+            <ul>
+              <li><a href="#services">Layanan</a></li>
+              <li><a href="#portfolio">Portofolio</a></li>
+              <li><a href="#pricing">Paket Harga</a></li>
+              <li><a href="faq.html">Pusat Bantuan (FAQ)</a></li>
+              <li><a href="feedback.html">Saran &amp; Lapor Bug</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <strong>Dokumentasi &amp; Alat</strong>
+            <ul>
+              <li><a href="history/index.html">Arsip Tampilan Lama</a></li>
+              <li><a href="brief.html">Formulir Brief Proyek</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <strong>Kontak</strong>
+            <ul>
+              <li><a href="https://wa.me/6289630984238" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><a href="mailto:goldenishark22@gmail.com">Email</a></li>
+              <li><a href="https://whatsapp.com/channel/0029Vb8fNGa1XquV0XHc6z22" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a></li>
+              <li><a href="https://www.instagram.com/shark.studio22?stkn=MXU3NDJzcjA2dmlhdA==" target="_blank" rel="noopener noreferrer">Instagram @shark.studio22</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="studio-footer-bottom">
+          <span>&copy; <span id="current-year">2026</span> NFShark. Hak cipta dilindungi undang-undang.</span>
+          <span>Dibuat dengan HTML5, CSS &amp; Vanilla JavaScript murni.</span>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-box reveal">
-        <div>
-          <p class="eyebrow">LANGKAH BERIKUTNYA</p>
-          <h2>Punya kebutuhan website? Mari wujudkan bersama NFShark.</h2>
-          <p>Ceritakan kebutuhan dan ide website Anda. Kami akan membantu memahami kebutuhan tersebut, menentukan pilihan pengerjaan, dan merancang website yang sesuai dengan tujuan serta anggaran Anda.</p>
-        </div>
-        <div class="contact-actions">
-          <a href="https://wa.me/6289630984238?text=Halo%20NFShark%2C%20saya%20tertarik%20menggunakan%20jasa%20pembuatan%20website.%0A%0ASaya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20website%2C%20pilihan%20paket%2C%20dan%20proses%20pengerjaannya.%0A%0AMohon%20informasi%20lebih%20lanjut.%20Terima%20kasih." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Pesan Website via WhatsApp</a>
-          <a href="brief.html" class="btn btn-secondary">Isi Brief Website</a>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- SKRIP INTERAKSI AKSESIBEL (Menu Mobile & Accordion) -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Intro NFShark: 0,5s FadeIn + 3,5s progress + 1s scale fade-out dengan latar transparan.
+        const loadingScreen = document.getElementById('nf-loading-screen');
+        const loadingContent = document.getElementById('nf-loading-content');
+        const loadingFill = document.getElementById('nf-loading-fill');
+        const loadingPercent = document.getElementById('nf-loading-percent');
+        const loadingTrack = document.getElementById('nf-loading-track');
 
-  <footer class="site-footer">
-    <div class="container footer-layout">
-      <div class="footer-about">
-        <a href="#home" class="footer-brand" aria-label="NFShark, kembali ke atas"><img src="assets/Logo/Logo.webp" alt="" width="40" height="40" /><strong>NFShark</strong></a>
-        <p>NFShark membantu mewujudkan website yang fleksibel, ringan, dan sesuai dengan kebutuhan informasi maupun pengembangan bisnis.</p>
-        <span class="footer-location">BERBASIS DI INDONESIA</span>
-      </div>
-      <div class="footer-column">
-        <h2>Navigasi Cepat</h2>
-        <a href="#services">Layanan</a><a href="#portfolio">Portofolio</a><a href="#features">Keunggulan</a><a href="#pricing">Paket Harga</a><a href="faq.html">Pusat Bantuan (FAQ)</a><a href="feedback.html">Masukan &amp; Laporan</a>
-      </div>
-      <div class="footer-column">
-        <h2>Dokumentasi &amp; Alat</h2>
-        <a href="history/index.html">Arsip Tampilan Lama</a>
-      </div>
-      <div class="footer-column">
-        <h2>Kontak</h2>
-        <a href="https://wa.me/6289630984238" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="mailto:goldenishark22@gmail.com">goldenishark22@gmail.com</a>
-        <a href="https://www.instagram.com/shark.studio22/" target="_blank" rel="noopener noreferrer">@shark.studio22</a>
-        <a href="https://whatsapp.com/channel/0029Vb8fNGa1XquV0XHc6z22" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a>
-      </div>
-    </div>
-    <div class="container footer-bottom"><p>© <span id="current-year">2026</span> NFShark. Hak cipta dilindungi undang-undang.</p></div>
-  </footer>
+        if (loadingScreen && loadingContent && loadingFill && loadingPercent && loadingTrack) {
+          let alreadyShown = false;
+          try {
+            alreadyShown = sessionStorage.getItem('nfshark-home-intro-shown') === '1';
+          } catch (_) {
+            // Jika sessionStorage tidak tersedia, intro tetap dijalankan.
+          }
 
-  <button class="scroll-top" type="button" aria-label="Kembali ke atas">↑</button>
+          if (alreadyShown) {
+            loadingScreen.remove();
+          } else {
+            try {
+              sessionStorage.setItem('nfshark-home-intro-shown', '1');
+            } catch (_) {
+              // Tidak mengganggu animasi bila penyimpanan sesi diblokir.
+            }
 
-  <dialog class="preview-dialog" id="portfolio-preview" aria-labelledby="preview-dialog-title">
-    <div class="preview-dialog-header"><h2 id="preview-dialog-title">Pratinjau demo</h2><button class="btn btn-secondary preview-dialog-close" type="button" aria-label="Tutup pratinjau">Tutup</button></div>
-    <iframe class="preview-dialog-frame" id="preview-dialog-frame" title="Pratinjau demo portofolio"></iframe>
-    <p class="preview-dialog-status" id="preview-dialog-status" role="status" aria-live="polite" aria-atomic="true">Pratinjau belum dimuat.</p>
-    <div class="preview-dialog-actions"><a class="btn btn-primary" id="preview-dialog-direct-link" href="portofolio/restoran/index.html" target="_blank" rel="noopener noreferrer">Buka demo langsung</a></div>
-  </dialog>
+            loadingScreen.hidden = false;
+            const loadingDuration = 3500;
+            const fadeContentDuration = 1000;
+            const startProgress = performance.now();
 
-  <script src="js/script.js"></script>
+            const colorStart = { r: 48, g: 58, b: 51 }; // #303A33
+            const colorEnd = { r: 67, g: 182, b: 92 }; // #43B65C
+
+            const animateProgress = (now) => {
+              const progress = Math.min((now - startProgress) / loadingDuration, 1);
+              const percent = Math.round(progress * 100);
+              const easedColor = progress;
+              const red = Math.round(colorStart.r + (colorEnd.r - colorStart.r) * easedColor);
+              const green = Math.round(colorStart.g + (colorEnd.g - colorStart.g) * easedColor);
+              const blue = Math.round(colorStart.b + (colorEnd.b - colorStart.b) * easedColor);
+
+              loadingFill.style.width = percent + '%';
+              loadingFill.style.backgroundColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+              loadingPercent.textContent = percent + '%';
+              loadingTrack.setAttribute('aria-valuenow', String(percent));
+
+              if (progress < 1) {
+                requestAnimationFrame(animateProgress);
+                return;
+              }
+
+              loadingPercent.textContent = '100%';
+              loadingTrack.setAttribute('aria-valuenow', '100');
+
+              window.setTimeout(() => {
+                // Konten (logo, teks, dan progress bar) membesar sambil memudar.
+                // Pada saat yang sama, latar loading berubah menjadi transparan.
+                loadingContent.classList.add('is-fading-out');
+                loadingScreen.classList.add('is-fading-out');
+
+                window.setTimeout(() => {
+                  loadingScreen.remove();
+                }, fadeContentDuration);
+              }, 0);
+            };
+
+            // FadeIn CSS berjalan 0,5 detik sebelum progress 3,5 detik dimulai.
+            window.setTimeout(() => requestAnimationFrame(animateProgress), 500);
+          }
+        }
+        // 0. Animasi elemen individual saat masuk viewport (tanpa menganimasikan container).
+        const motionItems = document.querySelectorAll(
+          'main h1, main h2, main h3, main h4, main p, main a, main button, main img, main li, main span, main strong, main em, main small, main figure, main blockquote, main label, main input, main textarea, main select, main th, main td, .studio-header a, .studio-header button, .studio-footer h3, .studio-footer p, .studio-footer a, .studio-footer strong, .studio-footer span, .studio-footer .badge-editorial'
+        );
+
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          const revealItem = (item) => item.classList.add('nf-animate-visible');
+
+          if ('IntersectionObserver' in window) {
+            const motionObserver = new IntersectionObserver((entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  revealItem(entry.target);
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, {
+              threshold: 0.08,
+              rootMargin: '0px 0px -35px 0px'
+            });
+
+            motionItems.forEach((item) => {
+              if (item.closest('.nf-loading-screen')) return;
+              item.classList.add('nf-animate-item');
+              motionObserver.observe(item);
+            });
+          } else {
+            motionItems.forEach((item) => {
+              if (!item.closest('.nf-loading-screen')) revealItem(item);
+            });
+          }
+        }
+
+        // 1. Menu Mobile Handler dengan Escape & Focus Management
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        const navLinks = document.querySelectorAll('.studio-nav-list a');
+
+        if (menuToggle && mainNav) {
+          function toggleMenu() {
+            const isOpened = mainNav.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpened));
+          }
+
+          function closeMenu() {
+            mainNav.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+
+          menuToggle.addEventListener('click', toggleMenu);
+          navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+              closeMenu();
+              menuToggle.focus();
+            }
+          });
+        }
+
+        // 2. Accordion Interaktif Aksesibel (ARIA)
+        const triggers = document.querySelectorAll('.accordion-trigger');
+        triggers.forEach(trigger => {
+          trigger.addEventListener('click', () => {
+            const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+            
+            // Tutup panel lain jika ingin single accordion
+            triggers.forEach(otherTrigger => {
+              if (otherTrigger !== trigger) {
+                otherTrigger.setAttribute('aria-expanded', 'false');
+                const otherPanel = document.getElementById(otherTrigger.getAttribute('aria-controls'));
+                if (otherPanel) otherPanel.setAttribute('aria-hidden', 'true');
+              }
+            });
+
+            // Toggle panel saat ini
+            trigger.setAttribute('aria-expanded', String(!isExpanded));
+            const targetPanel = document.getElementById(trigger.getAttribute('aria-controls'));
+            if (targetPanel) {
+              targetPanel.setAttribute('aria-hidden', String(isExpanded));
+            }
+          });
+        });
+
+        // 3. Tampilkan tombol hanya jika jumlah karya melebihi enam
+        const portfolioGrid = document.getElementById('studio-portfolio-grid');
+        const portfolioMore = document.getElementById('portfolio-more');
+        if (portfolioGrid && portfolioMore) {
+          const cards = [...portfolioGrid.querySelectorAll('.portfolio-card-studio')];
+          const visibleLimit = 6;
+          if (cards.length > visibleLimit) {
+            cards.forEach((card, index) => {
+              if (index >= visibleLimit) card.hidden = true;
+            });
+            portfolioMore.hidden = false;
+            portfolioMore.addEventListener('click', () => {
+              const expanded = portfolioMore.getAttribute('aria-expanded') === 'true';
+              cards.forEach((card, index) => {
+                if (index >= visibleLimit) card.hidden = expanded;
+              });
+              portfolioMore.setAttribute('aria-expanded', String(!expanded));
+              portfolioMore.textContent = expanded ? 'Lihat Karya Lainnya' : 'Tampilkan Lebih Sedikit';
+            });
+          }
+        }
+      });
+    </script>
+    <script src="data/hero-text.js"></script>
+    <script src="js/hero-typewriter.js" defer></script>
+    <script src="js/touch-ripple.js" defer></script>
 </body>
 </html>
