@@ -11,15 +11,15 @@
         {
           "id": "FIT-001",
           "title": "Halaman utama dan bagian layanan",
-          "description": "Halaman utama memuat navigasi, hero, tentang NFShark, layanan, portofolio, keunggulan, paket harga, CTA, dan footer dengan konten yang diselaraskan dengan naskah terbaru.",
+          "description": "Halaman utama memuat navigasi, hero, tentang NFShark, layanan, portofolio, keunggulan, tiga tahap pengerjaan (Diskusi, Pratinjau Awal, Finalisasi Desain), paket harga, CTA, dan footer dengan tautan WhatsApp Channel.",
           "benefit": "Memberi pengunjung ringkasan layanan dan jalur informasi.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
           "files": [
             "index.html",
-            "css/style.css"
+            "css/style-studio.css"
           ],
-          "testNotes": "Teks pada elemen halaman utama diperbarui tanpa mengubah struktur HTML, CSS, elemen, atau logika JavaScript. Pemeriksaan source dilakukan setelah pembaruan; uji browser belum dilakukan."
+          "testNotes": "Pemeriksaan source mengonfirmasi elemen tiga tahap pengerjaan menggunakan kelas tata letak yang sudah tersedia serta tautan WhatsApp Channel ditambahkan pada daftar kontak footer. CSS dan JavaScript tidak diubah. Uji browser/runtime belum dilakukan."
         },
         {
           "id": "FIT-002",
