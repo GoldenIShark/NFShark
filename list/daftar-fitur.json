@@ -11,34 +11,34 @@
         {
           "id": "FIT-001",
           "title": "Halaman utama dan bagian layanan",
-          "description": "Halaman utama statis memuat beranda, jasa, alasan memilih layanan, paket, portofolio, dan kontak.",
+          "description": "Halaman utama statis mempertahankan desain editorial sebelumnya dengan bagian hero, Tentang, layanan, portofolio, keunggulan, paket, CTA, dan footer.",
           "benefit": "Memberi pengunjung ringkasan layanan dan jalur informasi.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
           "files": [
             "index.html",
-            "css/style.css"
+            "css/common.css",
+            "css/style-studio.css"
           ],
-          "testNotes": "Struktur section dan tautan diperiksa; belum diuji seluruh interaksi."
+          "testNotes": "Struktur section dan stylesheet diperiksa di source; browser belum diuji."
         },
         {
           "id": "FIT-002",
           "title": "Navigasi utama responsif",
-          "description": "Tombol menu mengubah kelas menu dan aria-expanded; tautan internal mengarah ke section.",
+          "description": "Navigasi utama memakai menu mobile dan tautan anchor ke bagian halaman.",
           "benefit": "Membantu menemukan bagian situs, khususnya layar sempit.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
           "files": [
             "index.html",
-            "css/style.css",
-            "js/script.js"
+            "css/style-studio.css"
           ],
-          "testNotes": "Ada markup, aturan layar kecil, dan handler; belum dilakukan uji keyboard/browser pada semua ukuran."
+          "testNotes": "Markup dan aturan tampilan mobile diperiksa; pengujian interaksi browser belum dilakukan."
         },
         {
           "id": "FIT-003",
           "title": "Daftar proyek portofolio",
-          "description": "Halaman utama menampilkan kartu proyek dan tautan menuju demo yang dirujuknya.",
+          "description": "Halaman utama menampilkan lima kartu portofolio dengan pratinjau iframe dan label kecil “TEMPLATE UI PREVIEW”.",
           "benefit": "Memberi contoh tampilan proyek.",
           "priority": "Sedang",
           "status": "Tersedia di source",
@@ -46,33 +46,31 @@
             "index.html",
             "portofolio/"
           ],
-          "testNotes": "Source mencantumkan empat kartu; target dan isi proyek tetap perlu diperiksa saat QA."
+          "testNotes": "Lima iframe dan lima label diperiksa di source; tampilan demo belum diuji di browser."
         },
         {
           "id": "FIT-004",
-          "title": "Data dan tampilan paket",
-          "description": "JavaScript memuat data/packages.json, merender kartu, dan menyediakan fallback jika pemuatan data gagal.",
+          "title": "Tabel paket dan harga",
+          "description": "Tabel statis menampilkan empat paket Ringan (Basic), Populer (Popular), Premium (Premium), dan Fleksibel (Custom) beserta harga, cakupan, dan estimasi.",
           "benefit": "Menyajikan paket dan jalur pemesanan dari data terpisah.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
           "files": [
-            "data/packages.json",
-            "js/script.js",
             "index.html"
           ],
-          "testNotes": "Nama, harga, estimasi, badge, dan daftar fitur ada pada data lokal; ini bukan verifikasi kesesuaian harga dengan kesepakatan bisnis."
+          "testNotes": "Nama paket, harga, cakupan, dan estimasi diperiksa di HTML; kesesuaian bisnis tetap mengikuti keputusan pemilik."
         },
         {
           "id": "FIT-005",
           "title": "Pesan paket melalui WhatsApp",
-          "description": "Handler membuat tautan wa.me dengan isi pesan berdasarkan paket.",
+          "description": "Tombol CTA mengarahkan pengunjung ke WhatsApp dengan pesan konsultasi yang telah disiapkan.",
           "benefit": "Memudahkan calon pelanggan memulai konsultasi atau pemesanan.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
           "files": [
-            "js/script.js"
+            "index.html"
           ],
-          "testNotes": "Tautan dan penyusunan pesan terlihat di source; alur aplikasi WhatsApp tidak dijalankan dalam pemeriksaan ini."
+          "testNotes": "URL dan teks pesan diperiksa di source; aplikasi WhatsApp tidak dijalankan."
         },
         {
           "id": "FIT-006",
@@ -124,15 +122,15 @@
         {
           "id": "FIT-009",
           "title": "Konten dan struktur section Tentang NFShark",
-          "description": "Section Tentang memakai label TENTANG NFSHARK, heading “Dari kebutuhan sederhana menjadi tampilan website yang berkesan.”, serta dua paragraf penjelasan layanan.",
+          "description": "Section Tentang memakai label TENTANG NFSHARK, heading final, dan dua paragraf yang disetujui.",
           "benefit": "Menjelaskan fokus layanan dan batas frontend/backend dengan jelas.",
           "priority": "Tinggi",
-          "status": "Diperbarui di branch local",
+          "status": "Diperbarui di branch local — desain editorial sebelumnya dipertahankan",
           "files": [
             "index.html",
-            "css/style.css"
+            "css/style-studio.css"
           ],
-          "testNotes": "Source HTML dan CSS diperbarui; belum dilakukan uji browser lintas viewport."
+          "testNotes": "Source HTML diperiksa; belum dilakukan uji browser lintas viewport."
         }
       ]
     },
