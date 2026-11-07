@@ -10,13 +10,13 @@
       "items": [
         {
           "id": "REN-001",
-          "title": "Menuntaskan bagian Tentang halaman utama",
-          "goal": "Menampilkan judul, subjudul, dan isi yang disepakati dengan tata letak teknisi-modern.",
+          "title": "Finalisasi konten halaman utama NFShark",
+          "goal": "Menampilkan naskah halaman utama yang disepakati beserta elemen pendukung tiga tahap pengerjaan dan tautan WhatsApp Channel.",
           "priority": "Tinggi",
-          "status": "Selesai — konten halaman utama diperbarui",
-          "nextSteps": "Lakukan pemeriksaan visual di browser untuk memastikan teks sesuai dengan ruang komponen yang tersedia.",
+          "status": "Selesai — konten dan elemen pendukung ditambahkan",
+          "nextSteps": "Periksa tampilan halaman utama pada browser desktop dan mobile setelah deployment.",
           "dependencies": "Konfirmasi konten yang diminta; verifikasi halaman setelah perubahan kode.",
-          "resultAndUpdatedAt": "Konten bagian Tentang NFShark pada index.html diperbarui sesuai naskah yang disepakati tanpa mengubah desain atau struktur. Pemeriksaan visual browser masih diperlukan. Pembaruan 2026-11-07."
+          "resultAndUpdatedAt": "Menambahkan tiga kartu tahap pengerjaan (Diskusi, Pratinjau Awal, Finalisasi Desain) pada bagian keunggulan dan tautan WhatsApp Channel pada footer. Tautan Arsip Tampilan Lama tetap dipertahankan. Pembaruan 2026-11-07."
         },
         {
           "id": "REN-002",
