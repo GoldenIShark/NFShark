@@ -1,0 +1,21 @@
+/* NFShark font registry.
+ * File Telma-Light.otf berada di folder yang sama.
+ */
+@import url("https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap");
+
+@font-face {
+  font-family: "Telma Light";
+  src: url("./Telma-Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+:root {
+  --font-telma: "Telma Light", "Times New Roman", Times, serif;
+  --font-times-new-roman: "Times New Roman", Times, serif;
+  --font-rosaline: "Rosaline", "Brush Script MT", cursive;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font-serif: var(--font-telma);
+  --font-sans: var(--font-times-new-roman);
+}
