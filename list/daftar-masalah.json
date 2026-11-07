@@ -3,7 +3,7 @@
   "title": "Daftar Masalah",
   "category": "Pengembangan",
   "description": "Masalah teknis dan kebutuhan perbaikan yang dicatat berdasarkan bukti repository.",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-11-07",
   "sections": [
     {
       "title": "Terverifikasi",
@@ -11,14 +11,17 @@
       "items": [
         {
           "id": "MAS-001",
-          "title": "Heading utama section Tentang kosong",
-          "summary": "Eyebrow masih bertuliskan “Tentang Saya”, sementara subjudul berada pada elemen h3.",
-          "impact": "Judul section yang terlihat tidak mencerminkan judul yang diminta dan hierarki heading section tidak lengkap.",
-          "reproduction": "Buka section #about pada source halaman utama; periksa .section-heading: teks eyebrow “Tentang Saya”, h3 berisi subjudul, dan h2 kosong. Ini temuan inspeksi source, bukan klaim uji browser.",
-          "files": ["index.html", "css/style.css"],
+          "title": "Heading section Tentang NFShark",
+          "summary": "Heading kosong dan label lama pada source telah diganti dengan heading final dan label TENTANG NFSHARK.",
+          "impact": "Sebelumnya judul section tidak mengikuti konten yang disepakati.",
+          "reproduction": "Periksa section #about pada index.html di branch local.",
+          "files": [
+            "index.html",
+            "css/style.css"
+          ],
           "priority": "Sedang",
-          "status": "Terbuka",
-          "resolution": "Belum diperbaiki atau diuji setelah perbaikan.",
+          "status": "Ditutup",
+          "resolution": "Heading, label, dan struktur section Tentang diperbarui pada 2026-11-07. Pemeriksaan browser belum dilakukan.",
           "relatedPlan": "REN-001"
         }
       ]
