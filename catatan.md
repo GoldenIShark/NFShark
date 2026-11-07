@@ -270,3 +270,31 @@ Tanggal: 2026-11-07
 
 ## Command yang digunakan
 - GitHub Contents API untuk membaca dan memperbarui file pada branch main.
+
+
+---
+
+Tanggal: 2026-11-07
+
+## Area
+- Penyempurnaan elemen halaman utama NFShark pada branch main.
+
+## Perubahan
+- Menambahkan tiga elemen tahap pengerjaan: Diskusi, Pratinjau Awal, dan Finalisasi Desain pada bagian Keunggulan.
+- Menambahkan tautan WhatsApp Channel pada kolom Kontak di footer.
+- Mengganti judul brand footer menjadi NFShark.
+- Tautan Arsip Tampilan Lama tetap dipertahankan.
+
+## File yang diubah
+- index.html
+- list/daftar-fitur.json
+- list/daftar-rencana.json
+- catatan.md
+
+## Batas perubahan
+- Menggunakan kelas layout dan komponen yang sudah tersedia pada CSS; tidak mengubah file CSS atau JavaScript.
+- Tautan WhatsApp Channel: https://whatsapp.com/channel/0029Vb8fNGa1XquV0XHc6z22.
+
+## Verifikasi
+- Source HTML diperiksa untuk memastikan ketiga tahap dan tautan WhatsApp Channel tersedia.
+- Pemeriksaan visual browser dan status deployment belum dilakukan.
