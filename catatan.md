@@ -48,3 +48,12 @@ Tanggal: 2026-11-07
 - Tautan demo hanya ditambahkan untuk direktori portofolio yang ditemukan pada branch local. Aura Rasa ditampilkan sebagai konsep UI karena folder demo terpisah tidak ditemukan.
 - Paket harga dan deskripsi disinkronkan dengan keputusan naskah; CTA paket membuka WhatsApp dengan pesan sesuai pilihan.
 - Validasi dilakukan melalui inspeksi source dan pembaruan terarah; uji browser, responsivitas aktual, dan hasil GitHub Actions belum diverifikasi pada sesi ini.
+
+
+## Koreksi homepage — 2026-11-07
+- Permintaan koreksi: desain halaman utama harus kembali menggunakan desain editorial yang telah ada sebelumnya; tulisan “TEMPLATE UI PREVIEW” hanya menjadi label kecil pada kartu portofolio, bukan dasar untuk mengubah desain kartu atau keseluruhan halaman.
+- Branch sasaran tetap `local`; `index.html` dibangun kembali dari struktur homepage sebelumnya dan menggunakan `css/style-studio.css`. Konten final yang telah disetujui tetap dipakai.
+- Pratinjau portofolio, lima kartu, susunan halaman, dan gaya visual editorial dipertahankan. Label `TEMPLATE UI PREVIEW` diterapkan pada lima kartu.
+- Memulihkan stylesheet dan aset pendukung homepage yang diperlukan: `css/style-studio.css`, `assets/fonts/fonts.css`, `assets/fonts/Telma-Light.otf`, `data/hero-text.js`, `js/hero-typewriter.js`, `js/touch-ripple.js`, dan `js/skeleton-loading.js`.
+- Menambahkan kembali tiga tahapan proses pengerjaan dengan gaya kartu yang sama seperti bagian keunggulan.
+- Validasi source: tujuh section utama tersedia, lima iframe portofolio dan lima label ditemukan, file JavaScript berhasil diparse, dan tidak ada referensi ke stylesheet redesign pada homepage. Uji browser dan hasil GitHub Actions belum diperiksa.
