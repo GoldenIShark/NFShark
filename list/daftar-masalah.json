@@ -17,11 +17,11 @@
           "reproduction": "Periksa section #about pada index.html di branch local.",
           "files": [
             "index.html",
-            "css/style.css"
+            "css/style-studio.css"
           ],
           "priority": "Sedang",
           "status": "Ditutup",
-          "resolution": "Heading, label, dan struktur section Tentang diperbarui pada 2026-11-07. Pemeriksaan browser belum dilakukan.",
+          "resolution": "Heading, label, dan struktur section Tentang diperbarui pada 2026-11-07 dengan mempertahankan desain editorial sebelumnya. Pemeriksaan browser belum dilakukan.",
           "relatedPlan": "REN-001"
         }
       ]
