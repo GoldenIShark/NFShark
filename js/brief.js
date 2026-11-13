@@ -17,6 +17,70 @@ document.addEventListener('DOMContentLoaded', () => {
   const formError = document.querySelector('#form-error');
   const whatsappNumber = '6289630984238';
 
+  // Simpan draf brief di penyimpanan lokal browser selama 3 jam.
+  // Data tidak dikirim ke server dan persetujuan tidak pernah disimpan.
+  const DRAFT_KEY = 'nfshark-brief-draft-v1';
+  const DRAFT_TTL = 3 * 60 * 60 * 1000;
+  let draftExpiryTimer;
+
+  const getDraftControls = () => Array.from(form.querySelectorAll('input, select, textarea'))
+    .filter((control) => !['submit', 'button', 'reset'].includes(control.type) && control.id !== 'consent');
+
+  const clearDraft = () => {
+    localStorage.removeItem(DRAFT_KEY);
+    if (draftExpiryTimer) clearTimeout(draftExpiryTimer);
+  };
+
+  const saveDraft = () => {
+    const controls = getDraftControls();
+    const draft = controls.map((control) => ({
+      id: control.id || '',
+      name: control.name || '',
+      type: control.type || control.tagName.toLowerCase(),
+      value: control.value,
+      checked: control.type === 'checkbox' || control.type === 'radio' ? control.checked : undefined
+    }));
+
+    try {
+      const expiresAt = Date.now() + DRAFT_TTL;
+      localStorage.setItem(DRAFT_KEY, JSON.stringify({ expiresAt, fields: draft }));
+      if (draftExpiryTimer) clearTimeout(draftExpiryTimer);
+      draftExpiryTimer = setTimeout(clearDraft, DRAFT_TTL);
+    } catch (error) {
+      // Form tetap dapat digunakan jika penyimpanan browser tidak tersedia.
+    }
+  };
+
+  const restoreDraft = () => {
+    try {
+      const raw = localStorage.getItem(DRAFT_KEY);
+      if (!raw) return;
+      const saved = JSON.parse(raw);
+      if (!saved.expiresAt || Date.now() >= saved.expiresAt) {
+        clearDraft();
+        return;
+      }
+
+      const controls = getDraftControls();
+      saved.fields.forEach((field, index) => {
+        const control = controls[index];
+        if (!control || control.id !== field.id || control.name !== field.name) return;
+        if (control.type === 'checkbox' || control.type === 'radio') {
+          control.checked = Boolean(field.checked);
+        } else {
+          control.value = field.value ?? '';
+        }
+      });
+
+      draftExpiryTimer = setTimeout(clearDraft, Math.max(0, saved.expiresAt - Date.now()));
+    } catch (error) {
+      clearDraft();
+    }
+  };
+
+  form.addEventListener('input', saveDraft);
+  form.addEventListener('change', saveDraft);
+
   const selectedValue = (name) => form.querySelector(`input[name="${name}"]:checked`)?.value || '';
   const showStep = (step) => {
     const first = step === 1;
@@ -128,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const message = buildMessage();
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    clearDraft();
     window.open(url, '_blank', 'noopener,noreferrer');
   });
 
@@ -138,6 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (option) packageSelect.value = option.value;
   }
 
+  restoreDraft();
   updateConditionalFields();
   showStep(window.location.hash === '#consent' ? 2 : 1);
   if (window.location.hash === '#consent') document.querySelector('#consent').focus({ preventScroll: true });
