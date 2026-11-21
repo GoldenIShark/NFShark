@@ -41,7 +41,7 @@ def process_html(path: Path, route: str, root_page: bool) -> None:
     text = attr_pattern.sub(lambda m: f'{m.group(1)}={m.group(2)}{clean_reference(m.group(3), route, root_page)}{m.group(2)}', text)
     canonical = f'<link rel="canonical" href="https://nfshark.web.id{route}">'
     if 'rel="canonical"' not in text:
-        text = re.sub(r"</head>", f"    {canonical}\\n  </head>", text, count=1, flags=re.I)
+        text = re.sub(r"</head>", f"    {canonical}\n  </head>", text, count=1, flags=re.I)
     script_tag = '<script src="/js/clean-navigation.js" defer></script>'
     if script_tag not in text and re.search(r"</head>", text, re.I):
         text = re.sub(r"</head>", f"    {script_tag}\n  </head>", text, count=1, flags=re.I)
