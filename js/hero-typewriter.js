@@ -22,7 +22,7 @@
   let timer = null;
 
   const waitForIntro = (callback) => {
-    const intro = document.getElementById('nf-loading-screen');
+    const intro = document.getElementById('nf-page-loader');
     if (!intro || !intro.isConnected) {
       callback();
       return;
