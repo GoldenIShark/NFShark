@@ -780,3 +780,28 @@ section[id] {
 .process-map-figure img{display:block;width:100%;height:auto;border-radius:18px}
 @media(min-width:761px){.process-map-mobile{display:none}}
 @media(max-width:760px){.process-map-figure{display:none}}
+
+
+/* Peta konsep: panah, teks, dan perangkat sentuh */
+.process-map-item{box-sizing:border-box;min-width:0}
+.process-map-copy{min-width:0;flex:1}
+.process-map-copy h4,.process-map-copy p{overflow-wrap:anywhere}
+.process-map-arrow{font-size:2.35rem;line-height:1.1}
+.process-map-arrow--first{transform:translateX(4.5rem) scaleX(1.18)}
+.process-map-arrow--second{transform:translateX(-4.5rem) scaleX(1.18)}
+.process-map-figure{width:100%;max-width:1000px;min-width:0}
+.process-map-figure img{max-width:100%;object-fit:contain}
+@media(max-width:640px){
+  .process-map{width:100%;padding-inline:0}
+  .process-map-item{width:min(100%,620px);padding:1rem;gap:.85rem}
+  .process-map-arrow--first{transform:translateX(2.8rem) scale(1.18)}
+  .process-map-arrow--second{transform:translateX(-2.8rem) scale(1.18)}
+}
+/* Desktop Site pada ponsel dapat melaporkan viewport lebar.
+   Gunakan kemampuan pointer sentuh untuk tetap memilih susunan mobile. */
+@media(pointer:coarse) and (hover:none){
+  .process-map-figure{display:none}
+  .process-map-mobile{display:grid}
+  .process-map{width:100%;max-width:920px}
+  .process-map-item{width:min(100%,620px);max-width:100%}
+}
