@@ -105,3 +105,25 @@ Setiap laporan setelah perubahan wajib memisahkan file yang **ditambahkan**, **d
 - Agent tetap wajib melaporkan area/file yang diperiksa, temuan, dan batas pemeriksaan secara akurat.
 - Jika selama tugas read-only ditemukan masalah, cukup laporkan temuannya; jangan mengubah file atau mencatatnya sebagai perubahan.
 - Jika tugas kemudian berlanjut menjadi perubahan file, tambahkan satu entri JSONL setelah perubahan selesai sesuai aturan riwayat di atas.
+
+## Sumber aturan dan prioritas instruksi
+
+- `AGENTS.md` adalah sumber utama dan otoritatif untuk seluruh aturan global repository: konteks proyek, batasan teknis, standar kualitas, alur kerja, riwayat, inventaris, pemilihan skill, dan pelaporan.
+- File di `.github/agents/` dan `.agents/agents/` hanya memuat tanggung jawab serta prosedur khusus masing-masing agent. Setiap agent wajib membaca file ini terlebih dahulu dan tidak boleh menggandakan atau menyimpang dari aturan global.
+- `.github/copilot-instructions.md` hanya memuat konteks tambahan yang spesifik untuk lingkungan GitHub Copilot dan peta repository. Isinya melengkapi, bukan menggantikan atau mengesampingkan aturan di sini.
+- Jika ditemukan aturan yang bertentangan, ikuti `AGENTS.md`; laporkan konflik yang perlu diperbaiki pada file turunan.
+
+## Pemilihan dan penggunaan skills
+
+1. Sebelum memilih atau menggunakan skill, baca indeks yang sesuai dengan lingkungan agent: `.github/skills/daftar-file.md` untuk agent GitHub Copilot di `.github/agents/`, atau `.agents/skills/daftar-file.md` untuk agent di `.agents/agents/`.
+2. Gunakan indeks untuk menemukan sumber skill di `Tools/skills/<nama-skill>/SKILL.md`. Lokasi tersebut adalah sumber kanonis skill.
+3. Baca seluruh file `SKILL.md` yang relevan sebelum menerapkannya. Pilih kombinasi minimum yang sesuai dengan tugas; jangan membaca atau menerapkan semua skill secara otomatis.
+4. Jangan mencari skill pada direktori lama `.github/skills/<nama-skill>/` atau `.agents/skills/<nama-skill>/`. Kedua direktori tersebut berisi indeks, bukan lokasi sumber skill.
+5. Jika indeks atau file skill tidak tersedia, laporkan keterbatasannya dan jangan mengarang path atau mengklaim telah menggunakan skill tersebut.
+
+## Konteks repository untuk seluruh agent
+
+- Situs utama berada di root repository; halaman utama umumnya menggunakan `index.html`, `style.css`, `script.js`, dan aset di `assets/`. Periksa struktur aktual sebelum mengasumsikan path atau keberadaan file.
+- Situs pada `portofolio/` dapat memiliki struktur dan aset mandiri. Perlakukan setiap situs sebagai lingkup terpisah dan jangan mengubah situs utama atau situs portofolio lain tanpa diminta.
+- Hasil utama proyek adalah website statis/display-only untuk static hosting. Jangan menambahkan framework, library besar, paket, build step, backend, database, autentikasi, atau layanan eksternal tanpa kebutuhan eksplisit dan persetujuan.
+- Pertahankan konten, identitas, aset, dan tautan yang sudah ada. Jangan mengarang klaim bisnis, harga, testimoni, kebijakan, data, atau kemampuan sistem.
