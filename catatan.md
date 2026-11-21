@@ -298,3 +298,32 @@ Tanggal: 2026-11-07
 ## Verifikasi
 - Source HTML diperiksa untuk memastikan ketiga tahap dan tautan WhatsApp Channel tersedia.
 - Pemeriksaan visual browser dan status deployment belum dilakukan.
+
+
+---
+
+Tanggal: 2026-11-21
+
+## Area
+- Penggantian intro loading halaman utama: `index.html`, `css/style-studio.css`, `css/loading.css`, dan `js/loading.js`.
+- Sinkronisasi inventaris: `list/daftar-fitur.json` (FIT-018) dan `list/daftar-rencana.json` (REN-014).
+
+## Perubahan
+- Intro lama yang menampilkan logo, teks, dan progress bar dihapus.
+- Ditambahkan Dual Ring Spinner dengan dua lingkaran konsentris yang berputar berlawanan arah; durasi putaran ring luar 1,5 detik dan ring dalam 1 detik.
+- Overlay menggunakan warna hitam transparan 18%, backdrop blur 8px, fade-in 0,2 detik, dan fade-out 0,3 detik setelah event `window.load`.
+- Loader dihapus dari DOM setelah transisi selesai. `prefers-reduced-motion` menonaktifkan putaran.
+- Skeleton loading global tetap dipertahankan karena berfungsi sebagai placeholder elemen, bukan intro loading halaman.
+
+## Verifikasi
+- Source HTML, CSS, dan JavaScript diperbarui serta inventaris fitur/rencana disinkronkan.
+- Pemeriksaan runtime browser, visual, dan status deployment belum dilakukan; tidak diklaim berhasil.
+
+## File yang diubah
+- `index.html`
+- `css/style-studio.css`
+- `css/loading.css` (baru)
+- `js/loading.js` (baru)
+- `list/daftar-fitur.json`
+- `list/daftar-rencana.json`
+- `catatan.md`
