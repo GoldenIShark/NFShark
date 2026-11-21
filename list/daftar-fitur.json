@@ -268,7 +268,7 @@
         {
           "id": "FIT-025",
           "title": "Peta konsep tiga tahap pengerjaan",
-          "description": "Alur Diskusi, Pratinjau Awal, dan Finalisasi Desain disajikan dalam ilustrasi SVG desktop dengan panah yang terhubung ke tepi kartu dan teks yang dibungkus di dalam batas kartu. Perangkat sentuh menggunakan susunan kartu responsif kiri-kanan-kiri, termasuk ketika browser ponsel memakai Desktop Site.",
+          "description": "Alur Diskusi, Pratinjau Awal, dan Finalisasi Desain disajikan dalam ilustrasi SVG desktop dengan panah yang terhubung ke tepi kartu dan teks yang dibungkus di dalam batas kartu. Perangkat sentuh menggunakan susunan kartu responsif kiri-kanan-kiri, termasuk ketika browser ponsel memakai Desktop Site. Layout bagian layanan juga diperbaiki: kolom menggunakan fraksi fleksibel minmax(0,...) dan gap responsif agar total lebar tidak melampaui kontainer.",
           "benefit": "Membantu calon pelanggan memahami tahapan pengerjaan dengan cepat.",
           "priority": "Sedang",
           "status": "Perbaikan source tersimpan; perlu verifikasi ulang setelah deployment",
@@ -277,7 +277,7 @@
             "css/style-studio.css",
             "assets/images/peta-alur-pengerjaan.svg"
           ],
-          "testNotes": "Panah SVG diperpanjang dan diarahkan ke kartu tujuan. Teks SVG dipecah menjadi baris yang lebih pendek. Media query pointer:coarse dan hover:none menjaga susunan mobile pada ponsel dengan Desktop Site. Perlu uji desktop, mobile normal, dan Desktop Site setelah deployment."
+          "testNotes": "Panah SVG diperpanjang dan diarahkan ke kartu tujuan. Teks SVG dipecah menjadi baris yang lebih pendek. Media query pointer:coarse dan hover:none menjaga susunan mobile pada ponsel dengan Desktop Site. Perlu uji desktop, mobile normal, dan Desktop Site setelah deployment. Perbaikan tambahan pada .studio-services-layout menghilangkan kombinasi kolom 38% + 62% yang sebelumnya ditambah gap 4rem. Tetap perlu verifikasi visual setelah deployment, terutama Desktop Site di HP."
         }
       ]
     },
