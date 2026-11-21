@@ -80,7 +80,7 @@ jobs:
           test -f assets/fonts/fonts.css
           test -f list/index.json
           test -f list/daftar-fitur.json
-          test -f catatan.md
+          test -f arsip/catatan.md
           echo "Semua file wajib tersedia."
 
   website-test:
