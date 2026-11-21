@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-21",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -118,16 +118,17 @@
         },
         {
           "id": "FIT-018",
-          "title": "Intro loading dengan scale fade-out",
-          "description": "Intro halaman utama menampilkan logo NFShark, persentase progress 0–100% dengan warna dari hitam kehijauan ke hijau rumput, lalu seluruh konten loading (logo, teks, dan progress bar) membesar sambil memudar; latar loading ikut memudar menjadi transparan tanpa circular reveal.",
-          "benefit": "Memberikan transisi pembuka singkat sebelum pengunjung melihat halaman utama.",
+          "title": "Dual Ring Spinner loading halaman utama",
+          "description": "Halaman utama menampilkan overlay transparan dengan backdrop blur 8px dan dua ring konsentris yang berputar berlawanan arah. Ring luar berputar 1,5 detik per putaran dan ring dalam 1 detik; overlay fade-in 0,2 detik dan fade-out 0,3 detik setelah event window.load.",
+          "benefit": "Memberikan indikator pemuatan yang sederhana, ringan, dan konsisten tanpa logo, teks, atau progress bar.",
           "priority": "Rendah",
           "status": "Tersedia di source; runtime browser belum diverifikasi",
           "files": [
             "index.html",
-            "css/style-studio.css"
+            "css/loading.css",
+            "js/loading.js"
           ],
-          "testNotes": "Timeline source: FadeIn 0,5 detik, progress 3,5 detik, scale fade-out konten dan transisi latar transparan 1 detik. Intro dibatasi satu kali per tab session melalui sessionStorage. Belum diuji secara visual di browser."
+          "testNotes": "Source HTML/CSS/JS diperiksa. Spinner menggunakan CSS animation tanpa library tambahan; prefers-reduced-motion menonaktifkan putaran. window.load menutup overlay dan elemen dihapus setelah transisi. Uji browser/runtime dan deployment belum dilakukan."
         },
         {
           "id": "FIT-019",
