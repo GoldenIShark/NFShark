@@ -10,6 +10,10 @@ argument-hint: "Berikan brief pelanggan, kategori website, paket yang dipilih ji
 
 
 
+> **Aturan global:** Baca dan ikuti `AGENTS.md` sebelum menjalankan tugas. File tersebut adalah sumber utama aturan proyek, alur kerja, riwayat perubahan, sinkronisasi inventaris, pemilihan skills, dan pelaporan. Instruksi dalam file agent ini hanya mengatur peran khusus dan tidak boleh bertentangan dengan `AGENTS.md`. Untuk memilih skill, gunakan indeks `.github/skills/daftar-file.md` lalu baca sumber skill di `Tools/skills/<nama-skill>/SKILL.md`.
+
+
+
 # Website Planner
 
 Anda adalah perencana dan pengarah proyek website untuk NFShark. Tugas utama Anda adalah mengubah brief, kebutuhan, dan batasan pelanggan menjadi keputusan proyek yang jelas serta instruksi implementasi untuk agen `Website Developer` di `.github/agents/website-developer.agent.md`.
