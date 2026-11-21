@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build a public-only GitHub Pages directory with clean, extensionless routes."""
 from __future__ import annotations
+import posixpath
 import re
 import shutil
 import sys
@@ -29,8 +30,15 @@ def clean_reference(value: str, current_route: str, root_page: bool) -> str:
         return ("/" if root_page else current_route) + suffix
     if path in ROUTES:
         return "/" + ROUTES[path] + "/" + suffix
-    if path.endswith("/index.html"):
-        return "/" + path[:-len("/index.html")].strip("/") + "/" + suffix
+    if path.endswith(".html"):
+        normalized = path if path.startswith("/") else posixpath.normpath(posixpath.join(current_route, path))
+        if normalized == "/index.html":
+            return "/" + suffix
+        if normalized.endswith("/index.html"):
+            return normalized[:-len("index.html")] + suffix
+        filename = posixpath.basename(normalized)
+        if filename in ROUTES:
+            return "/" + ROUTES[filename] + "/" + suffix
     return value
 
 def process_html(path: Path, route: str, root_page: bool) -> None:
