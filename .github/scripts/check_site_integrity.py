@@ -31,7 +31,7 @@ REQUIRED_FILES = (
     "assets/fonts/fonts.css",
     "list/index.json",
     "list/daftar-fitur.json",
-    "catatan.md",
+    "arsip/catatan.md",
 )
 
 
