@@ -39,6 +39,9 @@ def process_html(path: Path, route: str, root_page: bool) -> None:
         text = re.sub(r"<head([^>]*)>", r'<head\1>\n    <base href="/">', text, count=1, flags=re.I)
     attr_pattern = re.compile(r'\b(href|src|action|poster)=(["\'])(.*?)\2', re.I)
     text = attr_pattern.sub(lambda m: f'{m.group(1)}={m.group(2)}{clean_reference(m.group(3), route, root_page)}{m.group(2)}', text)
+    canonical = f'<link rel="canonical" href="https://nfshark.web.id{route}">'
+    if 'rel="canonical"' not in text:
+        text = re.sub(r"</head>", f"    {canonical}\\n  </head>", text, count=1, flags=re.I)
     script_tag = '<script src="/js/clean-navigation.js" defer></script>'
     if script_tag not in text and re.search(r"</head>", text, re.I):
         text = re.sub(r"</head>", f"    {script_tag}\n  </head>", text, count=1, flags=re.I)
@@ -82,6 +85,13 @@ def main() -> None:
             route = "/" if relative.name == "index.html" else "/" + relative.stem + "/"
         root_page = relative.parent == Path(".") or (relative.parent.as_posix() in ROUTES.values() and relative.name == "index.html")
         process_html(page, route, root_page)
+
+    # Legacy .html URLs redirect to their clean equivalents; 404.html stays the Pages error document.
+    for filename, slug in ROUTES.items():
+        if filename == "404.html":
+            continue
+        redirect = f'''<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://nfshark.web.id/{slug}/"><meta http-equiv="refresh" content="0;url=/{slug}/"><title>Mengalihkan — NFShark</title></head><body><p>Halaman dipindahkan. <a href="/{slug}/">Lanjutkan ke halaman NFShark</a>.</p><script>location.replace("/{slug}/");</script></body></html>'''
+        (OUTPUT / filename).write_text(redirect, encoding="utf-8")
 
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     print("Direktori publik siap dibuat:", OUTPUT.relative_to(ROOT))
