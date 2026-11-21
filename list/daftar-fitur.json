@@ -249,6 +249,34 @@
             "portofolio/"
           ],
           "testNotes": "Rel icon dan apple-touch-icon ditambahkan pada 16 dokumen HTML aktif. Google dapat memperbarui favicon setelah crawl ulang; belum ada verifikasi dimensi aset atau tampilan hasil pencarian."
+        },
+        {
+          "id": "FIT-024",
+          "title": "URL bersih untuk seluruh halaman utama",
+          "description": "Halaman root statis diterbitkan melalui rute direktori tanpa ekstensi .html; tautan internal diperbarui, URL lama diarahkan ke rute baru, dan index.html dibersihkan dari address bar.",
+          "benefit": "Alamat halaman lebih ringkas dan konsisten serta memudahkan navigasi dan pengindeksan.",
+          "priority": "Tinggi",
+          "status": "Implementasi source dan workflow tersedia; deployment serta uji browser belum diverifikasi",
+          "files": [
+            ".github/scripts/prepare_pages.py",
+            ".github/workflows/nfshark-automation.yml",
+            "js/clean-navigation.js"
+          ],
+          "testNotes": "Workflow memeriksa keberadaan route brief, FAQ, feedback, persetujuan, dan UI preview. Verifikasi URL publik dan navigasi hash menunggu deployment."
+        },
+        {
+          "id": "FIT-025",
+          "title": "Peta konsep tiga tahap pengerjaan",
+          "description": "Alur Diskusi, Pratinjau Awal, dan Finalisasi Desain disajikan dalam ilustrasi SVG desktop serta susunan responsif kiri-kanan-kiri.",
+          "benefit": "Membantu calon pelanggan memahami tahapan pengerjaan dengan cepat.",
+          "priority": "Sedang",
+          "status": "Tersedia di source; tampilan browser belum diverifikasi",
+          "files": [
+            "index.html",
+            "css/style-studio.css",
+            "assets/images/peta-alur-pengerjaan.svg"
+          ],
+          "testNotes": "Teks tahap dipertahankan sesuai naskah pemilik. Uji visual desktop dan mobile belum dilakukan."
         }
       ]
     },
