@@ -128,9 +128,10 @@
             "css/style-studio.css",
             "css/loading.css",
             "js/loading.js",
-            "js/hero-typewriter.js"
+            "js/hero-typewriter.js",
+            "js/skeleton-loading.js"
           ],
-          "testNotes": "Source HTML/CSS/JS diperiksa. Spinner menggunakan CSS animation tanpa library tambahan; prefers-reduced-motion menonaktifkan putaran. window.load menutup overlay dan elemen dihapus setelah transisi. Skrip typewriter menunggu elemen loader baru dihapus sebelum mulai. Uji browser/runtime dan deployment belum dilakukan."
+          "testNotes": "Source HTML/CSS/JS diperiksa. Spinner menggunakan CSS animation tanpa library tambahan; prefers-reduced-motion menonaktifkan putaran. window.load menutup overlay dan elemen dihapus setelah transisi. Skrip typewriter menunggu elemen loader baru dihapus; skeleton loading mengecualikan loader baru dari placeholder. Uji browser/runtime dan deployment belum dilakukan."
         },
         {
           "id": "FIT-019",
