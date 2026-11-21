@@ -99,9 +99,9 @@ Jangan menyatakan pengujian berhasil apabila pengujian tersebut belum benar-bena
 
 Setiap laporan setelah perubahan wajib memisahkan file yang **ditambahkan**, **diubah**, **dihapus**, dan **dipindahkan/di-rename**. Tulis `Tidak ada` untuk kategori yang kosong.
 
-## 11. Pemeriksaan Read-Only Tanpa Catatan Perubahan
+## 11. Pemeriksaan Read-Only
 
-- Jika tugas hanya meminta pemeriksaan, pembacaan, pencarian, audit struktur, atau penelusuran isi file dan **tidak ada file yang ditambah, diubah, atau dihapus**, agent TIDAK perlu membuat atau memperbarui `catatan.md`.
+- Jika tugas hanya meminta pemeriksaan, pembacaan, pencarian, audit struktur, atau penelusuran isi file dan **tidak ada file yang ditambah, diubah, atau dihapus**, agent tidak perlu menambahkan entri ke `history/changes.jsonl` atau memperbarui `list/`.
 - Agent tetap wajib melaporkan area/file yang diperiksa, temuan, dan batas pemeriksaan secara akurat.
 - Jika selama tugas read-only ditemukan masalah, cukup laporkan temuannya; jangan mengubah file atau mencatatnya sebagai perubahan.
-- Jika tugas kemudian berlanjut menjadi perubahan file, aturan pencatatan `catatan.md` dan sinkronisasi `list/` yang berlaku kembali diterapkan untuk perubahan tersebut.
+- Jika tugas kemudian berlanjut menjadi perubahan file, tambahkan satu entri JSONL setelah perubahan selesai sesuai aturan riwayat di atas.
