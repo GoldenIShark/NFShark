@@ -34,4 +34,4 @@ Gunakan file ini sebagai daftar rujukan untuk menemukan konfigurasi skill. Semua
 
 ## Catatan lokasi
 
-Skrip pembantu `convert_to_webp.py` bukan file Markdown dan tidak dipindahkan dalam perubahan ini. Skrip tersebut tetap berada di `.github/skills/convert-images-to-webp/convert_to_webp.py`.
+Catatan: dokumen `convert-images-to-webp` menyebut skrip pembantu `convert_to_webp.py`, tetapi file skrip tersebut tidak ditemukan pada struktur repository saat pemindahan dilakukan. Jangan menganggap skrip tersedia atau menjalankan perintahnya sebelum keberadaan file diverifikasi.
