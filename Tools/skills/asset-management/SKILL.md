@@ -9,7 +9,7 @@ description: "Gunakan saat memilih, menambah, menamai, mengoptimalkan, mengonver
 - Identifikasi root situs yang benar dan telusuri referensi HTML, CSS, serta JavaScript sebelum memindah atau mengganti aset.
 - Untuk situs utama, aset berada di `assets/`. Untuk situs portofolio, periksa hanya `portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` bila situs langsung berada di kategori.
 - Jangan mengubah `assets/` situs utama saat bekerja pada situs portofolio kecuali diminta khusus.
-- Pada situs portofolio, baca `.github/skills/convert-images-to-webp/SKILL.md` dan ikuti aturan konversi khususnya jika optimasi gambar relevan.
+- Pada situs portofolio, baca `Tools/skills/convert-images-to-webp/SKILL.md` dan ikuti aturan konversi khususnya jika optimasi gambar relevan.
 
 ## Pilih dan atur
 - Gunakan media yang relevan, legal digunakan, berkualitas memadai, dan mendukung isi serta identitas situs; jangan hotlink atau menyalin aset tanpa izin.

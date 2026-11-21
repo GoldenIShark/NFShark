@@ -3,15 +3,15 @@
   "title": "Rangkuman Skill, Alat, dan Referensi",
   "category": "Referensi",
   "description": "Daftar sumber yang tersedia di repository dan keputusan awal. Ini bukan persetujuan otomatis untuk menambahkan dependensi.",
-  "updatedAt": "2026-10-10",
+  "updatedAt": "2026-11-21",
   "sections": [
     {
       "title": "Skill repository",
-      "description": "Semua skill berikut ditemukan di .github/skills/. Fungsi diringkas dari nama dan peta skill pada petunjuk repository; buka file sumber sebelum mengikuti prosedurnya untuk suatu tugas.",
+      "description": "Semua skill berikut ditemukan di Tools/skills/. Fungsi diringkas dari nama dan peta skill pada petunjuk repository; buka file sumber sebelum mengikuti prosedurnya untuk suatu tugas.",
       "items": [
         {
           "title": "asset-management",
-          "source": ".github/skills/asset-management/SKILL.md",
+          "source": "Tools/skills/asset-management/SKILL.md",
           "function": "Memilih, mengoptimalkan, dan mengelola aset website.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membantu menjaga aset dan path konsisten.",
@@ -20,7 +20,7 @@
         },
         {
           "title": "convert-images-to-webp",
-          "source": ".github/skills/convert-images-to-webp/SKILL.md",
+          "source": "Tools/skills/convert-images-to-webp/SKILL.md",
           "function": "Panduan konversi gambar ke WebP.",
           "evaluationStatus": "Tersedia; relevansi bergantung pada aset dan konteks.",
           "benefit": "Optimasi format gambar bila sesuai.",
@@ -29,7 +29,7 @@
         },
         {
           "title": "frontend-development",
-          "source": ".github/skills/frontend-development/SKILL.md",
+          "source": "Tools/skills/frontend-development/SKILL.md",
           "function": "Implementasi dan pemeliharaan HTML, CSS, dan JavaScript.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Mendorong perubahan kecil sesuai pola proyek.",
@@ -38,7 +38,7 @@
         },
         {
           "title": "github-management",
-          "source": ".github/skills/github-management/SKILL.md",
+          "source": "Tools/skills/github-management/SKILL.md",
           "function": "Pemeriksaan status, diff, staging, commit, dan GitHub.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membantu menjaga perubahan lokal tetap terpisah.",
@@ -47,7 +47,7 @@
         },
         {
           "title": "human-ui-design",
-          "source": ".github/skills/human-ui-design/SKILL.md",
+          "source": "Tools/skills/human-ui-design/SKILL.md",
           "function": "Hierarki visual, palet, spacing, keterbacaan, dan UX.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Menjaga konsistensi visual dan kemudahan penggunaan.",
@@ -56,7 +56,7 @@
         },
         {
           "title": "performance",
-          "source": ".github/skills/performance/SKILL.md",
+          "source": "Tools/skills/performance/SKILL.md",
           "function": "Diagnosis dan optimasi performa website.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Mengarahkan pengukuran pada masalah nyata.",
@@ -65,7 +65,7 @@
         },
         {
           "title": "responsive-web",
-          "source": ".github/skills/responsive-web/SKILL.md",
+          "source": "Tools/skills/responsive-web/SKILL.md",
           "function": "Layout dan navigasi adaptif lintas viewport.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membantu menentukan dan memeriksa perilaku responsif.",
@@ -74,7 +74,7 @@
         },
         {
           "title": "seo-accessibility",
-          "source": ".github/skills/seo-accessibility/SKILL.md",
+          "source": "Tools/skills/seo-accessibility/SKILL.md",
           "function": "Metadata, semantik, kontras, keyboard, dan aksesibilitas.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membantu pemeriksaan aksesibilitas serta SEO dasar.",
@@ -83,7 +83,7 @@
         },
         {
           "title": "web-animation",
-          "source": ".github/skills/web-animation/SKILL.md",
+          "source": "Tools/skills/web-animation/SKILL.md",
           "function": "Penambahan atau pemeriksaan gerak dan transisi web.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Mengarahkan penggunaan gerak yang bertujuan.",
@@ -92,7 +92,7 @@
         },
         {
           "title": "website-content",
-          "source": ".github/skills/website-content/SKILL.md",
+          "source": "Tools/skills/website-content/SKILL.md",
           "function": "Penyusunan dan peninjauan konten website.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Menjaga konten tetap jelas dan konsisten.",
@@ -101,7 +101,7 @@
         },
         {
           "title": "website-maintenance",
-          "source": ".github/skills/website-maintenance/SKILL.md",
+          "source": "Tools/skills/website-maintenance/SKILL.md",
           "function": "Diagnosis dan perbaikan lokal website yang ada.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membantu menjaga lingkup perubahan dan regresi.",
@@ -110,7 +110,7 @@
         },
         {
           "title": "website-planning",
-          "source": ".github/skills/website-planning/SKILL.md",
+          "source": "Tools/skills/website-planning/SKILL.md",
           "function": "Perencanaan struktur, konten, tujuan, dan kriteria.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membuat kebutuhan dan prioritas lebih eksplisit.",
@@ -119,7 +119,7 @@
         },
         {
           "title": "website-testing",
-          "source": ".github/skills/website-testing/SKILL.md",
+          "source": "Tools/skills/website-testing/SKILL.md",
           "function": "Pemeriksaan fungsi, tampilan, responsivitas, teknis, dan aksesibilitas.",
           "evaluationStatus": "Tersedia di repository; evaluasi per tugas.",
           "benefit": "Membantu mencatat cakupan pengujian dengan jujur.",
