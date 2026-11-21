@@ -489,75 +489,6 @@
     <!-- SKRIP INTERAKSI AKSESIBEL (Menu Mobile & Accordion) -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        // Intro NFShark: 0,5s FadeIn + 3,5s progress + 1s scale fade-out dengan latar transparan.
-        const loadingScreen = document.getElementById('nf-loading-screen');
-        const loadingContent = document.getElementById('nf-loading-content');
-        const loadingFill = document.getElementById('nf-loading-fill');
-        const loadingPercent = document.getElementById('nf-loading-percent');
-        const loadingTrack = document.getElementById('nf-loading-track');
-
-        if (loadingScreen && loadingContent && loadingFill && loadingPercent && loadingTrack) {
-          let alreadyShown = false;
-          try {
-            alreadyShown = sessionStorage.getItem('nfshark-home-intro-shown') === '1';
-          } catch (_) {
-            // Jika sessionStorage tidak tersedia, intro tetap dijalankan.
-          }
-
-          if (alreadyShown) {
-            loadingScreen.remove();
-          } else {
-            try {
-              sessionStorage.setItem('nfshark-home-intro-shown', '1');
-            } catch (_) {
-              // Tidak mengganggu animasi bila penyimpanan sesi diblokir.
-            }
-
-            loadingScreen.hidden = false;
-            const loadingDuration = 3500;
-            const fadeContentDuration = 1000;
-            const startProgress = performance.now();
-
-            const colorStart = { r: 48, g: 58, b: 51 }; // #303A33
-            const colorEnd = { r: 67, g: 182, b: 92 }; // #43B65C
-
-            const animateProgress = (now) => {
-              const progress = Math.min((now - startProgress) / loadingDuration, 1);
-              const percent = Math.round(progress * 100);
-              const easedColor = progress;
-              const red = Math.round(colorStart.r + (colorEnd.r - colorStart.r) * easedColor);
-              const green = Math.round(colorStart.g + (colorEnd.g - colorStart.g) * easedColor);
-              const blue = Math.round(colorStart.b + (colorEnd.b - colorStart.b) * easedColor);
-
-              loadingFill.style.width = percent + '%';
-              loadingFill.style.backgroundColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
-              loadingPercent.textContent = percent + '%';
-              loadingTrack.setAttribute('aria-valuenow', String(percent));
-
-              if (progress < 1) {
-                requestAnimationFrame(animateProgress);
-                return;
-              }
-
-              loadingPercent.textContent = '100%';
-              loadingTrack.setAttribute('aria-valuenow', '100');
-
-              window.setTimeout(() => {
-                // Konten (logo, teks, dan progress bar) membesar sambil memudar.
-                // Pada saat yang sama, latar loading berubah menjadi transparan.
-                loadingContent.classList.add('is-fading-out');
-                loadingScreen.classList.add('is-fading-out');
-
-                window.setTimeout(() => {
-                  loadingScreen.remove();
-                }, fadeContentDuration);
-              }, 0);
-            };
-
-            // FadeIn CSS berjalan 0,5 detik sebelum progress 3,5 detik dimulai.
-            window.setTimeout(() => requestAnimationFrame(animateProgress), 500);
-          }
-        }
         // 0. Animasi elemen individual saat masuk viewport (tanpa menganimasikan container).
         const motionItems = document.querySelectorAll(
           'main h1, main h2, main h3, main h4, main p, main a, main button, main img, main li, main span, main strong, main em, main small, main figure, main blockquote, main label, main input, main textarea, main select, main th, main td, .studio-header a, .studio-header button, .studio-footer h3, .studio-footer p, .studio-footer a, .studio-footer strong, .studio-footer span, .studio-footer .badge-editorial'
@@ -580,13 +511,12 @@
             });
 
             motionItems.forEach((item) => {
-              if (item.closest('.nf-loading-screen')) return;
               item.classList.add('nf-animate-item');
               motionObserver.observe(item);
             });
           } else {
             motionItems.forEach((item) => {
-              if (!item.closest('.nf-loading-screen')) revealItem(item);
+              revealItem(item);
             });
           }
         }
