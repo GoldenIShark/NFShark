@@ -24,6 +24,7 @@ Gunakan file ini sebagai daftar rujukan untuk menemukan konfigurasi skill. Semua
 | website-structure | [Tools/skills/website-structure/SKILL.md](../../Tools/skills/website-structure/SKILL.md) |
 | website-testing | [Tools/skills/website-testing/SKILL.md](../../Tools/skills/website-testing/SKILL.md) |
 | membuat-dan-mendesain-website-profesional | [Tools/skills/membuat-dan-mendesain-website-profesional/SKILL.md](../../Tools/skills/membuat-dan-mendesain-website-profesional/SKILL.md) |
+| skill-creator | [Tools/skills/skill-creator/SKILL.md](../../Tools/skills/skill-creator/SKILL.md) |
 
 ## Aturan penggunaan
 
