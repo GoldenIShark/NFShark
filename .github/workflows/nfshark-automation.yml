@@ -105,6 +105,10 @@ jobs:
           test -f site/feedback/index.html
           test -f site/persetujuan/index.html
           test -f site/ui-preview/index.html
+          test -f site/403/index.html
+          test -f site/404/index.html
+          test -f site/500/index.html
+          test -f site/error/index.html
           test -f site/js/clean-navigation.js
           test -f site/assets/images/peta-alur-pengerjaan.svg
           test -f site/CNAME
