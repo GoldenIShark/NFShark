@@ -763,3 +763,15 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .hero-typewriter-caret { display: none; animation: none; }
 }
+
+
+/* Peta konsep tiga tahap pengerjaan */
+.process-map{display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem;max-width:920px;margin:0 auto}
+.process-map-item{position:relative;display:flex;align-items:flex-start;gap:1.1rem;width:min(100%,620px);padding:1.35rem 1.5rem;border:1px solid rgba(174,205,174,.28);border-radius:18px;background:rgba(255,255,255,.035);box-shadow:0 12px 34px rgba(0,0,0,.08)}
+.process-map-item--left{justify-self:start}.process-map-item--right{justify-self:end}
+.process-map-number{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border:1px solid var(--color-mint,#a9d6b5);border-radius:50%;color:var(--color-mint,#a9d6b5);font-family:Georgia,serif;font-size:1.1rem}
+.process-map-copy h4{margin:.1rem 0 .45rem;color:var(--color-light-text,#f5f5ef);font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.15rem,2vw,1.4rem);font-weight:500}
+.process-map-copy p{margin:0;color:var(--studio-muted,#b9c4bd);line-height:1.7}
+.process-map-arrow{display:block;justify-self:center;color:var(--color-mint,#a9d6b5);font-size:2rem;line-height:1;opacity:.85}
+.process-map-arrow--first{transform:translateX(4rem)}.process-map-arrow--second{transform:translateX(-4rem)}
+@media(max-width:640px){.process-map-item{padding:1.1rem;gap:.85rem}.process-map-number{flex-basis:42px;width:42px;height:42px}.process-map-arrow--first{transform:translateX(2.5rem)}.process-map-arrow--second{transform:translateX(-2.5rem)}}
