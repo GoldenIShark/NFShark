@@ -374,3 +374,10 @@ Tanggal: 2026-11-21
 - Teks pada ketiga kartu SVG dipecah menjadi baris yang lebih pendek dan ukuran font isi disesuaikan agar tetap berada di dalam border.
 - CSS ditambah aturan untuk perangkat sentuh (`pointer: coarse` dan `hover: none`) agar susunan kartu mobile tetap digunakan pada ponsel meskipun browser meminta Desktop Site. Ukuran panah pada susunan kartu juga sedikit diperbesar.
 - Tidak ada file yang dihapus. Pengujian ulang browser desktop, mobile normal, Desktop Site, serta cache setelah deployment masih diperlukan.
+
+
+## Perbaikan overflow layout layanan — 2026-11-21
+- Ditemukan `.studio-services-layout` menggunakan kolom 38% + 62% sekaligus `gap: 4rem`, sehingga kebutuhan lebar grid melampaui kontainer.
+- Diganti menjadi `minmax(0, 0.62fr) minmax(0, 1fr)` dengan `gap: clamp(1.5rem, 4vw, 4rem)`, `width: 100%`, dan `min-width: 0` pada grid serta anak-anaknya.
+- Breakpoint yang mengubah layout menjadi satu kolom pada lebar 960px tetap dipertahankan.
+- Tidak ada file yang dihapus. Pengujian visual sesudah deployment masih diperlukan.
