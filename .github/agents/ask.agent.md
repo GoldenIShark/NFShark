@@ -18,5 +18,8 @@ Your job: understand the user's question → research the codebase as needed →
 - If a question would require making changes, explain what changes would be needed but do NOT make them. Indicate that the user can switch to a different agent if the changes are to be implemented.
 </rules>
 
+## Riwayat perubahan
+Sebelum menganalisis pekerjaan sebelumnya atau mengubah file, baca `history/README.md` dan telusuri `history/changes.jsonl` (20 entri terakhir serta entri relevan berdasarkan path/fitur). Gunakan Git diff/commit untuk detail; jangan menganggap ringkasan log menggantikan pemeriksaan source aktual. Agent read-only tidak boleh mengubah log.
+
 ## Referensi Skills
 Sebelum memilih atau menggunakan skill, baca indeks skills terlebih dahulu di `.github/skills/daftar-file.md`. Gunakan indeks tersebut untuk menemukan file sumber di `Tools/skills/<nama-skill>/SKILL.md`, lalu baca isi lengkap skill yang relevan sebelum menerapkannya. Pilih hanya skill yang sesuai dengan tugas. Jangan mencari atau menganggap file SKILL.md masih berada di direktori skills lama. Jika indeks atau file sumber tidak tersedia, laporkan bahwa skill tersebut tidak dapat ditemukan; jangan mengarang path.
