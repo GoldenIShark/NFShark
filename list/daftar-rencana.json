@@ -3,7 +3,7 @@
   "title": "Daftar Rencana Pengembangan",
   "category": "Pengembangan",
   "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-21",
   "sections": [
     {
       "title": "Belum dimulai atau masih perlu dilanjutkan",
@@ -141,9 +141,9 @@
         },
         {
           "id": "REN-014",
-          "title": "Mengubah transisi akhir intro loading halaman utama",
-          "result": "Animasi akhir diubah: logo, teks, dan progress bar membesar sambil memudar selama 1 detik, sementara latar loading berubah menjadi transparan. Circular reveal/radial mask dihapus. Runtime browser belum diverifikasi.",
-          "updatedAt": "2026-11-03"
+          "title": "Mengganti intro loading halaman utama dengan Dual Ring Spinner",
+          "result": "Intro lama dengan logo, teks, progress bar, dan transisi scale dihapus dari halaman utama. Diganti overlay transparan dengan backdrop blur 8px dan dua ring konsentris yang berputar berlawanan arah (1,5 detik untuk ring luar dan 1 detik untuk ring dalam). Fade-in 0,2 detik; setelah window.load, overlay fade-out 0,3 detik lalu dihapus. Skeleton loading global tetap dipertahankan karena merupakan fitur terpisah. prefers-reduced-motion menonaktifkan putaran.",
+          "updatedAt": "2026-11-21"
         },
         {
           "id": "REN-015",
