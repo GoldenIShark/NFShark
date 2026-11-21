@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261105-1" />
     <link rel="stylesheet" href="css/style-studio.css?v=20261029-2" />
+    <link rel="stylesheet" href="css/loading.css?v=20261121-1" />
+    <script src="js/loading.js" defer></script>
     <script src="js/skeleton-loading.js" defer></script>
     <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
     <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
@@ -21,21 +23,8 @@
     <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
   </head>
   <body class="studio-body">
-    <div class="nf-loading-screen" id="nf-loading-screen" hidden aria-label="Memuat halaman NFShark">
-      <div class="nf-loading-content" id="nf-loading-content">
-        <img class="nf-loading-logo" src="assets/Logo/Logo.webp" alt="" width="76" height="76" />
-        <div class="nf-loading-brand">nfshark</div>
-        <p class="nf-loading-caption">Preparing your experience</p>
-        <div class="nf-loading-progress">
-          <div class="nf-loading-progress-meta">
-            <span>Loading...</span>
-            <span id="nf-loading-percent" aria-live="off">0%</span>
-          </div>
-          <div class="nf-loading-track" id="nf-loading-track" role="progressbar" aria-label="Progres pemuatan animasi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <span class="nf-loading-fill" id="nf-loading-fill"></span>
-          </div>
-        </div>
-      </div>
+    <div class="nf-page-loader" id="nf-page-loader" role="status" aria-label="Memuat halaman NFShark">
+      <span class="nf-dual-ring" aria-hidden="true"></span>
     </div>
     
     <!-- NAVBAR (Sticky, Minimalist, Aksesibel Keyboard & Escape) -->
