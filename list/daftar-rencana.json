@@ -166,7 +166,7 @@
         {
           "id": "REN-018",
           "title": "Menyederhanakan homepage dan membuat peta konsep pengerjaan",
-          "result": "Menghapus kutipan teknologi, Arsip Tampilan Lama, Pratinjau Komponen UI, dan Berbasis di Indonesia dari homepage. Konten tiga tahap Diskusi, Pratinjau Awal, dan Finalisasi Desain dipertahankan, ditampilkan dalam peta konsep kiri-kanan-kiri serta ilustrasi SVG untuk desktop dan susunan teks responsif untuk mobile. Uji visual belum dilakukan.",
+          "result": "Menghapus kutipan teknologi, Arsip Tampilan Lama, Pratinjau Komponen UI, dan Berbasis di Indonesia dari homepage. Konten tiga tahap Diskusi, Pratinjau Awal, dan Finalisasi Desain dipertahankan, ditampilkan dalam peta konsep kiri-kanan-kiri serta ilustrasi SVG untuk desktop dan susunan teks responsif untuk mobile. Uji visual belum dilakukan. Revisi lanjutan berdasarkan screenshot Desktop Site di ponsel: panah SVG diperpanjang dan dihubungkan ke sisi kartu, teks SVG dipecah agar tetap di dalam border, serta perangkat sentuh diprioritaskan ke susunan kartu mobile walaupun viewport Desktop Site terdeteksi lebar. Perlu verifikasi visual setelah deployment.",
           "updatedAt": "2026-11-21"
         }
       ]
