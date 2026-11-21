@@ -329,3 +329,37 @@ Tanggal: 2026-11-21
 - `list/daftar-fitur.json`
 - `list/daftar-rencana.json`
 - `catatan.md`
+
+
+---
+
+Tanggal: 2026-11-21
+
+## Area
+- Penyederhanaan homepage dan peta konsep pengerjaan: `index.html`, `css/style-studio.css`, dan `assets/images/peta-alur-pengerjaan.svg`.
+- URL bersih seluruh halaman statis utama: `.github/scripts/prepare_pages.py`, `.github/workflows/nfshark-automation.yml`, dan `js/clean-navigation.js`.
+- Inventaris: `list/daftar-fitur.json` (FIT-024, FIT-025) dan `list/daftar-rencana.json` (REN-017, REN-018).
+
+## Perubahan
+- Menghapus kutipan “Dibuat dengan HTML5, CSS & Vanilla JavaScript murni.”, “Arsip Tampilan Lama”, “Pratinjau Komponen UI”, dan “Berbasis di Indonesia” dari homepage.
+- Mempertahankan naskah tiga tahap: Diskusi, Pratinjau Awal, dan Finalisasi Desain. Tampilan desktop memakai ilustrasi SVG peta konsep; tampilan mobile memakai kartu responsif dengan pola kiri-kanan-kiri.
+- Paket GitHub Pages kini menyiapkan rute direktori tanpa ekstensi untuk Brief, FAQ, Feedback, Persetujuan, UI Preview, dan halaman informasi/error. URL .html lama (kecuali dokumen error 404 yang dipakai GitHub Pages) diarahkan ke rute baru.
+- Tautan lokal dalam paket publik ditulis ulang ke rute bersih. Script navigasi menggulir ke target anchor dan menghapus hash dari address bar, serta menghapus akhiran index.html saat URL tersebut dibuka langsung.
+- Menambahkan canonical URL dan memperluas pemeriksaan workflow untuk memastikan beberapa rute utama tersedia.
+- Direktori arsip history tidak dimasukkan ke paket publik.
+
+## File yang diubah
+- `index.html`
+- `css/style-studio.css`
+- `assets/images/peta-alur-pengerjaan.svg` (baru)
+- `.github/scripts/prepare_pages.py`
+- `.github/workflows/nfshark-automation.yml`
+- `js/clean-navigation.js` (baru)
+- `list/daftar-fitur.json`
+- `list/daftar-rencana.json`
+- `arsip/catatan.md`
+
+## Verifikasi
+- Perubahan disimpan pada branch `main`.
+- Pemeriksaan sintaks skrip Python, hasil paket deployment, tampilan browser, navigasi lintas halaman, dan domain publik belum dijalankan/terkonfirmasi dalam catatan ini.
+- Tidak ada file yang dihapus.
