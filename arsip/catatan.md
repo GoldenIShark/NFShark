@@ -366,3 +366,11 @@ Tanggal: 2026-11-21
 
 - Alias `/studio/` disediakan untuk mencocokkan alamat yang ditampilkan pada ilustrasi browser homepage; paket publik tetap tidak menyalin direktori arsip `history/`.
 - Pemeriksaan tautan lokal diperbarui agar memahami rute bersih dan memetakan rute tersebut ke file sumber HTML; file wajib catatan diselaraskan ke `arsip/catatan.md`.
+
+
+## Revisi lanjutan peta konsep — 2026-11-21
+- Konteks screenshot dikonfirmasi: diambil dari browser HP dengan mode Desktop Site; status setelah reload belum diketahui.
+- Panah pada ilustrasi SVG diperpanjang dan titik ujungnya diarahkan ke tepi kartu tahap berikutnya, mempertahankan urutan kiri–kanan–kiri.
+- Teks pada ketiga kartu SVG dipecah menjadi baris yang lebih pendek dan ukuran font isi disesuaikan agar tetap berada di dalam border.
+- CSS ditambah aturan untuk perangkat sentuh (`pointer: coarse` dan `hover: none`) agar susunan kartu mobile tetap digunakan pada ponsel meskipun browser meminta Desktop Site. Ukuran panah pada susunan kartu juga sedikit diperbesar.
+- Tidak ada file yang dihapus. Pengujian ulang browser desktop, mobile normal, Desktop Site, serta cache setelah deployment masih diperlukan.
