@@ -1,0 +1,73 @@
+/* Dual Ring Loader NFShark */
+.nf-page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  background: rgb(0 0 0 / 18%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease, visibility 300ms ease;
+  animation: nf-loader-appear 200ms ease-out both;
+}
+
+.nf-page-loader.is-hiding {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.nf-dual-ring {
+  position: relative;
+  width: 58px;
+  height: 58px;
+}
+
+.nf-dual-ring::before,
+.nf-dual-ring::after {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  content: "";
+  animation: nf-ring-spin 1.5s linear infinite;
+}
+
+.nf-dual-ring::before {
+  border: 3px solid rgb(50 170 91 / 22%);
+  border-top-color: #32aa5b;
+  border-right-color: #32aa5b;
+}
+
+.nf-dual-ring::after {
+  inset: 11px;
+  border: 2px solid rgb(255 255 255 / 24%);
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+  animation-duration: 1s;
+  animation-direction: reverse;
+}
+
+@keyframes nf-ring-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nf-loader-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-page-loader {
+    animation: none;
+    transition-duration: 1ms;
+  }
+
+  .nf-dual-ring::before,
+  .nf-dual-ring::after {
+    animation: none;
+  }
+}
