@@ -10,6 +10,18 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
+CLEAN_ROUTES = {
+    "/": "index.html",
+    "/brief/": "brief.html",
+    "/faq/": "faq.html",
+    "/feedback/": "feedback.html",
+    "/persetujuan/": "persetujuan.html",
+    "/ui-preview/": "ui-preview.html",
+    "/403/": "403.html",
+    "/404/": "404.html",
+    "/500/": "500.html",
+    "/error/": "error.html",
+}
 REQUIRED_FILES = (
     "index.html",
     "CNAME",
@@ -56,6 +68,8 @@ def resolve_local_reference(source: Path, reference: str) -> Path | None:
         return None
 
     raw_path = unquote(parsed.path)
+    if raw_path in CLEAN_ROUTES:
+        return ROOT / CLEAN_ROUTES[raw_path]
     if raw_path.startswith("/"):
         candidate = ROOT / raw_path.lstrip("/")
     else:
