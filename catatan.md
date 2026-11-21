@@ -309,7 +309,7 @@ Tanggal: 2026-11-21
 - Sinkronisasi inventaris: `list/daftar-fitur.json` (FIT-018) dan `list/daftar-rencana.json` (REN-014).
 
 ## Perubahan
-- Intro lama yang menampilkan logo, teks, dan progress bar dihapus.
+- Intro lama yang menampilkan logo, teks, dan progress bar dihapus, termasuk skrip progress dan pembatasan satu kali per tab berbasis sessionStorage di dalam index.html.
 - Ditambahkan Dual Ring Spinner dengan dua lingkaran konsentris yang berputar berlawanan arah; durasi putaran ring luar 1,5 detik dan ring dalam 1 detik.
 - Overlay menggunakan warna hitam transparan 18%, backdrop blur 8px, fade-in 0,2 detik, dan fade-out 0,3 detik setelah event `window.load`.
 - Loader dihapus dari DOM setelah transisi selesai. `prefers-reduced-motion` menonaktifkan putaran.
