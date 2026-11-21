@@ -16,7 +16,7 @@ ROUTES = {
     "403.html": "403", "404.html": "404", "500.html": "500", "error.html": "error",
 }
 
-def clean_reference(value: str, current_route: str) -> str:
+def clean_reference(value: str, current_route: str, root_page: bool) -> str:
     if not value or value.startswith(("http://", "https://", "mailto:", "tel:", "data:", "javascript:", "//")):
         return value
     if value.startswith("#"):
@@ -26,19 +26,19 @@ def clean_reference(value: str, current_route: str) -> str:
     if path in ("", "."):
         return current_route + suffix
     if path == "index.html":
-        return "/" + suffix
+        return ("/" if root_page else current_route) + suffix
     if path in ROUTES:
         return "/" + ROUTES[path] + "/" + suffix
     if path.endswith("/index.html"):
         return "/" + path[:-len("/index.html")].strip("/") + "/" + suffix
     return value
 
-def process_html(path: Path, route: str) -> None:
+def process_html(path: Path, route: str, root_page: bool) -> None:
     text = path.read_text(encoding="utf-8")
-    if "<base " not in text.lower():
+    if root_page and "<base " not in text.lower():
         text = re.sub(r"<head([^>]*)>", r'<head\1>\n    <base href="/">', text, count=1, flags=re.I)
     attr_pattern = re.compile(r'\b(href|src|action|poster)=(["\'])(.*?)\2', re.I)
-    text = attr_pattern.sub(lambda m: f'{m.group(1)}={m.group(2)}{clean_reference(m.group(3), route)}{m.group(2)}', text)
+    text = attr_pattern.sub(lambda m: f'{m.group(1)}={m.group(2)}{clean_reference(m.group(3), route, root_page)}{m.group(2)}', text)
     script_tag = '<script src="/js/clean-navigation.js" defer></script>'
     if script_tag not in text and re.search(r"</head>", text, re.I):
         text = re.sub(r"</head>", f"    {script_tag}\n  </head>", text, count=1, flags=re.I)
@@ -80,7 +80,8 @@ def main() -> None:
             route = "/" + ROUTES[relative.name] + "/"
         else:
             route = "/" if relative.name == "index.html" else "/" + relative.stem + "/"
-        process_html(page, route)
+        root_page = relative.parent == Path(".") or (relative.parent.as_posix() in ROUTES.values() and relative.name == "index.html")
+        process_html(page, route, root_page)
 
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     print("Direktori publik siap dibuat:", OUTPUT.relative_to(ROOT))
