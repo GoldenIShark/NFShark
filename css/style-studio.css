@@ -775,3 +775,8 @@ section[id] {
 .process-map-arrow{display:block;justify-self:center;color:var(--color-mint,#a9d6b5);font-size:2rem;line-height:1;opacity:.85}
 .process-map-arrow--first{transform:translateX(4rem)}.process-map-arrow--second{transform:translateX(-4rem)}
 @media(max-width:640px){.process-map-item{padding:1.1rem;gap:.85rem}.process-map-number{flex-basis:42px;width:42px;height:42px}.process-map-arrow--first{transform:translateX(2.5rem)}.process-map-arrow--second{transform:translateX(-2.5rem)}}
+
+.process-map-figure{max-width:1000px;margin:0 auto 1.25rem}
+.process-map-figure img{display:block;width:100%;height:auto;border-radius:18px}
+@media(min-width:761px){.process-map-mobile{display:none}}
+@media(max-width:760px){.process-map-figure{display:none}}
