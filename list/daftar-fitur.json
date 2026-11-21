@@ -268,16 +268,16 @@
         {
           "id": "FIT-025",
           "title": "Peta konsep tiga tahap pengerjaan",
-          "description": "Alur Diskusi, Pratinjau Awal, dan Finalisasi Desain disajikan dalam ilustrasi SVG desktop serta susunan responsif kiri-kanan-kiri.",
+          "description": "Alur Diskusi, Pratinjau Awal, dan Finalisasi Desain disajikan dalam ilustrasi SVG desktop dengan panah yang terhubung ke tepi kartu dan teks yang dibungkus di dalam batas kartu. Perangkat sentuh menggunakan susunan kartu responsif kiri-kanan-kiri, termasuk ketika browser ponsel memakai Desktop Site.",
           "benefit": "Membantu calon pelanggan memahami tahapan pengerjaan dengan cepat.",
           "priority": "Sedang",
-          "status": "Tersedia di source; tampilan browser belum diverifikasi",
+          "status": "Perbaikan source tersimpan; perlu verifikasi ulang setelah deployment",
           "files": [
             "index.html",
             "css/style-studio.css",
             "assets/images/peta-alur-pengerjaan.svg"
           ],
-          "testNotes": "Teks tahap dipertahankan sesuai naskah pemilik. Uji visual desktop dan mobile belum dilakukan."
+          "testNotes": "Panah SVG diperpanjang dan diarahkan ke kartu tujuan. Teks SVG dipecah menjadi baris yang lebih pendek. Media query pointer:coarse dan hover:none menjaga susunan mobile pada ponsel dengan Desktop Site. Perlu uji desktop, mobile normal, dan Desktop Site setelah deployment."
         }
       ]
     },
