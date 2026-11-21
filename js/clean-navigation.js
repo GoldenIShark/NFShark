@@ -2,7 +2,7 @@
   "use strict";
 
   const cleanAddress = () => {
-    const cleanPath = window.location.pathname.replace(/index\\.html$/, "");
+    const cleanPath = window.location.pathname.replace(/index\.html$/, "");
     if (cleanPath !== window.location.pathname) {
       window.history.replaceState(null, "", cleanPath + window.location.search + window.location.hash);
     }
