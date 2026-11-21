@@ -76,26 +76,28 @@ Jangan menyatakan pengujian berhasil apabila pengujian tersebut belum benar-bena
 
 - Saat menulis kode, usahakan kode sesingkat, seefisien, dan serapi mungkin; hindari kode bertele‑tele, gunakan sintaks singkat, dan pertahankan keterbacaan.
 
-## 9. Batas Arsip `catatan.md`
+## Riwayat perubahan (JSONL)
 
-- Saat `catatan.md` mencapai 500 baris atau 50 KB (mana yang lebih dulu), arsipkan seluruh isinya tanpa kehilangan riwayat sebagai `catatan-vN.md` dengan nomor versi berikutnya yang belum digunakan.
-- Setelah arsip dibuat, mulai log aktif baru di `catatan.md` dan sertakan rujukan yang jelas ke arsip.
-- Jika masih di bawah kedua ambang, jangan memecah atau mengarsipkan catatan.
+- Sumber ringkasan perubahan adalah `history/changes.jsonl`. Baca `history/README.md` untuk skema dan aturan lengkap.
+- Sebelum pekerjaan yang berpotensi mengubah file, baca panduan lalu telusuri entri terbaru dan cari entri yang terkait dengan file/fitur sasaran. Tidak perlu membaca seluruh log: gunakan 20 entri terakhir dan pencarian berdasarkan path, ID, atau kata kunci bila tersedia.
+- Setelah satu tugas/perubahan logis selesai, tambahkan **tepat satu baris JSON valid** untuk satu rangkaian perubahan tersebut. Satu baris dapat mencantumkan beberapa file yang berubah dalam tugas yang sama. Jangan membuat satu baris per file dan jangan memecah satu tugas menjadi banyak entri.
+- Catat hanya perubahan yang benar-benar terjadi. Kelompokkan path ke `added`, `modified`, `deleted`, dan `renamed`; sertakan ringkasan, dampak, dan status verifikasi singkat. Jangan menyimpan dump diff, seluruh isi file, atau daftar command yang panjang.
+- Jangan membuat log untuk tugas read-only atau jika tidak ada file yang berubah. Jangan mencatat rencana sebagai implementasi.
+- Git commit/diff tetap menjadi sumber kebenaran untuk detail teknis. Jangan menyalin seluruh diff ke JSONL. Jika SHA commit tersedia, cantumkan; jika tidak, hilangkan.
+- `catatan.md` dan `catatan-vN.md` adalah arsip format lama. Pertahankan sebagai riwayat lama; jangan menambahkan entri baru ke sana.
 
-## 10. Sinkronisasi Wajib dengan Data `list/` (Semua Agent)
+## Sinkronisasi inventaris `list/`
 
-Setiap pekerjaan yang mengubah website—baik diminta langsung oleh pemilik maupun dikerjakan sebagai tindak lanjut agent—WAJIB terhubung dengan dokumentasi data di folder `list/`. Aturan ini berlaku sebelum dan sesudah perubahan, tanpa perlu pengingat tambahan.
+- Baca `list/index.json` dan hanya dokumen yang relevan ketika pekerjaan menyentuh fitur, bug, rencana, atau data inventaris.
+- Perbarui dokumen `list/` hanya jika fakta yang dicatat di dalamnya benar-benar berubah: fitur ditambah/diubah/dihapus, masalah ditemukan/statusnya berubah, atau rencana/progres berubah.
+- Perubahan kosmetik kecil, typo, refactor internal, atau perubahan dokumentasi yang tidak mengubah inventaris **tidak mewajibkan** pembaruan `list/`.
+- Jika dokumen relevan memiliki `updatedAt` lebih dari 14 hari dan datanya diperlukan untuk mengambil keputusan, cocokkan bagian terkait dengan source aktual. Jangan mengubah tanggal tanpa verifikasi.
+- Jangan membuat fitur, masalah, progres, atau hasil pengujian fiktif. Perbarui hanya kategori yang benar-benar terdampak.
+- Jika pekerjaan hanya read-only, cukup laporkan file yang diperiksa dan temuan; jangan membuat log atau mengubah inventaris.
 
-1. **Pemeriksaan sebelum perubahan:** baca `list/index.json`, pilih dokumen yang paling relevan dengan halaman/fitur yang akan disentuh, lalu baca dokumen tersebut. Jangan hanya mengandalkan `catatan.md`.
-2. **Pemeriksaan usia data 14 hari:** periksa tanggal `updatedAt` pada dokumen data yang dipilih (atau tanggal pembaruan terakhir yang tersedia). Jika data terakhir lebih dari 14 hari, lakukan pencocokan ulang terhadap source terkait sebelum mengubah website; perbarui status/isi yang sudah tidak sesuai berdasarkan bukti aktual. Jangan mengubah tanggal agar tampak baru tanpa pemeriksaan.
-3. **Pembaruan otomatis setelah perubahan:** setelah perubahan website selesai, agent WAJIB memperbarui sekurang-kurangnya satu dokumen `list/` yang paling relevan, meskipun pemilik tidak secara khusus meminta pembaruan dokumentasi. Lakukan juga bila pemilik meminta perubahan secara langsung. Perbarui `updatedAt` dan entri/status/rujukan file yang terdampak berdasarkan hasil nyata.
-4. **Pilih dokumen yang tepat:** gunakan `daftar-fitur.json` untuk fitur/kemampuan yang ditambah, diubah, atau dihapus; `daftar-masalah.json` untuk bug/temuan dan status penyelesaiannya; `daftar-rencana.json` untuk rencana, progres, atau pekerjaan lanjutan. Gunakan dokumen lain dalam katalog jika dampak perubahan memang berada pada domain dokumen tersebut. Perbarui lebih dari satu jika beberapa kategori benar-benar terdampak.
-5. **Jaga akurasi:** jangan mencatat fitur sebagai tersedia hanya karena direncanakan; bedakan pemeriksaan source dengan uji browser/runtime; jangan mengarang hasil pengujian, tanggal, data pelanggan, atau status. Jika tidak ada perubahan substantif pada inventaris, tetap catat pembaruan relevan yang menjelaskan dampak pemeliharaan dan file yang berubah tanpa membuat fitur fiktif.
-6. **Catatan perubahan tetap wajib:** selain dokumen `list/`, catat semua file yang ditambah/diubah/dihapus di `catatan.md` sesuai aturan pencatatan yang berlaku.
-7. **Pelaporan:** sebutkan dokumen `list/` yang diperiksa dan diperbarui, alasan pemilihannya, serta apakah data berusia lebih dari 14 hari dan perlu direkonsiliasi. Jika akses atau kemampuan edit tidak tersedia, nyatakan dengan jelas dan jangan mengklaim sinkronisasi selesai.
+## Pelaporan file
 
-Agent perencana juga wajib membaca dokumen `list/` yang relevan saat menyusun rencana dan memasukkan instruksi pembaruan data `list/` serta `catatan.md` ke prompt agent pelaksana.
-
+Setiap laporan setelah perubahan wajib memisahkan file yang **ditambahkan**, **diubah**, **dihapus**, dan **dipindahkan/di-rename**. Tulis `Tidak ada` untuk kategori yang kosong.
 
 ## 11. Pemeriksaan Read-Only Tanpa Catatan Perubahan
 
