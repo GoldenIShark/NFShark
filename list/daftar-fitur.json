@@ -260,9 +260,10 @@
           "files": [
             ".github/scripts/prepare_pages.py",
             ".github/workflows/nfshark-automation.yml",
-            "js/clean-navigation.js"
+            "js/clean-navigation.js",
+            ".github/scripts/check_site_integrity.py"
           ],
-          "testNotes": "Workflow memeriksa keberadaan route brief, FAQ, feedback, persetujuan, dan UI preview. Verifikasi URL publik dan navigasi hash menunggu deployment."
+          "testNotes": "Workflow memeriksa keberadaan route studio, brief, FAQ, feedback, persetujuan, UI preview, dan halaman error. Pemeriksaan integritas memetakan route bersih ke sumber HTML. Verifikasi URL publik dan navigasi browser menunggu deployment."
         },
         {
           "id": "FIT-025",
