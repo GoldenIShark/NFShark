@@ -55,8 +55,7 @@ Simpan hasil di folder asset yang sama dan pertahankan struktur subfolder sepert
 
 ## Tool Pembantu Otomatis (Python)
 
-Folder skill ini dilengkapi skrip Python pembantu reusable: `convert_to_webp.py`.
-Gunakan skrip ini saat perlu mengonversi satu gambar atau satu direktori gambar raster ke WebP secara cepat dan aman:
+Skrip Python `convert_to_webp.py` pernah dirujuk sebagai alat bantu, tetapi file tersebut tidak ditemukan pada struktur repository saat audit pemindahan dilakukan. Jangan menjalankan contoh perintah di bawah sebelum file skrip benar-benar tersedia dan diperiksa. Jika skrip ditambahkan kembali, sesuaikan path perintah dengan lokasi aktualnya:
 
 ```bash
 # Konversi satu file (file asli tetap disimpan secara default)
