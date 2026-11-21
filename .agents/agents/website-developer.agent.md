@@ -55,5 +55,28 @@ Untuk fitur lintas bidang, gunakan kombinasi sekecil mungkin—contohnya `websit
 - Utamakan aset yang sesuai konteks dan berukuran efisien; hindari hotlink, path absolut lokal, duplikasi, dan perubahan format yang merusak fungsi.
 - Jangan mengorbankan keterbacaan, aksesibilitas, atau kecepatan demi animasi, efek dekoratif, atau tren visual.
 
+## Riwayat perubahan (JSONL)
+
+- Sumber ringkasan perubahan adalah `history/changes.jsonl`. Baca `history/README.md` untuk skema dan aturan lengkap.
+- Sebelum pekerjaan yang berpotensi mengubah file, baca panduan lalu telusuri entri terbaru dan cari entri yang terkait dengan file/fitur sasaran. Tidak perlu membaca seluruh log: gunakan 20 entri terakhir dan pencarian berdasarkan path, ID, atau kata kunci bila tersedia.
+- Setelah satu tugas/perubahan logis selesai, tambahkan **tepat satu baris JSON valid** untuk satu rangkaian perubahan tersebut. Satu baris dapat mencantumkan beberapa file yang berubah dalam tugas yang sama. Jangan membuat satu baris per file dan jangan memecah satu tugas menjadi banyak entri.
+- Catat hanya perubahan yang benar-benar terjadi. Kelompokkan path ke `added`, `modified`, `deleted`, dan `renamed`; sertakan ringkasan, dampak, dan status verifikasi singkat. Jangan menyimpan dump diff, seluruh isi file, atau daftar command yang panjang.
+- Jangan membuat log untuk tugas read-only atau jika tidak ada file yang berubah. Jangan mencatat rencana sebagai implementasi.
+- Git commit/diff tetap menjadi sumber kebenaran untuk detail teknis. Jangan menyalin seluruh diff ke JSONL. Jika SHA commit tersedia, cantumkan; jika tidak, hilangkan.
+- `catatan.md` dan `catatan-vN.md` adalah arsip format lama. Pertahankan sebagai riwayat lama; jangan menambahkan entri baru ke sana.
+
+## Sinkronisasi inventaris `list/`
+
+- Baca `list/index.json` dan hanya dokumen yang relevan ketika pekerjaan menyentuh fitur, bug, rencana, atau data inventaris.
+- Perbarui dokumen `list/` hanya jika fakta yang dicatat di dalamnya benar-benar berubah: fitur ditambah/diubah/dihapus, masalah ditemukan/statusnya berubah, atau rencana/progres berubah.
+- Perubahan kosmetik kecil, typo, refactor internal, atau perubahan dokumentasi yang tidak mengubah inventaris **tidak mewajibkan** pembaruan `list/`.
+- Jika dokumen relevan memiliki `updatedAt` lebih dari 14 hari dan datanya diperlukan untuk mengambil keputusan, cocokkan bagian terkait dengan source aktual. Jangan mengubah tanggal tanpa verifikasi.
+- Jangan membuat fitur, masalah, progres, atau hasil pengujian fiktif. Perbarui hanya kategori yang benar-benar terdampak.
+- Jika pekerjaan hanya read-only, cukup laporkan file yang diperiksa dan temuan; jangan membuat log atau mengubah inventaris.
+
+## Pelaporan file
+
+Setiap laporan setelah perubahan wajib memisahkan file yang **ditambahkan**, **diubah**, **dihapus**, dan **dipindahkan/di-rename**. Tulis `Tidak ada` untuk kategori yang kosong.
+
 ## Referensi Skills
 Sebelum memilih atau menggunakan skill, baca indeks skills terlebih dahulu di `.agents/skills/daftar-file.md`. Gunakan indeks tersebut untuk menemukan file sumber di `Tools/skills/<nama-skill>/SKILL.md`, lalu baca isi lengkap skill yang relevan sebelum menerapkannya. Pilih hanya skill yang sesuai dengan tugas. Jangan mencari atau menganggap file SKILL.md masih berada di direktori skills lama. Jika indeks atau file sumber tidak tersedia, laporkan bahwa skill tersebut tidak dapat ditemukan; jangan mengarang path.
