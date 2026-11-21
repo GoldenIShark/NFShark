@@ -84,7 +84,7 @@ Jangan menyatakan pengujian berhasil apabila pengujian tersebut belum benar-bena
 - Catat hanya perubahan yang benar-benar terjadi. Kelompokkan path ke `added`, `modified`, `deleted`, dan `renamed`; sertakan ringkasan, dampak, dan status verifikasi singkat. Jangan menyimpan dump diff, seluruh isi file, atau daftar command yang panjang.
 - Jangan membuat log untuk tugas read-only atau jika tidak ada file yang berubah. Jangan mencatat rencana sebagai implementasi.
 - Git commit/diff tetap menjadi sumber kebenaran untuk detail teknis. Jangan menyalin seluruh diff ke JSONL. Jika SHA commit tersedia, cantumkan; jika tidak, hilangkan.
-- `catatan.md` dan `catatan-vN.md` adalah arsip format lama. Pertahankan sebagai riwayat lama; jangan menambahkan entri baru ke sana.
+- `arsip/catatan.md` dan `arsip/catatan-vN.md` adalah arsip format lama. Pertahankan sebagai riwayat lama; jangan menambahkan entri baru ke sana.
 
 ## Sinkronisasi inventaris `list/`
 
