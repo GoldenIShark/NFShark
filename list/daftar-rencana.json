@@ -156,6 +156,18 @@
           "title": "Menerapkan animasi Typewriter berulang pada headline hero",
           "result": "Headline utama dipindahkan menjadi elemen penampil yang diisi JavaScript. Sumber teks dan konfigurasi berada di data/hero-text.js, sedangkan js/hero-typewriter.js mengatur pengetikan per karakter (45 ms), jeda 10 detik, penghapusan per karakter (30 ms), jeda kosong 2 detik, lalu loop. Dimulai setelah loading intro selesai dan menghormati prefers-reduced-motion. Belum diuji runtime browser.",
           "updatedAt": "2026-11-03"
+        },
+        {
+          "id": "REN-017",
+          "title": "Menerapkan URL bersih pada halaman NFShark",
+          "result": "Menambahkan rute direktori untuk halaman Brief, FAQ, Feedback, Persetujuan, UI Preview, dan halaman informasi/error. Tautan internal di paket publik diubah ke rute tanpa .html; halaman .html lama diarahkan ke rute baru. Navigasi anchor memakai scroll JavaScript dan membersihkan hash setelah perpindahan. Source dan pemeriksaan workflow tersedia; deployment serta uji browser publik belum dikonfirmasi.",
+          "updatedAt": "2026-11-21"
+        },
+        {
+          "id": "REN-018",
+          "title": "Menyederhanakan homepage dan membuat peta konsep pengerjaan",
+          "result": "Menghapus kutipan teknologi, Arsip Tampilan Lama, Pratinjau Komponen UI, dan Berbasis di Indonesia dari homepage. Konten tiga tahap Diskusi, Pratinjau Awal, dan Finalisasi Desain dipertahankan, ditampilkan dalam peta konsep kiri-kanan-kiri serta ilustrasi SVG untuk desktop dan susunan teks responsif untuk mobile. Uji visual belum dilakukan.",
+          "updatedAt": "2026-11-21"
         }
       ]
     }
