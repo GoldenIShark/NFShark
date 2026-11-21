@@ -314,9 +314,15 @@ section[id] {
 
 .studio-services-layout {
   display: grid;
-  grid-template-columns: 38% 62%;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
   align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+.studio-services-layout > * {
+  min-width: 0;
 }
 
 .services-intro-col h2 {
