@@ -363,3 +363,6 @@ Tanggal: 2026-11-21
 - Perubahan disimpan pada branch `main`.
 - Pemeriksaan sintaks skrip Python, hasil paket deployment, tampilan browser, navigasi lintas halaman, dan domain publik belum dijalankan/terkonfirmasi dalam catatan ini.
 - Tidak ada file yang dihapus.
+
+- Alias `/studio/` disediakan untuk mencocokkan alamat yang ditampilkan pada ilustrasi browser homepage; paket publik tetap tidak menyalin direktori arsip `history/`.
+- Pemeriksaan tautan lokal diperbarui agar memahami rute bersih dan memetakan rute tersebut ke file sumber HTML; file wajib catatan diselaraskan ke `arsip/catatan.md`.
