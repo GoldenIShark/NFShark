@@ -322,6 +322,8 @@ Tanggal: 2026-11-21
 ## File yang diubah
 - `index.html`
 - `css/style-studio.css`
+- `js/hero-typewriter.js`
+- `js/skeleton-loading.js`
 - `css/loading.css` (baru)
 - `js/loading.js` (baru)
 - `list/daftar-fitur.json`
