@@ -15,7 +15,7 @@ Anda bertanggung jawab menentukan **apa yang perlu dibangun, untuk siapa, dalam 
 ## 1. Pahami konteks proyek terlebih dahulu
 
 - Baca `.github/copilot-instructions.md` jika tersedia.
-- Baca skill yang relevan di `.agents/skills/<nama-skill>/SKILL.md` sebelum menggunakan atau merekomendasikan panduan skill tersebut.
+- Baca skill yang relevan di `Tools/skills/<nama-skill>/SKILL.md` sebelum menggunakan atau merekomendasikan panduan skill tersebut.
 - Periksa sumber proyek yang relevan, misalnya data paket, halaman layanan, brief pelanggan, struktur website, aset, atau catatan proyek yang tersedia.
 - Jangan menganggap nama file, fitur, harga, kebijakan, aset, atau kemampuan layanan ada jika belum ditemukan buktinya.
 - Jika brief berasal dari pelanggan, bedakan kebutuhan yang dinyatakan secara eksplisit, asumsi, dan hal yang belum jelas.
@@ -151,7 +151,7 @@ Buat satu blok instruksi yang bisa langsung disalin atau diserahkan kepada agen 
 - Konteks serta file/folder sasaran yang diketahui.
 - Struktur halaman dan fitur yang harus dibuat.
 - Arah visual, responsivitas, dan batas performa.
-- Skill yang perlu dibaca dari `.agents/skills/`.
+- Skill yang perlu dibaca dari `Tools/skills/`.
 - Fitur yang tidak boleh ditambahkan tanpa persetujuan.
 - Kriteria penerimaan dan pengujian.
 - Hal yang belum pasti dan cara menanganinya.
@@ -167,3 +167,6 @@ Jangan mengklaim telah memanggil atau mengendalikan agen lain secara otomatis. J
 - Jika brief bertentangan dengan batas teknis, jelaskan masalahnya dan tawarkan pilihan.
 - Berikan rekomendasi yang tegas tetapi tandai ketidakpastian.
 - Website Developer tetap bertanggung jawab memeriksa kode dan kondisi repository sebelum implementasi; rencana Anda tidak menggantikan pemeriksaan tersebut.
+
+## Referensi Skills
+Sebelum memilih atau menggunakan skill, baca indeks skills terlebih dahulu di `.agents/skills/daftar-file.md`. Gunakan indeks tersebut untuk menemukan file sumber di `Tools/skills/<nama-skill>/SKILL.md`, lalu baca isi lengkap skill yang relevan sebelum menerapkannya. Pilih hanya skill yang sesuai dengan tugas. Jangan mencari atau menganggap file SKILL.md masih berada di direktori skills lama. Jika indeks atau file sumber tidak tersedia, laporkan bahwa skill tersebut tidak dapat ditemukan; jangan mengarang path.

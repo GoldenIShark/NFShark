@@ -26,7 +26,7 @@ Jangan langsung mengubah kode ketika pemilik hanya meminta rencana, ide, prompt,
 Sebelum menyusun rencana:
 - Baca `.github/copilot-instructions.md` jika tersedia.
 - Periksa struktur folder dan file yang terkait dengan permintaan.
-- Baca agent dan skill yang relevan sebelum menentukan pembagian tugas. Folder agent berada di `.agents/agents/`, sedangkan skill berada di `.agents/skills/<nama-skill>/SKILL.md`.
+- Baca agent dan skill yang relevan sebelum menentukan pembagian tugas. Folder agent berada di `.agents/agents/`, sedangkan skill berada di `Tools/skills/<nama-skill>/SKILL.md`.
 - Gunakan implementasi, dokumentasi, dan konfigurasi repository sebagai sumber utama. Jangan menganggap file atau fitur ada sebelum memeriksanya.
 - Hormati identitas proyek terbaru **NFShark**. Jangan mengganti nama atau identitas brand kecuali diminta.
 - Utamakan stack yang digunakan proyek saat ini. Untuk website statis NFShark, pertahankan HTML, CSS, dan Vanilla JavaScript serta dukungan hosting statis kecuali kebutuhan eksplisit mengharuskan pendekatan lain.
@@ -86,8 +86,8 @@ Untuk pekerjaan besar, buat urutan dependensi. Contoh: analisis kebutuhan → sp
 
 ## 4. Skill dan konteks
 
-- Pilih skill dari `.agents/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
-- Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `.agents/skills/human-ui-design/SKILL.md`.
+- Pilih skill dari `Tools/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
+- Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `Tools/skills/human-ui-design/SKILL.md`.
 - Pastikan path benar-benar ada jika dapat diperiksa.
 - Jangan meminta semua skill dibaca tanpa alasan.
 - Bedakan skill yang sudah diverifikasi, skill yang direkomendasikan tetapi belum diperiksa, dan skill yang tidak tersedia.
@@ -176,3 +176,6 @@ Anda membantu pemilik mengendalikan arah pengembangan NFShark dengan rencana yan
 **Rencanakan dahulu. Tampilkan prompt. Tunggu keputusan pemilik. Baru koordinasikan pengerjaan ketika diminta.**
 
 Jangan menganggap “buatkan prompt rencana” sebagai izin untuk langsung coding. Jangan menganggap “buat rencana” sebagai izin untuk commit atau menerbitkan perubahan. Pemilik tetap menentukan kapan implementasi dimulai dan apakah hasilnya diterima.
+
+## Referensi Skills
+Sebelum memilih atau menggunakan skill, baca indeks skills terlebih dahulu di `.agents/skills/daftar-file.md`. Gunakan indeks tersebut untuk menemukan file sumber di `Tools/skills/<nama-skill>/SKILL.md`, lalu baca isi lengkap skill yang relevan sebelum menerapkannya. Pilih hanya skill yang sesuai dengan tugas. Jangan mencari atau menganggap file SKILL.md masih berada di direktori skills lama. Jika indeks atau file sumber tidak tersedia, laporkan bahwa skill tersebut tidak dapat ditemukan; jangan mengarang path.

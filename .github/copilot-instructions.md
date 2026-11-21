@@ -18,7 +18,7 @@
 2. Baca `catatan.md` di root sebelum bekerja dan perbarui bila fakta atau keputusan teknis lintas agent berubah. Catat area, dampak, status, serta batasan command yang benar-benar diamati; jangan menyalin seluruh catatan ke instruksi atau menyimpan informasi sensitif.
 3. Untuk website baru atau perombakan besar, pahami proyek dan susun rencana sebelum mulai coding. Pengecualian: perubahan kecil yang terfokus pada situs yang sudah ada boleh langsung dikerjakan setelah memeriksa konteks dan dampaknya.
 4. Tentukan tujuan halaman, audiens, CTA, hierarki konten, dan batasan sebelum menyusun atau merombak antarmuka.
-5. Gunakan skill yang paling relevan dari `.github/skills/`; baca seluruh `SKILL.md` skill tersebut sebelum menerapkannya. Untuk permintaan lintas bidang, kombinasikan skill yang diperlukan, bukan semuanya secara otomatis.
+5. Gunakan skill yang paling relevan dari `.github/skills/daftar-file.md`; baca seluruh `SKILL.md` skill tersebut sebelum menerapkannya. Untuk permintaan lintas bidang, kombinasikan skill yang diperlukan, bukan semuanya secara otomatis.
 6. Pertahankan bahasa Indonesia pada antarmuka dan dokumentasi bila sesuai konteks situs. Gunakan label, instruksi, dan pesan kesalahan yang lugas dan konsisten.
 7. Jangan mengubah file di luar lingkup, menambah dependensi, atau melakukan perubahan destruktif tanpa izin. Jangan mengklaim pengujian telah dilakukan jika belum.
 8. Setelah perubahan, jalankan validasi paling relevan yang tersedia tanpa instalasi dependensi baru; periksa diff dan pastikan hanya file yang dimaksud berubah. Laporkan keterbatasan pengujian secara jujur.
@@ -47,9 +47,13 @@ Setiap kali melakukan penambahan, perubahan, atau penghapusan file di repository
 - Jika masih di bawah kedua ambang, jangan memecah atau mengarsipkan catatan.
 
 ## Aturan khusus aset portofolio
-Untuk pekerjaan gambar pada situs di `portofolio/`, gunakan skill `asset-management` dan patuhi `.github/skills/convert-images-to-webp/SKILL.md` (beserta tool Python `convert_to_webp.py`) bila konversi relevan. Periksa hanya folder aset situs yang sedang dikerjakan (`portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` jika situs berada langsung di kategori). Jangan mengubah `assets/` situs utama kecuali diminta. Jangan mengonversi SVG secara otomatis atau meratakan GIF animasi.
+Untuk pekerjaan gambar pada situs di `portofolio/`, gunakan skill `asset-management` dan patuhi `Tools/skills/convert-images-to-webp/SKILL.md` (beserta tool Python `convert_to_webp.py`) bila konversi relevan. Periksa hanya folder aset situs yang sedang dikerjakan (`portofolio/<kategori>/<website>/assets/`, atau `portofolio/<kategori>/assets/` jika situs berada langsung di kategori). Jangan mengubah `assets/` situs utama kecuali diminta. Jangan mengonversi SVG secara otomatis atau meratakan GIF animasi.
 
 
 
 ## Sinkronisasi Data `list/` (Wajib untuk Setiap Perubahan Website)
 Sebelum setiap perubahan website, baca `list/index.json` dan dokumen `list/` paling relevan dengan area yang akan diubah. Periksa tanggal `updatedAt`; bila lebih dari 14 hari, cocokkan ulang data terhadap source terkait sebelum implementasi dan perbarui data yang terbukti usang. Setelah setiap perubahan website, perbarui otomatis sekurang-kurangnya satu dokumen `list/` yang relevan meskipun pengguna tidak memintanya. Gunakan `daftar-fitur.json` untuk inventaris fitur, `daftar-masalah.json` untuk temuan/bug, dan `daftar-rencana.json` untuk rencana/progres; perbarui lebih dari satu bila diperlukan. Jangan mengarang status atau hasil uji. Tetap catat seluruh perubahan file di `catatan.md`. Dalam laporan, sebutkan file `list/` yang diperiksa dan diperbarui serta hasil pemeriksaan usia 14 hari.
+
+
+## Indeks skills
+Sebelum memilih skill, baca `.github/skills/daftar-file.md` untuk menemukan sumber skill di `Tools/skills/<nama-skill>/SKILL.md`. Baca file sumber yang relevan secara lengkap; jangan mencari SKILL.md pada direktori skills lama.

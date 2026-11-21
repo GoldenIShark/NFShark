@@ -26,7 +26,7 @@ Jangan langsung mengubah kode ketika pemilik hanya meminta rencana, ide, prompt,
 Sebelum menyusun rencana:
 - Baca `.github/copilot-instructions.md` jika tersedia.
 - Periksa struktur folder dan file yang terkait dengan permintaan.
-- Baca agent dan skill yang relevan sebelum menentukan pembagian tugas. Folder agent berada di `.github/agents/`, sedangkan skill berada di `.github/skills/<nama-skill>/SKILL.md`.
+- Baca agent dan skill yang relevan sebelum menentukan pembagian tugas. Folder agent berada di `.github/agents/`, sedangkan skill berada di `Tools/skills/<nama-skill>/SKILL.md`.
 - Gunakan implementasi, dokumentasi, dan konfigurasi repository sebagai sumber utama. Jangan menganggap file atau fitur ada sebelum memeriksanya.
 - Hormati identitas proyek terbaru **NFShark**. Jangan mengganti nama atau identitas brand kecuali diminta.
 - Utamakan stack yang digunakan proyek saat ini. Untuk website statis NFShark, pertahankan HTML, CSS, dan Vanilla JavaScript serta dukungan hosting statis kecuali kebutuhan eksplisit mengharuskan pendekatan lain.
@@ -86,8 +86,8 @@ Untuk pekerjaan besar, buat urutan dependensi. Contoh: analisis kebutuhan → sp
 
 ## 4. Skill dan konteks
 
-- Pilih skill dari `.github/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
-- Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `.github/skills/human-ui-design/SKILL.md`.
+- Pilih skill dari `Tools/skills/` berdasarkan kebutuhan tugas. Skill UX yang tersedia mencakup `website-structure`, `ux-forms`, `ux-research`, dan `ux-usability`; gunakan hanya jika sesuai dengan pekerjaan yang direncanakan.
+- Cantumkan path skill yang harus dibaca oleh agent pelaksana, misalnya `Tools/skills/human-ui-design/SKILL.md`.
 - Pastikan path benar-benar ada jika dapat diperiksa.
 - Jangan meminta semua skill dibaca tanpa alasan.
 - Bedakan skill yang sudah diverifikasi, skill yang direkomendasikan tetapi belum diperiksa, dan skill yang tidak tersedia.
@@ -180,3 +180,6 @@ Jangan menganggap “buatkan prompt rencana” sebagai izin untuk langsung codin
 
 ## Sinkronisasi data `list/` dalam perencanaan
 Sebelum menyusun rencana perubahan website, baca `list/index.json` dan dokumen `list/` yang relevan. Periksa `updatedAt`; jika lebih dari 14 hari, tandai bahwa data harus direkonsiliasi terhadap source aktual sebelum implementasi. Setiap prompt untuk agent pelaksana WAJIB memerintahkan pemeriksaan sebelum perubahan, pembaruan otomatis dokumen `list/` yang relevan setelah perubahan (meskipun tidak diminta pengguna), serta pencatatan semua file yang benar-benar berubah di `catatan.md`. **Pengecualian:** jika tugas hanya memeriksa/membaca/mencari/audit struktur atau isi file tanpa perubahan file, agent tidak perlu membuat atau memperbarui `catatan.md`; cukup laporkan file yang diperiksa dan temuannya. Jika ada perubahan file, kewajiban pencatatan berlaku kembali. Jangan menyatakan data telah diperbarui jika hanya menyusun rencana.
+
+## Referensi Skills
+Sebelum memilih atau menggunakan skill, baca indeks skills terlebih dahulu di `.github/skills/daftar-file.md`. Gunakan indeks tersebut untuk menemukan file sumber di `Tools/skills/<nama-skill>/SKILL.md`, lalu baca isi lengkap skill yang relevan sebelum menerapkannya. Pilih hanya skill yang sesuai dengan tugas. Jangan mencari atau menganggap file SKILL.md masih berada di direktori skills lama. Jika indeks atau file sumber tidak tersedia, laporkan bahwa skill tersebut tidak dapat ditemukan; jangan mengarang path.

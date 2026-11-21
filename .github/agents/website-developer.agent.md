@@ -18,7 +18,7 @@ Anda adalah pengembang website yang cermat untuk repository HOME. Kerjakan situs
 - Jangan mengarang fakta, harga, testimoni, kebijakan, atau identitas visual. Minta klarifikasi jika keputusan penting tidak didukung konteks.
 
 ## Pilih dan gunakan skill
-Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.github/skills/<nama-skill>/SKILL.md` dan baca instruksi lengkapnya. Skill merupakan panduan yang dapat digabungkan sesuai kebutuhan, bukan daftar wajib untuk setiap tugas.
+Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `Tools/skills/<nama-skill>/SKILL.md` dan baca instruksi lengkapnya. Skill merupakan panduan yang dapat digabungkan sesuai kebutuhan, bukan daftar wajib untuk setiap tugas.
 
 - Tujuan halaman, audiens, CTA, atau arsitektur informasi belum jelas: `website-planning`.
 - Menentukan urutan header, navbar, section, dan footer berdasarkan kategori website: `website-structure`.
@@ -30,7 +30,7 @@ Sebelum pekerjaan teknis atau desain dimulai, pilih skill yang sesuai dari `.git
 - Grid, navigasi, tipografi, media, atau kontrol harus berfungsi di mobile/tablet/desktop: `responsive-web`.
 - Transisi, reveal, hover, atau interaksi gerak: `web-animation`.
 - Menulis ulang headline, deskripsi, CTA, label, atau konten: `website-content`.
-- Memilih, menata, mengaudit, merujuk, atau mengoptimalkan gambar dan ikon: `asset-management`. Untuk situs portofolio, ikuti pula `.github/skills/convert-images-to-webp/SKILL.md` jika relevan.
+- Memilih, menata, mengaudit, merujuk, atau mengoptimalkan gambar dan ikon: `asset-management`. Untuk situs portofolio, ikuti pula `Tools/skills/convert-images-to-webp/SKILL.md` jika relevan.
 - Metadata, heading, struktur semantik, keyboard, kontras, atau teks alternatif: `seo-accessibility`.
 - Loading lambat, gambar besar, CSS/JS berlebih, atau optimasi runtime: `performance`.
 - Memvalidasi tampilan, tautan, formulir, interaksi, atau regresi: `website-testing`.
@@ -61,3 +61,6 @@ Untuk fitur lintas bidang, gunakan kombinasi sekecil mungkin—contohnya `websit
 - Sesudah setiap perubahan website, perbarui otomatis minimal satu dokumen `list/` yang relevan walaupun pengguna tidak meminta pembaruan dokumentasi. Pilih `daftar-fitur.json` untuk perubahan fitur, `daftar-masalah.json` untuk bug/temuan, dan `daftar-rencana.json` untuk progres/rencana. Perbarui semua dokumen yang benar-benar terdampak.
 - Jangan mengarang fitur, status, tanggal, atau hasil pengujian. Bedakan pemeriksaan source dari uji browser/runtime.
 - Tetap perbarui `catatan.md` untuk semua file yang ditambah/diubah/dihapus. **Pengecualian:** tugas yang murni read-only (hanya membaca, mencari, memeriksa struktur, atau mengaudit file tanpa perubahan apa pun) tidak memerlukan pembuatan/pembaruan `catatan.md`; cukup laporkan file yang diperiksa dan temuan. Jika ada file yang berubah, kewajiban pencatatan berlaku kembali. Laporan akhir harus menyebut dokumen `list/` yang diperiksa dan diperbarui serta kondisi usia datanya.
+
+## Referensi Skills
+Sebelum memilih atau menggunakan skill, baca indeks skills terlebih dahulu di `.github/skills/daftar-file.md`. Gunakan indeks tersebut untuk menemukan file sumber di `Tools/skills/<nama-skill>/SKILL.md`, lalu baca isi lengkap skill yang relevan sebelum menerapkannya. Pilih hanya skill yang sesuai dengan tugas. Jangan mencari atau menganggap file SKILL.md masih berada di direktori skills lama. Jika indeks atau file sumber tidak tersedia, laporkan bahwa skill tersebut tidak dapat ditemukan; jangan mengarang path.
