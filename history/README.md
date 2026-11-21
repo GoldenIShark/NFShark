@@ -51,4 +51,4 @@ File `changes.jsonl` adalah indeks ringkas konteks perubahan agar AI/agents dapa
 - `history/changes.jsonl`: log aktif ringkas untuk AI/agents.
 - Git: riwayat lengkap perubahan kode dan diff.
 - `list/`: inventaris kondisi fitur, masalah, dan rencana; hanya diperbarui saat data inventaris benar-benar berubah.
-- `catatan.md` dan `catatan-vN.md`: arsip riwayat dengan format lama. Pertahankan sebagai arsip, jangan tambahkan entri baru.
+- `arsip/catatan.md` dan `arsip/catatan-vN.md`: arsip riwayat dengan format lama. Pertahankan sebagai arsip, jangan tambahkan entri baru.
