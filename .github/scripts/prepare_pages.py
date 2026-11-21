@@ -66,6 +66,10 @@ def main() -> None:
     # Keep legacy .html endpoints while also publishing clean directory routes.
     for page in ROOT.glob("*.html"):
         shutil.copy2(page, OUTPUT / page.name)
+    studio_alias = OUTPUT / "studio"
+    studio_alias.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(ROOT / "index.html", studio_alias / "index.html")
+
     for filename, slug in ROUTES.items():
         source = ROOT / filename
         if source.is_file():
@@ -85,13 +89,15 @@ def main() -> None:
     # Rewrite public HTML references to extensionless paths and support hash-free scrolling.
     for page in OUTPUT.rglob("*.html"):
         relative = page.relative_to(OUTPUT)
-        if relative.name == "index.html" and relative.parent != Path("."):
+        if relative.parent.as_posix() == "studio":
+            route = "/studio/"
+        elif relative.name == "index.html" and relative.parent != Path("."):
             route = "/" + relative.parent.as_posix().strip("/") + "/"
         elif relative.name in ROUTES:
             route = "/" + ROUTES[relative.name] + "/"
         else:
             route = "/" if relative.name == "index.html" else "/" + relative.stem + "/"
-        root_page = relative.parent == Path(".") or (relative.parent.as_posix() in ROUTES.values() and relative.name == "index.html")
+        root_page = relative.parent == Path(".") or (relative.parent.as_posix() in (*ROUTES.values(), "studio") and relative.name == "index.html")
         process_html(page, route, root_page)
 
     # Legacy .html URLs redirect to their clean equivalents; 404.html stays the Pages error document.
