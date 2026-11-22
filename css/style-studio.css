@@ -837,7 +837,7 @@ section[id] {
 
 /* Lebar kolom tabel paket layanan dan masa pemeliharaan. */
 .studio-pricing-table {
-  min-width: 1050px;
+  min-width: 1365px;
   table-layout: fixed;
 }
 
@@ -873,12 +873,11 @@ section[id] {
 
 /* Penyesuaian kolom harga dan kontras tombol Custom. */
 .studio-pricing-table thead th:nth-child(2) {
-  width: 10%;
-  min-width: 105px;
+  width: 12%;
 }
 
 .studio-pricing-table thead th:nth-child(3) {
-  width: 24%;
+  width: 22%;
 }
 
 .studio-pricing-table .package-custom-action,
