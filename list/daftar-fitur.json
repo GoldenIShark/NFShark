@@ -51,7 +51,7 @@
         {
           "id": "FIT-004",
           "title": "Data dan tampilan paket",
-          "description": "JavaScript pada homepage memuat data/packages.json dan merender tabel paket, harga, fitur, estimasi, masa pemeliharaan gratis, serta tautan pemesanan. Tampilan tabel diatur melalui css/style-studio.css, termasuk lebar kolom harga dan kontras tombol Custom.",
+          "description": "JavaScript pada homepage memuat data/packages.json dan merender tabel paket, harga, fitur, estimasi, masa pemeliharaan gratis, serta tautan pemesanan. Tampilan tabel diatur melalui css/style-studio.css dengan lebar minimum 1365px agar kolom mendapat ruang tanpa mengurangi proporsi kolom lain.",
           "benefit": "Menyajikan paket dan jalur pemesanan dari data terpisah.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
