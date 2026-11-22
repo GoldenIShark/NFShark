@@ -869,3 +869,36 @@ section[id] {
 .studio-pricing-table thead th:nth-child(6) {
   width: 12%;
 }
+
+
+/* Penyesuaian kolom harga dan kontras tombol Custom. */
+.studio-pricing-table thead th:nth-child(2) {
+  width: 10%;
+  min-width: 105px;
+}
+
+.studio-pricing-table thead th:nth-child(3) {
+  width: 24%;
+}
+
+.studio-pricing-table .package-custom-action,
+.studio-pricing-table .package-custom-action:link,
+.studio-pricing-table .package-custom-action:visited {
+  color: #ffffff !important;
+  background-color: #0b3b30 !important;
+  border-color: #0b3b30 !important;
+  text-decoration: none;
+}
+
+.studio-pricing-table .package-custom-action:hover:not(:disabled):not([aria-disabled="true"]),
+.studio-pricing-table .package-custom-action:focus-visible {
+  color: #ffffff !important;
+  background-color: #145c49 !important;
+  border-color: #145c49 !important;
+}
+
+.studio-pricing-table .package-custom-action:active:not(:disabled):not([aria-disabled="true"]) {
+  color: #ffffff !important;
+  background-color: #0b3b30 !important;
+  border-color: #0b3b30 !important;
+}
