@@ -66,7 +66,7 @@
     const actionCell = document.createElement("td");
     actionCell.className = "table-action-cell";
     const link = document.createElement("a");
-    link.className = pkg.name === "Custom" ? "btn btn-outline-editorial" : "btn btn-lime";
+    link.className = pkg.name === "Custom" ? "btn package-custom-action" : "btn btn-lime";
     link.href = pkg.name === "Custom" ? "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent("Halo NFShark, saya ingin berkonsultasi mengenai Paket Custom.") : "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent("Halo NFShark, saya tertarik dengan Paket " + pkg.name + " seharga " + pkg.price + ". Mohon informasi lebih lanjut mengenai paket dan masa pemeliharaan gratis.");
     link.target = "_blank";
     link.rel = "noopener noreferrer";
