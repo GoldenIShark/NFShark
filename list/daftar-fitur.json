@@ -355,7 +355,7 @@
         {
           "id": "FIT-014",
           "title": "Penyempurnaan informasi paket",
-          "description": "Menilai kejelasan cakupan Basic, Popular, Premium, dan Custom serta istilah revisi/hosting.",
+          "description": "Menilai kejelasan cakupan Ringan, Populer, Premium, dan Custom serta istilah revisi/hosting.",
           "benefit": "Membantu pelanggan membandingkan paket berdasarkan kebutuhan.",
           "priority": "Tinggi",
           "status": "Perlu evaluasi",
