@@ -1,10 +1,10 @@
 [
   {
-    "name": "Basic",
+    "name": "Ringan",
     "price": "Rp100.000",
     "domainIncluded": false,
     "estimate": "1-3 hari kerja",
-    "badge": "Starter",
+    "badge": "RINGAN",
     "featured": false,
     "features": [
       "1 halaman website",
@@ -22,7 +22,7 @@
     "maintenanceLabel": "1 bulan"
   },
   {
-    "name": "Popular",
+    "name": "Populer",
     "price": "Rp225.000",
     "domainIncluded": false,
     "estimate": "3-5 hari kerja",
