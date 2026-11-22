@@ -260,9 +260,16 @@ section[id] {
    ========================================================================== */
 .studio-profile-grid {
   display: grid;
-  grid-template-columns: 45% 55%;
-  gap: 3.5rem;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3.5vw, 3.5rem);
   align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+.studio-profile-grid > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .studio-profile-left h2 {
