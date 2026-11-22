@@ -818,3 +818,18 @@ section[id] {
   .process-map{width:100%;max-width:920px}
   .process-map-item{width:min(100%,620px);max-width:100%}
 }
+
+
+/* Tombol konsultasi Custom pada tabel berlatar terang. */
+.studio-pricing-table .package-custom-action {
+  background-color: #0b3b30;
+  border: 1px solid #0b3b30;
+  color: #ffffff;
+}
+
+.studio-pricing-table .package-custom-action:hover,
+.studio-pricing-table .package-custom-action:focus-visible {
+  background-color: #145c49;
+  border-color: #145c49;
+  color: #ffffff;
+}
