@@ -4,7 +4,7 @@ Dokumen ini mencatat rincian operasional yang belum memiliki keputusan final ata
 
 ## 1. Masa pemeliharaan gratis per paket
 
-- Tetapkan durasi masa pemeliharaan untuk Basic, Popular, Premium, dan Custom.
+- Durasi gratis telah ditetapkan berdasarkan harga akhir: Rp100.000–Rp199.999 = 1 bulan; Rp200.000–Rp299.999 = 2 bulan; Rp300.000–Rp499.999 = 3 bulan; Rp500.000 ke atas = 4 bulan.
 - Pastikan apakah masa pemeliharaan dihitung sejak tanggal penyerahan, pelunasan, atau website dipublikasikan.
 - Tetapkan batas bantuan teknis dan perbaikan bug yang termasuk di dalamnya.
 
