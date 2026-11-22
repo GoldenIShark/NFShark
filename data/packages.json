@@ -17,7 +17,9 @@
       "Revisi terbatas"
     ],
     "button": "Pesan Paket",
-    "href": "#contact"
+    "href": "#contact",
+    "maintenanceMonths": 1,
+    "maintenanceLabel": "1 bulan"
   },
   {
     "name": "Popular",
@@ -38,7 +40,9 @@
       "Revisi"
     ],
     "button": "Pesan Paket",
-    "href": "#contact"
+    "href": "#contact",
+    "maintenanceMonths": 2,
+    "maintenanceLabel": "2 bulan"
   },
   {
     "name": "Premium",
@@ -58,7 +62,9 @@
       "Revisi"
     ],
     "button": "Pesan Paket",
-    "href": "#contact"
+    "href": "#contact",
+    "maintenanceMonths": 4,
+    "maintenanceLabel": "4 bulan"
   },
   {
     "name": "Custom",
@@ -77,6 +83,9 @@
     ],
     "button": "Konsultasi",
     "href": "#contact",
-    "customNote": "Harga dapat menyesuaikan tingkat kesulitan dan fitur yang dibutuhkan."
+    "customNote": "Harga dapat menyesuaikan tingkat kesulitan dan fitur yang dibutuhkan.",
+    "maintenanceMonths": null,
+    "maintenanceLabel": "Mengikuti harga akhir",
+    "maintenanceNote": "Durasi ditentukan berdasarkan harga akhir yang disepakati dan dicantumkan dalam penawaran."
   }
 ]
