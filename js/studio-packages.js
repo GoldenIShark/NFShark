@@ -39,9 +39,9 @@
       badge.textContent = pkg.badge || "REKOMENDASI";
       title.append(badge);
     }
-    const titleCell = createCell(title);
+    const titleCell = document.createElement("th");
     titleCell.setAttribute("scope", "row");
-    titleCell.setAttribute("role", "rowheader");
+    titleCell.append(title);
     row.append(titleCell);
 
     const price = document.createElement("span");
