@@ -381,3 +381,10 @@ Tanggal: 2026-11-21
 - Diganti menjadi `minmax(0, 0.62fr) minmax(0, 1fr)` dengan `gap: clamp(1.5rem, 4vw, 4rem)`, `width: 100%`, dan `min-width: 0` pada grid serta anak-anaknya.
 - Breakpoint yang mengubah layout menjadi satu kolom pada lebar 960px tetap dipertahankan.
 - Tidak ada file yang dihapus. Pengujian visual sesudah deployment masih diperlukan.
+
+
+## Perbaikan overflow bagian Tentang NFShark — 2026-11-22
+- Ditemukan `.studio-profile-grid` menggunakan kolom 45% + 55% sekaligus `gap: 3.5rem`, sehingga total lebar grid melebihi kontainer.
+- Diganti menjadi `minmax(0, 0.82fr) minmax(0, 1fr)` dengan `gap: clamp(1.5rem, 3.5vw, 3.5rem)`, `width: 100%`, dan batas `min-width: 0` / `max-width: 100%` pada anak grid.
+- Breakpoint satu kolom pada lebar 960px tetap dipertahankan.
+- Tidak ada file yang dihapus. Uji visual desktop, mobile normal, dan Desktop Site setelah deployment masih diperlukan.
