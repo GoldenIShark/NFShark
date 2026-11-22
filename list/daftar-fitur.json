@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-22",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -51,16 +51,16 @@
         {
           "id": "FIT-004",
           "title": "Data dan tampilan paket",
-          "description": "JavaScript memuat data/packages.json, merender kartu, dan menyediakan fallback jika pemuatan data gagal.",
+          "description": "JavaScript pada homepage memuat data/packages.json dan merender tabel paket, harga, fitur, estimasi, masa pemeliharaan gratis, serta tautan pemesanan.",
           "benefit": "Menyajikan paket dan jalur pemesanan dari data terpisah.",
           "priority": "Tinggi",
           "status": "Tersedia di source",
           "files": [
             "data/packages.json",
-            "js/script.js",
+            "js/studio-packages.js",
             "index.html"
           ],
-          "testNotes": "Nama, harga, estimasi, badge, dan daftar fitur ada pada data lokal; ini bukan verifikasi kesesuaian harga dengan kesepakatan bisnis."
+          "testNotes": "Sumber data paket terpusat di data/packages.json; perubahan nilai paket akan tercermin pada homepage setelah file JSON diperbarui. Uji runtime browser/deployment tetap diperlukan."
         },
         {
           "id": "FIT-005",
