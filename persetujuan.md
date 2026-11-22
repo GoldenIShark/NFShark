@@ -128,7 +128,7 @@
    - Rp100.000: 1 bulan.
    - Rp225.000 (Paket Popular): 2 bulan, mengikuti jenjang harga Rp200.000.
    - Rp500.000: 4 bulan.
-3. Untuk Paket Custom, durasi ditentukan berdasarkan nilai akhir yang disepakati. Acuan jenjangnya adalah Rp100.000 untuk 1 bulan, Rp200.000 untuk 2 bulan, Rp300.000–Rp400.000 untuk 3 bulan, dan Rp500.000 untuk 4 bulan. Durasi final wajib dicantumkan dalam penawaran atau kesepakatan tertulis sebelum pengerjaan dimulai.
+3. Untuk Paket Custom, durasi ditentukan berdasarkan harga akhir yang disepakati dengan mengikuti jenjang yang sama: Rp100.000–Rp199.999 untuk 1 bulan, Rp200.000–Rp299.999 untuk 2 bulan, Rp300.000–Rp499.999 untuk 3 bulan, dan Rp500.000 ke atas untuk 4 bulan. Durasi final wajib dicantumkan dalam penawaran atau kesepakatan tertulis sebelum pengerjaan dimulai.
 4. Masa pemeliharaan mulai dihitung sejak website diserahkan kepada pelanggan setelah tahap finalisasi, kecuali tanggal mulai lain disepakati secara tertulis.
 5. Selama masa pemeliharaan, NFShark memberikan:
    - Perbaikan bug atau kesalahan teknis yang berasal dari pengerjaan NFShark.
