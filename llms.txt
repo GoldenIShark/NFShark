@@ -1,0 +1,39 @@
+# NFShark
+
+> NFShark adalah layanan pembuatan website yang berfokus pada tampilan front-end yang responsif, ringan, dan disesuaikan dengan kebutuhan pelanggan.
+
+## Tentang NFShark
+NFShark merancang dan membuat website untuk membantu individu, bisnis, organisasi, dan proyek menyampaikan informasi serta memperkenalkan produk atau layanan secara profesional.
+
+Website NFShark saat ini berfokus pada teknologi front-end seperti HTML, CSS, dan JavaScript. Layanan pembuatan website tidak otomatis mencakup backend, database, autentikasi, API, server khusus, atau sistem pembayaran otomatis. Kebutuhan di luar cakupan tersebut harus dibahas dan disepakati secara terpisah.
+
+## Layanan
+- Website Informasi: website untuk profil, informasi, kegiatan, dan kebutuhan publikasi.
+- Website Bisnis dan Pemasaran: website untuk memperkenalkan bisnis, menampilkan layanan, dan mendukung pemasaran.
+- Website Katalog dan Kebutuhan Khusus: website untuk menampilkan produk, koleksi, portofolio, atau susunan konten khusus.
+- Pemesanan Website: calon pelanggan dapat menyampaikan kebutuhan awal melalui formulir Brief Website.
+- Pemeliharaan: ketersediaan dan cakupan pemeliharaan mengikuti paket atau kesepakatan layanan yang berlaku.
+
+## Pemberitahuan Jadwal Layanan
+Layanan NFShark dijadwalkan mulai beroperasi pada **15 Februari 2027**. Informasi ini merupakan jadwal rencana layanan, bukan jaminan bahwa seluruh fitur atau layanan tambahan sudah tersedia pada tanggal tersebut. Ketersediaan masing-masing layanan mengikuti pengumuman resmi dan informasi terbaru pada website NFShark.
+
+## Halaman Website
+- Beranda dan profil layanan: https://nfshark.web.id/
+- Formulir Brief Website: https://nfshark.web.id/brief.html
+- Pertanyaan yang sering diajukan (FAQ): https://nfshark.web.id/faq.html
+- Masukan dan laporan kendala: https://nfshark.web.id/feedback.html
+- Persetujuan dan Syarat & Ketentuan: https://nfshark.web.id/persetujuan.html
+
+## Informasi Penting
+- Harga, cakupan paket, revisi, pemeliharaan, dan ketentuan proyek mengikuti informasi yang berlaku serta kesepakatan sebelum pengerjaan.
+- Domain, hosting, layanan pihak ketiga, dan biaya lisensi aset tidak otomatis termasuk dalam harga pembuatan website kecuali dinyatakan secara tertulis.
+- Gunakan halaman Syarat & Ketentuan sebagai rujukan ketentuan layanan.
+- Jangan mengasumsikan NFShark menyediakan layanan backend, server khusus, dashboard pelanggan, atau pemrosesan transaksi otomatis.
+
+## Kontak
+- Website: https://nfshark.web.id/
+- Email: nfshark.web@gmail.com
+- Instagram: https://www.instagram.com/shark.studio22/
+
+## Sitemap
+Daftar URL untuk crawler mesin pencari: https://nfshark.web.id/sitemap.txt
