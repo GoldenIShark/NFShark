@@ -1,6 +1,6 @@
 # Daftar Pekerjaan Harian NFShark
 
-Daftar ini menjadi sumber pemilihan pekerjaan harian untuk mengikuti `Otomatis/Intruksi.md`. Kerjakan maksimal satu tugas per hari.
+Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikuti `Otomatis/Intruksi.md`. Kerjakan maksimal satu tugas per hari. Audit mingguan `Audit Repository NFShark` berjalan melalui otomasi terjadwal terpisah dan menggunakan checklist `Daftar Pemeriksaan Mingguan Audit Repository NFShark.md`; audit tersebut tidak dihitung sebagai tugas implementasi harian.
 
 ## Belum Dikerjakan
 

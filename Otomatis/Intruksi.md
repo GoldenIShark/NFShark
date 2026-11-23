@@ -3,6 +3,11 @@
 ## Tujuan
 Jalankan pekerjaan repository NFShark secara bertahap berdasarkan daftar tugas di `kerjaan.md`. Instruksi ini menjadi titik awal wajib setiap kali pekerjaan harian dimulai.
 
+## Pemisahan pekerjaan harian dan audit mingguan
+- Daftar `Otomatis/kerjaan.md` hanya untuk pekerjaan implementasi harian; tetap maksimal satu tugas per hari.
+- Audit berkala **Audit Repository NFShark** dijalankan melalui jadwal otomatis mingguan tersendiri, bukan dipilih sebagai tugas harian. Ikuti `Otomatis/Daftar Pemeriksaan Mingguan Audit Repository NFShark.md`.
+- Audit mingguan bersifat read-only untuk seluruh repository, dengan pengecualian terbatas: hanya `llms.txt`, `sitemap.txt`, dan `robots.txt` yang boleh disinkronkan jika ditemukan ketidaksesuaian terverifikasi. Tidak boleh mengubah file website atau file lain dalam rangka sinkronisasi.
+
 ## Urutan wajib
 1. Baca file ini (`Otomatis/Intruksi.md`) sampai selesai.
 2. Baca seluruh isi `Otomatis/kerjaan.md`.
