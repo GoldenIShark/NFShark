@@ -113,6 +113,8 @@ jobs:
           test -f site/js/clean-navigation.js
           test -f site/assets/images/peta-alur-pengerjaan.svg
           test -f site/CNAME
+          test -f site/llms.txt
+          test -f site/sitemap.txt
           test -f site/.nojekyll
           test -d site/assets
           test -d site/css

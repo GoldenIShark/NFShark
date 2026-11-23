@@ -3,7 +3,7 @@
   "title": "Daftar Masalah",
   "category": "Pengembangan",
   "description": "Masalah teknis dan kebutuhan perbaikan yang dicatat berdasarkan bukti repository.",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-23",
   "sections": [
     {
       "title": "Terverifikasi",
@@ -52,6 +52,22 @@
           "priority": "Sedang",
           "status": "Diperbaiki — pemeriksaan source",
           "resolution": "Mengubah src @font-face agar memuat ./Telma-Light.otf dengan format opentype, menyelaraskan bobot Telma Light pada selector heading, serta memperbarui dokumentasi dan cache-busting stylesheet. File OTF terdeteksi memiliki signature OpenType OTTO. Belum dilakukan uji browser atau pemeriksaan ulang Google Search Console."
+        },
+        {
+          "id": "MAS-004",
+          "title": "llms.txt dan sitemap.txt tidak masuk paket GitHub Pages",
+          "summary": "Kedua file tersedia di root repository, tetapi tidak tercantum pada ROOT_STATIC_FILES di skrip penyiapan Pages sehingga tidak disalin ke direktori site/.",
+          "impact": "URL https://nfshark.web.id/llms.txt dan https://nfshark.web.id/sitemap.txt menghasilkan 404 setelah deployment meskipun file ada di repository.",
+          "reproduction": "Periksa ROOT_STATIC_FILES pada .github/scripts/prepare_pages.py; sebelum perbaikan daftar tersebut tidak memuat llms.txt maupun sitemap.txt. Jalankan skrip build dan periksa hasil direktori site/.",
+          "files": [
+            ".github/scripts/prepare_pages.py",
+            ".github/workflows/nfshark-automation.yml",
+            "llms.txt",
+            "sitemap.txt"
+          ],
+          "priority": "Tinggi",
+          "status": "Diperbaiki pada source; menunggu workflow dan deployment",
+          "resolution": "Menambahkan llms.txt dan sitemap.txt ke daftar file statis yang disalin ke site/, serta menambahkan assertion test -f untuk kedua file pada langkah Verify deployment package. Keberhasilan publikasi URL belum diklaim sebelum workflow deployment selesai."
         }
       ]
     },
