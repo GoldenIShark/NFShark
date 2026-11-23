@@ -4,6 +4,10 @@ Daftar ini menjadi sumber pemilihan pekerjaan harian untuk mengikuti `Otomatis/I
 
 ## Belum Dikerjakan
 
+- [ ] **Tugas 7 — Implementasi navigasi Jelajahi pada halaman studio.** Ganti container informasi Minimalist Editorial dengan navigasi responsif Jelajahi. Terapkan geser horizontal pada HP dan satu baris dengan tombol Tampilan semua pada layar lebih lebar; tampilkan grid saat diminta. Fokus fitur baru tahap awal adalah Langganan Website. Hubungkan Pesan Website ke halaman Brief yang sudah ada, pindahkan Paket Website ke halaman terpisah, dan gunakan menu lain hanya jika halaman tujuannya tersedia. Cari ikon konsisten dari Flaticon/FreeIcons atau sumber permisif lain, verifikasi lisensi tiap aset, dan dokumentasikan atribusi. Ikuti seluruh pemeriksaan aksesibilitas dan pengujian responsif dalam spesifikasi.
+  Spesifikasi: [Rancangan dan Arahan Navigasi Jelajahi NFShark.md](./Rancangan%20dan%20Arahan%20Navigasi%20Jelajahi%20NFShark.md)
+
+
 - [ ] **Tugas 2 — Implementasi kebijakan pemeliharaan bulanan.** Periksa halaman, informasi paket, dan komponen terkait. Terapkan ketentuan tarif, cakupan tiap paket, batas permintaan, waktu respons, masa berlangganan, serta pemberitahuan hanya sejauh didukung sistem website. Jangan menjanjikan otomasi hosting yang belum tersedia.  
   Spesifikasi: [KEBIJAKAN LAYANAN PEMELIHARAAN BULANAN NFSHARK.md](./KEBIJAKAN%20LAYANAN%20PEMELIHARAAN%20BULANAN%20NFSHARK.md)
 
