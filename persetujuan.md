@@ -244,11 +244,11 @@ Syarat dan Ketentuan ini tunduk pada hukum Republik Indonesia.
 
 ## 29. Komunikasi dan Pemberitahuan Resmi
 
-1. WhatsApp menjadi saluran komunikasi utama antara NFShark dan pelanggan.
-2. Pemberitahuan terkait pesanan, pembayaran, perubahan pekerjaan, konfirmasi, dan penghentian proyek dapat disampaikan melalui WhatsApp.
-3. Pelanggan bertanggung jawab memastikan nomor WhatsApp yang diberikan dapat dihubungi.
-4. Pemberitahuan dianggap telah disampaikan apabila telah dikirimkan ke nomor WhatsApp yang digunakan dalam komunikasi proyek.
-
+1. WhatsApp menjadi saluran komunikasi utama untuk konsultasi, pemesanan, diskusi dan pengiriman brief, permintaan revisi, serta komunikasi pemeliharaan website.
+2. Pemberitahuan resmi terkait pesanan, pembayaran, perubahan pekerjaan, konfirmasi, dan penghentian proyek disampaikan melalui WhatsApp.
+3. Untuk pelaporan bug atau kendala teknis, pertanyaan pelanggan, dan permintaan bantuan pelanggan, NFShark menyediakan email [nfshark.web@gmail.com](mailto:nfshark.web@gmail.com).
+4. Pelanggan bertanggung jawab memastikan nomor WhatsApp yang digunakan dalam komunikasi proyek dapat dihubungi.
+5. Pemberitahuan resmi dianggap telah disampaikan apabila telah dikirimkan ke nomor WhatsApp yang digunakan dalam komunikasi proyek.
 ## 30. Bukti Pembayaran
 
 1. Pelanggan wajib mengirimkan bukti pembayaran melalui WhatsApp setelah melakukan transaksi.
@@ -274,3 +274,4 @@ Syarat dan Ketentuan ini tunduk pada hukum Republik Indonesia.
 **NFShark**  
 Website: https://nfshark.web.id  
 Saluran komunikasi utama: WhatsApp
+Email untuk bug, kendala, pertanyaan, dan bantuan: [nfshark.web@gmail.com](mailto:nfshark.web@gmail.com)

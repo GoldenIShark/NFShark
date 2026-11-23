@@ -1,5 +1,5 @@
 const FEEDBACK_CONFIG = {
-  email: 'goldenishark22@gmail.com',
+  email: 'nfshark.web@gmail.com',
 };
 
 document.addEventListener('DOMContentLoaded', () => {

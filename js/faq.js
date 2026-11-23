@@ -1,4 +1,4 @@
-const FAQ_QUESTION_RECIPIENT = 'goldenishark22@gmail.com';
+const FAQ_QUESTION_RECIPIENT = 'nfshark.web@gmail.com';
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.menu-toggle');

@@ -4,9 +4,6 @@ Daftar ini menjadi sumber pemilihan pekerjaan harian untuk mengikuti `Otomatis/I
 
 ## Belum Dikerjakan
 
-- [ ] **Tugas 1 — Keselarasan identitas dan kontak NFShark.** Periksa seluruh halaman dan komponen yang relevan, lalu selaraskan nama bisnis, Gmail, Instagram, pembagian kanal komunikasi, serta pesan otomatis WhatsApp sesuai spesifikasi. Nomor WhatsApp belum ditentukan dalam dokumen; jangan mengarang atau menggantinya.  
-  Spesifikasi: [Identitas Kontak dan Keselarasan Informasi NFShark.md](./Identitas%20Kontak%20dan%20Keselarasan%20Informasi%20NFShark.md)
-
 - [ ] **Tugas 2 — Implementasi kebijakan pemeliharaan bulanan.** Periksa halaman, informasi paket, dan komponen terkait. Terapkan ketentuan tarif, cakupan tiap paket, batas permintaan, waktu respons, masa berlangganan, serta pemberitahuan hanya sejauh didukung sistem website. Jangan menjanjikan otomasi hosting yang belum tersedia.  
   Spesifikasi: [KEBIJAKAN LAYANAN PEMELIHARAAN BULANAN NFSHARK.md](./KEBIJAKAN%20LAYANAN%20PEMELIHARAAN%20BULANAN%20NFSHARK.md)
 
@@ -24,7 +21,7 @@ Daftar ini menjadi sumber pemilihan pekerjaan harian untuk mengikuti `Otomatis/I
 
 ## Sudah Dikerjakan
 
-- Belum ada tugas yang diselesaikan melalui alur kerja harian ini.
+- [x] **Tugas 1 — Keselarasan identitas dan kontak NFShark.** Selesai pada 2026-11-23. Alamat Gmail, pembagian kanal komunikasi, serta pesan otomatis konsultasi, pemesanan, brief, dan revisi diselaraskan. Nomor WhatsApp yang telah ada dan akun Instagram @shark.studio22 dipertahankan tanpa perubahan.
 
 ## Aturan pembaruan daftar
 - Setelah satu tugas benar-benar selesai dan diverifikasi, pindahkan hanya tugas tersebut dari **Belum Dikerjakan** ke **Sudah Dikerjakan**.
