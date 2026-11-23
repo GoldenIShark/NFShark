@@ -4,6 +4,9 @@ Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikut
 
 ## Belum Dikerjakan
 
+- [ ] **Tugas 8 — Pemisahan tampilan S&K pelanggan dan dokumen Markdown untuk AI.** Jadikan `persetujuan.md` sumber isi utama; tampilkan seluruh isinya langsung pada HTML hasil build agar pelanggan dapat membaca tanpa JavaScript. Pertahankan file Markdown pada URL publik untuk pemrosesan crawler/AI, tanpa menampilkan tautannya pada antarmuka pelanggan. Perbarui `llms.txt` dan periksa izin crawler Googlebot/Google-Extended; jangan memasukkan Markdown ke sitemap dan jangan menjanjikan akses eksklusif Gemini. Jangan mengubah substansi ketentuan. Verifikasi hasil build, kesamaan isi HTML/Markdown, paket deployment, dan URL live jika dapat diakses.
+  Spesifikasi: [Penyajian Syarat dan Ketentuan untuk Pelanggan dan AI.md](./Penyajian%20Syarat%20dan%20Ketentuan%20untuk%20Pelanggan%20dan%20AI.md)
+
 - [ ] **Tugas 7 — Implementasi navigasi Jelajahi pada halaman studio.** Ganti container informasi Minimalist Editorial dengan navigasi responsif Jelajahi. Terapkan geser horizontal pada HP dan satu baris dengan tombol Tampilan semua pada layar lebih lebar; tampilkan grid saat diminta. Fokus fitur baru tahap awal adalah Langganan Website. Hubungkan Pesan Website ke halaman Brief yang sudah ada, pindahkan Paket Website ke halaman terpisah, dan gunakan menu lain hanya jika halaman tujuannya tersedia. Cari ikon konsisten dari Flaticon/FreeIcons atau sumber permisif lain, verifikasi lisensi tiap aset, dan dokumentasikan atribusi. Ikuti seluruh pemeriksaan aksesibilitas dan pengujian responsif dalam spesifikasi.
   Spesifikasi: [Rancangan dan Arahan Navigasi Jelajahi NFShark.md](./Rancangan%20dan%20Arahan%20Navigasi%20Jelajahi%20NFShark.md)
 
