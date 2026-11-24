@@ -68,7 +68,7 @@ jobs:
           PY
 
       - name: Validate automation scripts
-        run: python -m py_compile .github/scripts/check_site_integrity.py .github/scripts/prepare_pages.py
+        run: python -m py_compile .github/scripts/check_site_integrity.py .github/scripts/prepare_pages.py .github/scripts/render_agreement.py
 
       - name: Check required project files
         run: |
@@ -94,6 +94,9 @@ jobs:
       - name: Check HTML local references and assets
         run: python .github/scripts/check_site_integrity.py
 
+      - name: Install pinned build dependency
+        run: python -m pip install --disable-pip-version-check -r requirements-build.txt
+
       - name: Prepare public GitHub Pages directory
         run: python .github/scripts/prepare_pages.py site
 
@@ -115,6 +118,23 @@ jobs:
           test -f site/CNAME
           test -f site/llms.txt
           test -f site/sitemap.txt
+          test -f site/persetujuan.md
+          test -f site/persetujuan.html
+          test -f site/persetujuan/index.html
+          grep -Fq '<h1>SYARAT DAN KETENTUAN LAYANAN NFShark</h1>' site/persetujuan.html
+          grep -Fq '<h2>32. Ketentuan Penutup</h2>' site/persetujuan.html
+          grep -Fq '<h1>SYARAT DAN KETENTUAN LAYANAN NFShark</h1>' site/persetujuan/index.html
+          grep -Fq 'https://nfshark.web.id/persetujuan.html' site/llms.txt
+          grep -Fq 'https://nfshark.web.id/persetujuan.md' site/llms.txt
+          grep -Fq 'persetujuan.html' site/sitemap.txt
+          if grep -Fq 'persetujuan.md' site/sitemap.txt; then exit 1; fi
+          grep -Fq 'User-agent: *' site/robots.txt
+          grep -Fq 'Allow: /' site/robots.txt
+          if grep -Fq 'Disallow: /' site/robots.txt; then exit 1; fi
+          if grep -Fq 'persetujuan.md' site/persetujuan.html; then exit 1; fi
+          if grep -Fq 'cdn.jsdelivr.net/npm/marked' site/persetujuan.html; then exit 1; fi
+          if grep -Fq 'cdn.jsdelivr.net/npm/dompurify' site/persetujuan.html; then exit 1; fi
+          if grep -Fq 'raw.githubusercontent.com' site/persetujuan.html; then exit 1; fi
           test -f site/.nojekyll
           test -d site/assets
           test -d site/css

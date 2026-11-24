@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/common-animasi.css" />
   <link rel="stylesheet" href="css/page-template.css" />
   <link rel="stylesheet" href="css/persetujuan.css" />
-  <script src="js/skeleton-loading.js" defer></script>\n  <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />\n  <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />\n</head>
+  <link rel="icon" type="image/webp" href="/assets/Logo/Logo.webp" />
+  <link rel="apple-touch-icon" href="/assets/Logo/Logo.webp" />
+</head>
 <body class="editorial-page agreement-page">
   <header class="studio-header">
     <div class="studio-container studio-header-inner">
@@ -25,8 +27,8 @@
 
   <main class="agreement-main">
     <article class="container agreement-content">
-      <div class="agreement-document" id="agreement-document" aria-live="polite">
-        <p class="agreement-loading">Memuat ketentuan layanan…</p>
+      <div class="agreement-document" id="agreement-document">
+        <!-- AGREEMENT_CONTENT -->
       </div>
       <div class="agreement-actions">
         <a class="btn btn-secondary" href="brief.html">Kembali ke brief</a>
@@ -42,28 +44,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const target = document.querySelector('#agreement-document');
-      if (!target) return;
-
-      try {
-        const response = await fetch('https://raw.githubusercontent.com/GoldenIShark/NFShark/main/persetujuan.md', { cache: 'no-cache' });
-        if (!response.ok) throw new Error('Dokumen tidak dapat dimuat.');
-        if (!window.marked || !window.DOMPurify) throw new Error('Komponen Markdown tidak tersedia.');
-
-        const markdown = await response.text();
-        const rendered = window.marked.parse(markdown, { gfm: true, breaks: false });
-        target.innerHTML = window.DOMPurify.sanitize(rendered);
-        target.classList.add('is-loaded');
-      } catch (error) {
-        target.innerHTML = '<h1>Ketentuan layanan belum dapat dimuat</h1><p>Periksa koneksi internet, lalu muat ulang halaman. Anda juga dapat membaca <a href="https://github.com/GoldenIShark/NFShark/blob/main/persetujuan.md">dokumen Markdown secara langsung</a>.</p>';
-        target.classList.add('is-error');
-      }
-    });
-  </script>
   <script src="js/touch-ripple.js" defer></script>
 </body>
 </html>

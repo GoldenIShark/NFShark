@@ -7,10 +7,12 @@ import shutil
 import sys
 from pathlib import Path
 
+from render_agreement import render_markdown, verify_rendered_content
+
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = (ROOT / sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / "site"
 PUBLIC_DIRECTORIES = ("assets", "css", "data", "js", "portofolio")
-ROOT_STATIC_FILES = ("CNAME", "robots.txt", "sitemap.xml", "llms.txt", "sitemap.txt", "favicon.ico", "manifest.webmanifest", "site.webmanifest", "browserconfig.xml")
+ROOT_STATIC_FILES = ("CNAME", "robots.txt", "sitemap.xml", "llms.txt", "sitemap.txt", "persetujuan.md", "favicon.ico", "manifest.webmanifest", "site.webmanifest", "browserconfig.xml")
 ROUTES = {
     "brief.html": "brief", "faq.html": "faq", "feedback.html": "feedback",
     "persetujuan.html": "persetujuan", "ui-preview.html": "ui-preview",
@@ -63,9 +65,19 @@ def main() -> None:
         raise SystemExit("Output deployment harus berada di dalam repository.")
     OUTPUT.mkdir(parents=True, exist_ok=True)
 
+    agreement_markdown = (ROOT / "persetujuan.md").read_text(encoding="utf-8")
+    agreement_template = (ROOT / "persetujuan.html").read_text(encoding="utf-8")
+    marker = "<!-- AGREEMENT_CONTENT -->"
+    if agreement_template.count(marker) != 1:
+        raise SystemExit("Template persetujuan.html harus memiliki tepat satu marker AGREEMENT_CONTENT.")
+    agreement_html = agreement_template.replace(marker, render_markdown(agreement_markdown))
+
     # Keep legacy .html endpoints while also publishing clean directory routes.
     for page in ROOT.glob("*.html"):
-        shutil.copy2(page, OUTPUT / page.name)
+        if page.name == "persetujuan.html":
+            (OUTPUT / page.name).write_text(agreement_html, encoding="utf-8")
+        else:
+            shutil.copy2(page, OUTPUT / page.name)
     studio_alias = OUTPUT / "studio"
     studio_alias.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT / "index.html", studio_alias / "index.html")
@@ -75,7 +87,10 @@ def main() -> None:
         if source.is_file():
             route_dir = OUTPUT / slug
             route_dir.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(source, route_dir / "index.html")
+            if filename == "persetujuan.html":
+                (route_dir / "index.html").write_text(agreement_html, encoding="utf-8")
+            else:
+                shutil.copy2(source, route_dir / "index.html")
 
     for name in ROOT_STATIC_FILES:
         source = ROOT / name
@@ -102,10 +117,19 @@ def main() -> None:
 
     # Legacy .html URLs redirect to their clean equivalents; 404.html stays the Pages error document.
     for filename, slug in ROUTES.items():
-        if filename == "404.html":
+        if filename in ("404.html", "persetujuan.html"):
             continue
         redirect = f'''<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://nfshark.web.id/{slug}/"><meta http-equiv="refresh" content="0;url=/{slug}/"><title>Mengalihkan — NFShark</title></head><body><p>Halaman dipindahkan. <a href="/{slug}/">Lanjutkan ke halaman NFShark</a>.</p><script>location.replace("/{slug}/");</script></body></html>'''
         (OUTPUT / filename).write_text(redirect, encoding="utf-8")
+
+    markdown_copy = OUTPUT / "persetujuan.md"
+    if not markdown_copy.is_file() or markdown_copy.read_text(encoding="utf-8") != agreement_markdown:
+        raise SystemExit("persetujuan.md tidak tersalin identik ke paket publik.")
+
+    for rendered_page in (OUTPUT / "persetujuan.html", OUTPUT / "persetujuan" / "index.html"):
+        if not rendered_page.is_file():
+            raise SystemExit(f"Halaman hasil render tidak ditemukan: {rendered_page.relative_to(ROOT)}")
+        verify_rendered_content(agreement_markdown, rendered_page.read_text(encoding="utf-8"))
 
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     print("Direktori publik siap dibuat:", OUTPUT.relative_to(ROOT))

@@ -22,7 +22,10 @@ Layanan NFShark dijadwalkan mulai beroperasi pada **15 Februari 2027**. Informas
 - Formulir Brief Website: https://nfshark.web.id/brief.html
 - Pertanyaan yang sering diajukan (FAQ): https://nfshark.web.id/faq.html
 - Masukan dan laporan kendala: https://nfshark.web.id/feedback.html
-- Persetujuan dan Syarat & Ketentuan: https://nfshark.web.id/persetujuan.html
+- Tampilan Syarat & Ketentuan untuk pelanggan: https://nfshark.web.id/persetujuan.html
+- Representasi Markdown dengan isi yang sama untuk pemrosesan mesin dan sistem AI: https://nfshark.web.id/persetujuan.md
+
+Kedua URL tersebut bersifat publik; file Markdown tidak dibatasi untuk Gemini saja. Aturan robots.txt menyatakan preferensi crawler dan tidak menjamin pengindeksan atau penggunaan dokumen oleh layanan tertentu.
 
 ## Informasi Penting
 - Harga, cakupan paket, revisi, pemeliharaan, dan ketentuan proyek mengikuti informasi yang berlaku serta kesepakatan sebelum pengerjaan.
