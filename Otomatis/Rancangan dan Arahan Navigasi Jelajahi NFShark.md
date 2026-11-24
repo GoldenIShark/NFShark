@@ -33,6 +33,12 @@ Urutan menu yang direncanakan:
 
 Catatan ruang lingkup: penambahan fitur baru tahap awal adalah **Langganan Website**. Menu lain hanya ditampilkan apabila tujuan halamannya memang sudah tersedia dan dapat diverifikasi. Jangan membuat halaman baru untuk menu yang belum siap hanya demi memenuhi daftar. Jika ada tujuan yang belum tersedia, catat sebagai hambatan/pekerjaan lanjutan dan jangan membuat tautan mati.
 
+### Tautan ke halaman yang belum dibuat
+- Untuk **Langganan Website** dan **Paket Website** yang halaman terpisahnya belum tersedia saat Tugas 7 dikerjakan, jangan mengarang URL atau mengarahkan ke halaman yang salah.
+- Sementara gunakan `href="#"` sebagai placeholder sesuai arahan pemilik, atau tunda aktivasi item/tautannya sampai halaman terpisah selesai dibuat. Pilih penundaan jika placeholder berpotensi membingungkan pengguna.
+- Jangan menganggap `#` sebagai tujuan fungsional. Catat item yang masih placeholder/ditunda dan gantikan dengan URL sebenarnya setelah halaman terkait tersedia.
+- Tugas 9 secara khusus menyusun halaman Paket Website setelah Tugas 7 selesai. Tugas 7 tidak perlu menyelesaikan desain halaman paket tersebut.
+
 ### Perilaku
 - Setiap item harus berupa tautan atau kontrol yang jelas dan dapat diakses dengan keyboard.
 - Tombol **Tampilan semua** membuka/menutup tampilan grid lengkap; statusnya harus dapat dipahami oleh teknologi bantu (misalnya `aria-expanded`).
