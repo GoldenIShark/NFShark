@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-22",
+  "updatedAt": "2026-11-24",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -206,7 +206,7 @@
         {
           "id": "FIT-023",
           "title": "Skeleton loading global per elemen",
-          "description": "Halaman aktif menampilkan placeholder shimmer pada teks, tautan, tombol, label, kontrol formulir, gambar yang belum selesai dimuat, serta area iframe. Placeholder teks dilepas setelah event load dan document.fonts.ready; placeholder gambar/iframe dilepas berdasarkan event masing-masing. prefers-reduced-motion menonaktifkan animasi shimmer.",
+          "description": "Pada halaman yang memuat js/skeleton-loading.js, placeholder shimmer diterapkan pada teks, tautan, tombol, label, kontrol formulir, gambar yang belum selesai dimuat, serta area iframe. Placeholder teks dilepas setelah event load dan document.fonts.ready; placeholder gambar/iframe dilepas berdasarkan event masing-masing. prefers-reduced-motion menonaktifkan animasi shimmer.",
           "benefit": "Memberi umpan balik visual saat konten halaman sedang dimuat tanpa mengganti intro loading utama.",
           "priority": "Rendah",
           "status": "Tersedia di source; runtime browser belum diverifikasi",
@@ -218,14 +218,13 @@
             "brief.html",
             "faq.html",
             "feedback.html",
-            "persetujuan.html",
             "ui-preview.html",
             "403.html",
             "404.html",
             "500.html",
             "error.html"
           ],
-          "testNotes": "Source bersama ditautkan melalui script defer di head pada 10 halaman aktif. Selektor mencakup teks dan kontrol; gambar serta iframe memakai status load/error masing-masing. `node --check js/skeleton-loading.js` lulus. Uji visual/runtime browser dan iframe lintas-origin belum dilakukan."
+          "testNotes": "Source bersama ditautkan melalui script defer di head pada 9 halaman aktif. Selektor mencakup teks dan kontrol; gambar serta iframe memakai status load/error masing-masing. `node --check js/skeleton-loading.js` lulus. Uji visual/runtime browser dan iframe lintas-origin belum dilakukan. Halaman persetujuan.html tidak lagi memakai script ini karena seluruh isi S&K tersedia langsung dari HTML hasil build."
         },
         {
           "id": "FIT-023",
@@ -278,6 +277,26 @@
             "assets/images/peta-alur-pengerjaan.svg"
           ],
           "testNotes": "Panah SVG diperpanjang dan diarahkan ke kartu tujuan. Teks SVG dipecah menjadi baris yang lebih pendek. Media query pointer:coarse dan hover:none menjaga susunan mobile pada ponsel dengan Desktop Site. Perlu uji desktop, mobile normal, dan Desktop Site setelah deployment. Perbaikan tambahan pada .studio-services-layout menghilangkan kombinasi kolom 38% + 62% yang sebelumnya ditambah gap 4rem. Tetap perlu verifikasi visual setelah deployment, terutama Desktop Site di HP. Bagian .studio-profile-grid diperbaiki dari 45% + 55% dengan gap 3.5rem menjadi fraksi fleksibel minmax(0, 0.82fr) dan minmax(0, 1fr), dengan gap responsif serta batas min/max-width. Perlu uji visual setelah deployment."
+        },
+        {
+          "id": "FIT-026",
+          "title": "Penyajian Syarat dan Ketentuan untuk pelanggan dan AI",
+          "description": "persetujuan.md menjadi sumber isi tunggal. Proses build menghasilkan isi Markdown sebagai HTML semantik langsung pada persetujuan.html dan rute /persetujuan/ tanpa fetch runtime, serta menerbitkan salinan Markdown pada root publik untuk pemrosesan crawler dan sistem AI.",
+          "benefit": "Pelanggan dapat membaca seluruh ketentuan tanpa JavaScript, sementara crawler dan sistem AI dapat mengambil representasi Markdown dengan isi yang sama.",
+          "priority": "Sedang",
+          "status": "Tersedia di source; build dan deployment workflow terverifikasi, URL live belum diverifikasi langsung",
+          "files": [
+            ".github/scripts/render_agreement.py",
+            ".github/scripts/prepare_pages.py",
+            ".github/workflows/nfshark-automation.yml",
+            "requirements-build.txt",
+            "persetujuan.html",
+            "persetujuan.md",
+            "llms.txt",
+            "robots.txt",
+            "sitemap.txt"
+          ],
+          "testNotes": "Workflow run 45303899478 lulus pada Quality Check, Website & Deployment Package Test, dan Deploy to GitHub Pages. Build memeriksa kesamaan teks Markdown dan HTML, salinan Markdown identik pada paket publik, keberadaan kedua rute HTML, referensi llms.txt, serta pengecualian Markdown dari sitemap. robots.txt tetap menggunakan User-agent: * dan Allow: /. URL live belum dapat diperiksa langsung pada sesi ini; status indeks Google dan pemakaian oleh Gemini tidak diverifikasi."
         }
       ]
     },
