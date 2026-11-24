@@ -38,16 +38,16 @@ Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket
 | Pemeriksaan website berkala | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan bug ringan | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan tautan/tampilan bermasalah | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
-| Perubahan konten ringan | Tidak termasuk | Maks. 2 permintaan/bulan | Mengikuti cakupan Populer; pembagian kuota perlu dikonfirmasi | Sesuai kesepakatan |
+| Permintaan pekerjaan yang termasuk langganan | Maks. 1 permintaan/bulan | Maks. 3 permintaan/bulan | Maks. 5 permintaan/bulan | Sesuai kesepakatan |
 | Optimasi performa | — | — | Termasuk | Sesuai kesepakatan |
 | Pemeriksaan responsivitas dan kompatibilitas | — | — | Termasuk | Sesuai kesepakatan |
-| Batas permintaan pekerjaan ringan | Tidak termasuk perubahan konten atau fitur baru | Maks. 2 permintaan/bulan | Maks. 4 permintaan/bulan | Sesuai kesepakatan |
 
 Catatan wajib yang menyertai tabel:
 - Tarif langganan pemeliharaan adalah Rp10.000/bulan untuk Ringan, Rp15.000/bulan untuk Populer, dan Rp20.000/bulan untuk Premium. Tarif Custom ditentukan berdasarkan cakupan layanan dan kesepakatan.
 - Biaya langganan pemeliharaan terpisah dari harga pembuatan website. Perubahan harga pembuatan website tidak otomatis mengubah tarif langganan.
-- Untuk Premium, kebijakan menetapkan maksimal 4 permintaan pekerjaan ringan per bulan dan mewarisi seluruh layanan Populer. Namun, kebijakan belum menjelaskan secara eksplisit apakah batas 2 permintaan perubahan konten dari Populer dihitung di dalam kuota 4 pekerjaan ringan atau memiliki perhitungan tersendiri. Tandai hal ini untuk konfirmasi sebelum publikasi; jangan menetapkan interpretasi sendiri.
-- Perbaikan bug dan masalah teknis yang termasuk cakupan pemeliharaan tidak dihitung sebagai permintaan perubahan konten.
+- Batas total permintaan per bulan adalah Ringan 1, Populer 3, dan Premium 5. Premium mewarisi seluruh layanan Populer, tetapi kuotanya tetap 5 permintaan total, bukan penjumlahan kuota antarlevel.
+- Permintaan perubahan website di luar kuota atau di luar cakupan paket harus dikonsultasikan langsung kepada NFShark. Harga dan ruang lingkup pekerjaan tambahan dibahas serta disepakati sebelum pengerjaan.
+- Perbaikan bug dan masalah teknis yang termasuk cakupan pemeliharaan tidak mengurangi kuota permintaan.
 - Cakupan, batas pekerjaan, dan tarif Custom ditentukan melalui kesepakatan dengan pelanggan.
 - Jangan menyamakan paket pembuatan website dengan paket langganan terpisah. Kolom di atas menunjukkan tingkat pemeliharaan yang mengikuti paket website pelanggan.
 
