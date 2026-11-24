@@ -33,14 +33,14 @@ Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket
 | Pemeriksaan website berkala | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan bug ringan | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan tautan/tampilan bermasalah | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
-| Perubahan konten ringan | Tidak termasuk | Maks. 2 permintaan/bulan | Termasuk cakupan Populer | Sesuai kesepakatan |
+| Perubahan konten ringan | Tidak termasuk | Maks. 2 permintaan/bulan | Mengikuti cakupan Populer; pembagian kuota perlu dikonfirmasi | Sesuai kesepakatan |
 | Optimasi performa | — | — | Termasuk | Sesuai kesepakatan |
 | Pemeriksaan responsivitas dan kompatibilitas | — | — | Termasuk | Sesuai kesepakatan |
 | Batas permintaan pekerjaan ringan | Tidak termasuk perubahan konten atau fitur baru | Maks. 2 permintaan/bulan | Maks. 4 permintaan/bulan | Sesuai kesepakatan |
 
 Catatan wajib yang menyertai tabel:
 - Tarif Rp10.000 per bulan berlaku sama untuk semua tingkat.
-- Untuk Premium, batas maksimal 4 permintaan pekerjaan ringan per bulan. Cakupan Populer yang diwarisi tetap berlaku; jelaskan bahwa batas Premium adalah batas total permintaan pekerjaan ringan, bukan tambahan dua permintaan di luar kuota.
+- Untuk Premium, kebijakan menetapkan maksimal 4 permintaan pekerjaan ringan per bulan dan mewarisi seluruh layanan Populer. Namun, kebijakan belum menjelaskan secara eksplisit apakah batas 2 permintaan perubahan konten dari Populer dihitung di dalam kuota 4 pekerjaan ringan atau memiliki perhitungan tersendiri. Tandai hal ini untuk konfirmasi sebelum tabel dipublikasikan; jangan menetapkan interpretasi sendiri.
 - Perbaikan bug dan masalah teknis yang termasuk cakupan pemeliharaan tidak dihitung sebagai permintaan perubahan konten.
 - Cakupan dan batas pekerjaan Custom ditentukan melalui kesepakatan dengan pelanggan.
 - Jangan menyamakan paket pembuatan website dengan paket langganan terpisah. Kolom di atas menunjukkan tingkat pemeliharaan yang mengikuti paket website pelanggan.
