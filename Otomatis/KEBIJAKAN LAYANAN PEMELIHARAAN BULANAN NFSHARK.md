@@ -47,12 +47,17 @@ Paket Custom
 
 4. Batas permintaan pekerjaan
 
-- Ringan: Tidak mencakup permintaan perubahan konten atau fitur baru.
-- Populer: Maksimal 2 permintaan perubahan konten ringan per bulan.
-- Premium: Maksimal 4 permintaan pekerjaan ringan per bulan.
+Batas maksimal permintaan pekerjaan yang termasuk dalam langganan setiap bulan:
+- Ringan: Maksimal 1 permintaan per bulan.
+- Populer: Maksimal 3 permintaan per bulan.
+- Premium: Maksimal 5 permintaan per bulan.
 - Custom: Berdasarkan kesepakatan.
 
-Perbaikan bug dan masalah teknis mengikuti cakupan pemeliharaan masing-masing paket dan tidak dihitung sebagai permintaan perubahan konten.
+Kuota Populer dan Premium merupakan batas total permintaan per bulan. Premium mewarisi seluruh layanan Populer, tetapi kuotanya tetap maksimal 5 permintaan secara keseluruhan, bukan kuota Populer ditambah kuota Premium.
+
+Permintaan perubahan website di luar kuota atau pekerjaan yang tidak termasuk cakupan paket harus dikonsultasikan secara langsung kepada NFShark. Biaya tambahan dan ruang lingkup pekerjaan dibahas serta disepakati sebelum pengerjaan.
+
+Perbaikan bug dan masalah teknis yang termasuk dalam cakupan pemeliharaan masing-masing paket tidak mengurangi kuota permintaan tersebut.
 
 5. Waktu respons
 
