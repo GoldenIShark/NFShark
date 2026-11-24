@@ -201,8 +201,11 @@ def verify_rendered_content(markdown_text: str, html_document: str) -> None:
     if actual != expected:
         limit = min(len(actual), len(expected))
         mismatch = next((i for i in range(limit) if actual[i] != expected[i]), limit)
+        expected_excerpt = expected[max(0, mismatch - 50):mismatch + 100]
+        actual_excerpt = actual[max(0, mismatch - 50):mismatch + 100]
         raise ValueError(
             "Isi HTML hasil render tidak sama dengan persetujuan.md "
             f"(perbedaan pertama sekitar karakter {mismatch}; "
-            f"teks sumber {len(expected)} karakter, HTML {len(actual)} karakter)."
+            f"teks sumber {len(expected)} karakter, HTML {len(actual)} karakter). "
+            f"Sumber: {expected_excerpt!r}; HTML: {actual_excerpt!r}"
         )
