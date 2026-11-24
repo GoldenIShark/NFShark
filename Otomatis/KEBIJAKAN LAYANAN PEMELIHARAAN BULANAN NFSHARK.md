@@ -2,8 +2,13 @@ KEBIJAKAN LAYANAN PEMELIHARAAN BULANAN NFSHARK
 
 1. Tarif dan sistem berlangganan
 
-- Tarif pemeliharaan: Rp10.000 per bulan.
-- Tarif berlaku sama untuk semua jenis paket: Ringan, Populer, Premium, dan Custom.
+Tarif pemeliharaan per bulan berdasarkan tingkat layanan:
+- Ringan: Rp10.000 per bulan.
+- Populer: Rp15.000 per bulan.
+- Premium: Rp20.000 per bulan.
+- Custom: tarif ditentukan berdasarkan cakupan layanan dan kesepakatan dengan pelanggan.
+
+Tarif langganan merupakan biaya pemeliharaan website, terpisah dari harga pembuatan website.
 - Pelanggan dapat memilih durasi berlangganan sampai bulan tertentu.
 - Pembayaran dilakukan di awal periode berlangganan.
 - Langganan tidak diperpanjang secara otomatis.
