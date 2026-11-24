@@ -122,6 +122,10 @@ class _AgreementTextParser(HTMLParser):
         "area", "base", "br", "col", "embed", "hr", "img", "input",
         "link", "meta", "param", "source", "track", "wbr",
     }
+    BLOCKS = {
+        "blockquote", "br", "h1", "h2", "h3", "h4", "h5", "h6",
+        "hr", "li", "ol", "p", "pre", "ul",
+    }
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -137,16 +141,22 @@ class _AgreementTextParser(HTMLParser):
                 self.active = True
                 self.depth = 1
             return
-        if tag.lower() not in self.VOID:
+        normalized_tag = tag.lower()
+        if normalized_tag in self.BLOCKS:
+            self.parts.append(" ")
+        if normalized_tag not in self.VOID:
             self.depth += 1
 
     def handle_endtag(self, tag: str) -> None:
-        if not self.active or tag.lower() in self.VOID:
+        normalized_tag = tag.lower()
+        if not self.active or normalized_tag in self.VOID:
             return
-        if tag.lower() == "div" and self.depth == 1:
+        if normalized_tag == "div" and self.depth == 1:
             self.active = False
             self.depth = 0
             return
+        if normalized_tag in self.BLOCKS:
+            self.parts.append(" ")
         self.depth -= 1
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -197,7 +207,7 @@ def verify_rendered_content(markdown_text: str, html_document: str) -> None:
         raise ValueError("Kontainer #agreement-document tidak ditemukan pada HTML hasil build.")
 
     expected = _source_text(markdown_text)
-    actual = _normalize_text(" ".join(parser.parts))
+    actual = _normalize_text("".join(parser.parts))
     if actual != expected:
         limit = min(len(actual), len(expected))
         mismatch = next((i for i in range(limit) if actual[i] != expected[i]), limit)
