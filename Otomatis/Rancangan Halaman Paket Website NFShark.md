@@ -1,4 +1,4 @@
-# Rancangan Halaman Paket Website NFShark
+# Rancangan Halaman Harga Paket Pembuatan Website NFShark
 
 ## Status dan ketergantungan
 Dokumen ini adalah spesifikasi untuk tugas lanjutan setelah **Tugas 7 — Implementasi navigasi Jelajahi pada halaman studio** benar-benar selesai dan diverifikasi. Jangan mulai implementasi halaman ini sebelum Tugas 7 selesai. Tugas ini hanya disiapkan sebagai pekerjaan berikutnya.
@@ -6,7 +6,13 @@ Dokumen ini adalah spesifikasi untuk tugas lanjutan setelah **Tugas 7 — Implem
 ## Nama paket dan sumber data
 - Nama paket yang berlaku adalah **Ringan, Populer, Premium, dan Custom**. Istilah Basic dan Popular merupakan nama lama dan tidak boleh dipakai untuk konten layanan aktif.
 - Gunakan `data/packages.json` sebagai sumber data utama yang sudah memuat nama paket terbaru. Jangan menyalin data dari proposal/demo atau arsip tanpa verifikasi.
-- Pertahankan harga, fitur, estimasi, dan ketentuan yang ada di sumber data resmi; tugas halaman ini tidak mengubah substansinya.
+- Sumber data saat dokumen ini diperbarui masih mencantumkan Ringan Rp100.000, Populer Rp225.000, Premium Rp500.000, dan Custom mulai Rp100.000. Angka Populer dan Premium sedang menunggu keputusan harga baru dari pemilik; jangan menganggap angka lama sebagai harga final setelah keputusan baru diberikan.
+- Harga Custom menyesuaikan tingkat kebutuhan, fitur, dan tingkat kesulitan, dengan acuan struktur/tingkat harga paket lainnya. Jangan menetapkan nominal final tanpa penilaian kebutuhan dan persetujuan.
+- Jangan mengubah harga sebelum nominal baru dikonfirmasi. Setelah disetujui, selaraskan sumber data utama dan seluruh tampilan/komunikasi aktif.
+
+## Penamaan halaman
+- Judul/nama halaman publik: **Harga Paket Pembuatan Website**. Gunakan frasa ini agar tidak tertukar dengan biaya pemeliharaan bulanan.
+- Istilah singkat dalam navigasi boleh **Harga Paket**, selama konteksnya jelas bahwa yang ditawarkan adalah jasa pembuatan website.
 
 ## Tujuan
 Memindahkan informasi Paket Website dari halaman studio/utama ke halaman HTML tersendiri, dengan tetap mempertahankan bentuk tabel paket yang sudah digunakan pada halaman utama. Halaman baru menjadi tempat pelanggan melihat dan memahami paket website NFShark.
