@@ -6,7 +6,12 @@ Tarif pemeliharaan per bulan berdasarkan tingkat layanan:
 - Ringan: Rp10.000 per bulan.
 - Populer: Rp15.000 per bulan.
 - Premium: Rp20.000 per bulan.
-- Custom: tarif ditentukan berdasarkan cakupan layanan dan kesepakatan dengan pelanggan.
+- Custom: tarif langganan mengikuti harga pembuatan website Custom yang dipesan:
+  - Harga pembuatan sampai dengan Rp100.000: tarif langganan Ringan, Rp10.000 per bulan.
+  - Harga pembuatan di atas Rp100.000 sampai dengan Rp225.000: tarif langganan Populer, Rp15.000 per bulan.
+  - Harga pembuatan di atas Rp225.000 sampai dengan Rp500.000: tarif langganan Premium, Rp20.000 per bulan.
+  - Harga pembuatan di atas Rp500.000: tarif langganan dibahas dan disepakati langsung dengan pelanggan.
+- Cakupan layanan dan batas pekerjaan paket Custom tetap ditentukan berdasarkan kesepakatan dengan pelanggan.
 
 Tarif langganan merupakan biaya pemeliharaan website, terpisah dari harga pembuatan website.
 - Pelanggan dapat memilih durasi berlangganan sampai bulan tertentu.
