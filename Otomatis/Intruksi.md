@@ -3,6 +3,23 @@
 ## Tujuan
 Jalankan pekerjaan repository NFShark secara bertahap berdasarkan daftar tugas di `kerjaan.md`. Instruksi ini menjadi titik awal wajib setiap kali pekerjaan harian dimulai.
 
+## Tingkat pengerjaan
+Setiap tugas menggunakan salah satu dari tiga tingkat berikut. Tingkat ini menentukan urutan pemilihan dan kehati-hatian pengerjaan, bukan janji durasi.
+
+| Tingkat | Kriteria | Perlakuan |
+|---|---|---|
+| **Biasa** | Perubahan kecil, ruang lingkup jelas, risiko rendah, dan tidak mengubah alur utama atau data pelanggan. | Dapat dipilih setelah tugas tingkat Prioritas dan Sedang yang siap dikerjakan. Tetap wajib diuji sesuai perubahan. |
+| **Sedang** | Melibatkan beberapa file/halaman, perubahan interaksi atau tampilan lintas perangkat, atau membutuhkan koordinasi beberapa komponen. | Dikerjakan setelah tugas Prioritas yang siap. Periksa dampak lintas halaman dan dependensi sebelum mulai. |
+| **Prioritas** | Berkaitan dengan keamanan/privasi, data, ketentuan pelanggan, informasi harga/layanan yang keliru, tautan atau alur pemesanan utama, kerusakan publik, atau penghambat pekerjaan lain. | Didahulukan jika seluruh dependensi dan informasi sudah tersedia. Jika terhambat, catat hambatan dan pilih tugas siap berikutnya sesuai aturan satu tugas. |
+
+### Aturan penentuan tingkat dan pemilihan
+- Setiap tugas di `kerjaan.md` wajib mencantumkan satu tingkat: **Biasa**, **Sedang**, atau **Prioritas**.
+- Pilih satu tugas siap dengan urutan tingkat **Prioritas → Sedang → Biasa**.
+- Tugas yang belum memenuhi dependensi, menunggu keputusan pemilik, atau tidak dapat diverifikasi tidak dianggap siap; jangan memaksakan pengerjaannya.
+- Jika beberapa tugas dalam tingkat yang sama siap, pilih berdasarkan dependensi, dampak terhadap pelanggan/website, dan urutan antrean. Jangan mengabaikan tugas yang lebih awal tanpa alasan yang dicatat.
+- Tingkat dapat diubah hanya jika ruang lingkup atau risiko tugas berubah; catat alasan perubahan pada daftar tugas.
+- Tingkat pengerjaan bukan izin untuk memperluas ruang lingkup. Batas satu tugas per hari tetap berlaku.
+
 ## Pemisahan pekerjaan harian dan audit mingguan
 - Daftar `Otomatis/kerjaan.md` hanya untuk pekerjaan implementasi harian; tetap maksimal satu tugas per hari.
 - Audit berkala **Audit Repository NFShark** dijalankan melalui jadwal otomatis mingguan tersendiri, bukan dipilih sebagai tugas harian. Ikuti `Otomatis/Daftar Pemeriksaan Mingguan Audit Repository NFShark.md`.
@@ -12,7 +29,7 @@ Jalankan pekerjaan repository NFShark secara bertahap berdasarkan daftar tugas d
 1. Baca file ini (`Otomatis/Intruksi.md`) sampai selesai.
 2. Baca seluruh isi `Otomatis/kerjaan.md`.
 3. Periksa bagian **Belum Dikerjakan** dan **Sudah Dikerjakan**.
-4. Jika masih ada tugas pada **Belum Dikerjakan**, pilih tepat **satu tugas** untuk dikerjakan pada hari tersebut. Ikuti tautan/nama file spesifikasi yang tercantum pada tugas.
+4. Periksa tingkat pengerjaan dan dependensi setiap tugas. Pilih tepat **satu tugas siap** berdasarkan urutan **Prioritas → Sedang → Biasa**. Ikuti tautan/nama file spesifikasi yang tercantum pada tugas.
 5. Baca file spesifikasi yang dirujuk sampai selesai. Jika file tersebut mengarahkan ke file lain, ikuti rujukan itu dan baca seluruh instruksi terkait sebelum mengubah apa pun.
 6. Telusuri file website/repository yang relevan untuk memahami kondisi saat ini. Jangan mengasumsikan implementasi belum ada hanya karena dokumen menyebut rancangan; periksa kode terlebih dahulu.
 7. Kerjakan hanya ruang lingkup tugas terpilih dan patuhi semua instruksi repository yang relevan. Jangan mengerjakan tugas lain pada hari yang sama.
