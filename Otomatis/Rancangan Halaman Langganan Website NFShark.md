@@ -34,7 +34,7 @@ Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket
 
 | Fitur layanan | Ringan | Populer | Premium | Custom |
 |---|---|---|---|---|
-| Tarif | Rp10.000/bulan | Rp15.000/bulan | Rp20.000/bulan | Sesuai kesepakatan |
+| Tarif | Rp10.000/bulan | Rp15.000/bulan | Rp20.000/bulan | Mengikuti harga pembuatan website; lihat penjelasan tarif Custom |
 | Pemeriksaan website berkala | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan bug ringan | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan tautan/tampilan bermasalah | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
@@ -43,12 +43,14 @@ Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket
 | Pemeriksaan responsivitas dan kompatibilitas | — | — | Termasuk | Sesuai kesepakatan |
 
 Catatan wajib yang menyertai tabel:
-- Tarif langganan pemeliharaan adalah Rp10.000/bulan untuk Ringan, Rp15.000/bulan untuk Populer, dan Rp20.000/bulan untuk Premium. Tarif Custom ditentukan berdasarkan cakupan layanan dan kesepakatan.
+- Tarif langganan pemeliharaan adalah Rp10.000/bulan untuk Ringan, Rp15.000/bulan untuk Populer, dan Rp20.000/bulan untuk Premium. Tarif langganan Custom mengikuti harga pembuatan website yang dipesan: sampai dengan Rp100.000 mengikuti tarif Ringan (Rp10.000/bulan); di atas Rp100.000 sampai dengan Rp225.000 mengikuti tarif Populer (Rp15.000/bulan); di atas Rp225.000 sampai dengan Rp500.000 mengikuti tarif Premium (Rp20.000/bulan); dan di atas Rp500.000 dibahas serta disepakati langsung dengan pelanggan.
 - Biaya langganan pemeliharaan terpisah dari harga pembuatan website. Perubahan harga pembuatan website tidak otomatis mengubah tarif langganan.
 - Batas total permintaan per bulan adalah Ringan 1, Populer 3, dan Premium 5. Premium mewarisi seluruh layanan Populer, tetapi kuotanya tetap 5 permintaan total, bukan penjumlahan kuota antarlevel.
 - Permintaan perubahan website di luar kuota atau di luar cakupan paket harus dikonsultasikan langsung kepada NFShark. Harga dan ruang lingkup pekerjaan tambahan dibahas serta disepakati sebelum pengerjaan.
 - Perbaikan bug dan masalah teknis yang termasuk cakupan pemeliharaan tidak mengurangi kuota permintaan.
-- Cakupan, batas pekerjaan, dan tarif Custom ditentukan melalui kesepakatan dengan pelanggan.
+- Untuk paket Custom, jelaskan tarif dengan bahasa sederhana: tarif langganan mengikuti harga pembuatan website yang dipesan. Sampai dengan Rp100.000 mengikuti tarif Ringan (Rp10.000/bulan); di atas Rp100.000–Rp225.000 mengikuti tarif Populer (Rp15.000/bulan); di atas Rp225.000–Rp500.000 mengikuti tarif Premium (Rp20.000/bulan); di atas Rp500.000 dibahas dan disepakati langsung dengan pelanggan.
+- Cakupan layanan dan batas pekerjaan Custom tetap ditentukan melalui kesepakatan dengan pelanggan; aturan tarif berdasarkan harga pembuatan tidak otomatis menentukan cakupan layanan.
+- Sertakan bantuan bagi pelanggan yang masih bingung: mereka dapat meminta penjelasan tambahan kepada AI seperti Google Gemini atau ChatGPT, atau menghubungi NFShark melalui kanal bantuan yang tersedia. Sampaikan sebagai saran opsional, bukan kewajiban dan bukan pengganti konfirmasi tarif/cakupan dari NFShark.
 - Jangan menyamakan paket pembuatan website dengan paket langganan terpisah. Kolom di atas menunjukkan tingkat pemeliharaan yang mengikuti paket website pelanggan.
 
 ### 4. Ketentuan langganan
@@ -63,6 +65,14 @@ Tampilkan setelah tabel dalam bagian ringkas yang mudah dipindai:
 - Pengerjaan menyesuaikan tingkat kesulitan dan antrean. Masalah kritis seperti website tidak dapat diakses atau fungsi utama rusak mendapat prioritas.
 - Pemberitahuan masa berakhir: saat langganan berakhir, satu bulan setelahnya, dan dua bulan setelahnya.
 - Setelah tiga bulan tidak diperpanjang, website dapat dinonaktifkan sementara. Sampaikan sebagai ketentuan yang pelaksanaannya bergantung pada sistem hosting tiap website, bukan sebagai otomatisasi yang sudah tersedia. File dan hasil pekerjaan tidak langsung dihapus; website dapat ditampilkan kembali setelah langganan diaktifkan sesuai ketentuan NFShark.
+
+### Penjelasan paket Custom untuk pelanggan
+Gunakan kalimat yang mudah dipahami dan tampilkan dekat informasi harga Custom:
+> Harga langganan paket Custom mengikuti harga pembuatan website yang kamu pesan. Jika harga pembuatan website sampai dengan Rp100.000, tarif langganannya mengikuti Ringan, yaitu Rp10.000 per bulan. Jika lebih dari Rp100.000 sampai Rp225.000, tarifnya mengikuti Populer, yaitu Rp15.000 per bulan. Jika lebih dari Rp225.000 sampai Rp500.000, tarifnya mengikuti Premium, yaitu Rp20.000 per bulan. Untuk pesanan di atas Rp500.000, tarif langganan dibahas dan disepakati terlebih dahulu dengan NFShark.
+>
+> Masih bingung? Kamu bisa meminta penjelasan tambahan kepada AI seperti Google Gemini atau ChatGPT. Untuk memastikan tarif dan cakupan layanan pesananmu, kamu juga dapat menghubungi NFShark.
+- Pastikan rentang harga tidak tumpang tindih dan gunakan istilah “sampai dengan” agar batas tiap rentang jelas.
+- Saran menggunakan AI bersifat opsional. Jangan mengarahkan pelanggan untuk menyerahkan data pribadi, informasi rahasia, atau detail pesanan sensitif kepada layanan AI.
 
 ### 5. Cara berlangganan dan bantuan
 - Jelaskan hanya alur konsultasi, konfirmasi cakupan, pembayaran, dan aktivasi yang benar-benar telah ditetapkan atau dapat dilakukan.
