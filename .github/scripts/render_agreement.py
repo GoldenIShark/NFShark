@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 import re
 from urllib.parse import urlsplit
 
-import markdown
+import mistune
 
 
 ALLOWED_TAGS = {
@@ -182,7 +182,7 @@ def _source_text(markdown_text: str) -> str:
 
 def render_markdown(markdown_text: str) -> str:
     """Convert Markdown, then sanitize it before it enters the deployment HTML."""
-    raw_html = markdown.markdown(markdown_text, extensions=[], output_format="html5")
+    raw_html = mistune.create_markdown(escape=True)(markdown_text)
     sanitizer = _Sanitizer()
     sanitizer.feed(raw_html)
     sanitizer.close()

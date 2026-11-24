@@ -1,2 +1,2 @@
 # Dependensi build-only untuk menghasilkan halaman GitHub Pages.
-Markdown==3.8.2
+mistune==3.2.1
