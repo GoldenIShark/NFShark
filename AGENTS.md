@@ -46,7 +46,14 @@ Jangan menggunakan React, framework tambahan, backend, atau layanan server khusu
 6. Jangan mengubah domain, konfigurasi deployment, atau struktur Git tanpa izin.
 7. Jangan melakukan commit, push, atau merge tanpa instruksi.
 
-## 6. Alur Kerja Agent
+## 6. Pemilihan agent untuk seluruh proyek website
+
+- Aturan ini berlaku untuk setiap pekerjaan membuat atau mengubah halaman/website, baik milik NFShark maupun perusahaan, merek, organisasi, atau klien lain; jangan membatasi penggunaan agent berdasarkan identitas perusahaan atau repository.
+- Sebelum membuat atau mengubah halaman website, gunakan agent **Website Developer** sebagai pelaksana pengembangan website. Jika lingkungan menyediakan agent khusus lain yang relevan (misalnya perencana), gunakan sesuai perannya, tetapi pekerjaan implementasi halaman tetap mengikuti prosedur Website Developer.
+- Agent wajib membaca instruksi global dan memilih skill yang relevan dari indeks skill lingkungannya sebelum bekerja. Baca hanya skill yang diperlukan untuk tugas; jangan mengklaim menggunakan skill yang belum dibaca.
+- Jika agent Website Developer tidak tersedia pada lingkungan tersebut, ikuti prosedur pengembangan website yang setara dan nyatakan keterbatasannya; jangan mengklaim agent telah dijalankan.
+
+## 7. Alur Kerja Agent
 
 Untuk tugas yang memiliki dampak luas:
 
