@@ -12,7 +12,7 @@ Halaman ini menjadi tujuan menu Langganan Website pada navigasi Jelajahi, bukan 
 ## Dependensi
 - Implementasi halaman tetap menunggu Tugas 7 (navigasi Jelajahi) selesai dan diverifikasi.
 - Halaman Paket Website (Tugas 9) juga direncanakan memiliki header/footer acuan yang sama. Saat Tugas 12 dikerjakan, periksa hasil aktual Tugas 9 dan gunakan komponen serta gaya yang sama, bukan menebak atau membuat versi berbeda.
-- Gunakan `Otomatis/KEBIJAKAN LAYANAN PEMELIHARAAN BULANAN NFSHARK.md` sebagai sumber isi layanan.
+- Gunakan `Otomatis/KEBIJAKAN LAYANAN PEMELIHARAAN BULANAN NFSHARK.md` sebagai sumber isi layanan dan tarif.
 - Jangan mengubah tarif, durasi, cakupan, batas permintaan, waktu respons, atau ketentuan tanpa keputusan baru yang terdokumentasi.
 
 ## Rencana tampilan awal
@@ -30,11 +30,11 @@ Halaman ini menjadi tujuan menu Langganan Website pada navigasi Jelajahi, bukan 
 - Hindari klaim bahwa layanan berjalan otomatis atau bahwa seluruh gangguan selalu selesai dalam batas waktu respons.
 
 ### 3. Tabel paket langganan
-Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket website yang dimiliki pelanggan: **Ringan, Populer, Premium, dan Custom**. Tarif pemeliharaan yang tercatat saat ini sama untuk semua tingkat; perbedaannya terletak pada cakupan dan batas permintaan.
+Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket website yang dimiliki pelanggan: **Ringan, Populer, Premium, dan Custom**. Tarif dibedakan berdasarkan tingkat layanan; Custom mengikuti cakupan dan kesepakatan.
 
 | Fitur layanan | Ringan | Populer | Premium | Custom |
 |---|---|---|---|---|
-| Tarif | Rp10.000/bulan | Rp10.000/bulan | Rp10.000/bulan | Rp10.000/bulan |
+| Tarif | Rp10.000/bulan | Rp15.000/bulan | Rp20.000/bulan | Sesuai kesepakatan |
 | Pemeriksaan website berkala | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan bug ringan | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
 | Perbaikan tautan/tampilan bermasalah | Termasuk | Termasuk | Termasuk | Sesuai kesepakatan |
@@ -44,10 +44,11 @@ Tampilkan tabel perbandingan empat tingkat layanan. Nama tingkat mengikuti paket
 | Batas permintaan pekerjaan ringan | Tidak termasuk perubahan konten atau fitur baru | Maks. 2 permintaan/bulan | Maks. 4 permintaan/bulan | Sesuai kesepakatan |
 
 Catatan wajib yang menyertai tabel:
-- Tarif pemeliharaan yang tercatat dalam kebijakan saat ini adalah Rp10.000 per bulan untuk semua tingkat. Ini adalah biaya langganan pemeliharaan, terpisah dari harga pembuatan website. Jangan mengubahnya ketika harga pembuatan website Populer/Premium diperbarui.
-- Untuk Premium, kebijakan menetapkan maksimal 4 permintaan pekerjaan ringan per bulan dan mewarisi seluruh layanan Populer. Namun, kebijakan belum menjelaskan secara eksplisit apakah batas 2 permintaan perubahan konten dari Populer dihitung di dalam kuota 4 pekerjaan ringan atau memiliki perhitungan tersendiri. Tandai hal ini untuk konfirmasi sebelum tabel dipublikasikan; jangan menetapkan interpretasi sendiri.
+- Tarif langganan pemeliharaan adalah Rp10.000/bulan untuk Ringan, Rp15.000/bulan untuk Populer, dan Rp20.000/bulan untuk Premium. Tarif Custom ditentukan berdasarkan cakupan layanan dan kesepakatan.
+- Biaya langganan pemeliharaan terpisah dari harga pembuatan website. Perubahan harga pembuatan website tidak otomatis mengubah tarif langganan.
+- Untuk Premium, kebijakan menetapkan maksimal 4 permintaan pekerjaan ringan per bulan dan mewarisi seluruh layanan Populer. Namun, kebijakan belum menjelaskan secara eksplisit apakah batas 2 permintaan perubahan konten dari Populer dihitung di dalam kuota 4 pekerjaan ringan atau memiliki perhitungan tersendiri. Tandai hal ini untuk konfirmasi sebelum publikasi; jangan menetapkan interpretasi sendiri.
 - Perbaikan bug dan masalah teknis yang termasuk cakupan pemeliharaan tidak dihitung sebagai permintaan perubahan konten.
-- Cakupan dan batas pekerjaan Custom ditentukan melalui kesepakatan dengan pelanggan.
+- Cakupan, batas pekerjaan, dan tarif Custom ditentukan melalui kesepakatan dengan pelanggan.
 - Jangan menyamakan paket pembuatan website dengan paket langganan terpisah. Kolom di atas menunjukkan tingkat pemeliharaan yang mengikuti paket website pelanggan.
 
 ### 4. Ketentuan langganan
