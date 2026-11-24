@@ -3,6 +3,11 @@
 ## Status dan ketergantungan
 Dokumen ini adalah spesifikasi untuk tugas lanjutan setelah **Tugas 7 — Implementasi navigasi Jelajahi pada halaman studio** benar-benar selesai dan diverifikasi. Jangan mulai implementasi halaman ini sebelum Tugas 7 selesai. Tugas ini hanya disiapkan sebagai pekerjaan berikutnya.
 
+## Nama paket dan sumber data
+- Nama paket yang berlaku adalah **Ringan, Populer, Premium, dan Custom**. Istilah Basic dan Popular merupakan nama lama dan tidak boleh dipakai untuk konten layanan aktif.
+- Gunakan `data/packages.json` sebagai sumber data utama yang sudah memuat nama paket terbaru. Jangan menyalin data dari proposal/demo atau arsip tanpa verifikasi.
+- Pertahankan harga, fitur, estimasi, dan ketentuan yang ada di sumber data resmi; tugas halaman ini tidak mengubah substansinya.
+
 ## Tujuan
 Memindahkan informasi Paket Website dari halaman studio/utama ke halaman HTML tersendiri, dengan tetap mempertahankan bentuk tabel paket yang sudah digunakan pada halaman utama. Halaman baru menjadi tempat pelanggan melihat dan memahami paket website NFShark.
 
