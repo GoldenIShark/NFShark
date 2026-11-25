@@ -36,7 +36,9 @@ section[id] {
 
 /* Container Umum Studio */
 .studio-container {
-  width: min(100% - 2.5rem, 1180px);
+  /* calc() menjaga dukungan lebar kontainer pada browser mobile. */
+  width: calc(100% - 2.5rem);
+  max-width: 1180px;
   margin-inline: auto;
 }
 
@@ -672,8 +674,26 @@ section[id] {
 @media (max-width: 960px) {
   .studio-profile-grid,
   .studio-services-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2.5rem;
+  }
+
+  /* Jaga kolom layanan tetap berada di dalam kontainer mobile. */
+  .studio-services-layout > .services-intro-col,
+  .studio-services-layout > .studio-accordion-wrap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .studio-accordion-wrap .accordion-trigger {
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .studio-accordion-wrap .accordion-trigger > span:first-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .portfolio-grid-studio {
