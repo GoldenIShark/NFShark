@@ -34,6 +34,9 @@ Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikut
 
 ## Sudah Dikerjakan
 
+- [x] **Perbaikan langsung — Konsistensi tata letak section Layanan pada mobile.** Selesai pada 2026-11-25. Memperbaiki lebar kontainer agar memiliki jarak tepi yang konsisten dan memperkuat aturan grid/accordion pada breakpoint mobile. Perubahan ini tidak menandai Tugas 7, 9, atau 12 sebagai selesai.
+
+
 - [x] **Tugas 2 — [Prioritas] Implementasi kebijakan pemeliharaan bulanan.** Selesai pada 2026-11-25. FAQ kini menjelaskan tarif, cakupan, kuota permintaan, waktu respons, pembayaran dan penghentian langganan, jadwal pemberitahuan, serta keterbatasan hosting. Informasi paket homepage mengarahkan pengunjung ke FAQ Pemeliharaan. Masa pemeliharaan gratis tetap berlaku terlebih dahulu; tidak ada klaim otomasi pembayaran, notifikasi, atau penonaktifan hosting. Syarat dan Ketentuan tidak diubah karena penyelarasan formalnya tercatat pada Tugas 5 dan 6.
 
 - [x] **Tugas 1 — [Sedang] Keselarasan identitas dan kontak NFShark.** Selesai pada 2026-11-23. Alamat Gmail, pembagian kanal komunikasi, serta pesan otomatis konsultasi, pemesanan, brief, dan revisi diselaraskan. Nomor WhatsApp yang telah ada dan akun Instagram @shark.studio22 dipertahankan tanpa perubahan.
