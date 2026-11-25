@@ -10,8 +10,6 @@ Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikut
 - [ ] **Tugas 9 — [Sedang] Membuat halaman Harga Paket Pembuatan Website setelah Tugas 7 selesai.** Buat file HTML terpisah untuk informasi paket. Header mengikuti gaya halaman utama tetapi hanya berisi tombol **⟨ Kembali ke halaman** di sisi kiri dan sejajar vertikal di tengah, tanpa logo maupun elemen header lain. Di bawahnya tampilkan tabel paket dengan bentuk dan isi yang sama seperti tabel pada halaman utama; pertahankan desainnya. Gunakan nama resmi **Ringan, Populer, Premium, dan Custom** dari `data/packages.json`. Tambahkan konten pendukung yang relevan dan footer konsisten dengan halaman utama. Setelah halaman siap, hubungkan menu Paket Website ke URL aktual halaman baru. Tugas ini baru boleh dikerjakan setelah Tugas 7 selesai dan diverifikasi.
   Spesifikasi: [Rancangan Halaman Paket Website NFShark.md](./Rancangan%20Halaman%20Paket%20Website%20NFShark.md)
 
-- [ ] **Tugas 2 — [Prioritas] Implementasi kebijakan pemeliharaan bulanan.** Periksa halaman, informasi paket, dan komponen terkait. Terapkan ketentuan tarif, cakupan tiap paket, batas permintaan, waktu respons, masa berlangganan, serta pemberitahuan hanya sejauh didukung sistem website. Jangan menjanjikan otomasi hosting yang belum tersedia.
-  Spesifikasi: [KEBIJAKAN LAYANAN PEMELIHARAAN BULANAN NFSHARK.md](./KEBIJAKAN%20LAYANAN%20PEMELIHARAAN%20BULANAN%20NFSHARK.md)
 
 - [ ] **Tugas 3 — [Prioritas] Implementasi kebijakan pengembalian dana.** Periksa halaman S&K, FAQ, dan informasi layanan yang relevan. Selaraskan penjelasan kondisi refund, dasar perhitungan, tahapan progres, kompensasi, serta target waktu sesuai dokumen. Pastikan rumus dan simulasi konsisten sebelum dipublikasikan.
   Spesifikasi: [KEBIJAKAN PENGEMBALIAN DANA (REFUND) NFSHARK.md](./KEBIJAKAN%20PENGEMBALIAN%20DANA%20(REFUND)%20NFSHARK.md)
@@ -35,6 +33,8 @@ Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikut
   Spesifikasi: [Rancangan Penataan Direktori Website NFShark.md](./Rancangan%20Penataan%20Direktori%20Website%20NFShark.md)
 
 ## Sudah Dikerjakan
+
+- [x] **Tugas 2 — [Prioritas] Implementasi kebijakan pemeliharaan bulanan.** Selesai pada 2026-11-25. FAQ kini menjelaskan tarif, cakupan, kuota permintaan, waktu respons, pembayaran dan penghentian langganan, jadwal pemberitahuan, serta keterbatasan hosting. Informasi paket homepage mengarahkan pengunjung ke FAQ Pemeliharaan. Masa pemeliharaan gratis tetap berlaku terlebih dahulu; tidak ada klaim otomasi pembayaran, notifikasi, atau penonaktifan hosting. Syarat dan Ketentuan tidak diubah karena penyelarasan formalnya tercatat pada Tugas 5 dan 6.
 
 - [x] **Tugas 1 — [Sedang] Keselarasan identitas dan kontak NFShark.** Selesai pada 2026-11-23. Alamat Gmail, pembagian kanal komunikasi, serta pesan otomatis konsultasi, pemesanan, brief, dan revisi diselaraskan. Nomor WhatsApp yang telah ada dan akun Instagram @shark.studio22 dipertahankan tanpa perubahan.
 
