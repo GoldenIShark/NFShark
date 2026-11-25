@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-25",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -297,6 +297,19 @@
             "sitemap.txt"
           ],
           "testNotes": "Workflow run 45303899478 lulus pada Quality Check, Website & Deployment Package Test, dan Deploy to GitHub Pages. Build memeriksa kesamaan teks Markdown dan HTML, salinan Markdown identik pada paket publik, keberadaan kedua rute HTML, referensi llms.txt, serta pengecualian Markdown dari sitemap. robots.txt tetap menggunakan User-agent: * dan Allow: /. URL live belum dapat diperiksa langsung pada sesi ini; status indeks Google dan pemakaian oleh Gemini tidak diverifikasi."
+        },
+        {
+          "id": "FIT-027",
+          "title": "Informasi langganan pemeliharaan bulanan",
+          "description": "FAQ menjelaskan tarif Ringan, Populer, Premium, dan Custom; cakupan tiap tingkat; kuota permintaan; waktu respons; ketentuan pembayaran/penghentian; jadwal pemberitahuan; serta batas ketergantungan hosting. Catatan paket homepage mengarahkan pengunjung ke bagian FAQ Pemeliharaan.",
+          "benefit": "Membantu pelanggan memahami layanan pemeliharaan setelah masa gratis paket pembuatan website berakhir.",
+          "priority": "Sedang",
+          "status": "Tersedia di source",
+          "files": [
+            "faq.html",
+            "index.html"
+          ],
+          "testNotes": "Markup FAQ dan tautan anchor tersedia di source. Pemeriksaan source dilakukan; uji browser langsung belum dilakukan."
         }
       ]
     },
