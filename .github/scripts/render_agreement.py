@@ -170,7 +170,11 @@ class _AgreementTextParser(HTMLParser):
 
 
 def _normalize_text(value: str) -> str:
-    return " ".join(value.split())
+    """Collapse layout whitespace without changing punctuation adjacency."""
+    normalized = " ".join(value.split())
+    normalized = re.sub(r"\(\s+", "(", normalized)
+    normalized = re.sub(r"\s+\)", ")", normalized)
+    return normalized
 
 
 def _source_text(markdown_text: str) -> str:
