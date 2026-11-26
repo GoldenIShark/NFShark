@@ -1,76 +1,56 @@
-Masalah 5 — Perubahan dan Pembaruan Syarat dan Ketentuan NFShark
+# Masalah 5 — Perubahan dan Pembaruan Syarat dan Ketentuan NFShark
 
-1. Sistem Versi S&K
+**Status:** Dokumen ini telah diselaraskan dengan keputusan terbaru pada Masalah 7, yaitu `Tanggal Publikasi dan Dokumentasi Perubahan S&K NFShark.md`. Jika ditemukan perbedaan, keputusan Masalah 7 menjadi acuan.
 
-Setiap pembaruan Syarat dan Ketentuan harus memiliki:
+## 1. Patokan tanggal
 
-- Nomor versi, misalnya v1.0, v1.1, dan v2.0.
-- Tanggal publikasi.
-- Tanggal mulai berlaku.
-- Ringkasan perubahan.
+- Setiap pembaruan Syarat dan Ketentuan (S&K) harus mencantumkan tanggal publikasi.
+- Tanggal publikasi menjadi patokan perhitungan tanggal efektif.
+- NFShark tidak menggunakan nomor versi atau nomor penomoran pembaruan.
 
-2. Masa Transisi
+## 2. Masa transisi
 
-- Setiap perubahan S&K memiliki masa transisi selama 7 hari kalender sejak tanggal publikasi.
-- Selama masa transisi, versi sebelumnya tetap berlaku.
-- Setelah masa transisi berakhir, versi baru mulai berlaku.
-- Ketentuan ini berlaku bagi pelanggan lama maupun pelanggan baru, dengan memperhatikan mekanisme persetujuan untuk perubahan besar.
+- Setiap pembaruan memiliki masa transisi selama 7 hari kalender sejak tanggal publikasi.
+- Hari publikasi dihitung sebagai hari pertama masa transisi.
+- Selama masa transisi, ketentuan sebelumnya tetap berlaku.
+- Ketentuan baru mulai berlaku pada hari ke-8, yaitu tanggal efektif yang diumumkan.
 
-Contoh:
-
-- Publikasi versi baru: 1 November 2026.
-- Masa transisi: 1–7 November 2026.
-- Versi baru mulai berlaku: 8 November 2026.
-
-3. Pemberitahuan Perubahan
+## 3. Pemberitahuan perubahan
 
 Perubahan dibedakan menjadi dua kategori:
 
-A. Perubahan kecil
+### A. Perubahan kecil
 
-- Cukup diumumkan melalui halaman S&K dan riwayat perubahan.
-- Contohnya perbaikan typo, penyesuaian kalimat, atau penjelasan tambahan yang tidak mengubah hak dan kewajiban pelanggan.
+- Perubahan kecil cukup diumumkan melalui halaman S&K dan halaman daftar perubahan.
+- Tidak diperlukan pemberitahuan langsung kepada pelanggan.
+- Contohnya perbaikan salah ketik, penyesuaian kalimat, atau penjelasan tambahan yang tidak mengubah hak dan kewajiban pelanggan.
 
-B. Perubahan besar
+### B. Perubahan besar
 
-- NFShark wajib memberikan pemberitahuan langsung kepada pelanggan.
-- Contohnya perubahan harga, hak pengembalian dana, dan pengurangan cakupan layanan.
-- Perubahan yang berdampak pada hak atau kewajiban pelanggan memerlukan persetujuan pelanggan sebelum diterapkan pada layanan yang sedang berjalan.
+- Perubahan besar wajib diberitahukan langsung kepada pelanggan yang terdampak.
+- Contohnya perubahan harga, hak pengembalian dana, pengurangan cakupan layanan, atau perubahan lain yang berdampak pada hak maupun kewajiban pelanggan.
+- Perubahan besar yang memengaruhi hak atau kewajiban pelanggan memerlukan persetujuan pelanggan sebelum diterapkan pada layanan yang sedang berjalan.
+- Sampai persetujuan diperoleh, ketentuan yang telah disepakati sebelumnya tetap berlaku untuk layanan tersebut.
 
-4. Tampilan Riwayat Perubahan
+## 4. Dokumentasi perubahan
 
-Riwayat perubahan ditampilkan melalui dua tempat:
+- Catatan perubahan hanya memuat bagian S&K yang ditambahkan, diubah, atau dihapus beserta ringkasan yang mudah dipahami.
+- Setiap catatan mencantumkan tanggal publikasi dan tanggal efektif.
+- Tidak perlu menampilkan seluruh isi S&K sebelumnya atau menyimpan riwayat lengkap setiap versi untuk ditampilkan kepada pelanggan.
 
-A. Pada halaman S&K di navigasi
+## 5. Lokasi informasi
 
-- Menampilkan ringkasan perubahan terbaru.
-- Menampilkan nomor versi, tanggal publikasi, dan tanggal efektif.
-- Menampilkan bagian yang ditambahkan, diubah, atau dihapus.
-- Tidak perlu menampilkan seluruh isi versi sebelumnya.
+- Halaman S&K menampilkan ketentuan yang sedang berlaku serta ringkasan pembaruan terbaru.
+- Halaman terpisah `daftar-perubahan-S&K.html` menampilkan ringkasan seluruh pembaruan yang tercatat.
+- Pelanggan diharapkan memeriksa halaman S&K dan daftar perubahan secara berkala.
 
-B. Halaman terpisah "daftar-perubahan-S&K.html"
+## 6. Hak pembaruan S&K
 
-- Menampilkan seluruh riwayat pembaruan S&K.
-- Setiap versi memiliki tanggal publikasi dan tanggal efektif.
-- Setiap versi memiliki ringkasan perubahan.
-- Riwayat versi lama tetap dapat dibaca sebagai dokumentasi.
+NFShark dapat mengubah, menambahkan, atau menyesuaikan S&K sewaktu-waktu sesuai kebutuhan operasional dan perkembangan layanan. Setiap perubahan diumumkan melalui halaman S&K beserta ringkasan perubahan dan tanggal publikasi. Masa transisi 7 hari kalender berlaku sebelum ketentuan baru mulai efektif. Untuk perubahan besar yang berdampak pada hak atau kewajiban pelanggan, pemberitahuan langsung dan persetujuan pelanggan tetap diperlukan sebelum perubahan diterapkan pada layanan yang sedang berjalan.
 
-5. Ketentuan Dokumentasi
-
-Setiap perubahan harus dicatat secara konsisten. Riwayat perubahan minimal memuat:
-
-1. Nomor versi.
-2. Tanggal publikasi.
-3. Tanggal efektif.
-4. Bagian yang berubah.
-5. Keterangan perubahan.
-6. Kategori perubahan (kecil atau besar).
-
-6. Tujuan
+## 7. Tujuan
 
 - Memberikan informasi perubahan S&K secara transparan.
-- Memudahkan pelanggan mengetahui ketentuan terbaru.
-- Menyediakan dokumentasi perubahan yang dapat ditelusuri.
-- Menghindari kebingungan antara ketentuan lama dan ketentuan baru.
-
-Status: Rancangan kebijakan telah disepakati. Implementasi pada repository belum dilakukan.
+- Memudahkan pelanggan mengetahui ketentuan yang berlaku.
+- Menyediakan ringkasan perubahan yang dapat ditelusuri.
+- Menghindari kebingungan mengenai tanggal publikasi, tanggal efektif, dan penerapan perubahan pada layanan berjalan.
