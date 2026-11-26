@@ -1,8 +1,12 @@
 # SYARAT DAN KETENTUAN LAYANAN NFShark
 
 **Website:** https://nfshark.web.id  
-**Tanggal berlaku:** 1 November 2026  
-**Terakhir diperbarui:** 1 November 2026
+**Tanggal berlaku ketentuan saat ini:** 1 November 2026  
+**Terakhir diperbarui:** 26 November 2026  
+**Tanggal publikasi pembaruan bagian 24:** 26 November 2026  
+**Tanggal efektif pembaruan bagian 24:** 3 Desember 2026  
+
+*Pembaruan pada bagian 24 dipublikasikan pada 26 November 2026 dan berlaku mulai 3 Desember 2026. Sampai 2 Desember 2026, ketentuan perubahan S&K yang sebelumnya berlaku tetap menjadi acuan.*
 
 ## 1. Ketentuan Umum
 
@@ -212,13 +216,14 @@ Penghentian proyek tetap memperhatikan ketentuan pembatalan dan pengembalian dan
 
 ## 24. Perubahan Syarat dan Ketentuan
 
-1. NFShark berhak memperbarui Syarat dan Ketentuan apabila diperlukan.
-2. Versi terbaru akan dipublikasikan melalui website resmi NFShark.
-3. NFShark akan memberitahukan perubahan kepada pelanggan melalui WhatsApp apabila perubahan tersebut berdampak pada layanan atau proyek yang sedang berjalan.
-4. Perubahan yang bersifat administratif atau tidak mengubah kesepakatan proyek dapat diterapkan setelah diumumkan.
-5. Perubahan material yang memengaruhi harga, ruang lingkup, hak, atau kewajiban dalam pesanan yang sedang berjalan harus dikomunikasikan dan disepakati terlebih dahulu oleh para pihak.
-6. Untuk pesanan baru, versi Syarat dan Ketentuan yang berlaku adalah versi terbaru pada saat pelanggan melakukan persetujuan.
-
+1. NFShark dapat mengubah, menambahkan, atau menyesuaikan Syarat dan Ketentuan sewaktu-waktu sesuai kebutuhan operasional dan perkembangan layanan.
+2. Setiap pembaruan diumumkan melalui halaman S&K dan dicatat pada halaman daftar perubahan S&K. Catatan perubahan memuat tanggal publikasi serta ringkasan bagian yang ditambahkan, diubah, atau dihapus. NFShark tidak menggunakan nomor versi atau nomor penomoran pembaruan.
+3. Setiap pembaruan memiliki masa transisi selama 7 hari kalender sejak tanggal publikasi. Hari publikasi dihitung sebagai hari pertama masa transisi. Selama masa transisi, ketentuan sebelumnya tetap berlaku; ketentuan baru mulai berlaku pada hari ke-8, yaitu tanggal efektif yang diumumkan.
+4. Perubahan kecil, seperti perbaikan salah ketik, penyesuaian kalimat, atau penjelasan tambahan yang tidak mengubah hak dan kewajiban pelanggan, cukup diumumkan melalui halaman S&K dan daftar perubahan. Perubahan kecil tidak memerlukan pemberitahuan langsung kepada pelanggan.
+5. Perubahan besar, seperti perubahan harga, hak pengembalian dana, pengurangan cakupan layanan, atau perubahan lain yang berdampak pada hak atau kewajiban pelanggan, wajib diberitahukan langsung kepada pelanggan yang terdampak melalui WhatsApp.
+6. Perubahan besar yang memengaruhi hak atau kewajiban pelanggan hanya dapat diterapkan pada layanan yang sedang berjalan setelah pelanggan memberikan persetujuan. Sampai persetujuan diperoleh, ketentuan yang telah disepakati sebelumnya tetap berlaku untuk layanan tersebut.
+7. Untuk pesanan baru, ketentuan yang telah mencapai tanggal efektif pada saat pelanggan menyetujui pesanan menjadi acuan.
+8. Pelanggan diharapkan memeriksa halaman S&K dan daftar perubahan secara berkala.
 ## 25. Persetujuan Pelanggan
 
 1. Pelanggan wajib membaca dan memahami Syarat dan Ketentuan sebelum melakukan pemesanan.
