@@ -13,12 +13,10 @@ Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikut
 
 - [ ] **Tugas 3 — [Prioritas] Implementasi kebijakan pengembalian dana.** Periksa halaman S&K, FAQ, dan informasi layanan yang relevan. Selaraskan penjelasan kondisi refund, dasar perhitungan, tahapan progres, kompensasi, serta target waktu sesuai dokumen. Pastikan rumus dan simulasi konsisten sebelum dipublikasikan.
   Spesifikasi: [KEBIJAKAN PENGEMBALIAN DANA (REFUND) NFSHARK.md](./KEBIJAKAN%20PENGEMBALIAN%20DANA%20(REFUND)%20NFSHARK.md)
+  Catatan hambatan (2026-11-26): rumus menghasilkan Rp300.000 pada progres 5% (D=Rp300.000; P=0,05), sedangkan tabel simulasi mencantumkan Rp285.000. Diperlukan keputusan apakah rumus atau nilai simulasi 5% yang menjadi acuan sebelum kebijakan refund diterapkan.
 
 - [ ] **Tugas 4 — [Sedang] Implementasi persetujuan publikasi portofolio.** Periksa formulir brief, alur penyerahan, dan halaman portofolio. Terapkan persetujuan terpisah untuk tampilan website, nama proyek/bisnis, dan tautan publik; jangan publikasikan komponen yang belum diizinkan.
   Spesifikasi: [KEBIJAKAN PUBLIKASI PORTOFOLIO NFSHARK.md](./KEBIJAKAN%20PUBLIKASI%20PORTOFOLIO%20NFSHARK.md)
-
-- [ ] **Tugas 5 — [Prioritas] Penyelarasan aturan perubahan S&K.** Bandingkan dokumen Masalah 5 dengan keputusan terbaru pada Masalah 7. Gunakan Masalah 7 sebagai acuan terbaru: tanpa nomor versi, tanggal publikasi sebagai patokan, masa transisi 7 hari kalender, serta pemberitahuan dan persetujuan untuk perubahan besar yang berdampak pada pelanggan. Selaraskan dokumen/halaman website yang relevan tanpa menghilangkan ketentuan yang masih berlaku.
-  Spesifikasi: [Perubahan dan Pembaruan Syarat dan Ketentuan NFShark.md](./Perubahan%20dan%20Pembaruan%20Syarat%20dan%20Ketentuan%20NFShark.md) dan [Tanggal Publikasi dan Dokumentasi Perubahan S&K NFShark.md](./Tanggal%20Publikasi%20dan%20Dokumentasi%20Perubahan%20S%26K%20NFShark.md)
 
 - [ ] **Tugas 6 — [Sedang] Dokumentasi tanggal publikasi dan daftar perubahan S&K.** Periksa halaman S&K dan halaman `daftar-perubahan-S&K.html` (atau struktur aktual yang menggantikannya). Terapkan tanggal publikasi, perhitungan tanggal efektif setelah 7 hari kalender, ringkasan bagian yang berubah, serta pemberitahuan perubahan sesuai kategorinya. Jangan membuat tanggal publikasi historis atau menyatakan perubahan berlaku tanpa dasar.
   Spesifikasi: [Tanggal Publikasi dan Dokumentasi Perubahan S&K NFShark.md](./Tanggal%20Publikasi%20dan%20Dokumentasi%20Perubahan%20S%26K%20NFShark.md)
@@ -38,6 +36,8 @@ Daftar ini menjadi sumber pemilihan pekerjaan implementasi harian untuk mengikut
 
 
 - [x] **Tugas 2 — [Prioritas] Implementasi kebijakan pemeliharaan bulanan.** Selesai pada 2026-11-25. FAQ kini menjelaskan tarif, cakupan, kuota permintaan, waktu respons, pembayaran dan penghentian langganan, jadwal pemberitahuan, serta keterbatasan hosting. Informasi paket homepage mengarahkan pengunjung ke FAQ Pemeliharaan. Masa pemeliharaan gratis tetap berlaku terlebih dahulu; tidak ada klaim otomasi pembayaran, notifikasi, atau penonaktifan hosting. Syarat dan Ketentuan tidak diubah karena penyelarasan formalnya tercatat pada Tugas 5 dan 6.
+
+- [x] **Tugas 5 — [Prioritas] Penyelarasan aturan perubahan S&K.** Selesai pada 2026-11-26. Dokumen Masalah 5 dan bagian 24 pada `persetujuan.md` diselaraskan dengan keputusan terbaru Masalah 7: tanpa nomor versi, tanggal publikasi sebagai patokan, masa transisi 7 hari kalender (tanggal publikasi dihitung sebagai hari pertama), tanggal efektif pada hari ke-8, pengumuman perubahan kecil, serta pemberitahuan langsung dan persetujuan untuk perubahan besar yang berdampak pada hak atau kewajiban pelanggan. Pembaruan bagian 24 dipublikasikan 26 November 2026 dan dijadwalkan efektif 3 Desember 2026. Halaman daftar perubahan tetap menjadi ruang lingkup Tugas 6.
 
 - [x] **Tugas 1 — [Sedang] Keselarasan identitas dan kontak NFShark.** Selesai pada 2026-11-23. Alamat Gmail, pembagian kanal komunikasi, serta pesan otomatis konsultasi, pemesanan, brief, dan revisi diselaraskan. Nomor WhatsApp yang telah ada dan akun Instagram @shark.studio22 dipertahankan tanpa perubahan.
 
