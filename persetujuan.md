@@ -130,7 +130,7 @@
 1. NFShark menyediakan masa pemeliharaan gratis sesuai harga paket atau nilai akhir proyek yang disepakati pelanggan.
 2. Untuk paket dengan harga tetap, durasi masa pemeliharaan gratis adalah:
    - Rp100.000: 1 bulan.
-   - Rp225.000 (Paket Popular): 2 bulan, mengikuti jenjang harga Rp200.000.
+   - Rp225.000 (Paket Populer): 2 bulan, mengikuti jenjang harga Rp200.000.
    - Rp500.000: 4 bulan.
 3. Untuk Paket Custom, durasi ditentukan berdasarkan harga akhir yang disepakati dengan mengikuti jenjang yang sama: Rp100.000–Rp199.999 untuk 1 bulan, Rp200.000–Rp299.999 untuk 2 bulan, Rp300.000–Rp499.999 untuk 3 bulan, dan Rp500.000 ke atas untuk 4 bulan. Durasi final wajib dicantumkan dalam penawaran atau kesepakatan tertulis sebelum pengerjaan dimulai.
 4. Masa pemeliharaan mulai dihitung sejak website diserahkan kepada pelanggan setelah tahap finalisasi, kecuali tanggal mulai lain disepakati secara tertulis.

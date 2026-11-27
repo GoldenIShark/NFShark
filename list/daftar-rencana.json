@@ -3,7 +3,7 @@
   "title": "Daftar Rencana Pengembangan",
   "category": "Pengembangan",
   "description": "Status menggambarkan kondisi repository yang diperiksa pada 2026-10-10. Prioritas adalah urutan kerja internal, bukan komitmen waktu. Rencana bukan bukti fitur tersedia.",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-27",
   "sections": [
     {
       "title": "Belum dimulai atau masih perlu dilanjutkan",
@@ -20,7 +20,7 @@
         },
         {
           "id": "REN-002",
-          "title": "Menyempurnakan informasi paket Basic, Popular, Premium, dan Custom",
+          "title": "Menyempurnakan informasi paket Ringan, Populer, Premium, dan Custom",
           "goal": "Membuat cakupan tiap paket jelas dan konsisten dengan data yang ditampilkan.",
           "priority": "Tinggi",
           "status": "Belum dimulai",

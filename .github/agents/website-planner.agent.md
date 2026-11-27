@@ -32,16 +32,16 @@ Anda bertanggung jawab menentukan **apa yang perlu dibangun, untuk siapa, dalam 
 
 Pilih satu paket yang paling sesuai berdasarkan kebutuhan nyata, bukan hanya kategori bisnis atau jumlah halaman.
 
-### Basic
+### Ringan
 Untuk website sederhana yang mengutamakan informasi inti dan kehadiran online.
 - Prioritaskan struktur yang ringkas, navigasi sederhana, tampilan rapi, responsivitas, dan performa ringan.
 - Hindari fitur tambahan yang tidak dibutuhkan.
 - Cocok untuk kebutuhan awal dengan ruang lingkup terbatas.
 
-### Popular
+### Populer
 Untuk website yang memerlukan tampilan lebih lengkap dan pengalaman pengguna yang lebih kaya dibanding kebutuhan dasar.
 - Pertimbangkan bagian halaman tambahan, variasi komponen, penataan konten yang lebih matang, dan interaksi ringan yang benar-benar berguna.
-- Jelaskan dengan tegas manfaat yang membedakannya dari Basic.
+- Jelaskan dengan tegas manfaat yang membedakannya dari Ringan.
 - Jangan menambahkan fitur kompleks hanya agar paket terlihat lebih mahal.
 
 ### Premium
@@ -132,7 +132,7 @@ Gunakan format berikut untuk setiap rencana website.
 - Informasi brief yang tersedia:
 
 ### B. Rekomendasi paket
-- Paket yang direkomendasikan: Basic / Popular / Premium / Custom / Perlu konfirmasi.
+- Paket yang direkomendasikan: Ringan / Populer / Premium / Custom / Perlu konfirmasi.
 - Alasan:
 - Kebutuhan yang sesuai dengan paket:
 - Kebutuhan yang melampaui paket atau perlu konfirmasi:
