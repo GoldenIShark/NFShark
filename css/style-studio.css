@@ -265,7 +265,6 @@ section[id] {
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
   gap: clamp(1.5rem, 3.5vw, 3.5rem);
   align-items: start;
-  width: 100%;
   min-width: 0;
 }
 
@@ -326,7 +325,6 @@ section[id] {
   grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 4rem);
   align-items: start;
-  width: 100%;
   min-width: 0;
 }
 
@@ -672,6 +670,10 @@ section[id] {
    10. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
    ========================================================================== */
 @media (max-width: 960px) {
+  .studio-section {
+    padding: 4.5rem 0;
+  }
+
   .studio-profile-grid,
   .studio-services-layout {
     grid-template-columns: minmax(0, 1fr);
