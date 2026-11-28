@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const whatsappNumber = '6289630984238';
 
   // Simpan draf brief di penyimpanan lokal browser selama 3 jam.
-  // Data tidak dikirim ke server dan persetujuan tidak pernah disimpan.
+  // Data tidak dikirim ke server; persetujuan layanan dan publikasi tidak disimpan.
   const DRAFT_KEY = 'nfshark-brief-draft-v1';
   const DRAFT_TTL = 3 * 60 * 60 * 1000;
   let draftExpiryTimer;
 
   const getDraftControls = () => Array.from(form.querySelectorAll('input, select, textarea'))
-    .filter((control) => !['submit', 'button', 'reset'].includes(control.type) && control.id !== 'consent');
+    .filter((control) => !['submit', 'button', 'reset'].includes(control.type) && control.id !== 'consent' && !['portfolioDisplay', 'portfolioName', 'portfolioLink'].includes(control.name));
 
   const clearDraft = () => {
     localStorage.removeItem(DRAFT_KEY);
@@ -170,6 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
       '',
       '*PERSETUJUAN*',
       '- Ketentuan layanan NFShark: Telah dibaca dan disetujui',
+      '',
+      '*PERSETUJUAN PUBLIKASI PORTOFOLIO*',
+      `- Tampilan website melalui iframe: ${checkedValues('portfolioDisplay').length ? 'Diizinkan' : 'Tidak diizinkan'}`,
+      `- Nama proyek / bisnis: ${checkedValues('portfolioName').length ? 'Diizinkan' : 'Tidak diizinkan'}`,
+      `- Tautan website publik: ${checkedValues('portfolioLink').length ? 'Diizinkan' : 'Tidak diizinkan'}`,
+      '- Komponen tanpa izin tidak dipublikasikan.',
       '',
       '_Mohon tinjau ringkasan brief ini. Terima kasih._'
     ];
