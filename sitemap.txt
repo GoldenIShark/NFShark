@@ -1,5 +1,10 @@
 https://nfshark.web.id/
-https://nfshark.web.id/brief.html
-https://nfshark.web.id/faq.html
-https://nfshark.web.id/feedback.html
-https://nfshark.web.id/persetujuan.html
+https://nfshark.web.id/brief/
+https://nfshark.web.id/faq/
+https://nfshark.web.id/feedback/
+https://nfshark.web.id/persetujuan/
+https://nfshark.web.id/portofolio/restoran-basic/
+https://nfshark.web.id/portofolio/restoran/
+https://nfshark.web.id/portofolio/toko/
+https://nfshark.web.id/portofolio/sekolah/
+https://nfshark.web.id/portofolio/bisnis/
