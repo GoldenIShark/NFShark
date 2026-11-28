@@ -3,7 +3,7 @@
   "title": "Daftar Fitur",
   "category": "Pengembangan",
   "description": "Inventaris fitur berdasarkan source code yang diperiksa di repository pada 2026-10-10. Pemeriksaan source tidak berarti alur telah diuji langsung di browser.",
-  "updatedAt": "2026-11-25",
+  "updatedAt": "2026-11-28",
   "sections": [
     {
       "title": "Tersedia — keberadaan diperiksa di source",
@@ -310,6 +310,21 @@
             "index.html"
           ],
           "testNotes": "Markup FAQ dan tautan anchor tersedia di source. Pemeriksaan source dilakukan; uji browser langsung belum dilakukan."
+        },
+        {
+          "id": "FIT-028",
+          "title": "Persetujuan publikasi portofolio per komponen",
+          "description": "Brief menyediakan pilihan izin terpisah dan tidak dicentang secara default untuk tampilan website melalui iframe, nama proyek atau bisnis, dan tautan website publik. Ringkasan pilihan disertakan pada pesan WhatsApp. Template proposal memuat tahap peninjauan ulang setelah website selesai.",
+          "benefit": "Memastikan hanya komponen portofolio yang diizinkan pelanggan yang dipublikasikan.",
+          "priority": "Sedang",
+          "status": "Tersedia di source; pengingat dan perubahan/penghapusan portofolio mengikuti proses manual",
+          "files": [
+            "brief.html",
+            "js/brief.js",
+            "css/brief.css",
+            "portofolio/proposal/index.html"
+          ],
+          "testNotes": "Pemeriksaan source memastikan tiga checkbox bersifat opsional dan default tidak diizinkan, pilihan tidak disimpan ke draf lokal, serta ringkasan WhatsApp membedakan izin tiap komponen. Template proposal menambahkan peninjauan ulang setelah finalisasi. Proyek portofolio yang diperiksa merupakan demo/placeholder, bukan entri pelanggan yang perlu disembunyikan. Uji browser dan pengiriman WhatsApp end-to-end belum dilakukan."
         }
       ]
     },
