@@ -24,9 +24,10 @@ Dokumen ini mencatat rincian operasional yang belum memiliki keputusan final ata
 
 ## 4. Publikasi portofolio
 
-- Pastikan apakah publikasi otomatis tanpa persetujuan tambahan memang menjadi kebijakan akhir.
-- Tetapkan cara menangani permintaan pelanggan untuk menunda atau tidak menampilkan proyek.
-- Pisahkan tampilan website publik dari data pribadi, kredensial, informasi internal, dan materi rahasia pelanggan.
+- Keputusan final (2026-11-28): publikasi website pelanggan sebagai portofolio tidak dilakukan secara otomatis. Pelanggan memberi izin secara terpisah untuk tampilan website melalui iframe, nama proyek atau bisnis, dan tautan website publik. Komponen yang tidak diizinkan tidak boleh dipublikasikan.
+- Persetujuan awal dicatat melalui Brief. Setelah website selesai, NFShark mengingatkan pelanggan untuk meninjau kembali pilihan; pelanggan dapat mengubah izin atau meminta penghapusan portofolio yang sudah dipublikasikan.
+- Jika website tidak mendukung iframe, NFShark harus meminta persetujuan untuk alternatif pratinjau.
+- Tindak lanjut formal: bagian 11 pada `persetujuan.md` masih menyatakan publikasi tidak memerlukan persetujuan tambahan. Selaraskan melalui proses pembaruan S&K dan dokumentasi perubahan yang berlaku; jangan mengubahnya diam-diam.
 
 ## 5. Perubahan Syarat dan Ketentuan
 
