@@ -214,6 +214,26 @@
               </label>
             </section>
 
+            <fieldset class="brief-field brief-publication-field" aria-describedby="portfolio-consent-help">
+              <legend>Persetujuan publikasi portofolio <span class="field-optional">Opsional</span></legend>
+              <p class="brief-hint" id="portfolio-consent-help">Pilih setiap izin secara terpisah. Jika tidak dicentang, komponen tersebut tidak akan dipublikasikan sebagai portofolio NFShark.</p>
+              <div class="brief-publication-options">
+                <label>
+                  <input type="checkbox" id="portfolio-display" name="portfolioDisplay" value="Diizinkan" />
+                  <span>Izinkan tampilan website ditampilkan melalui iframe pada portofolio NFShark.</span>
+                </label>
+                <label>
+                  <input type="checkbox" id="portfolio-name" name="portfolioName" value="Diizinkan" />
+                  <span>Izinkan nama proyek atau bisnis ditampilkan.</span>
+                </label>
+                <label>
+                  <input type="checkbox" id="portfolio-link" name="portfolioLink" value="Diizinkan" />
+                  <span>Izinkan tautan website publik dicantumkan.</span>
+                </label>
+              </div>
+              <p class="brief-publication-note">Setelah website selesai, NFShark akan mengingatkan Anda untuk meninjau kembali pilihan ini. Jika website tidak mendukung iframe, NFShark akan meminta persetujuan Anda sebelum menggunakan alternatif pratinjau. Anda dapat mengubah izin atau meminta penghapusan portofolio yang telah dipublikasikan melalui <a href="mailto:nfshark.web@gmail.com">email bantuan NFShark</a>.</p>
+            </fieldset>
+
             <p class="brief-submit-note">Setelah dikirim, WhatsApp akan terbuka dengan ringkasan jawaban Anda. Periksa kembali pesan sebelum mengirimkannya kepada NFShark.</p>
             <p class="brief-error" id="form-error" role="alert"></p>
             <div class="brief-step-actions brief-step-actions-final">
