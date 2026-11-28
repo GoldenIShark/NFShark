@@ -26,3 +26,57 @@
   .brief-page { --page-gutter: 1.25rem; }
   .brief-page { --page-header-height: 66px; --page-logo-size: 40px; }
 }
+
+/* Persetujuan publikasi portofolio — pilihan terpisah dan opsional. */
+.brief-page .brief-publication-field {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border: 1px solid var(--color-dark-border);
+  border-radius: var(--page-control-radius, 8px);
+  background: rgba(255, 255, 255, .025);
+}
+
+.brief-page .brief-publication-field legend {
+  color: var(--color-light-text);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.brief-page .brief-publication-options {
+  display: grid;
+  gap: .85rem;
+  margin-top: .85rem;
+}
+
+.brief-page .brief-publication-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  color: var(--color-muted);
+  font-size: .88rem;
+  font-weight: 500;
+}
+
+.brief-page .brief-publication-options input {
+  flex: 0 0 auto;
+  margin: .2rem 0 0;
+  accent-color: var(--color-mint);
+}
+
+.brief-page .brief-publication-note {
+  margin: .9rem 0 0;
+  color: var(--color-muted);
+  font-size: .8rem;
+  line-height: 1.6;
+}
+
+.brief-page .brief-publication-note a {
+  color: var(--color-mint);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .brief-page .brief-publication-field { padding: .9rem; }
+}
